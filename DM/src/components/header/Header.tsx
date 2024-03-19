@@ -3,7 +3,7 @@ import Logo from '/DmLogo.svg'
 
 const Header = () => {
   return (
-    <div className='flex justify-between items-center py-3 font-main'>
+    <div className='flex mx-auto max-w-[95vw] justify-between items-center py-3 font-main'>
       <div>
         <img src={Logo}  alt="Logo" className='h-[70px]'/>
       </div>
