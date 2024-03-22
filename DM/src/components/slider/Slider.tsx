@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Navigation, Autoplay } from 'swiper/modules';
 import Button from '../button/Button';
-import Logo from '/DmLogo.svg';
+import Logo from '/DmLogo.png';
 
 const App: React.FC = () => {
   const handleClick = () => {

@@ -12,6 +12,9 @@ export default {
         orange: "#FF6A00"
       }
     },
+    gridTemplateRows: {
+      'custom': 'repeat(3, minmax(0, 250px))',
+    }
   },
   plugins: [],
 }
