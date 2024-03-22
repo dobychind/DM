@@ -1,4 +1,3 @@
-import React from 'react'
 import Logo from '/DmLogo.png'
 
 const Header = () => {
