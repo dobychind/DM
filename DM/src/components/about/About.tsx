@@ -1,4 +1,6 @@
 import React from 'react'
+import AnimatedNumbers from "react-animated-numbers";
+
 
 const About = () => {
     return (
@@ -13,24 +15,78 @@ const About = () => {
 
             </div>
             <div className='grid grid-cols-2 w-4/5 gap-x-12 gap-y-8'>
-                <div className=' border-2 p-4 border-blue rounded-3xl font-bold text-main text-2xl'>
-                    <span className='text-5xl text-main font-bold'> &#62;</span>
-                    <span className='text-blue text-6xl font-bold'>200</span> <br />
+
+                <div className='flex flex-col flex-wrap border-2 p-4 border-blue rounded-3xl font-bold text-main text-2xl'>
+                    <div className='flex items-baseline'>
+                        <span className='text-5xl text-main font-bold'> &#62;</span>
+                        <AnimatedNumbers
+                            transitions={(index) => ({
+                                type: "spring",
+                                duration: index + 0.5,
+                            })}
+                            animateToNumber={300}
+                            fontStyle={{
+                                height: 44,
+                                fontSize: '3rem',
+                                color: "#71B4BE",
+                            }}
+                        />
+                    </div>
                     Cотрудников работают в нашей компании
                 </div>
-                <div className=' border-2 p-4 border-blue rounded-3xl font-bold text-main text-2xl'>
-                    <span className='text-5xl text-main font-bold'> &#62;</span>
-                    <span className='text-blue text-6xl font-bold'>100</span> <br />
-                    Автомобилей в собственном парке
+
+                <div className='flex flex-col justify-center     border-2 p-4 border-blue rounded-3xl font-bold text-main text-2xl'>
+                    <AnimatedNumbers
+                        includeComma
+                        transitions={(index) => ({
+                            type: "spring",
+                            duration: index + 0.5,
+                        })}
+                        animateToNumber={65}
+                        fontStyle={{
+                            height: 44,
+                            fontSize: '3rem',
+                            color: "#71B4BE",
+                        }}
+                    />                    Автомобилей в собственном парке
                 </div>
-                <div className=' border-2 p-4 border-blue rounded-3xl font-bold text-main text-xl'>
-                    <span className='text-blue text-6xl font-bold'>3</span> <br />
-                    Филлиала в Москве, Санкт-Петербурге и Новгороде
+
+                <div className='flex flex-col items-baseline border-2 p-4 border-blue rounded-3xl font-bold text-main text-2xl'>
+                    <div className='flex items-baseline'>
+                        <span className='text-5xl text-main font-bold'> &#62;</span>
+                        <AnimatedNumbers
+                            transitions={(index) => ({
+                                type: "spring",
+                                duration: index + 0.5,
+                            })}
+                            animateToNumber={2000}
+                            fontStyle={{
+                                height: 44,
+                                fontSize: '3rem',
+                                color: "#71B4BE",
+                            }}
+                        />
+                    </div>
+                    Площадь складских помещений
                 </div>
-                <div className=' border-2 p-4 border-blue rounded-3xl font-bold text-main text-2xl'>
-                    <span className='text-5xl text-main font-bold'> &#62;</span>
-                    <span className='text-blue text-6xl font-bold'>200</span> <br />
-                    Cотрудников работают в нашей компании
+
+                <div className='flex flex-col items-baseline border-2 p-4 border-blue rounded-3xl font-bold text-main text-2xl'>
+                    <div className='flex items-baseline'>
+                        <span className='text-5xl text-main font-bold'> &#62;</span>
+                        <AnimatedNumbers
+                            transitions={(index) => ({
+                                type: "spring",
+                                duration: index + 0.5,
+                            })}
+                            animateToNumber={3000}
+                            fontStyle={{
+                                height: 44,
+                                fontSize: '3rem',
+                                color: "#71B4BE",
+                            }}
+                        />
+                    </div>
+                    Торговых точек
                 </div>
             </div>
         </div>

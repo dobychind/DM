@@ -1,5 +1,6 @@
 import React from 'react';
 import ProductionCard from './ProductionCard';
+import Button from '../button/Button';
 import HppLogo from '/HppLogo.png';
 import DmLogo from '/DmLogo.png';
 import NovLogo from '/NovHleb.png';
@@ -19,6 +20,9 @@ const productionData: ProductionDataItem[] = [
 ];
 
 const Production: React.FC = () => {
+  const handleClick = () => {
+    console.log('Button clicked!');
+  };
   return (
     <div className='flex flex-col bg-gradient-to-b from-white from-10% via-[#CC7C3280] h-[900px] to-white'>
       <h3 className='text-main text-5xl font-bold text-center'>Производство</h3>
@@ -41,8 +45,8 @@ const Production: React.FC = () => {
           <p className='text-white text-center text-2xl font-semibold'>В 2018г. состоялся запуск собственного производства под брендом “ХПП №1”</p>
         </div>
 
-        <div className='bg-orange p-4 rounded-2xl flex justify-center items-center'>
-          <p className='text-white text-center text-2xl font-semibold'>В 2018г. состоялся запуск собственного производства под брендом “ХПП №1”</p>
+        <div className="bg-[url('/production.png')] bg-cover bg-no-repeat p-4 rounded-2xl flex justify-end  min-h-[16rem] items-end">
+          <Button color='orange' onClick={handleClick} text="Продукция"/>
         </div>
 
       </div>
