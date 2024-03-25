@@ -24,7 +24,7 @@ const Production: React.FC = () => {
     console.log('Button clicked!');
   };
   return (
-    <div className='flex flex-col bg-gradient-to-b from-white from-10% via-[#CC7C3280] h-[900px] to-white'>
+    <div className='flex flex-col bg-gradient-to-b from-white from-10% via-[#CC7C3280] to-white'>
       <h3 className='text-main text-5xl font-bold text-center'>Производство</h3>
       <div className='flex justify-between w-4/5 mx-auto py-16'>
         {productionData.map((item, index) => (

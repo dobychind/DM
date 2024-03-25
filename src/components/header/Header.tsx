@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <div className='flex mx-auto max-w-[95vw] justify-between items-center py-3 font-main'>
       <div>
-        <img src={Logo}  alt="Logo" className='h-[70px]'/>
+        <a href="#"><img src={Logo}  alt="Logo" className='h-[70px]'/></a>
       </div>
       <div className='flex gap-5'>
         <a href="#"><p className='text-main text-2xl font-semibold'>Главная</p></a>
