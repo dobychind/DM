@@ -1,7 +1,4 @@
-import React from 'react'
 import ClientSwiper from './ClientSwiper'
-
-
 
 const Distribution = () => {
     return (

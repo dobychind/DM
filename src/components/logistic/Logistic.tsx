@@ -1,4 +1,3 @@
-import React from 'react';
 import Car from '/gazelle.png';
 import Cars from '/cars.png';
 import Threepl from '/3pl.png';
