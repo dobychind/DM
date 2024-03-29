@@ -6,8 +6,8 @@ interface ProductionCardProps {
 }
 
 const ProductionCard: React.FC<ProductionCardProps> = ({ logo, name }) => (
-  <div className='flex flex-col gap-4'>
-    <img src={logo} alt={name} className='h-[210px]' />
+  <div className='flex flex-col justify-between h-full gap-4'>
+    <img src={logo} alt={name} className='' />
     <p className='text-main font-bold text-3xl text-center'>{name}</p>
   </div>
 );

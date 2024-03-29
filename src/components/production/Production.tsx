@@ -2,7 +2,7 @@ import React from 'react';
 import ProductionCard from './ProductionCard';
 import Button from '../button/Button';
 import HppLogo from '/HppLogo.png';
-import DmLogo from '/DmLogo.png';
+import DmLogo from '/DmLogo.svg';
 import NovLogo from '/NovHleb.png';
 import RzevLogo from '/rzevka.png';
 
@@ -24,11 +24,11 @@ const Production: React.FC = () => {
     console.log('Button clicked!');
   };
   return (
-    <div className='flex flex-col bg-gradient-to-b from-white from-10% via-[#CC7C3280] to-white'>
+    <div className='flex flex-col bg-gradient-to-b from-bg from-10% via-[#CC7C3280] to-bg'>
       <h3 className='text-main text-5xl font-bold text-center'>Производство</h3>
-      <div className='flex justify-between w-4/5 mx-auto py-16'>
+      <div className='grid grid-cols-4 gap-36 w-4/5 mx-auto py-16'>
         {productionData.map((item, index) => (
-          <ProductionCard key={index} {...item} />
+          <a className='' href=""><ProductionCard key={index} {...item}/></a>
         ))}
       </div>
       <div className='grid grid-cols-3 grid-rows-3 gap-8 w-2/3 py-16 mx-auto'>

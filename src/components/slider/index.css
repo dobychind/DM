@@ -1,0 +1,11 @@
+/* Цвет активных стрелок */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #CC7C32 !important;
+}
+
+/* Цвет неактивных стрелок */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    color: #cc7c32e5 !important; 
+}

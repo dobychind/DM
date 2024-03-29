@@ -9,7 +9,8 @@ export default {
       colors: {
         main: "#CC7C32",
         blue: "#71B4BE",
-        orange: "#FF6A00"
+        orange: "#FF6A00",
+        bg: "#F2F3F4"
       }
     },
     gridTemplateRows: {
