@@ -1,6 +1,5 @@
-import React, {useRef} from 'react'
+import {useRef} from 'react'
 import Header from '../components/header/Header'
-import Slider from '../components/slider/Slider'
 import About from '../components/about/About'
 import Production from '../components/production/Production'
 import Distribution from '../components/distribution/Distribution'

@@ -1,4 +1,3 @@
-import React from 'react'
 import DmLogo from '/DmLogo.svg';
 import Button from '../button/Button';
 

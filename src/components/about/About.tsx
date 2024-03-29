@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import AnimatedNumbers from 'react-animated-numbers';
 
 const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forwardRef }) => {
