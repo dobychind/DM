@@ -9,7 +9,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ scrollToAbout }) => {
 
   return (
-    <div className="flex bg-[url('/back.jpg')] flex-col max-h-screen h-screen items-center">
+    <div className="flex bg-[url('/back.jpg')] bg-cover flex-col max-h-screen h-screen items-center">
       <div className='flex mx-auto max-w-[95vw] justify-between items-center py-3 font-main'>
         <div className='flex gap-5'>
           <a href="#"><p className='text-main text-2xl font-semibold hover:underline hover:text-blue'>Главная</p></a>
