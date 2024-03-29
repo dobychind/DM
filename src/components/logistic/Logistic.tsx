@@ -15,7 +15,7 @@ const Logistic: React.FC = () => {
     };
 
     return (
-        <div className='flex flex-col bg-bg items-center gap-9 justify-center mx-auto w-4/5'>
+        <div className='flex flex-col bg-bg items-center gap-9 justify-center mx-auto w-3/4'>
             <h3 className='text-main text-5xl font-bold text-center'>Логистика</h3>
             <div className='flex justify-between gap-6 items-center py-12'>
                 <img src={Car} alt='brand car' className='' />
@@ -34,7 +34,7 @@ const Logistic: React.FC = () => {
 
             <div className='grid grid-cols-3 items-start justify-between gap-9 w-full md:flex-row'>
 
-                <div className='flex w-full rounded-xl shadow-md p-3 h-full items-center'>
+                <div className='flex w-full bg-white rounded-xl shadow-md p-3 h-full items-center'>
                     <div className='w-full'>
                         <img src={Threepl} alt='' className='w-full' />
                         <p className='text-main font-semibold text-2xl m-auto py-4 text-center'>Поставки по системе 3PL</p>
@@ -42,7 +42,7 @@ const Logistic: React.FC = () => {
 
                 </div>
 
-                <div className='flex w-full rounded-xl shadow-md p-3 h-full items-center'>
+                <div className='flex w-full bg-white rounded-xl shadow-md p-3 h-full items-center'>
                     <div className='w-full'>
                         <img src={Cars} alt='' className='w-full' />
                         <p className='text-main font-semibold text-2xl my-auto py-4 text-center'>Собственный автопарк 100 машин</p>
@@ -50,10 +50,10 @@ const Logistic: React.FC = () => {
 
                 </div>
 
-                <div className='flex w-full rounded-xl shadow-md p-3 items-center'>
+                <div className='flex w-full bg-white rounded-xl shadow-md p-3 items-center'>
                     <div className='w-full'>
                         <img src={Sklad} alt='' className='w-full' />
-                        <p className='text-main font-semibold text-xl m-auto py-4 text-center'>Склады в Москве, Санкт-Петербуге и Новгороде общей площадью 100000 м2</p>
+                        <p className='text-main font-semibold text-xl m-auto py-4 text-center'>Склады в Москве, Санкт-Петербуге и Новгороде общей площадью 2000 м2</p>
                     </div>
 
                 </div>
@@ -62,21 +62,21 @@ const Logistic: React.FC = () => {
             <div className='flex flex-col items-center justify-center'>
                 <h4 className='text-main text-3xl font-bold text-center'>Предоставляемые услуги</h4>
                 <div className='grid grid-cols-4 py-9 gap-8 '>
-                    <div className='flex flex-col justify-around gap-4 items-center p-3 py-6 rounded-3xl shadow-md'>
+                    <div className='flex flex-col bg-white justify-around gap-4 items-center p-3 py-6 rounded-3xl shadow-md'>
                         <img src={Deliver} alt='' />
-                        <p className='font-semibold text-3xl text-main text-center'>Доставка в торговую точку</p>
+                        <p className='font-semibold text-2xl text-main text-center'>Доставка в торговую точку</p>
                     </div>
-                    <div className='flex flex-col justify-center gap-4 items-center p-3 rounded-3xl shadow-md'>
+                    <div className='flex flex-col bg-white justify-center gap-4 items-center p-3 rounded-3xl shadow-md'>
                         <img className='w-[200px]' src={Save} alt='' />
-                        <p className='font-semibold text-3xl text-main text-center'>Комплектование</p>
+                        <p className='font-semibold text-2xl text-main text-center'>Комплектование</p>
                     </div>
-                    <div className='flex flex-col justify-center gap-4 items-center p-3 rounded-3xl shadow-md'>
+                    <div className='flex flex-col bg-white justify-center gap-4 items-center p-3 rounded-3xl shadow-md'>
                         <img className='w-[200px]' src={Print} alt='' />
-                        <p className='font-semibold text-3xl text-main text-center'>Печать необходимых докуметов</p>
+                        <p className='font-semibold text-2xl text-main text-center'>Печать необходимых докуметов</p>
                     </div>
-                    <div className='flex flex-col justify-center gap-4 items-center p-3 rounded-3xl shadow-md box-border'>
+                    <div className='flex flex-col bg-white justify-center gap-4 items-center p-3 rounded-3xl shadow-md box-border'>
                         <img className='w-[200px]' src={Package} alt='' />
-                        <p className='font-semibold text-3xl text-main text-center'>Комплектование</p>
+                        <p className='font-semibold text-2xl text-main text-center'>Комплектование</p>
                     </div>
                 </div>
             </div>

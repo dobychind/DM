@@ -2,11 +2,11 @@ import ClientSwiper from './ClientSwiper'
 
 const Distribution = () => {
     return (
-        <div>
-            <div className='flex bg-bg flex-col w-4/5 mx-auto items-center justify-center'>
+        <div className=" py-16">
+            <div className="flex  flex-col w-3/4 mx-auto items-center justify-center">
                 <h3 className='text-main text-5xl font-bold text-center'>Дистрибьюция</h3>
                 <div className='flex py-12 gap-12 justify-between'>
-                    <div className='flex flex-col'>
+                    <div className='flex flex-col gap-4'>
                         <p className=' text-main text-2xl font-semibold'>
                             ГК «Даниэль М» занимает ключевую позицию в отрасли дистрибуции хлеба на территории Москвы, Санкт-Петербурга и их областей.
                         </p>

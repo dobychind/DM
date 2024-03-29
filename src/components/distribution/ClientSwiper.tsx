@@ -8,6 +8,7 @@ import Lenta from '/lenta.jpg';
 import Spar from '/spar.jpg';
 import Okey from '/okey.png';
 // Import Swiper styles
+import './index.css';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
