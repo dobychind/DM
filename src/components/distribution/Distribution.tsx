@@ -9,7 +9,7 @@ const Distribution = () => {
                 <img src={BreadDist} alt="" className=''/>
                 <div className='flex py-12 gap-12 justify-between'>
                     <div className='flex flex-col gap-4'>
-                        <p className=' text-black text-2xl font-semibold leading-relaxed font-medium	'>
+                        <p className=' text-black text-2xl leading-relaxed font-medium	'>
                             ГК «Даниэль М» на протяжении 10 лет занимает ключевую позицию в отрасли дистрибуции хлеба на территории Москвы, Санкт-Петербурга и их областей. 
                             <br/>
                             Мы не только обеспечиваем надежные поставки продукции, но и активно
