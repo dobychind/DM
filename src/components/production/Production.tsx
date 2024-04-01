@@ -34,7 +34,7 @@ const Production: React.FC = () => {
       <div className='grid grid-cols-3 grid-rows-3 gap-8 w-2/3 py-16 pb-8 mx-auto'>
 
         <div className='bg-orange p-4 rounded-2xl flex justify-center items-center'>
-          <p className='text-white text-center text-2xl font-semibold'>В 2018г. состоялся запуск собственного производства под брендом “ХПП №1”</p>
+          <p className='text-white text-center text-2xl'>В 2018г. состоялся запуск собственного производства под брендом “ХПП №1”</p>
         </div>
 
         <div className="p-4 col-span-2 rounded-2xl flex justify-center bg-[url('/bread.jpg')] bg-cover min-h-[16rem] items-center" />
@@ -42,7 +42,7 @@ const Production: React.FC = () => {
         <div className="bg-[url('/bread2.jpeg')] p-4 col-span-2 row-span-2 rounded-2xl flex justify-center h-full bg-cover min-h-[32rem] items-center" />
 
         <div className='bg-orange p-4 rounded-2xl flex justify-center items-center'>
-          <p className='text-white text-center text-2xl font-semibold'>В 2018г. состоялся запуск собственного производства под брендом “ХПП №1”</p>
+          <p className='text-white text-center text-2xl'>В 2018г. состоялся запуск собственного производства под брендом “ХПП №1”</p>
         </div>
 
         <div className="bg-[url('/production.png')] bg-cover bg-no-repeat p-4 rounded-2xl flex justify-end  min-h-[16rem] items-end">
