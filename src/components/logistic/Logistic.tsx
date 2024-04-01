@@ -16,11 +16,11 @@ const Logistic: React.FC = () => {
 
     return (
         <div className='flex flex-col bg-bg items-center gap-9 justify-center mx-auto w-3/4'>
-            <h3 className='text-main text-5xl font-bold text-center'>Логистика</h3>
+            <h3 className='text-black text-5xl font-bold text-center'>Логистика</h3>
             <div className='flex justify-between gap-6 items-center py-12'>
                 <img src={Car} alt='brand car' className='' />
                 <div className='flex flex-col gap-6'>
-                    <p className='text-main text-2xl w-full font-semibold'>
+                    <p className='text-black text-2xl w-full font-semibold'>
                         В 2019г. произошел запуск проекта по оказанию логистических услуг на базе дистрибьюторского опыта.<br />
                         Наша логистическая компания специализируется на предоставлении высококачественных услуг по системе 3PL.
                     </p>
@@ -60,7 +60,7 @@ const Logistic: React.FC = () => {
             </div>
 
             <div className='flex flex-col items-center justify-center'>
-                <h4 className='text-main text-3xl font-bold text-center'>Предоставляемые услуги</h4>
+                <h4 className='text-black text-3xl font-bold text-center'>Предоставляемые услуги</h4>
                 <div className='grid grid-cols-4 py-9 gap-8 '>
                     <div className='flex flex-col bg-white justify-around gap-4 items-center p-3 py-6 rounded-3xl shadow-md'>
                         <img src={Deliver} alt='' />

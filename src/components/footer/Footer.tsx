@@ -8,7 +8,7 @@ const Footer = () => {
   return (
 
     <div className=" bg-[url('/back.jpg')] bg-bottom bg-cover">
-      <div className="flex py-4 mx-auto max-w-[95%] w-full justify-between">
+      <div className="flex py-8 mx-auto max-w-[95%] w-full justify-between">
 
         <div className='flex items-center gap-10'>
           <img src={DmLogo} alt="" className='h-[70px]' />

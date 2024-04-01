@@ -11,6 +11,9 @@ export default {
         blue: "#71B4BE",
         orange: "#FF6A00",
         bg: "#F2F3F4"
+      },
+      fontFamily: {
+        body: ['Manrope'],
       }
     },
     gridTemplateRows: {

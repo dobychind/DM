@@ -19,7 +19,7 @@ const MainPage = () => {
   };
 
   return (
-    <div>
+    <div className='font-body'>
         <Header scrollToAbout={scrollToAbout}/>
         {/* <Slider></Slider> */}
         <div className="flex bg-bg py-[4rem] flex-col gap-[4rem]">

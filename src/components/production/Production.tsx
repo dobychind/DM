@@ -31,7 +31,7 @@ const Production: React.FC = () => {
           <a className='' href=""><ProductionCard key={index} {...item}/></a>
         ))}
       </div>
-      <div className='grid grid-cols-3 grid-rows-3 gap-8 w-2/3 py-16 mx-auto'>
+      <div className='grid grid-cols-3 grid-rows-3 gap-8 w-2/3 py-16 pb-8 mx-auto'>
 
         <div className='bg-orange p-4 rounded-2xl flex justify-center items-center'>
           <p className='text-white text-center text-2xl font-semibold'>В 2018г. состоялся запуск собственного производства под брендом “ХПП №1”</p>
@@ -49,6 +49,10 @@ const Production: React.FC = () => {
           <Button color='orange' onClick={handleClick} text="Продукция"/>
         </div>
 
+      </div>
+        
+      <div className='mx-auto'>
+        <Button onClick={handleClick} text='Узнать больше' color='orange'/>
       </div>
     </div>
   );
