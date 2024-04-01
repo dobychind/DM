@@ -10,7 +10,7 @@ const Header: React.FC<HeaderProps> = ({ scrollToAbout }) => {
 
   return (
     <section>
-      <div className="flex bg-[url('/back-header.jpg')] sticky top-0 bg-cover flex-col   items-center">
+      <div className="flex bg-[url('/back-header.jpg')]  top-0 bg-cover flex-col   items-center">
         <div className='flex mx-auto w-full backdrop-blur-sm justify-between items-center py-3 font-main '>
           <div className='flex max-w-[95vw] mx-auto gap-5'>
             <a href="#"><p className='text-white text-2xl font-semibold hover:underline hover:text-blue '>Главная</p></a>

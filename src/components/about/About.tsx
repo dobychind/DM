@@ -4,20 +4,20 @@ import FoodAbout from '/FoodAbout.png'
 
 const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forwardRef }) => {
   return (
-    <div ref={forwardRef} className='flex max-w-7xl	w-full mx-auto flex-col pt-7  bg-gradient-to-b from-bg to-bg items-center'>
+    <div ref={forwardRef} className='flex w-full mx-auto flex-col pt-7  bg-gradient-to-b from-bg to-bg items-center xl:max-w-7xl'>
       <h3 className='text-black text-5xl font-bold text-center'>О компании</h3>
       <div className='flex  mx-auto py-16 pt-24  gap-12 justify-between'>
         <p className='text-black w-1/2 text-3xl font-semibold'>
-          Группа компаний “Даниэль М” специализируется в логистике, дистрибьюции и производстве хлебобулочных изделий.<br/>
+          Группа компаний “Даниэль М” специализируется в логистике, дистрибьюции и производстве хлебобулочных изделий.<br />
           Основные принципы нашего взаимодействия с партнерами - это принципы открытости и надежности.
         </p>
-        <img src={FoodAbout} alt='BreadPhoto' className=''/>
+        <img src={FoodAbout} alt='BreadPhoto' className='w-1/2' />
       </div>
 
       <div className='flex flex-col w-1/2 gap-x-12 gap-y-8'>
         <div className='flex gap-6 border-2 p-4 border-blue rounded-3xl font-bold text-main text-2xl'>
           <div className='flex items-center'>
-            
+
             <div ><p className='text-5xl mt-[-10px] text-main font-bold'> &#62;</p></div>
             <AnimatedNumbers
               transitions={(index) => ({
@@ -27,7 +27,8 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
               animateToNumber={300}
               fontStyle={{
                 width: 32,
-                height: 42,
+                height: 40,
+                lineHeight: "38px",
                 fontSize: '3rem',
                 color: "#71B4BE",
               }}
@@ -46,7 +47,8 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
             animateToNumber={65}
             fontStyle={{
               width: 32,
-              height: 44,
+              height: 40,
+              lineHeight: "38px",
               fontSize: '3rem',
               color: "#71B4BE",
             }}
@@ -64,14 +66,15 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
               animateToNumber={2000}
               fontStyle={{
                 width: 32,
-                height: 42,
+                height: 40,
+                lineHeight: "38px",
                 fontSize: '3rem',
                 color: "#71B4BE",
               }}
             />
           </div>
           <p className='leading-none'>
-          Площадь складских помещений
+            Площадь складских помещений
           </p>
         </div>
 
@@ -85,7 +88,8 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
               })}
               animateToNumber={3000}
               fontStyle={{
-                height: 44,
+                height: 40,
+                lineHeight: "38px",
                 width: 32,
 
                 fontSize: '3rem',
