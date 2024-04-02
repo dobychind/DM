@@ -5,23 +5,22 @@ import FoodCounter from '/food2.jpg';
 
 const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forwardRef }) => {
   return (
-    <div ref={forwardRef} className='flex w-full mx-auto flex-col pt-7  bg-gradient-to-b from-bg to-bg items-center xl:max-w-7xl'>
+    <div ref={forwardRef} className='flex w-full max-h-screen h-full mx-auto flex-col bg-gradient-to-b from-bg to-bg items-center xl:max-w-7xl'>
       <h3 className='text-black text-5xl font-bold text-center'>О компании</h3>
-      <div className='flex  mx-auto py-16 pt-24  gap-12 justify-between'>
-        <p className='text-black w-1/2 text-3xl font-semibold leading-normal	'>
+      <div className='flex max-h-[42vh] mx-auto py-8 gap-8'>
+        <p className='text-black my-auto w-1/2 text-2xl font-semibold leading-normal	'>
           Группа компаний “Даниэль М” специализируется в логистике, дистрибьюции и производстве хлебобулочных изделий.<br />
           Основные принципы нашего взаимодействия с партнерами - это принципы открытости и надежности.
         </p>
-        <img src={FoodAbout} alt='BreadPhoto' className='w-1/2' />
+        <img src={FoodAbout} alt='BreadPhoto' className='' />
       </div>
-      <div className='flex gap-12 h-full w-full'>
-        <div className='w-full'>
-          <img src={FoodCounter} alt="" />
+      <div className='flex  max-h-[48vh]  gap-8 h-full w-full'>
+        <div className='w-4/5' >
+          <img src={FoodCounter} alt="" className=' h-full'/>
         </div>
         <div className='flex flex-col w-full justify-between'>
-          <div className='flex gap-6 border-2 p-4 border-main font-bold text-main text-2xl'>
-            <div className='flex items-center'>
-
+          <div className='flex h-full gap-4 items-center font-bold text-main text-2xl'>
+            <div className='flex  items-center'>
               <div ><p className='text-5xl mt-[-10px] text-blue font-bold'> &#62;</p></div>
               <AnimatedNumbers
                 transitions={(index) => ({
@@ -41,7 +40,7 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
             <p className='leading-none	'>Cотрудников работают в нашей компании</p>
           </div>
 
-          <div className='flex gap-6 items-center border-2 p-4 border-main font-bold text-main text-2xl'>
+          <div className='flex gap-6 h-full items-center border-y-2  border-t-main border-b-main font-bold text-main text-2xl'>
             <AnimatedNumbers
               includeComma
               transitions={(index) => ({
@@ -59,7 +58,7 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
             />                    Автомобилей в собственном парке
           </div>
 
-          <div className='flex gap-6 items-center border-2 p-4 border-main font-bold text-main text-2xl'>
+          <div className='flex gap-6 h-full border-b-2 border-b-main items-center  font-bold text-main text-2xl'>
             <div className='flex items-center'>
               <p className='text-5xl mt-[-10px] text-blue font-bold'> &#62;</p>
               <AnimatedNumbers
@@ -82,9 +81,9 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
             </p>
           </div>
 
-          <div className='flex gap-6 items-center border-2 p-4 border-main font-bold text-main text-2xl'>
+          <div className='flex gap-6 items-center h-full font-bold text-main text-2xl'>
             <div className='flex items-center'>
-              <p className='text-5xl  mt-[-10px] text-main font-bold'> &#62;</p>
+              <p className='text-5xl  mt-[-10px] text-blue font-bold'> &#62;</p>
               <AnimatedNumbers
                 transitions={(index) => ({
                   type: "spring",
@@ -97,7 +96,7 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
                   width: 32,
 
                   fontSize: '3rem',
-                  color: "#CC7C32",
+                  color: "#71B4BE",
                 }}
               />
             </div>

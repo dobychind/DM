@@ -24,8 +24,8 @@ const Header: React.FC<HeaderProps> = ({ scrollToAbout }) => {
       </div>
       <div className="flex bg-[url('/back-main.jpg')] rounded-b-lg rounded-bl-lg flex-col max-h-screen bg-cover h-screen justify-center">
         <div className="flex flex-col mb-24">
-          <img src={Logo} alt='' className='h-[250px]' />
-          <h2 className=' text-white font-serif text-4xl text-center font-bold'>Группа компаний<br /><span className='text-6xl'>«Даниэль М»</span></h2>
+          <img src={Logo} alt='' className='h-[200px]' />
+          <h2 className=' text-white font-serif text-3xl text-center font-bold'>Группа компаний<br /><span className='text-5xl'>«Даниэль М»</span></h2>
         </div>
         <button onClick={scrollToAbout} className='absolute w-fit left-0 right-0 bottom-3 mx-auto'><img src={ArrowDown} alt="" /></button>
       </div>
