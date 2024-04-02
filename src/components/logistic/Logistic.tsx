@@ -20,11 +20,11 @@ const Logistic: React.FC = () => {
             <div className='flex justify-between gap-6 items-center py-12'>
                 <img src={Car} alt='brand car' className='' />
                 <div className='flex flex-col gap-6'>
-                    <p className='text-black text-2xl w-full font-semibold'>
+                    <p className='text-black text-2xl w-full text-center font-medium'>
                         В 2019г. произошел запуск проекта по оказанию логистических услуг на базе дистрибьюторского опыта.<br />
                         Наша логистическая компания специализируется на предоставлении высококачественных услуг по системе 3PL.
                     </p>
-                    <div className='ml-auto'>
+                    <div className='mx-auto'>
                         <Button onClick={handleClick} text='Подробнее' />
                     </div>
                 </div>

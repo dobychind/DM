@@ -25,7 +25,7 @@ const Production: React.FC = () => {
   };
   return (
     <div className='flex flex-col bg-gradient-to-b from-bg from-10% via-[#CC7C3280] to-bg'>
-      <h3 className='text-main text-5xl font-bold text-center'>Производство</h3>
+      <h3 className='text-black text-5xl font-bold text-center'>Производство</h3>
       <div className='grid grid-cols-4 gap-36 w-4/5 mx-auto py-16'>
         {productionData.map((item, index) => (
           <a className='' href=""><ProductionCard key={index} {...item}/></a>
