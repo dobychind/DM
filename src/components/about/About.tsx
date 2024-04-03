@@ -34,7 +34,7 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
               <AnimatedNumbers
                 transitions={(index) => ({
                   type: "spring",
-                  duration: index + 3.5,
+                  duration: index + 2.5,
                 })}
 
                 animateToNumber={300}
@@ -55,7 +55,7 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
               includeComma
               transitions={(index) => ({
                 type: "spring",
-                duration: index + 3.5,
+                duration: index + 2.5,
               })}
               animateToNumber={65}
               fontStyle={{
@@ -74,7 +74,7 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
               <AnimatedNumbers
                 transitions={(index) => ({
                   type: "spring",
-                  duration: index + 3.5,
+                  duration: index + 2.5,
                 })}
                 animateToNumber={2000}
                 fontStyle={{
@@ -97,7 +97,7 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
               <AnimatedNumbers
                 transitions={(index) => ({
                   type: "spring",
-                  duration: index + 3.5,
+                  duration: index + 2.5,
                 })}
                 animateToNumber={3000}
                 fontStyle={{
