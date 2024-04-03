@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import ProductionCard from './ProductionCard';
 import Button from '../button/Button';
 import HppLogo from '/HppLogo.png';
 import DmLogo from '/DmLogo.svg';
 import NovLogo from '/NovHleb.png';
 import RzevLogo from '/rzevka.png';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 
 interface ProductionDataItem {
@@ -23,17 +25,21 @@ const Production: React.FC = () => {
   const handleClick = () => {
     console.log('Button clicked!');
   };
+  useEffect(() =>
+  {
+    Aos.init();
+  }, [])
   return (
-    <div className='flex flex-col bg-gradient-to-b from-bg from-10% via-[#CC7C3280] to-bg'>
-      <h3 className='text-black text-5xl font-bold text-center'>Производство</h3>
-      <div className='grid grid-cols-4 gap-36 mx-auto py-16 xl:max-w-7xl'>
+    <div  className='flex flex-col bg-gradient-to-b from-bg from-10% via-[#CC7C3280] to-bg'>
+      <h3 data-aos="fade-up" data-aos-duration="1000" className='text-black text-5xl font-bold text-center'>Производство</h3>
+      <div data-aos="fade-up" data-aos-duration="1000" className='grid grid-cols-4 gap-36 mx-auto py-16 xl:max-w-7xl'>
         {productionData.map((item, index) => (
           <a className='' href=""><ProductionCard key={index} {...item}/></a>
         ))}
       </div>
       <div className='grid grid-cols-3 grid-rows-3 gap-8 w-2/3 py-8 mx-auto'>
 
-        <div className='bg-orange p-4 rounded-2xl flex justify-center items-center'>
+        <div data-aos="flip-right" data-aos-duration="1500" className='bg-orange p-4 rounded-2xl flex justify-center items-center'>
           <p className='text-white text-center text-2xl'>В 2018г. состоялся запуск собственного производства под брендом “ХПП №1”</p>
         </div>
 
@@ -41,7 +47,7 @@ const Production: React.FC = () => {
 
         <div className="bg-[url('/bread2.jpeg')] p-4 col-span-2 row-span-2 rounded-2xl flex justify-center h-full bg-cover min-h-[28rem] items-center" />
 
-        <div className='bg-orange p-4 rounded-2xl flex justify-center items-center'>
+        <div data-aos="flip-left" data-aos-duration="1500" className='bg-orange p-4 rounded-2xl flex justify-center items-center'>
           <p className='text-white text-center text-2xl'>В 2018г. состоялся запуск собственного производства под брендом “ХПП №1”</p>
         </div>
 

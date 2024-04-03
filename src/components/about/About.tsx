@@ -1,24 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import AnimatedNumbers from 'react-animated-numbers';
 import FoodAbout from '/FoodAbout.png';
 import FoodCounter from '/food2.jpg';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 
 
 const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forwardRef }) => {
-  
+  useEffect(() =>
+  {
+    Aos.init();
+  }, [])
   return (
-    <div ref={forwardRef} className='flex w-full max-h-screen h-full mx-auto flex-col bg-gradient-to-b from-bg to-bg items-center xl:max-w-7xl'>
+    <div data-aos="fade-down" data-aos-duration="1000" ref={forwardRef} className='flex my-auto h-screen w-full py-8 max-h-screen h-full mx-auto flex-col bg-gradient-to-b from-bg to-bg items-center xl:max-w-7xl'>
 
       <h3 className='text-black text-5xl font-bold text-center'>О компании</h3>
-      <div className='flex max-h-[42vh] mx-auto py-8 gap-8'>
+      <div data-aos="fade-left" data-aos-duration="2000" className='flex max-h-[42vh] mx-auto py-8 gap-8'>
         <p className='text-black my-auto w-1/2 text-2xl font-semibold leading-normal	'>
           Группа компаний “Даниэль М” специализируется в логистике, дистрибьюции и производстве хлебобулочных изделий.<br />
           Основные принципы нашего взаимодействия с партнерами - это принципы открытости и надежности.
         </p>
         <img src={FoodAbout} alt='BreadPhoto' className='' />
       </div>
-      <div data-aoc="fade-left" className='flex  max-h-[48vh]  gap-8 h-full w-full'>
+      <div data-aos="fade-right" data-aos-duration="3000" className='flex  max-h-[42vh]  gap-8 h-full w-full'>
         <div className='w-4/5' >
           <img  src={FoodCounter} alt="" className=' h-full'/>
         </div>
@@ -29,8 +34,9 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
               <AnimatedNumbers
                 transitions={(index) => ({
                   type: "spring",
-                  duration: index + 0.5,
+                  duration: index + 3.5,
                 })}
+
                 animateToNumber={300}
                 fontStyle={{
                   width: 32,
@@ -49,7 +55,7 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
               includeComma
               transitions={(index) => ({
                 type: "spring",
-                duration: index + 0.5,
+                duration: index + 3.5,
               })}
               animateToNumber={65}
               fontStyle={{
@@ -68,7 +74,7 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
               <AnimatedNumbers
                 transitions={(index) => ({
                   type: "spring",
-                  duration: index + 0.5,
+                  duration: index + 3.5,
                 })}
                 animateToNumber={2000}
                 fontStyle={{
@@ -91,7 +97,7 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
               <AnimatedNumbers
                 transitions={(index) => ({
                   type: "spring",
-                  duration: index + 0.5,
+                  duration: index + 3.5,
                 })}
                 animateToNumber={3000}
                 fontStyle={{

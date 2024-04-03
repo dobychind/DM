@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Car from '/gazelle.png';
 import Cars from '/gaz.jpeg';
 import Threepl from '/3pl.jpg';
@@ -8,17 +8,22 @@ import Deliver from '/deliver.png';
 import Save from '/save.png';
 import Print from '/print.png';
 import Package from '/package.png';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const Logistic: React.FC = () => {
     const handleClick = () => {
         console.log('Button clicked!');
     };
+    useEffect(()=> {
+        Aos.init()
+    }, [])
 
     return (
         <div className='flex flex-col bg-bg items-center gap-8 justify-center mx-auto w-3/4'>
             <h3 className='text-black text-5xl font-bold text-center'>Логистика</h3>
             <div className='flex justify-between gap-6 items-center py-12'>
-                <img src={Car} alt='brand car' className='' />
+                <img data-aos='fade-left' data-aos-duration="4000" src={Car} alt='brand car' className='translate-x-full ease-in duration-[10000ms] ' />
                 <div className='flex flex-col gap-6'>
                     <p className='text-black text-2xl w-full text-center font-medium'>
                         В 2019г. произошел запуск проекта по оказанию логистических услуг на базе дистрибьюторского опыта.<br />
@@ -34,7 +39,7 @@ const Logistic: React.FC = () => {
 
             <div className='grid grid-cols-3 items-start justify-between gap-9 w-full md:flex-row'>
 
-                <div className='flex w-full bg-white rounded-xl shadow-md p-3 h-full items-center'>
+                <div data-aos="fade-up" data-aos-duration="1000" className='flex w-full bg-white rounded-xl shadow-md p-3 h-full items-center'>
                     <div className='w-full h-full flex flex-col justify-between'>
                         <img src={Threepl} alt='' className='w-full' />
                         <p className='text-main font-semibold text-2xl m-auto py-4 text-center'>Поставки по системе 3PL</p>
@@ -42,7 +47,7 @@ const Logistic: React.FC = () => {
 
                 </div>
 
-                <div className='flex w-full bg-white rounded-xl shadow-md p-3 h-full items-center'>
+                <div data-aos="fade-up" data-aos-duration="2000" className='flex w-full bg-white rounded-xl shadow-md p-3 h-full items-center'>
                     <div className='w-full h-full flex flex-col justify-between'>
                         <img src={Cars} alt='' className='w-full h-full object-cover' />
                         <p className='text-main font-semibold text-2xl my-auto py-4 text-center'>Собственный автопарк 100 машин</p>
@@ -50,7 +55,7 @@ const Logistic: React.FC = () => {
 
                 </div>
 
-                <div className='flex w-full bg-white rounded-xl shadow-md h-full p-3 items-center'>
+                <div data-aos="fade-up" data-aos-duration="3000" className='flex w-full bg-white rounded-xl shadow-md h-full p-3 items-center'>
                     <div className='w-full h-full flex flex-col justify-between'>
                         <img src={Sklad} alt='' className='w-full h-full object-cover' />
                         <p className='text-main font-semibold text-xl m-auto py-4 text-center'>Склады в Москве, Санкт-Петербуге и Новгороде общей площадью 2000 м2</p>
