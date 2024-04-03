@@ -13,7 +13,7 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
     Aos.init();
   }, [])
   return (
-    <div data-aos="fade-down" data-aos-duration="1000" ref={forwardRef} className='flex my-auto h-screen w-full py-8 max-h-screen h-full mx-auto flex-col bg-gradient-to-b from-bg to-bg items-center xl:max-w-7xl'>
+    <div data-aos="fade-down" data-aos-duration="1000" ref={forwardRef} className='flex my-auto  w-full py-8 max-h-screen h-full mx-auto flex-col bg-gradient-to-b from-bg to-bg items-center xl:max-w-7xl'>
 
       <h3 className='text-black text-5xl font-bold text-center'>О компании</h3>
       <div data-aos="fade-left" data-aos-duration="2000" className='flex max-h-[42vh] mx-auto py-8 gap-8'>
