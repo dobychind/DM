@@ -3,9 +3,13 @@ import AnimatedNumbers from 'react-animated-numbers';
 import FoodAbout from '/FoodAbout.png';
 import FoodCounter from '/food2.jpg';
 
+
+
 const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forwardRef }) => {
+  
   return (
     <div ref={forwardRef} className='flex w-full max-h-screen h-full mx-auto flex-col bg-gradient-to-b from-bg to-bg items-center xl:max-w-7xl'>
+
       <h3 className='text-black text-5xl font-bold text-center'>О компании</h3>
       <div className='flex max-h-[42vh] mx-auto py-8 gap-8'>
         <p className='text-black my-auto w-1/2 text-2xl font-semibold leading-normal	'>
