@@ -19,18 +19,18 @@ export default () => {
         <Swiper
             modules={[Navigation, Pagination]}
             spaceBetween={50}
-            slidesPerView={4}
+            slidesPerView={5}
             navigation
             pagination={{ clickable: true }}
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log('slide change')}
             className='flex px-10'
         >
-            <SwiperSlide className='flex items-center h-[200px] py-4'><img src={Lenta} alt='Lenta' className=''/></SwiperSlide>
-            <SwiperSlide className='flex h-[200px] items-center justify-center'><img src={Auchan} alt='Lenta' className=''/></SwiperSlide>
-            <SwiperSlide className='flex h-[200px] items-center justify-center'><img src={Dixy} alt='Lenta' className='h-[200px]'/></SwiperSlide>
-            <SwiperSlide className='flex h-[200px] items-center justify-center'><img src={Spar} alt='Lenta' className='h-[200px]'/></SwiperSlide>
-            <SwiperSlide className='flex h-[200px] items-center justify-center'><img src={Okey} alt='Lenta' className='h-[200px]'/></SwiperSlide>
+            <SwiperSlide className='flex items-center h-[150px] py-4'><img src={Lenta} alt='Lenta' className=''/></SwiperSlide>
+            <SwiperSlide className='flex h-[150px] items-center justify-center'><img src={Auchan} alt='Lenta' className=''/></SwiperSlide>
+            <SwiperSlide className='flex h-[150px] items-center justify-center'><img src={Dixy} alt='Lenta' className='h-[150px]'/></SwiperSlide>
+            <SwiperSlide className='flex h-[150px] items-center justify-center'><img src={Spar} alt='Lenta' className='h-[150px]'/></SwiperSlide>
+            <SwiperSlide className='flex h-[150px] items-center justify-center'><img src={Okey} alt='Lenta' className='h-[150px]'/></SwiperSlide>
         </Swiper>
     );
 };

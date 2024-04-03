@@ -1,7 +1,7 @@
 import React from 'react';
 import Car from '/gazelle.png';
-import Cars from '/cars.png';
-import Threepl from '/3pl.png';
+import Cars from '/gaz.jpeg';
+import Threepl from '/3pl.jpg';
 import Sklad from '/sklad.png';
 import Button from '../button/Button';
 import Deliver from '/deliver.png';
@@ -35,7 +35,7 @@ const Logistic: React.FC = () => {
             <div className='grid grid-cols-3 items-start justify-between gap-9 w-full md:flex-row'>
 
                 <div className='flex w-full bg-white rounded-xl shadow-md p-3 h-full items-center'>
-                    <div className='w-full'>
+                    <div className='w-full h-full flex flex-col justify-between'>
                         <img src={Threepl} alt='' className='w-full' />
                         <p className='text-main font-semibold text-2xl m-auto py-4 text-center'>Поставки по системе 3PL</p>
                     </div>
@@ -43,16 +43,16 @@ const Logistic: React.FC = () => {
                 </div>
 
                 <div className='flex w-full bg-white rounded-xl shadow-md p-3 h-full items-center'>
-                    <div className='w-full'>
-                        <img src={Cars} alt='' className='w-full' />
+                    <div className='w-full h-full flex flex-col justify-between'>
+                        <img src={Cars} alt='' className='w-full h-full object-cover' />
                         <p className='text-main font-semibold text-2xl my-auto py-4 text-center'>Собственный автопарк 100 машин</p>
                     </div>
 
                 </div>
 
                 <div className='flex w-full bg-white rounded-xl shadow-md p-3 items-center'>
-                    <div className='w-full'>
-                        <img src={Sklad} alt='' className='w-full' />
+                    <div className='w-full h-full flex flex-col justify-between'>
+                        <img src={Sklad} alt='' className='w-full h-full object-cover' />
                         <p className='text-main font-semibold text-xl m-auto py-4 text-center'>Склады в Москве, Санкт-Петербуге и Новгороде общей площадью 2000 м2</p>
                     </div>
 
