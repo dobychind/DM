@@ -5,9 +5,9 @@ const Distribution = () => {
     return (
         <div className=" pb-16">
             <div className="flex w-full flex-col  mx-auto items-center justify-center xl:max-w-7xl">
-                <h3 className='text-black text-7xl my-16 font-bold text-center'>Дистрибьюция</h3>
-                <img src={BreadDist} alt="" className=''/>
-                <div className='flex py-12 gap-12 justify-between'>
+                <h3 className='text-black text-5xl my-8 font-bold text-center'>Дистрибьюция</h3>
+                <img src={BreadDist} alt="" className='h-[60vh] object-cover w-full'/>
+                <div className='flex py-8 gap-12 justify-between'>
                     <div className='flex flex-col gap-4'>
                         <p className=' text-black text-2xl leading-relaxed font-medium	'>
                             ГК «Даниэль М» на протяжении 10 лет занимает ключевую позицию в отрасли дистрибуции хлеба на территории Москвы, Санкт-Петербурга и их областей. 

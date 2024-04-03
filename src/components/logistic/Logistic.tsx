@@ -15,7 +15,7 @@ const Logistic: React.FC = () => {
     };
 
     return (
-        <div className='flex flex-col bg-bg items-center gap-9 justify-center mx-auto w-3/4'>
+        <div className='flex flex-col bg-bg items-center gap-8 justify-center mx-auto w-3/4'>
             <h3 className='text-black text-5xl font-bold text-center'>Логистика</h3>
             <div className='flex justify-between gap-6 items-center py-12'>
                 <img src={Car} alt='brand car' className='' />
@@ -50,7 +50,7 @@ const Logistic: React.FC = () => {
 
                 </div>
 
-                <div className='flex w-full bg-white rounded-xl shadow-md p-3 items-center'>
+                <div className='flex w-full bg-white rounded-xl shadow-md h-full p-3 items-center'>
                     <div className='w-full h-full flex flex-col justify-between'>
                         <img src={Sklad} alt='' className='w-full h-full object-cover' />
                         <p className='text-main font-semibold text-xl m-auto py-4 text-center'>Склады в Москве, Санкт-Петербуге и Новгороде общей площадью 2000 м2</p>

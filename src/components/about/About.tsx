@@ -14,9 +14,9 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
         </p>
         <img src={FoodAbout} alt='BreadPhoto' className='' />
       </div>
-      <div className='flex  max-h-[48vh]  gap-8 h-full w-full'>
+      <div data-aoc="fade-left" className='flex  max-h-[48vh]  gap-8 h-full w-full'>
         <div className='w-4/5' >
-          <img src={FoodCounter} alt="" className=' h-full'/>
+          <img  src={FoodCounter} alt="" className=' h-full'/>
         </div>
         <div className='flex flex-col w-full justify-between'>
           <div className='flex h-full gap-4 items-center font-bold text-main text-2xl'>
