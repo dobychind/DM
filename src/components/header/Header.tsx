@@ -10,8 +10,8 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ scrollToAbout, forwardRef }) => {
 
   return (
-    <section ref={forwardRef} className="bg-[url('/back-main.jpg')] bg-cover">
-      <div className="flex  flex-col items-center">
+    <section className="bg-[url('/back-main.jpg')] bg-cover">
+      <div  ref={forwardRef} className="flex  flex-col items-center">
         <div className='flex mx-auto w-full justify-between items-center py-3 font-main shadow-transparent bg-zinc-700 bg-opacity-70'>
           <div className='flex max-w-[95vw] mx-auto gap-5'>
             <a href="#"><p className='text-white text-2xl font-semibold hover:underline hover:text-blue '>Главная</p></a>

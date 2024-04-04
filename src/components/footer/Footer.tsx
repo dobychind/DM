@@ -25,7 +25,7 @@ const Footer: React.FC<FooterProps> = ({ scrollToHeader }) => {
           </div>
         </div>
         <div className='flex justify-end mt-auto h-fit'>
-          <a href="#"><Button onClick={scrollToHeader} text='Наверх' /></a>
+          <Button onClick={scrollToHeader} text='Наверх'/>
         </div>
       </div>
     </div>
