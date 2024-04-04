@@ -8,6 +8,7 @@ import Footer from '../components/footer/Footer'
 
 const MainPage = () => {
   const aboutRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
 
   // Функция для скролла к компоненту About
   const scrollToAbout = () => {
@@ -18,16 +19,26 @@ const MainPage = () => {
     }, 100); // Примерно 100 миллисекунд задержки
   };
 
+  const scrollToHeader = () => {
+    setTimeout(() => {
+      if (headerRef.current) {
+        headerRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100); // Примерно 100 миллисекунд задержки
+  };
+
+
+
   return (
     <div className='font-body'>
-        <Header scrollToAbout={scrollToAbout} forwardRef={aboutRef}/>
+        <Header scrollToAbout={scrollToAbout} forwardRef={headerRef}/>
         <div className="flex bg-bg py-[4rem] flex-col gap-[4rem]">
           <About forwardRef={aboutRef}/>
           <Production />
           <Distribution/>
           <Logistic/>
         </div>
-        <Footer scrollToAbout={scrollToAbout}/>
+        <Footer scrollToHeader={scrollToHeader}/>
 
     </div>
   )
