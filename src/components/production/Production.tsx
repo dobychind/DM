@@ -58,7 +58,7 @@ const Production: React.FC = () => {
       </div>
         
       <div className='mx-auto'>
-        <Button onClick={handleClick} text='Узнать больше' color='orange'/>
+        <a href="/production"><Button onClick={handleClick} text='Узнать больше' color='orange'/></a>
       </div>
     </div>
   );
