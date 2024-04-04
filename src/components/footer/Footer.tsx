@@ -1,10 +1,11 @@
 import DmLogo from '/DmLogo.svg';
 import Button from '../button/Button';
 
-const Footer = () => {
-  const handleClick = () => {
-    console.log('Button clicked!');
-  };
+interface FooterProps {
+  scrollToAbout: () => void; // Принимаем функцию для скролла к компоненту About
+}
+
+const Footer: React.FC<FooterProps> = ({ scrollToAbout }) => {
   return (
 
     <div className=" bg-[url('/back.jpg')] bg-bottom bg-cover">
@@ -24,7 +25,7 @@ const Footer = () => {
           </div>
         </div>
         <div className='flex justify-end mt-auto h-fit'>
-          <a href="#"><Button onClick={handleClick} text='Наверх' /></a>
+          <a href="#"><Button onClick={scrollToAbout} text='Наверх' /></a>
         </div>
       </div>
     </div>

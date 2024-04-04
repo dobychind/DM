@@ -14,6 +14,7 @@ export default {
       },
       fontFamily: {
         body: ['Manrope'],
+        title: ['Bitter']
       }
     },
     gridTemplateRows: {

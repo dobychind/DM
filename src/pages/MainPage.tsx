@@ -20,15 +20,14 @@ const MainPage = () => {
 
   return (
     <div className='font-body'>
-        <Header scrollToAbout={scrollToAbout}/>
-        {/* <Slider></Slider> */}
+        <Header scrollToAbout={scrollToAbout} forwardRef={aboutRef}/>
         <div className="flex bg-bg py-[4rem] flex-col gap-[4rem]">
           <About forwardRef={aboutRef}/>
           <Production />
           <Distribution/>
           <Logistic/>
         </div>
-        <Footer/>
+        <Footer scrollToAbout={scrollToAbout}/>
 
     </div>
   )

@@ -66,7 +66,7 @@ const Logistic: React.FC = () => {
 
             <div className='flex flex-col items-center justify-center'>
                 <h4 className='text-black text-3xl font-bold text-center'>Предоставляемые услуги</h4>
-                <div className='grid grid-cols-4 py-9 gap-8 '>
+                <div className='grid grid-cols-4 py-8 gap-8 '>
                     <div className='flex flex-col bg-white justify-around gap-4 items-center p-3 py-6 rounded-3xl shadow-md'>
                         <img src={Deliver} alt='' />
                         <p className='font-semibold text-2xl text-main text-center'>Доставка в торговую точку</p>
