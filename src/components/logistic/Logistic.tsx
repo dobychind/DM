@@ -11,7 +11,7 @@ import Package from '/package.png';
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 
-const Logistic: React.FC = () => {
+const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forwardRef }) => {
     const handleClick = () => {
         console.log('Button clicked!');
     };
@@ -20,16 +20,16 @@ const Logistic: React.FC = () => {
     }, [])
 
     return (
-        <div className='flex flex-col overflow-hidden bg-bg items-center gap-8 justify-center mx-auto w-3/4'>
+        <div ref={forwardRef} className='flex flex-col overflow-hidden bg-bg items-center gap-8 justify-center mx-auto w-3/4'>
             <h3 className='text-black text-5xl font-bold text-center'>Логистика</h3>
             <div className='flex justify-between gap-6 items-center py-12'>
                 <img data-aos='fade-left' data-aos-duration="6000" data-aos-anchor-placement="bottom-bottom" data-aos-easing="linear" src={Car} alt='brand car' className=' translate-x-full ease-in duration-[4000ms] ' />
                 <div className='flex flex-col gap-6'>
-                    <p className='text-black text-2xl w-full text-center font-medium'>
+                    <p className='text-black text-2xl w-full font-medium'>
                         В 2019г. произошел запуск проекта по оказанию логистических услуг на базе дистрибьюторского опыта.<br />
                         Наша логистическая компания специализируется на предоставлении высококачественных услуг по системе 3PL.
                     </p>
-                    <div className='mx-auto'>
+                    <div className=''>
                         <Button onClick={handleClick} text='Подробнее' />
                     </div>
                 </div>

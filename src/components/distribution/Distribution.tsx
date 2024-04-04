@@ -4,13 +4,13 @@ import BreadDist from '/FoodDistrib.jpg';
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 
-const Distribution = () => {
+const Distribution: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forwardRef }) => {
     useEffect(() => {
         Aos.init();
     }, [])
     return (
         <div className="pb-8">
-            <div className="flex w-full flex-col  mx-auto items-center justify-center xl:max-w-7xl">
+            <div ref={forwardRef} className="flex w-full flex-col  mx-auto items-center justify-center xl:max-w-7xl">
                 <h3 className='text-black text-5xl my-8 font-bold text-center'>Дистрибьюция</h3>
                 <img data-aos="fade-down" data-aos-duration="2000" src={BreadDist} alt="" className='h-[60vh] object-cover w-full' />
                 <div className='flex py-8 gap-12 justify-between'>

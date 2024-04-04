@@ -21,7 +21,7 @@ const productionData: ProductionDataItem[] = [
   { logo: RzevLogo, name: 'Ржевка' }
 ];
 
-const Production: React.FC = () => {
+const Production: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forwardRef }) => {
   const handleClick = () => {
     console.log('Button clicked!');
   };
@@ -30,7 +30,7 @@ const Production: React.FC = () => {
     Aos.init();
   }, [])
   return (
-    <div  className='flex flex-col bg-gradient-to-b from-bg from-10% via-[#CC7C3280] to-bg'>
+    <div  ref={forwardRef} className='flex flex-col bg-gradient-to-b from-bg from-10% via-[#CC7C3280] to-bg'>
       <h3 data-aos="fade-up" data-aos-duration="1000" className='text-black text-5xl font-bold text-center'>Производство</h3>
       <div data-aos="fade-up" data-aos-duration="1000" className='grid grid-cols-4 gap-36 mx-auto py-16 xl:max-w-7xl'>
         {productionData.map((item, index) => (
@@ -58,7 +58,7 @@ const Production: React.FC = () => {
       </div>
         
       <div className='mx-auto'>
-        <a href="/production"><Button onClick={handleClick} text='Узнать больше' color='orange'/></a>
+        <a href="/DM/production"><Button onClick={handleClick} text='Узнать больше' color='orange'/></a>
       </div>
     </div>
   );
