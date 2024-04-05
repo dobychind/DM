@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom"
+
 const Error = () => {
   return (
     <div>
-      
+      <Link to="/">Home</Link>
     </div>
   )
 }

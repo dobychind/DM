@@ -58,7 +58,7 @@ const MainPage = () => {
 
 
   return (
-    <div className='font-body'>
+    <div id='root' className='font-body'>
         <Header scrollToLogistic={scrollToLogistic} scrollToPoduction={scrollToPoduction} scrollToDistribution={scrollToDistribution} scrollToAbout={scrollToAbout} forwardRef={headerRef}/>
         <div className="flex bg-bg py-[4rem] flex-col gap-[4rem]">
           <About forwardRef={aboutRef}/>
