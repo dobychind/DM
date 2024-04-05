@@ -8,6 +8,7 @@ import Button from '../button/Button';
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import Services from './Services';
+import { Link } from 'react-router-dom';
 
 const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forwardRef }) => {
     const handleClick = () => {
@@ -28,7 +29,7 @@ const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ f
                         Наша логистическая компания специализируется на предоставлении высококачественных услуг по системе 3PL.
                     </p>
                     <div className=''>
-                        <Button onClick={handleClick} text='Подробнее' />
+                       <Link to="/logistic"> <Button onClick={handleClick} text='Подробнее' /></Link>
                     </div>
                 </div>
             </div>
