@@ -12,22 +12,22 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
     Aos.init();
   }, [])
   return (
-    <div data-aos="fade-down" data-aos-duration="1000" className='flex my-auto w-full py-8 max-h-screen h-full mx-auto flex-col bg-gradient-to-b from-bg to-bg items-center xl:max-w-7xl'>
+    <div data-aos="fade-down" data-aos-duration="1000" className='flex my-auto w-full gap-8 py-8 max-h-screen h-full mx-auto flex-col bg-gradient-to-b from-bg to-bg items-center xl:max-w-7xl'>
 
       <h3 className='text-black text-5xl font-bold text-center'>О компании</h3>
 
-      <div ref={forwardRef} data-aos="fade-left" data-aos-duration="2000" className='flex max-h-[42vh] mx-auto py-8 gap-8'>
+      <div ref={forwardRef} data-aos="fade-left" data-aos-duration="2000" className='flex max-h-[42vh] mx-auto gap-8'>
         <p className='text-black my-auto w-1/2 text-2xl font-semibold leading-normal	'>
           Группа компаний “Даниэль М” специализируется в логистике, дистрибьюции и производстве хлебобулочных изделий.<br />
           Основные принципы нашего взаимодействия с партнерами - это принципы открытости и надежности.
         </p>
         <div>
-          <img src={FoodAbout} alt='BreadPhoto' className='w-full object-cover h-full' />
+          <img src={FoodAbout} alt='BreadPhoto' className='w-full rounded-xl object-cover h-full' />
         </div>
       </div>
       <div data-aos="fade-right" data-aos-duration="3000" className='flex  max-h-[42vh]  gap-8 h-full w-full'>
         <div className='w-4/5' >
-          <img src={FoodCounter} alt="" className='w-full object-cover h-full' />
+          <img src={FoodCounter} alt="" className='w-full rounded-xl object-cover h-full' />
         </div>
         <div className='flex flex-col w-full justify-between'>
           <div className='flex h-full gap-4 items-center font-bold text-main text-2xl'>

@@ -15,7 +15,7 @@ const Header: React.FC<HeaderProps> = ({ scrollToAbout, scrollToDistribution, sc
   return (
     <section className="bg-[url('/back-main.jpg')] bg-cover">
       <div  ref={forwardRef} className="flex  flex-col items-center">
-        <div className='flex mx-auto w-full justify-between items-center py-3 font-main shadow-transparent bg-zinc-700 bg-opacity-70'>
+        <div className='flex mx-auto w-full justify-between items-center py-3 font-main shadow-transparent bg-gradient-to-b from-zinc-700 via-70% to-transparent bg-opacity-70'>
           <div className='flex max-w-[95vw] mx-auto gap-5'>
             <a onClick={scrollToAbout} href="#"><p className='text-white text-2xl font-semibold hover:underline hover:text-blue '>Главная</p></a>
             <a onClick={scrollToAbout} href="#"><p className='text-white text-2xl font-semibold hover:underline hover:text-blue'>О компании</p></a>
