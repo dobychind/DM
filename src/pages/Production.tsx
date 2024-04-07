@@ -1,4 +1,4 @@
-const Production = () => {
+const production = () => {
   return (
     <div>
       Production
@@ -6,4 +6,4 @@ const Production = () => {
   )
 }
 
-export default Production
+export default production
