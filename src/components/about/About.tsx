@@ -12,12 +12,12 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
     Aos.init();
   }, [])
   return (
-    <div data-aos="fade-down" data-aos-duration="1000" className='flex my-auto w-full gap-8 py-8 max-h-screen h-full mx-auto flex-col bg-gradient-to-b from-bg to-bg items-center xl:max-w-7xl'>
+    <div data-aos="fade-down" data-aos-duration="1000" className='flex px-4 flex-col my-auto w-full gap-4 h-full mx-auto bg-bg items-center md:py-8 md:gap-8 md:max-h-screen xl:max-w-7xl'>
 
       <h3 className='text-black text-5xl font-bold text-center'>О компании</h3>
 
-      <div ref={forwardRef} data-aos="fade-left" data-aos-duration="2000" className='flex max-h-[42vh] mx-auto gap-8'>
-        <p className='text-black my-auto w-1/2 text-2xl font-semibold leading-normal	'>
+      <div ref={forwardRef} data-aos="fade-left" data-aos-duration="2000" className='flex flex-col h-full w-full mx-auto gap-4 md:gap-8 md:max-h-[42vh] md:flex-row '>
+        <p className='text-black my-auto text-2xl font-semibold leading-normal text-center md:text-start	md:w-1/2'>
           Группа компаний “Даниэль М” специализируется в логистике, дистрибьюции и производстве хлебобулочных изделий.<br />
           Основные принципы нашего взаимодействия с партнерами - это принципы открытости и надежности.
         </p>
@@ -25,14 +25,14 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
           <img src={FoodAbout} alt='BreadPhoto' className='w-full rounded-xl object-cover h-full' />
         </div>
       </div>
-      <div data-aos="fade-right" data-aos-duration="3000" className='flex  max-h-[42vh]  gap-8 h-full w-full'>
-        <div className='w-4/5' >
+      <div data-aos="fade-right" data-aos-duration="3000" className='flex flex-col gap-8 h-full w-full md:max-h-[42vh] md:flex-row'>
+        <div className='w-4/5 hidden md:block' >
           <img src={FoodCounter} alt="" className='w-full rounded-xl object-cover h-full' />
         </div>
         <div className='flex flex-col w-full justify-between'>
-          <div className='flex h-full gap-4 items-center font-bold text-main text-2xl'>
+          <div className='flex h-full py-4 gap-4 items-center font-bold text-main text-2xl'>
             <div className='flex  items-center'>
-              <div ><p className='text-5xl mt-[-10px] text-blue font-bold'> &#62;</p></div>
+              <div ><p className='text-5xl  mt-[-10px] text-blue font-bold'> &#62;</p></div>
               <AnimatedNumbers
                 transitions={(index) => ({
                   type: "spring",
@@ -49,10 +49,10 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
                 }}
               />
             </div>
-            <p className='leading-none	'>Cотрудников работают в нашей компании</p>
+            <p className='leading-none	'>Cотрудников</p>
           </div>
 
-          <div className='flex pl-[2rem] gap-6 h-full items-center border-y-2  border-t-main border-b-main font-bold text-main text-2xl'>
+          <div className='flex pl-[2rem] py-4 gap-6 h-full items-center border-y-2  border-t-main border-b-main font-bold text-main text-2xl'>
             <AnimatedNumbers
               includeComma
               transitions={(index) => ({
@@ -67,10 +67,10 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
                 fontSize: '3rem',
                 color: "#71B4BE",
               }}
-            />                    Автомобилей в собственном парке
+            />                    Автомобилей
           </div>
 
-          <div className='flex gap-6 h-full border-b-2 border-b-main items-center  font-bold text-main text-2xl'>
+          <div className='flex gap-6 py-4 h-full border-b-2 border-b-main items-center  font-bold text-main text-2xl'>
             <div className='flex items-center'>
               <p className='text-5xl mt-[-10px] text-blue font-bold'> &#62;</p>
               <AnimatedNumbers
@@ -89,11 +89,11 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
               />
             </div>
             <p className='leading-none'>
-              М<sup>2 </sup> площадь складских помещений
+              М<sup>2 </sup> площадь складов
             </p>
           </div>
 
-          <div className='flex gap-6 items-center h-full font-bold text-main text-2xl'>
+          <div className='flex gap-6 py-4 items-center h-full font-bold text-main text-2xl'>
             <div className='flex items-center'>
               <p className='text-5xl  mt-[-10px] text-blue font-bold'> &#62;</p>
               <AnimatedNumbers
