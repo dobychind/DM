@@ -1,7 +1,7 @@
 const Logistic = () => {
   return (
     <div>
-      
+      Логистика
     </div>
   )
 }

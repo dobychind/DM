@@ -7,6 +7,7 @@ import NovLogo from '/NovHleb.png';
 import RzevLogo from '/rzevka.png';
 import Aos from 'aos'
 import 'aos/dist/aos.css'
+import { Link } from 'react-router-dom';
 
 
 interface ProductionDataItem {
@@ -52,13 +53,13 @@ const Production: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({
         </div>
 
         <div className="bg-[url('/production.png')] bg-cover bg-no-repeat p-4 rounded-2xl flex justify-end  min-h-[16rem] items-end">
-          <Button color='orange' onClick={handleClick} text="Продукция"/>
+          <Link to="" ><Button color='orange' onClick={handleClick} text="Продукция"/></Link>
         </div>
 
       </div>
         
       <div className='mx-auto'>
-        <a href="/DM/production"><Button onClick={handleClick} text='Узнать больше' color='orange'/></a>
+        <Link to="/production"><Button onClick={handleClick} text='Узнать больше' color='orange'/></Link>
       </div>
     </div>
   );
