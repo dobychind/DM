@@ -24,13 +24,33 @@ export default () => {
             pagination={{ clickable: true }}
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log('slide change')}
-            className='flex px-10'
+            className='flex px-10 h-[180px] flex-wrap'
+            breakpoints={{
+                320:{
+                    slidesPerView: 1,   
+                },
+                420: {
+                    slidesPerView: 2,
+                    spaceBetween: 40
+                },
+                768: {
+                    slidesPerView: 3,
+                },
+                1024: {
+                    slidesPerView: 4
+                },
+                1280: {
+                    slidesPerView: 5
+                }
+
+
+            }}
         >
-            <SwiperSlide className='flex items-center h-[150px] py-4'><img src={Lenta} alt='Lenta' className=''/></SwiperSlide>
-            <SwiperSlide className='flex h-[150px] items-center justify-center'><img src={Auchan} alt='Lenta' className=''/></SwiperSlide>
-            <SwiperSlide className='flex h-[150px] items-center justify-center'><img src={Dixy} alt='Lenta' className='h-[150px]'/></SwiperSlide>
-            <SwiperSlide className='flex h-[150px] items-center justify-center'><img src={Spar} alt='Lenta' className='h-[150px]'/></SwiperSlide>
-            <SwiperSlide className='flex h-[150px] items-center justify-center'><img src={Okey} alt='Lenta' className='h-[150px]'/></SwiperSlide>
+            <SwiperSlide className='flex h-[150px] items-center py-4'><img src={Lenta} alt='Lenta' className='object-cover'/></SwiperSlide>
+            <SwiperSlide className='flex h-[150px] items-center justify-center'><img src={Auchan} alt='Lenta' className='object-contain'/></SwiperSlide>
+            <SwiperSlide className='flex h-[150px] items-center justify-center'><img src={Dixy} alt='Lenta' className='h-[150px] object-contain'/></SwiperSlide>
+            <SwiperSlide className='flex h-[150px] items-center justify-center'><img src={Spar} alt='Lenta' className='h-[150px] object-contain'/></SwiperSlide>
+            <SwiperSlide className='flex h-[150px] items-center justify-center'><img src={Okey} alt='Lenta' className='h-[150px] object-contain'/></SwiperSlide>
         </Swiper>
     );
 };

@@ -11,7 +11,7 @@ const Footer: React.FC<FooterProps> = ({ scrollToHeader }) => {
     <div className="bg-[url('/back.jpg')] bg-bottom bg-cover">
       <div className="flex flex-col py-8 gap-4 mx-auto max-w-[95%] w-full justify-between md:flex-row">
 
-        <div className='flex flex-col items-center gap-10 md:flex-row'>
+        <div className='flex flex-col md:items-center md:gap-4 gap-8 md:flex-row'>
           <img src={DmLogo} alt="" className='h-[70px]' />
           <div className='font-semibold md:w-1/3'>
             <p className='text-white'>Москва, 2-й Кожевнический переулок, д.12</p>

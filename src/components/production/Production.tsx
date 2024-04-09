@@ -31,14 +31,14 @@ const Production: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({
     Aos.init();
   }, [])
   return (
-    <div  ref={forwardRef} className='flex flex-col px-4 bg-gradient-to-b from-bg from-10% via-[#CC7C3280] to-bg'>
+    <div  ref={forwardRef} className='flex flex-col px-4 bg-gradient-to-b from-bg from-10% via-[#CC7C3280] to-bg '>
       <h3 data-aos="fade-up" data-aos-duration="1000" className='text-black text-3xl font-bold text-center md:text-5xl'>Производство</h3>
-      <div data-aos="fade-up" data-aos-duration="1000" className='grid grid-cols-2 gap-4 pt-8 mx-auto xl:max-w-7xl md:grid-cols-4 md:py-16 md:gap-36'>
+      <div data-aos="fade-up" data-aos-duration="1000" className='grid grid-cols-2 gap-4 pt-8 mx-auto lg:w-[90%] md:grid-cols-4 md:py-16 md:gap-16 xl:gap-36'>
         {productionData.map((item, index) => (
           <a className='' href=""><ProductionCard key={index} {...item}/></a>
         ))}
       </div>
-      <div className='flex flex-col  gap-4 w-full py-8 mx-auto md:grid md:grid-cols-3 md:grid-rows-3 md:gap-8'>
+      <div className='flex flex-col  gap-4 w-full py-8 mx-auto md:grid md:grid-cols-3 md:grid-rows-3 md:gap-8 lg:w-[70%]'>
 
         <div data-aos="flip-right" data-aos-duration="1500" className='bg-orange w-full p-4 rounded-2xl flex justify-center items-center'>
           <p className='text-white text-center text-xl md:text-2xl'>В 2018г. состоялся запуск собственного производства под брендом “ХПП №1”</p>

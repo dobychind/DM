@@ -1,11 +1,24 @@
 /* Цвет активных стрелок */
 .swiper-button-next,
 .swiper-button-prev {
-    color: #CC7C32 !important;
+    color: #cc7c32 !important;
+    display: block;
 }
 
 /* Цвет неактивных стрелок */
 .swiper-button-next::after,
 .swiper-button-prev::after {
-    color: #cc7c32e5 !important; 
+    color: #cc7c32e5 !important;
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        display: none;
+    }
 }

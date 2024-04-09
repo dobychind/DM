@@ -29,7 +29,7 @@ const Services = () => {
                 </div>
                 <div data-aos="flip-left" data-aos-duration="3000" data-aos-anchor-placement="bottom-bottom" className='flex flex-col bg-white justify-center gap-4 items-center p-3 rounded-3xl shadow-md box-border'>
                     <img className=' object-cover w-[160px] md:w-[200px]' src={Package} alt='' />
-                    <p className='md:font-semibold font-medium text-xl md:text-2xl text-main text-center'>Комплектование</p>
+                    <p className='font-semibold text-xl text-wrap md:text-2xl text-main text-center'>Упаковка</p>
                 </div>
             </div>
         </div>
