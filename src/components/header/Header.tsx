@@ -49,8 +49,9 @@ const Header: React.FC<HeaderProps> = ({ scrollToAbout, scrollToDistribution, sc
             </button>
           </div>
         )}
-        <button onClick={toggleMenu} className={`text-white w-[32px] h-[32px] ml-4 mt-4 transition-opacity duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}>
+        <button onClick={toggleMenu} className={`text-white flex flex-col items-center w-[32px] h-[32px] ml-4 mt-4 transition-opacity duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}>
           <img src={Burger} alt=''/>
+          <p>Меню</p>
         </button>
       </div>
       </div>
