@@ -9,7 +9,7 @@ const Distribution: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = 
         Aos.init();
     }, [])
     return (
-        <div className="pb-8">
+        <div className="md:pb-8">
             <div ref={forwardRef} className="flex w-full flex-col px-4 mx-auto items-center justify-center md:px-0 lg:w-[90%]">
                 <h3 className='text-black text-3xl mb-4 font-bold text-center md:my-8 md:text-5xl'>Дистрибьюция</h3>
                 <img data-aos="fade-down" data-aos-duration="2000" src={BreadDist} alt="" className='md:h-[60vh] rounded-xl object-cover w-full' />
