@@ -2,7 +2,7 @@
   "name": "dm",
   "private": true,
   "homepage": "https://dobychind.github.io/DM/",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
