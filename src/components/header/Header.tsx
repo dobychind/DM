@@ -37,7 +37,7 @@ const Header: React.FC<HeaderProps> = ({ scrollToAbout, scrollToDistribution, sc
         </div>
         <div className="md:hidden relative w-full">
         {isMenuOpen && (
-          <div data-aos="fade-left" data-aos-duration="500" className={`flex flex-col gap-4 text-2xl bg-gray-800  py-6 pl-6 absolute top-0 left-0 w-full`}>
+          <div data-aos="fade-right" data-aos-duration="500" className={`flex flex-col gap-4 text-2xl bg-gray-800  py-6 pl-6 absolute top-0 left-0 w-full`}>
             <a onClick={scrollToAbout} href="#" className='block text-white w-fit font-semibold hover:underline hover:text-blue '>Главная</a>
             <a onClick={scrollToAbout} href="#" className='block text-white w-max font-semibold hover:underline hover:text-blue'>О компании</a>
             <a onClick={scrollToPoduction} href="#" className='block text-white w-fit font-semibold hover:underline hover:text-blue'>Производство</a>
