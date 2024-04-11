@@ -37,13 +37,13 @@ const Header: React.FC<HeaderProps> = ({ scrollToAbout, scrollToDistribution, sc
         </div>
         <div className="md:hidden relative w-full">
         {isMenuOpen && (
-          <div data-aos="fade-down" data-aos-duration="500" className={`flex flex-col gap-4 text-2xl bg-gray-800  py-6 pl-6 absolute top-0 left-0 w-full`}>
-            <a onClick={scrollToAbout} href="#" className='block text-white font-semibold hover:underline hover:text-blue '>Главная</a>
+          <div data-aos="fade-left" data-aos-duration="500" className={`flex flex-col gap-4 text-2xl bg-gray-800  py-6 pl-6 absolute top-0 left-0 w-full`}>
+            <a onClick={scrollToAbout} href="#" className='block text-white w-fit font-semibold hover:underline hover:text-blue '>Главная</a>
             <a onClick={scrollToAbout} href="#" className='block text-white w-max font-semibold hover:underline hover:text-blue'>О компании</a>
-            <a onClick={scrollToPoduction} href="#" className='block text-white font-semibold hover:underline hover:text-blue'>Производство</a>
-            <a onClick={scrollToDistribution} href="#" className='block text-white font-semibold hover:underline hover:text-blue'>Дистрибьюция</a>
-            <a onClick={scrollToLogistic} href="#" className='block text-white font-semibold hover:underline hover:text-blue'>Логистика</a>
-            <a onClick={scrollToAbout} href="#" className='block text-white font-semibold hover:underline hover:text-blue'>Прочее</a>
+            <a onClick={scrollToPoduction} href="#" className='block text-white w-fit font-semibold hover:underline hover:text-blue'>Производство</a>
+            <a onClick={scrollToDistribution} href="#" className='block text-white w-fit font-semibold hover:underline hover:text-blue'>Дистрибьюция</a>
+            <a onClick={scrollToLogistic} href="#" className='block text-white w-fit font-semibold hover:underline hover:text-blue'>Логистика</a>
+            <a onClick={scrollToAbout} href="#" className='block text-white w-fit font-semibold hover:underline hover:text-blue'>Прочее</a>
             <button onClick={toggleMenu} className="text-white absolute w-[32px] h-[32px] top-6 right-6">
               <img src={Close} alt='close button'/>
             </button>
