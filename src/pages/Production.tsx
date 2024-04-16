@@ -1,11 +1,9 @@
-import { Link } from "react-router-dom"
+import Navbar from "../components/navbar/Navbar"
 
 const production = () => {
   return (
     <div>
-      Production
-      <Link to="/">Home</Link>
-
+      <Navbar/>
     </div>
   )
 }

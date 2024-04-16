@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom"
+import Navbar from "../components/navbar/Navbar"
 
 const Logistic = () => {
   return (
     <div>
-      Логистика
-      <Link to="/">Home</Link>
+      <Navbar/>
+
     </div>
   )
 }

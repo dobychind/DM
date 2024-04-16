@@ -12,11 +12,11 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
     Aos.init();
   }, [])
   return (
-    <div  ref={forwardRef} data-aos="fade-down" data-aos-duration="1000" className='flex px-4 flex-col my-auto w-full gap-4 mx-auto bg-bg items-center md:py-8 md:gap-8 md:max-h-screen lg:w-[90%]'>
+    <div   data-aos="fade-down" data-aos-duration="1000" className='flex px-4 flex-col my-auto w-full gap-4 mx-auto bg-bg items-center md:py-8 md:gap-8 md:max-h-screen lg:w-[90%]'>
 
       <h3 className='text-black text-5xl font-bold text-center'>О компании</h3>
 
-      <div data-aos="fade-left" data-aos-duration="2000" className='flex flex-col w-full mx-auto gap-4 md:gap-8 md:max-h-[42vh] md:flex-row '>
+      <div ref={forwardRef} data-aos="fade-right" data-aos-duration="2000" className='flex flex-col w-full mx-auto gap-4 md:gap-8 md:max-h-[42vh] md:flex-row '>
         <p className='text-black my-auto md:text-xl lg:text-2xl font-semibold leading-normal text-center md:text-start md:w-fit lg:w-1/2'>
           Группа компаний “Даниэль М” специализируется в логистике, дистрибьюции и производстве хлебобулочных изделий.<br />
           Основные принципы нашего взаимодействия с партнерами - это принципы открытости и надежности.

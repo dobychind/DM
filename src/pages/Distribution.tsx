@@ -1,10 +1,9 @@
-import { Link } from "react-router-dom"
+import Navbar from "../components/navbar/Navbar"
 
 const Distribution = () => {
   return (
     <div>
-      Distribution
-      <Link to="/">Home</Link>
+      <Navbar/>
     </div>
   )
 }
