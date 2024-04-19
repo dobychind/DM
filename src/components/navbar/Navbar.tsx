@@ -12,7 +12,7 @@ const Navbar = () => {
         setIsMenuOpen(!isMenuOpen);
     };
     return (
-        <section className="bg-bg pb-4">
+        <section className="bg-zinc-700 pb-4">
             <div className="flex flex-col items-center">
                 <div className='hidden md:flex mx-auto w-full justify-between items-center py-3 font-main shadow-transparent bg-zinc-700 bg-opacity-70'>
                     <div className='flex max-w-[95vw]  mx-auto gap-5 text-xl md:items-center md:text-2xl'>
@@ -39,7 +39,7 @@ const Navbar = () => {
                             </button>
                         </div>
                     )}
-                    <button onClick={toggleMenu} className={`text-black flex flex-col items-center w-[32px] h-[32px] ml-4 mt-4 transition-opacity duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}>
+                    <button onClick={toggleMenu} className={`text-white flex flex-col items-center w-[32px] h-[32px] ml-4 mt-4 transition-opacity duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}>
                         <img src={Burger} alt='' />
                         <p>Меню</p>
                     </button>
