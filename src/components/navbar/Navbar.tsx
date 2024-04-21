@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Burger from '/burgen-menu.png';
 import Close from '/close.png';
 import Logo from '/DmLogo.svg';
