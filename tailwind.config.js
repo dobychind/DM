@@ -14,7 +14,8 @@ export default {
       },
       fontFamily: {
         body: ['Manrope'],
-        title: ['Bitter']
+        title: ['Bitter'],
+        moon: ['Rubik Moonrocks']
       }
     },
     gridTemplateRows: {
