@@ -14,7 +14,7 @@ const Navbar = () => {
     return (
         <section className="bg-zinc-700 pb-4 md:pb-0">
             <div className="flex flex-col items-center">
-                <div className='hidden md:flex mx-auto w-full justify-between items-center py-3 font-main shadow-transparent bg-zinc-700 bg-opacity-70'>
+                <div className='hidden md:flex mx-auto w-full justify-between items-center py-3 font-main shadow-transparent bg-main bg-opacity-50'>
                     <img src={Logo} alt='logo Daniel' className='h-[70px] ml-8' />
                     <div className='flex max-w-[95vw]  mx-auto gap-5 text-xl md:items-center md:text-2xl'>
                        <Link to="/"><p className='text-white font-semibold hover:underline hover:text-blue '>Главная</p></Link>
