@@ -35,7 +35,7 @@ const Distribution: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = 
                     <h4 className='text-black text-3xl py-4 font-semibold text-center md:py-12 md:text-5xl'>Наши клиенты</h4>
                 </div>
             </div>
-            <div data-aos="fade-right" data-aos-duration="3000" >
+            <div data-aos="fade-left" data-aos-duration="3000" >
                 <ClientSwiper />
             </div>
         </div>
