@@ -1,13 +1,8 @@
 import { Link } from "react-router-dom"
 import Navbar from "../components/navbar/Navbar"
 import O from "/0.png"
-import Footer from "../components/footer/Footer"
-import useSmoothScrollToRef from "../hooks/useScroll"
-import { useRef } from "react"
 
 const Error = () => {
-  const headerRef = useRef<HTMLDivElement>(null);
-  const scrollToHeader = useSmoothScrollToRef(headerRef);
 
   return (
     <div className="flex flex-col h-screen gap-6 bg-bg">

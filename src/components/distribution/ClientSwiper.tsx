@@ -23,8 +23,8 @@ export default () => {
             slidesPerView={5}
             navigation
             pagination={{ clickable: true }}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log('slide change')}
+            // onSwiper={(swiper) => console.log(swiper)}
+            // onSlideChange={() => console.log('slide change')}
             className='flex px-10 h-[180px] flex-wrap'
             breakpoints={{
                 320:{
