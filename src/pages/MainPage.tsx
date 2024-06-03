@@ -25,7 +25,7 @@ const MainPage = () => {
   return (
     <div id='root' className='overflow-x-hidden font-body'>
         <Header scrollToLogistic={scrollToLogistic} scrollToPoduction={scrollToPoduction} scrollToDistribution={scrollToDistribution} scrollToAbout={scrollToAbout} forwardRef={headerRef}/>
-        <div className="flex bg-bg py-[4rem] flex-col gap-[4rem]">
+        <div className="flex bg-bg py-[4rem] flex-col gap-[4rem] ">
           <About forwardRef={aboutRef}/>
           <Production forwardRef={productionRef}/>
           <Distribution forwardRef={distributionRef}/>
@@ -33,7 +33,7 @@ const MainPage = () => {
         </div>
         <Footer scrollToHeader={scrollToHeader}/>
 
-    </div>
+    </div>  
   )
 }
 
