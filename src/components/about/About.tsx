@@ -12,16 +12,16 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
     Aos.init();
   }, [])
   return (
-    <div   data-aos="fade-down" data-aos-duration="1000" className='flex px-4 flex-col my-auto w-full gap-4 mx-auto bg-bg items-center md:py-8 md:gap-8 md:max-h-screen 2xl:text-4xl lg:w-[70%]'>
+    <div   data-aos="fade-down" data-aos-duration="1000" className='flex px-3 flex-col my-auto w-full gap-4 mx-auto bg-bg items-center md:py-8 md:gap-8 md:max-h-screen 2xl:text-4xl lg:w-[70%]'>
 
-      <h3 className='text-black text-5xl font-bold text-center'>О компании</h3>
+      <h3 className='text-black text-4xl font-bold text-center lg:text-5xl'>О компании</h3>
 
       <div ref={forwardRef} data-aos="fade-right" data-aos-duration="2000" className='flex flex-col w-full mx-auto gap-4 md:gap-8 md:max-h-[42vh]  2xl:gap-16 md:flex-row '>
-        <p className='text-black my-auto md:text-2xl lg:text-2xl font-semibold leading-normal text-center md:text-start md:w-fit lg:w-1/2 2xl:text-4xl'>
+        <p className='text-black my-auto md:text-2xl lg:text-2xl font-semibold leading-normal text-center md:text-start md:w-fit lg:w-1/2'>
           Группа компаний “Даниэль М” специализируется в логистике, дистрибьюции и производстве хлебобулочных изделий.<br />
           Основные принципы нашего взаимодействия с партнерами - это принципы открытости и надежности.
         </p>
-        <div className='w-3/5'>
+        <div className='lg:w-3/5 md:w-full'>
           <img src={FoodAbout} alt='BreadPhoto' className='w-full h-full rounded-2xl object-cover' />
         </div>
       </div>
@@ -30,7 +30,7 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
           <img src={FoodCounter} alt="" className='w-full rounded-2xl object-cover h-full' />
         </div>
         <div className='flex flex-col w-full justify-between'>
-          <div className='flex h-full py-4 gap-4 items-center font-bold text-main text-2xl'>
+          <div className='flex h-full py-4 gap-4 items-center font-bold text-main'>
             <div className='flex  items-center'>
               <div ><p className='text-5xl  mt-[-10px] text-blue font-bold'> &#62;</p></div>
               <AnimatedNumbers
@@ -49,10 +49,10 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
                 }}
               />
             </div>
-            <p className='leading-none 2xl:text-4xl	'>Cотрудников</p>
+            <p className='leading-none 2xl:text-3xl	'>Cотрудников</p>
           </div>
 
-          <div className='flex pl-[2rem] py-4 gap-6 h-full items-center border-y-2  border-t-main border-b-main font-bold text-main text-2xl 2xl:text-4xl'>
+          <div className='flex pl-[2rem] py-4 gap-6 h-full items-center border-y-2  border-t-main border-b-main font-bold text-main text-xl lg:text-2xl 2xl:text-3xl'>
             <AnimatedNumbers
               includeComma
               transitions={(index) => ({
@@ -70,7 +70,7 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
             />                    Автомобилей
           </div>
 
-          <div className='flex gap-6 py-4 h-full border-b-2 border-b-main items-center  font-bold text-main text-2xl 2xl:text-4xl'>
+          <div className='flex gap-6 py-4 h-full border-b-2 border-b-main items-center  font-bold text-main  text-xl lg:text-2xl 2xl:text-3xl'>
             <div className='flex items-center'>
               <p className='text-5xl mt-[-10px] text-blue font-bold'> &#62;</p>
               <AnimatedNumbers
@@ -93,7 +93,7 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
             </p>
           </div>
 
-          <div className='flex gap-6 py-4 items-center h-full font-bold text-main text-2xl 2xl:text-4xl'>
+          <div className='flex gap-6 py-4 items-center h-full font-bold text-main  text-xl lg:text-2xl 2xl:text-3xl'>
             <div className='flex items-center'>
               <p className='text-5xl  mt-[-10px] text-blue font-bold'> &#62;</p>
               <AnimatedNumbers

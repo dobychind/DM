@@ -19,14 +19,14 @@ const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ f
     }, [])
 
     return (
-        <div ref={forwardRef} className='flex flex-col overflow-hidden bg-bg items-center gap-8 justify-center mx-auto px-4 lg:px-0 lg:w-[70%]'>
+        <div ref={forwardRef} className='flex flex-col overflow-hidden bg-bg items-center gap-8 justify-center mx-auto px-3 lg:px-0 lg:w-[70%]'>
             <h3 className='text-black text-3xl font-bold text-center md:text-5xl'>Логистика</h3>
             <div className='flex flex-col w-full justify-between py-4 lg:gap-6 items-center lg:flex-row md:py-12 md:pb-0'>
                 <div className='w-full h-full'>
                     <img data-aos='fade-left' data-aos-duration="2000" data-aos-anchor-placement="bottom-bottom" data-aos-easing="linear" src={Car} alt='brand car' className='translate-x-full w-full h-full ease-in duration-[4000ms]' />
                 </div>
                 <div className='flex flex-col gap-6 lg:w-1/2'>
-                    <p className='text-black font-normal text-xl lg:w-fit md:text-2xl md:font-medium 2xl:text-4xl 2xl:leading-relaxed'>
+                    <p className='text-black font-normal text-xl lg:w-fit md:text-2xl md:font-medium 2xl:text-2xl 2xl:leading-normal'>
                         В 2019г. произошел запуск проекта по оказанию логистических услуг на базе дистрибьюторского опыта.<br />
                         Наша логистическая компания специализируется на предоставлении высококачественных услуг по системе 3PL.
                     </p>
@@ -38,7 +38,7 @@ const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ f
 
 
 
-            <div className='grid grid-cols-1 items-start justify-between gap-9 w-full md:grid-cols-3 md:flex-row'>
+            <div className='grid grid-cols-1 items-start justify-between gap-8 w-full md:grid-cols-3 md:flex-row'>
 
                 <div data-aos="fade-up" data-aos-duration="1000" className='flex w-full bg-white rounded-xl shadow-md p-3 h-full items-center'>
                     <div className='w-full h-full flex flex-col justify-between'>
