@@ -32,11 +32,11 @@ const Production: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({
   return (
     <div  ref={forwardRef} className='flex flex-col px-4 bg-gradient-to-b from-bg from-10% via-[#CC7C3280] to-bg '>
       <h3 data-aos="fade-up" data-aos-duration="1000" className='text-black text-3xl font-bold text-center md:text-5xl'>Собственное производство</h3>
-      <div data-aos="fade-up" data-aos-duration="1000" className='grid grid-cols-2 gap-4 pt-8 mx-auto lg:w-[70%] md:grid-cols-4 md:py-16 md:gap-16 xl:gap-36'>
+      {/* <div data-aos="fade-up" data-aos-duration="1000" className='grid grid-cols-2 gap-4 pt-8 mx-auto lg:w-[70%] md:grid-cols-4 md:py-16 md:gap-16 xl:gap-36'>
         {productionData.map((item, index) => (
           <a className='2xl:max-w-[380px] flex flex-col w-full justify-between items-center h-full gap-4' href=""><ProductionCard key={index} {...item}/></a>
         ))}
-      </div>
+      </div> */}
       <div className='flex flex-col  gap-4 w-full py-8 mx-auto md:grid md:grid-cols-3 md:grid-rows-3 md:gap-8 lg:w-[70%]'>
 
         <div data-aos="flip-right" data-aos-duration="1500" className='bg-orange w-full p-4 rounded-2xl flex justify-center items-center md:col-span-2'>

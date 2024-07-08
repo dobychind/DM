@@ -89,9 +89,9 @@ const Logistic = () => {
                 </div>
               </div>
             </div>
-            <div className="flex w-full h-28">
+            {/* <div className="flex w-full h-28">
               <ClientSwiper />
-            </div>
+            </div> */}
             <Button text="Присоединиться" color="main" onClick={handleClick} />
           </div>
         </div>

@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Dates = () => {
     return (
         <div className='lg:w-[70%]'>
