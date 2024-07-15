@@ -30,7 +30,7 @@ const Counters = () => {
                                 }}
                             />
                         </div>
-                        <p className='leading-none text-center 2xl:text-4xl	'>Cотрудников</p>
+                        <p className='leading-none text-center 2xl:text-4xl	'>Наш коллектив насчитывает</p>
                     </div>
 
                     <div className='flex max-w-[196px] flex-col py-4 gap-4 h-full items-center font-bold text-black text-center text-2xl 2xl:text-4xl'>
@@ -48,7 +48,7 @@ const Counters = () => {
                                 fontSize: '3rem',
                                 color: "#CC7C32",
                             }}
-                        />                    Автомобилей
+                        />              Автопарк включает
                     </div>
 
                     <div className='flex flex-col max-w-[196px] gap-4 py-4 h-full items-center  font-bold text-black text-2xl 2xl:text-4xl'>
@@ -70,7 +70,7 @@ const Counters = () => {
                             />
                         </div>
                         <p className='leading-none text-center'>
-                            М<sup>2 </sup> площадь складов
+                            М<sup>2 </sup> складские помещения компании 
                         </p>
                     </div>
 

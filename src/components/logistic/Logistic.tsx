@@ -21,7 +21,7 @@ const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ f
 
     return (
         <div ref={forwardRef} className='flex flex-col overflow-hidden bg-white items-center gap-8 justify-center mx-auto p-3 md:p-8 rounded-2xl lg:w-[75%]'>
-            <h3 className='text-black text-3xl font-bold text-center md:text-5xl'>Логистика</h3>
+            <h3 className='text-black text-3xl font-bold text-center md:text-5xl'>Логистические услуги по системе 3PL</h3>
             <div className='flex flex-col w-full justify-between p-4 lg:gap-6 items-center lg:flex-row md:py-12 md:pb-0'>
                 <div className='w-full h-full'>
                     <img data-aos='fade-left' data-aos-duration="2000" data-aos-anchor-placement="bottom-bottom" data-aos-easing="linear" src={Car} alt='brand car' className='translate-x-full w-full h-full ease-in duration-[4000ms]' />

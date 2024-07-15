@@ -3,8 +3,8 @@ import Logo from '/DmLogo.svg';
 import ArrowDown from '/ArrowDown.svg';
 import Burger from '/burgen-menu.png';
 import Close from '/close.png';
-import { Accordion, AccordionItem } from '@szhsin/react-accordion';
 import { Link } from 'react-router-dom';
+import './index.css';
 
 interface HeaderProps {
   scrollToAbout: () => void;
@@ -14,45 +14,48 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ scrollToAbout, scrollToProduction, forwardRef }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isAccordionOpen, setIsAccordionOpen] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const toggleAccordion = () => {
-    setIsAccordionOpen(!isAccordionOpen);
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
   };
 
   return (
     <section className="bg-[url('/back-main.jpg')] bg-cover">
       <div ref={forwardRef} className="flex flex-col items-center">
-        <div className='hidden md:flex mx-auto w-full justify-between items-center py-3 font-main shadow-transparent bg-gradient-to-b from-zinc-700 via-70% to-transparent bg-opacity-70'>
-          <div className='flex max-w-[95vw] mx-auto gap-5 text-xl md:text-2xl'>
-            <Link to="/"><p className='text-white font-semibold hover:underline hover:text-blue'>Главная</p></Link>
-            <a className='cursor-pointer' onClick={scrollToAbout}><p className='text-white text-l w-max font-semibold hover:underline hover:text-blue'>О компании</p></a>
-            <Accordion transition transitionTimeout={150}>
-              <AccordionItem
-                header={
-                  <div className="flex items-center">
-                    <span>{"Производство"}</span>
-                    <img className={`ml-2 transform transition-transform ${isAccordionOpen ? 'rotate-180' : 'rotate-0'}`} src='chevron-down.svg' alt="arrow" />
-                  </div>
-                }
-                className='flex flex-col gap-3 text-white font-semibold'
-                onClick={toggleAccordion}
-              >
-                <div className='flex absolute top-16 bg-slate-500 p-4 rounded-2xl flex-col gap-3'>
-                  <a onClick={scrollToProduction} href="#brands" className='text-lg hover:underline hover:text-blue'>Наши бренды</a>
-                  <Link to="/production" className='text-lg hover:underline hover:text-blue'>О производстве</Link>
-                  <Link to="/production" className='text-lg hover:underline hover:text-blue'>Продукция</Link>
-                </div>
-              </AccordionItem>
-            </Accordion>
-            <Link to="/distribution"><p className='text-white font-semibold hover:underline hover:text-blue'>Дистрибьюция</p></Link>
-            <Link to="/logistic"><p className='text-white font-semibold hover:underline hover:text-blue'>Логистика</p></Link>
-            <a className='cursor-pointer' onClick={scrollToAbout}><p className='text-white font-semibold hover:underline hover:text-blue'>Прочее</p></a>
+        <div className='flex max-w-[95vw] mx-auto gap-5 text-xl md:text-2xl'>
+          <Link to="/"><p className='text-white font-semibold hover:underline hover:text-blue'>Главная</p></Link>
+          <a className='cursor-pointer' onClick={scrollToAbout}><p className='text-white text-l w-max font-semibold hover:underline hover:text-blue'>О компании</p></a>
+          <div
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            className='relative'
+          >
+            <div className="flex items-center cursor-pointer">
+              <span className='text-white font-semibold'>Производство</span>
+              <img
+                className={`ml-2 transform transition-transform ${isHovered ? 'rotate-180' : 'rotate-0'}`}
+                src='chevron-down.svg'
+                alt="arrow"
+              />
+            </div>
+            <div className={`dropdown-content ${isHovered ? 'show' : ''} flex absolute top-10 bg-slate-500 p-4 rounded-2xl flex-col gap-3`}>
+              <a onClick={scrollToProduction} href="#brands" className='text-lg text-white font-semibold hover:underline hover:text-blue'>Наши бренды</a>
+              <Link to="/production" className='text-lg hover:underline text-white font-semibold hover:text-blue'>О производстве</Link>
+              <Link to="/production" className='text-lg hover:underline text-white font-semibold hover:text-blue'>Продукция</Link>
+            </div>
           </div>
+          <Link to="/distribution"><p className='text-white font-semibold hover:underline hover:text-blue'>Дистрибьюция</p></Link>
+          <Link to="/logistic"><p className='text-white font-semibold hover:underline hover:text-blue'>Логистика</p></Link>
+          <a className='cursor-pointer' onClick={scrollToAbout}><p className='text-white font-semibold hover:underline hover:text-blue'>Прочее</p></a>
         </div>
         <div className="md:hidden relative w-full">
           {isMenuOpen && (

@@ -30,7 +30,7 @@ const Production: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({
     Aos.init();
   }, [])
   return (
-    <div  ref={forwardRef} className='flex flex-col px-4 bg-gradient-to-b from-bg from-10% via-[#CC7C3280] to-bg '>
+    <div   className='flex flex-col px-4 bg-gradient-to-b from-bg from-10% via-[#CC7C3280] to-bg '>
       <h3 data-aos="fade-up" data-aos-duration="1000" className='text-black text-3xl font-bold text-center md:text-5xl'>Собственное производство</h3>
       {/* <div data-aos="fade-up" data-aos-duration="1000" className='grid grid-cols-2 gap-4 pt-8 mx-auto lg:w-[70%] md:grid-cols-4 md:py-16 md:gap-16 xl:gap-36'>
         {productionData.map((item, index) => (
@@ -56,7 +56,7 @@ const Production: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({
         </div>
 
       </div>
-      <div className=''>
+      <div ref={forwardRef} className=''>
         <h3 data-aos="fade-up" data-aos-duration="1000" className='text-black text-3xl py-8 font-bold text-center md:text-4xl'>Наши бренды</h3>
         <div data-aos="fade-up" data-aos-duration="1000" className='grid grid-cols-2 gap-4 items-center pb-4 mx-auto lg:w-[80%] md:grid-cols-4 md:pb-16 md:gap-16 xl:gap-36'>
           {productionData.map((item, index) => (
