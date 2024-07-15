@@ -16,8 +16,8 @@ const Distribution: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = 
     };
     return (
         <div className="md:pb-8 ">
-            <div ref={forwardRef} className="flex w-full flex-col px-3 bg-white rounded-2xl mx-auto items-center justify-center gap-12 md:px-0 lg:w-[85%]">
-                <h3 className='text-black text-3xl mb-4 font-bold text-center md:my-8 md:text-5xl'>Дистрибьюция</h3>
+            <div ref={forwardRef} className="flex w-full flex-col pt-6 px-3 bg-white rounded-2xl mx-auto items-center justify-center gap-12 md:px-0 lg:w-[85%]">
+                <h3 className='text-black text-3xl md:mb-4 font-bold text-center md:my-8 md:text-5xl'>Дистрибьюция</h3>
                 <div className='flex flex-col p-4 md:px-12 gap-12 justify-between md:py-8'>
                     <div className='flex flex-col-reverse md:flex-row-reverse gap-4 justify-between '>
                         <img data-aos="fade-down" data-aos-duration="2000" src={MapPic} alt="" className='rounded-xl md:w-1/2' />

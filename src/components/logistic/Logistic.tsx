@@ -4,12 +4,15 @@ import Cars from '/gaz.jpeg';
 import Threepl from '/3pl.jpg';
 import Sklad from '/sklad.png';
 import Button from '../button/Button';
+import Delivery from '/deliver.png';
+import Snowflake from '/snowflake.png';
 
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import Services from './Services';
 import { Link } from 'react-router-dom';
 import FeedbackForm from './Form';
+import Counters from './Counters';
 
 const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forwardRef }) => {
     const handleClick = () => {
@@ -40,6 +43,10 @@ const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ f
                 </div>
             </div>
 
+            <Counters/>
+
+            
+            
 
             <p className='text-3xl font-bold'>Наши преимущества</p>
             <div className='grid grid-cols-1 items-start justify-between gap-8 w-full md:grid-cols-3 md:flex-row'>
@@ -71,6 +78,31 @@ const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ f
                     </div>
 
                 </div>
+            </div>
+
+            <p className='text-3xl font-bold'>Доставка груза</p>
+            <div className='grid grid-cols-1 items-start justify-between gap-8 w-full md:max-w-[70%] md:grid-cols-2 md:flex-row'>
+
+                <div data-aos="fade-up" data-aos-duration="1000" className='flex w-full bg-white rounded-xl shadow-md p-3 h-full items-center'>
+                    <div className='w-full h-full flex flex-col justify-between'>
+                        <div className='max-h-[280px] h-full'>
+                            <img src={Delivery} alt='' className='w-full h-[260px] object-cover rounded-xl ' />
+                        </div>
+                        <p className='text-main font-semibold text-2xl m-auto py-4 text-center'>Доставка груза до торговой точки</p>
+                    </div>
+
+                </div>
+
+                <div data-aos="fade-up" data-aos-duration="2000" className='flex w-full bg-white rounded-xl shadow-md p-3 h-full items-center'>
+                    <div className='w-full h-full flex flex-col justify-between'>
+                        <div className='h-full'>
+                            <img src={Snowflake} alt='' className='w-full h-[260px] object-contain rounded-xl' />
+                        </div>
+                        <p className='text-main font-semibold text-xl my-auto py-4 text-center'>Собственные автомобили с рефрижератором и без него</p>
+                    </div>
+
+                </div>
+
             </div>
 
             <Services />

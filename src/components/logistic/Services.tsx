@@ -25,7 +25,7 @@ const Services = () => {
                 </div> 
                 <div className='flex flex-col bg-white justify-center gap-4 items-center p-3 rounded-3xl shadow-md'>
                     <img className='object-cover w-[160px]' src={Print} alt='' />
-                    <p className='md:font-semibold break-all font-medium text-lg md:text-2xl text-main text-center'>Составление сопроводительных документов</p>
+                    <p className='md:font-semibold font-medium text-lg md:text-2xl text-main text-center'>Составление сопроводительных документов</p>
                 </div>
                 <div className='flex flex-col bg-white justify-center gap-4 items-center p-3 rounded-3xl shadow-md box-border'>
                     <img className=' object-cover w-[160px]' src={Package} alt='' />

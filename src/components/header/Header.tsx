@@ -5,6 +5,7 @@ import Burger from '/burgen-menu.png';
 import Close from '/close.png';
 import { Link } from 'react-router-dom';
 import './index.css';
+import Button from '../button/Button';
 
 interface HeaderProps {
   scrollToAbout: () => void;
@@ -15,6 +16,10 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ scrollToAbout, scrollToProduction, forwardRef }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+
+  const handleClick = () => {
+    console.log('click');
+  }
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -31,7 +36,12 @@ const Header: React.FC<HeaderProps> = ({ scrollToAbout, scrollToProduction, forw
   return (
     <section className="bg-[url('/back-main.jpg')] bg-cover">
       <div ref={forwardRef} className="flex flex-col items-center">
-        <div className='flex max-w-[95vw] mx-auto gap-5 text-xl md:text-2xl'>
+        <div className='absolute left-2 bottom-2'>
+          <Link to="/production">
+            <Button onClick={handleClick} color='orange' text='Продукция' />
+          </Link>
+        </div>
+        <div className='max-w-[95vw] hidden md:flex mx-auto gap-5 p-3 text-xl md:text-2xl'>
           <Link to="/"><p className='text-white font-semibold hover:underline hover:text-blue'>Главная</p></Link>
           <a className='cursor-pointer' onClick={scrollToAbout}><p className='text-white text-l w-max font-semibold hover:underline hover:text-blue'>О компании</p></a>
           <div
