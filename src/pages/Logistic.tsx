@@ -6,7 +6,7 @@ import Samokat from '/samokat.png';
 import Lenta from '/lenta.jpg';
 import 'aos/dist/aos.css'; // Не забудьте импортировать стили AOS
 import Button from "../components/button/Button";
-import ClientSwiper from "../components/distribution/ClientSwiper";
+// import ClientSwiper from "../components/distribution/ClientSwiper";
 
 const Logistic = () => {
   useEffect(() => {
