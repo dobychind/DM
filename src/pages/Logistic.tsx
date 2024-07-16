@@ -4,6 +4,7 @@ import Navbar from "../components/navbar/Navbar"
 import PL from '/3plbanner.jpg';
 import loc from '/location.png';
 import skl from '/skl.jpg';
+import del from '/dellog.png';
 import Lenta from '/lenta.jpg';
 import 'aos/dist/aos.css'; // Не забудьте импортировать стили AOS
 import FeedbackForm from "../components/logistic/Form";
@@ -20,12 +21,12 @@ const Logistic = () => {
     <div>
       <Navbar />
       <div className="w-full object-cover relative">
-        <div className="absolute w-1/3 flex flex-col gap-4 rounded-2xl top-1/2 left-4 bg-opacity-50 p-8 bg-black">
-          <h2 className="text-4xl text-white font-bold">Логистика 3PL</h2>
-          <p className="w-full ml-auto text-white text-xl leading-normal font-semibold">Услуги ответственного хранения 3pl подразумевают прием и создание условий для сохранности вверенных материальных ценностей на территории компании-исполнителя. </p>
+        <div className="absolute w-full md:w-1/3 flex flex-col pt-10 gap-2 md:gap-4 md:rounded-2xl md:top-1/2 md:left-4 bg-opacity-50 p-8 bg-black">
+          <h2 className="text-xl pt-8 md:text-4xl text-white font-bold">Логистика 3PL</h2>
+          <p className="w-full ml-auto text-white text-m md:text-xl leading-normal font-semibold">Услуги ответственного хранения 3pl подразумевают прием и создание условий для сохранности вверенных материальных ценностей на территории компании-исполнителя. </p>
         </div>
 
-        <img src={PL} alt="" className="w-full object-cover max-h-screen" />
+        <img src={PL} alt="Фон 3PL" className="w-full md md:object-cover max-h-screen" />
       </div>
       <div className="flex w-full justify-center items-center px-4 py-16 flex-col  bg-bg" >
 
@@ -35,24 +36,24 @@ const Logistic = () => {
             {/* 3PL */}
 
             <div className="flex w-full flex-col p-6 gap-10 bg-white border border-black rounded-2xl">
-              <p className="text-3xl pb-3 font-bold text-center border-black border-b-4">
+              <p className="text-2xl md:text-3xl pb-3 font-bold border-black border-b-4">
                 Сотрудничество в рамках предоставляемого комплекса услуг системы 3PL включает:
               </p>
-              <div className="flex justify-between">
-                <div className="flex flex-col gap-4 w-1/2">
-                  <p className="text-xl py-3 px-8  font-semibold border rounded-2xl border-black">
-                    Комплекс погрузочно-разгрузочных работ под ключ
+              <div className="flex flex-col gap-10 md:gap-0 md:flex-row justify-between">
+                <div className="flex flex-col gap-4 w-full md:w-1/2">
+                  <p className="text-lg md:text-xl py-3 px-8  font-semibold border rounded-2xl border-black">
+                    Комплекс погрузочно-разгрузочных работ <span className="text-main">под ключ</span> 
                   </p>
-                  <p className="text-xl py-3 px-8 font-semibold border rounded-2xl border-black ">Приемка товара с осуществлением его сортировки и складской маркировки</p>
-                  <p className="text-xl py-3 px-8 font-semibold border rounded-2xl border-black ">Паллетирование упаковок с учетом требований по их хранению</p>
-                  <p className="text-xl py-3 px-8 font-semibold border rounded-2xl border-black ">Организация доставки товаров оптовым покупателям или в розничную сеть</p>
-                  <p className="text-xl py-3 px-8 font-semibold border rounded-2xl border-black ">Ведение оперативного и товарного учета с составлением первичной документации</p>
-                  <p className="text-xl py-3 px-8 font-semibold border rounded-2xl border-black ">Кросс-докинг для перемещения ценностей с транзитного склада на место постоянного хранения</p>
-                  <p className="text-xl py-3 px-8 font-semibold border rounded-2xl border-black ">Комплектация партий и заказов согласно указаниям клиента</p>
+                  <p className="text-lg md:text-xl py-3 px-8 font-semibold border rounded-2xl border-black "><span className="text-main">Приемка товара</span> с осуществлением его сортировки и складской маркировки</p>
+                  <p className="text-lg md:text-xl py-3 px-8 font-semibold border rounded-2xl border-black "><span className="text-main">Паллетирование упаковок</span> с учетом требований по их хранению</p>
+                  <p className="text-lg md:text-xl py-3 px-8 font-semibold border rounded-2xl border-black "><span className="text-main">Организация доставки</span> товаров оптовым покупателям или в розничную сеть</p>
+                  <p className="text-lg md:text-xl py-3 px-8 font-semibold border rounded-2xl border-black ">Ведение оперативного и товарного <span className="text-main">учета</span> с составлением первичной документации</p>
+                  <p className="text-lg md:text-xl py-3 px-8 font-semibold border rounded-2xl border-black "><span className="text-main">Кросс-докинг</span> для перемещения ценностей с транзитного склада на место постоянного хранения</p>
+                  <p className="text-lg md:text-xl py-3 px-8 font-semibold border rounded-2xl border-black "><span className="text-main">Комплектация</span> партий и заказов согласно указаниям клиента</p>
 
                 </div>
-                <div className="flex flex-col gap-8 justify-center w-[35%] mx-auto">
-                  <img src={Lenta} alt="" className="rounded-3xl object-cover" />
+                <div className="flex flex-col gap-8 justify-center w-full md:w-[35%] mx-auto">
+                  <img src={Lenta} alt="Магазин Лента" className="rounded-3xl object-cover" />
                   <p className="font-medium"><span className="font-bold text-blue text-3xl">Пример:</span><br />
                     - <b>Лента</b> более 600 ТТ (Осуществление поставок 3PL ассортимента «ПЕКО» в Москве) </p>
                 </div>
@@ -60,8 +61,8 @@ const Logistic = () => {
               </div>
             </div>
 
-            <div className="w-4/5 bg-white rounded-2xl border border-black p-6 flex flex-col gap-3 pl-16 justify-center mr-auto">
-              <p className="text-2xl font-bold">По запросу компании-отправителя могут быть предоставлены дополнительные услуги по</p>
+            <div className="w-full md:w-4/5 bg-white rounded-2xl border border-black p-6 flex flex-col gap-3 md:pl-16 justify-center mr-auto">
+              <p className="text-2xl font-bold">По запросу компании-отправителя могут быть предоставлены <span className="text-main">дополнительные услуги</span> по</p>
               <ul className="list-disc flex flex-col ml-8 gap-1">
                 <li className="text-xl font-normal">Обработке</li>
                 <li className="text-xl font-normal">Упаковке и доставке товара</li>
@@ -74,28 +75,49 @@ const Logistic = () => {
             </div>
 
             <div className="flex flex-col w-fit gap-8 ml-auto bg-white border border-black rounded-2xl p-6">
-              <p className="text-2xl font-bold">Наши склады размещены в 3х городах России: </p>
-              <div className="flex gap-8">
-                <img className="w-2/3" src={skl} alt="" />
-                <div className="flex justify-center flex-col gap-12">
+              <p className="text-4xl font-bold">Наши <span className="text-main">склады</span> размещены в 3х городах России: </p>
+              <div className="flex flex-col md:flex-row gap-8">
+                <img className="w-full md:w-2/3" src={skl} alt="Склад" />
+                <div className="flex justify-center flex-col gap-6 md:gap-12">
                   <div className="flex items-center gap-3">
-                    <img className="w-[32px]" src={loc} alt="" />
-                    <p className="text-3xl font-semibold">Санкт-Петербург</p>
+                    <img className="w-[32px]" src={loc} alt="Локация" />
+                    <p className="text-2xl md:text-3xl font-semibold">Санкт-Петербург</p>
                   </div>
                   <div className="flex items-center gap-3">
-                    <img className="w-[32px]" src={loc} alt="" />
-                    <p className="text-3xl font-semibold">Москва</p>
+                    <img className="w-[32px]" src={loc} alt="Локация" />
+                    <p className="text-2xl md:text-3xl font-semibold">Москва</p>
                   </div>
                   <div className="flex items-center gap-3">
-                    <img className="w-[32px]" src={loc} alt="" />
-                    <p className="text-3xl font-semibold">Великий Новгород</p>
+                    <img className="w-[32px]" src={loc} alt="Локация" />
+                    <p className="text-2xl md:text-3xl font-semibold">Великий Новгород</p>
                   </div>
                 </div>
               </div>
 
             </div>
 
-            <FeedbackForm />
+            <div className="flex flex-col gap-8 w-fit mr-auto bg-white border border-black rounded-2xl p-6">
+              <p className="text-2xl md:text-4xl font-bold"><span className="text-main">Доставляем</span> груз в Торговые точки по Москве и Московской области, Санкт-Петербургу и ЛО, а также Великий Новгород.</p>
+              <div className="flex flex-col md:flex-row gap-8">
+                <div className="w-full md:w-2/3">
+                  <img className="w-full" src={del} alt="Фон с доставкой" />
+                </div>
+                <div className="w-full md:w-1/3 flex flex-col justify-center gap-4">
+                  <p className="text-main text-4xl font-bold">Наши автомобили</p>
+                  <ul className="list-disc flex flex-col ml-7 gap-1">
+                    <li className="text-2xl font-semibold">Газель NEXT</li>
+                    <li className="text-2xl font-semibold">Газель Бизнес</li>
+                    <li className="text-2xl font-semibold">Газель с рефрижерактором</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className='w-full flex flex-col md:flex-row justify-center gap-8 items-center'>
+                <p className='font-normal md:w-2/3'>Стоимость услуг оператора для каждого типа логистики рассчитывается индивидуально. 
+                    <br />Для расчета обратитесь к менеджерам компании, заполнив форму или позвонив по телефону, указанному на сайте.</p>
+                <FeedbackForm/>    
+            </div>
           </div>
         </div>
       </div>

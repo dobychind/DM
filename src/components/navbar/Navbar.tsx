@@ -8,7 +8,7 @@ import { Link, useLocation } from 'react-router-dom';
 const Navbar = () => {
     const location = useLocation();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const isActive = (path: string): string => location.pathname === path ? ' underline ' : 'text-white ';
+    const isActive = (path: string): string => location.pathname === path ? ' underline ' : 'text-blue ';
 
 
     const toggleMenu = () => {

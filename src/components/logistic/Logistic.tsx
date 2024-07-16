@@ -110,7 +110,7 @@ const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ f
 
             <div className='w-full flex flex-col md:flex-row justify-center gap-8 items-center'>
                 <p className='font-light md:w-1/2'>Стоимость услуг оператора для каждого типа логистики рассчитывается индивидуально. 
-                    <br />Для расчета обратитесь к менеджерам компании, заказав обратный звонок или позвонив по телефону, указанному в шапке сайта.</p>
+                    <br />Для расчета обратитесь к менеджерам компании, заполнив форму или позвонив по телефону, указанному на сайте.</p>
                 <FeedbackForm/>    
             </div>
         </div>
