@@ -38,7 +38,7 @@ const Header: React.FC<HeaderProps> = ({ scrollToAbout, scrollToProduction, forw
       <div ref={forwardRef} className="flex flex-col items-center">
         <div className='absolute left-2 bottom-2'>
           <Link to="/production">
-            <Button onClick={handleClick} color='orange' text='Продукция' />
+            <Button onClick={handleClick} color='orange' text='Узнать больше' />
           </Link>
         </div>
         <div className='max-w-[95vw] hidden md:flex mx-auto gap-5 p-3 text-xl md:text-2xl'>

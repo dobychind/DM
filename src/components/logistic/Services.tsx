@@ -14,7 +14,7 @@ const Services = () => {
     return (
         <div className='flex flex-col items-center justify-center w-full'>
             <h4  data-aos="fade-down" className='text-black text-3xl font-bold text-center'>Ответственное хранение</h4>
-            <div data-aos="fade-down" data-aos-duration="1500" className='grid grid-cols-2 gap-4 md:grid-cols-2 w-[80%] py-8 md:gap-8 '>
+            <div data-aos="fade-down" data-aos-duration="1500" className='grid grid-cols-1 gap-4 md:grid-cols-2 w-[80%] py-8 md:gap-8 '>
                 <div  className='flex flex-col bg-white justify-around gap-4 items-center p-3 py-6 rounded-3xl shadow-md'>
                     <img src={Diamond} className='object-cover w-[160px]' alt='' />
                     <p className='md:font-semibold font-medium text-lg md:text-2xl text-main text-center'>Размещение материальных ценностей</p>

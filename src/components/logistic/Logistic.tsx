@@ -45,8 +45,36 @@ const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ f
 
             <Counters/>
 
+            <Services />
+
             
-            
+
+           
+
+            <p className='text-3xl font-bold'>Доставка груза</p>
+            <div className='grid grid-cols-1 w-4/5 md:w-full items-start justify-between gap-8 md:max-w-[70%] md:grid-cols-2 md:flex-row'>
+
+                <div data-aos="fade-up" data-aos-duration="1000" className='flex w-full bg-white rounded-xl shadow-md p-3 h-full items-center'>
+                    <div className='w-full h-full flex flex-col justify-between'>
+                        <div className='max-h-[280px] h-full'>
+                            <img src={Delivery} alt='' className='w-full h-[260px] object-contain rounded-xl ' />
+                        </div>
+                        <p className='text-main font-semibold text-2xl m-auto py-4 text-center'>Доставка груза до торговой точки</p>
+                    </div>
+
+                </div>
+
+                <div data-aos="fade-up" data-aos-duration="2000" className='flex w-full bg-white rounded-xl shadow-md p-3 h-full items-center'>
+                    <div className='w-full h-full flex flex-col justify-between'>
+                        <div className='h-full'>
+                            <img src={Snowflake} alt='' className='w-full h-[260px] object-contain rounded-xl' />
+                        </div>
+                        <p className='text-main font-semibold text-xl my-auto py-4 text-center'>Собственные автомобили с рефрижератором и без него</p>
+                    </div>
+
+                </div>
+
+            </div>
 
             <p className='text-3xl font-bold'>Наши преимущества</p>
             <div className='grid grid-cols-1 items-start justify-between gap-8 w-full md:grid-cols-3 md:flex-row'>
@@ -80,32 +108,6 @@ const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ f
                 </div>
             </div>
 
-            <p className='text-3xl font-bold'>Доставка груза</p>
-            <div className='grid grid-cols-1 items-start justify-between gap-8 w-full md:max-w-[70%] md:grid-cols-2 md:flex-row'>
-
-                <div data-aos="fade-up" data-aos-duration="1000" className='flex w-full bg-white rounded-xl shadow-md p-3 h-full items-center'>
-                    <div className='w-full h-full flex flex-col justify-between'>
-                        <div className='max-h-[280px] h-full'>
-                            <img src={Delivery} alt='' className='w-full h-[260px] object-cover rounded-xl ' />
-                        </div>
-                        <p className='text-main font-semibold text-2xl m-auto py-4 text-center'>Доставка груза до торговой точки</p>
-                    </div>
-
-                </div>
-
-                <div data-aos="fade-up" data-aos-duration="2000" className='flex w-full bg-white rounded-xl shadow-md p-3 h-full items-center'>
-                    <div className='w-full h-full flex flex-col justify-between'>
-                        <div className='h-full'>
-                            <img src={Snowflake} alt='' className='w-full h-[260px] object-contain rounded-xl' />
-                        </div>
-                        <p className='text-main font-semibold text-xl my-auto py-4 text-center'>Собственные автомобили с рефрижератором и без него</p>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <Services />
             <div className='w-full flex flex-col md:flex-row justify-center gap-8 items-center'>
                 <p className='font-light md:w-1/2'>Стоимость услуг оператора для каждого типа логистики рассчитывается индивидуально. 
                     <br />Для расчета обратитесь к менеджерам компании, заказав обратный звонок или позвонив по телефону, указанному в шапке сайта.</p>

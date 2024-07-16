@@ -60,7 +60,7 @@ const FeedbackForm: React.FC = () => {
     }, [isOpen]);
 
     return (
-        <div>
+        <div className='z-50'>
             <Button text='Консультация с логистом' onClick={handleOpen} color='main'></Button>
 
             {isOpen && (

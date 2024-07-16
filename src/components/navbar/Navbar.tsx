@@ -2,26 +2,29 @@ import { useState } from 'react'
 import Burger from '/burgen-menu.png';
 import Close from '/close.png';
 import Logo from '/DmLogo.svg';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 
 const Navbar = () => {
+    const location = useLocation();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const isActive = (path: string): string => location.pathname === path ? ' underline ' : 'text-white ';
+
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
     return (
-        <section className="bg-zinc-700 pb-4 md:pb-0">
+        <section className="bg-transparent fixed w-full z-50 top-0 pb-4 md:pb-0">
             <div className="flex flex-col items-center">
-                <div className='hidden md:flex mx-auto w-full justify-between items-center py-3 font-main shadow-transparent bg-slate-700 bg-opacity-50'>
+                <div className='hidden md:flex mx-auto w-full justify-between items-center py-3 font-main bg-gray-900 shadow-transparent bg-opacity-50'>
                     <img src={Logo} alt='logo Daniel' className='h-[70px] ml-8' />
                     <div className='flex max-w-[95vw]  mx-auto gap-5 text-xl md:items-center md:text-2xl'>
-                       <Link to="/"><p className='text-white font-semibold hover:underline hover:text-blue '>Главная</p></Link>
-                       <Link to="/"><p className='text-white text-l w-max font-semibold hover:underline hover:text-blue'>О компании</p></Link>
-                       <Link to="/production"><p className='text-white font-semibold hover:underline hover:text-blue'>Производство</p></Link>
-                       <Link to="/distribution"><p className='text-white font-semibold hover:underline hover:text-blue'>Дистрибьюция</p></Link>
-                       <Link to="/logistic"><p className='text-white font-semibold hover:underline hover:text-blue'>Логистика</p></Link>
+                       <Link to="/"><p className={`${isActive('/')} text-white font-semibold hover:underline hover:text-blue `}>Главная</p></Link>
+                       <Link to="/"><p className={`${isActive('/')} text-white text-l w-max font-semibold hover:underline hover:text-blue`}>О компании</p></Link>
+                       <Link to="/production"><p className={`${isActive('/production')} text-white font-semibold hover:underline hover:text-blue`}>Производство</p></Link>
+                       <Link to="/distribution"><p className={`${isActive('/distribution')}text-white font-semibold hover:underline hover:text-blue`}>Дистрибьюция</p></Link>
+                       <Link to="/logistic"><p className={`${isActive('/logistic')}text-white font-semibold hover:underline hover:text-blue`}>Логистика</p></Link>
                        <Link to="/"><p className='text-white font-semibold hover:underline hover:text-blue'>Прочее</p></Link>
                     </div>
                 </div>
