@@ -6,7 +6,7 @@ const Error = () => {
 
   return (
     <div className="flex flex-col h-screen gap-6 bg-bg">
-      <Navbar />
+      <Navbar position="block"/>
       <div className='flex flex-col overflow-hidden my-auto items-center justify-center mx-auto px-2 pb-8 lg:px-0 lg:w-[90%]'>
         <div className="font-moon flex items-center text-[#EA8638] h-[450px] text-[400px]">
           4
