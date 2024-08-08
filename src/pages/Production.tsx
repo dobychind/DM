@@ -64,7 +64,7 @@ const Production: React.FC = () => {
         <div>
           <nav className="flex gap-12">
             {allTypes.map((type) => (
-              <Link className='text-3xl font-bold' key={type} to={`/production/${typeMapping[type]}`}>
+              <Link className='text-3xl font-bold hover:text-main' key={type} to={`/production/${typeMapping[type]}`}>
                 {type}
               </Link>
             ))}

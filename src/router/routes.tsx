@@ -12,7 +12,7 @@ interface RouteConfig {
   }
 
 export const publicRoutes: RouteConfig[] =[ 
-    {path: '/', component: <MainPage/>},
+    {path: '/', component: <MainPage/> },
     {path: '/production/bread', component: <Production/>},
     {path: '/production/confectionery', component: <Production/>},
     {path: '/distribution', component: <Distribution/>},

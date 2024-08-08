@@ -60,7 +60,7 @@ const Header: React.FC<HeaderProps> = ({ scrollToAbout, scrollToProduction, forw
             <div className={`dropdown-content ${isHovered ? 'show' : ''} flex absolute top-10 bg-slate-500 p-4 rounded-2xl flex-col gap-3`}>
               <a onClick={scrollToProduction} href="#brands" className='text-lg text-white font-semibold hover:underline hover:text-blue'>Наши бренды</a>
               <Link to="/production" className='text-lg hover:underline text-white font-semibold hover:text-blue'>О производстве</Link>
-              <Link to="/production" className='text-lg hover:underline text-white font-semibold hover:text-blue'>Продукция</Link>
+              <Link to="/production/bread" className='text-lg hover:underline text-white font-semibold hover:text-blue'>Продукция</Link>
             </div>
           </div>
           <Link to="/distribution"><p className='text-white font-semibold hover:underline hover:text-blue'>Дистрибьюция</p></Link>
