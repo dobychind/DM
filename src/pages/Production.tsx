@@ -4,6 +4,7 @@ import { products as initialProducts } from '../data/products';
 import ProductList from '../components/product/ProductList';
 import ProductFilter from '../components/product/ProductFilter';
 import Navbar from "../components/navbar/Navbar";
+import Navigation from '../components/nav/Navigation';
 
 const typeMapping: { [key: string]: string } = {
   'Кондитерские изделия': 'confectionery',
@@ -59,26 +60,42 @@ const Production: React.FC = () => {
 
   return (
     <div className="flex flex-col gap-8 justify-center items-center pb-12">
-      <Navbar position="block"/>
-      <div className="flex flex-col gap-8 lg:w-[80%] justify-center">
+      <Navbar position="fixed" />
+      <div className="flex flex-col gap-8 lg:w-[90%] justify-center mt-32">
+        <Navigation />
         <div>
           <nav className="flex gap-12">
             {allTypes.map((type) => (
-              <Link className='text-3xl font-bold hover:text-main' key={type} to={`/production/${typeMapping[type]}`}>
+              <Link
+                className={`text-3xl font-bold hover:text-main ${
+                  selectedType === type ? 'text-main' : 'text-black'
+                }`}
+                key={type}
+                to={`/production/${typeMapping[type]}`}
+              >
                 {type}
               </Link>
             ))}
           </nav>
         </div>
-        <ProductFilter
-          categories={categories}
-          manufacturers={manufacturers}
-          selectedCategory={selectedCategory}
-          selectedManufacturer={selectedManufacturer}
-          onCategoryChange={handleCategoryChange}
-          onManufacturerChange={handleManufacturerChange}
-        />
-        <ProductList products={filteredProducts} />
+        <div className='relative flex gap-8'>
+          <div className='inherit'>
+            <div className='sticky top-[8rem]'>
+              <ProductFilter
+                categories={categories}
+                manufacturers={manufacturers}
+                selectedCategory={selectedCategory}
+                selectedManufacturer={selectedManufacturer}
+                onCategoryChange={handleCategoryChange}
+                onManufacturerChange={handleManufacturerChange}
+              />
+            </div>
+
+          </div>
+          <div className='w-4/5 ml-auto'>
+            <ProductList products={filteredProducts} />
+          </div>
+        </div>
       </div>
     </div>
   );

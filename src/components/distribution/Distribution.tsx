@@ -33,7 +33,7 @@ const Distribution: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = 
                             <p className=' text-black text-xl font-normal md:text-2xl md:leading-normal md:font-medium	2xl:text-3xl 2xl:leading-normal'>
                                 ГК Даниэль М  занимает важное положение в сфере дистрибуции хлеба в стратегически важных регионах России как Москва и Санкт-Петербург, а так же их областях.
                             </p>
-                            <p className=' text-black text-xl font-normal md:text-2xl md:leading-normal md:font-medium	2xl:text-3xl 2xl:leading-normal'>С 2023 года мы успешно осуществляем дистрибьюцию в Великом Новгороде.</p>
+                            <p className=' text-black text-xl font-normal text-start md:text-2xl md:leading-normal md:font-medium	2xl:text-3xl 2xl:leading-normal'>С 2023 года мы успешно осуществляем дистрибьюцию в Великом Новгороде.</p>
                         </div>
                     </div>
                     <div>

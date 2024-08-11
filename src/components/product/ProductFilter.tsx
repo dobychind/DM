@@ -18,16 +18,34 @@ const ProductFilter: React.FC<ProductFilterProps> = ({
     onManufacturerChange,
 }) => {
     return (
-        <div className="flex gap-6">
-            <select value={selectedCategory} onChange={(e) => onCategoryChange(e.target.value)}>
-                <option value="">Все категории</option>
+        <div className="flex flex-col gap-6 border px-12 py-8 rounded-2xl">
+            <div className="flex flex-col gap-2">
+                <button
+                    className={`px-4 py-2 rounded ${
+                        selectedCategory === '' ? 'bg-blue-500 text-black' : 'bg-gray-200 text-black'
+                    }`}
+                    onClick={() => onCategoryChange('')}
+                >
+                    Все категории
+                </button>
                 {categories.map((category) => (
-                    <option key={category} value={category}>
+                    <button
+                        key={category}
+                        className={`px-4 py-2 rounded ${
+                            selectedCategory === category ? 'bg-blue-500 text-black' : 'bg-gray-200 text-black'
+                        }`}
+                        onClick={() => onCategoryChange(category)}
+                    >
                         {category}
-                    </option>
+                    </button>
                 ))}
-            </select>
-            <select value={selectedManufacturer} onChange={(e) => onManufacturerChange(e.target.value)}>
+            </div>
+
+            <select
+                value={selectedManufacturer}
+                onChange={(e) => onManufacturerChange(e.target.value)}
+                className="px-4 py-2 rounded bg-gray-200"
+            >
                 <option value="">Все производители</option>
                 {manufacturers.map((manufacturer) => (
                     <option key={manufacturer} value={manufacturer}>

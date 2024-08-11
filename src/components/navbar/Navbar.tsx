@@ -11,7 +11,17 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ position }) => {
     const location = useLocation();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const isActive = (path: string): string => (location.pathname === path ? ' underline ' : 'text-blue ');
+
+    const isActive = (path: string): string => {
+        if (path === '/' && location.pathname === '/') {
+            return ' text-main ';
+        } else if (path !== '/' && location.pathname.startsWith(path)) {
+            return ' text-main ';
+        } else {
+            return 'text-black ';
+        }
+    };
+    
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -20,26 +30,26 @@ const Navbar: React.FC<NavbarProps> = ({ position }) => {
     return (
         <section className={`${position === 'fixed' ? 'fixed' : 'block'} bg-transparent w-full z-50 top-0 pb-4 md:pb-0`}>
             <div className="flex flex-col items-center">
-                <div className="hidden md:flex mx-auto w-full justify-between items-center py-3 font-main bg-gray-900 shadow-transparent bg-opacity-50">
+                <div className="hidden md:flex mx-auto w-full justify-between items-center py-3 font-main bg-white shadow-transparent ">
                     <img src={Logo} alt="logo Daniel" className="h-[70px] ml-8" />
                     <div className="flex max-w-[95vw] mx-auto gap-5 text-xl md:items-center md:text-2xl">
                         <Link to="/">
-                            <p className={`${isActive('/')} text-white font-semibold hover:underline hover:text-blue `}>Главная</p>
+                            <p className={`${isActive('/')} text-black font-semibold hover:underline hover:text-main `}>Главная</p>
                         </Link>
                         <Link to="/">
-                            <p className={`${isActive('/')} text-white text-l w-max font-semibold hover:underline hover:text-blue`}>О компании</p>
+                            <p className={`${isActive('/')} text-black text-l w-max font-semibold hover:underline hover:text-main`}>О компании</p>
                         </Link>
                         <Link to="/production">
-                            <p className={`${isActive('/production')} text-white font-semibold hover:underline hover:text-blue`}>Производство</p>
+                            <p className={`${isActive('/production')} text-black font-semibold hover:underline hover:text-main`}>Производство</p>
                         </Link>
                         <Link to="/distribution">
-                            <p className={`${isActive('/distribution')} text-white font-semibold hover:underline hover:text-blue`}>Дистрибьюция</p>
+                            <p className={`${isActive('/distribution')} text-black font-semibold hover:underline hover:text-main`}>Дистрибьюция</p>
                         </Link>
                         <Link to="/logistic">
-                            <p className={`${isActive('/logistic')} text-white font-semibold hover:underline hover:text-blue`}>Логистика</p>
+                            <p className={`${isActive('/logistic')} text-black font-semibold hover:underline hover:text-main`}>Логистика</p>
                         </Link>
                         <Link to="/">
-                            <p className="text-white font-semibold hover:underline hover:text-blue">Прочее</p>
+                            <p className="text-black font-semibold hover:underline hover:text-main">Прочее</p>
                         </Link>
                     </div>
                 </div>
@@ -50,25 +60,25 @@ const Navbar: React.FC<NavbarProps> = ({ position }) => {
                             data-aos-duration="500"
                             className="flex flex-col z-10 gap-4 text-2xl bg-gray-800 py-6 pl-6 absolute top-0 left-0 w-full"
                         >
-                            <Link to="/" className="block text-white w-fit font-semibold hover:underline hover:text-blue ">
+                            <Link to="/" className="block text-black w-fit font-semibold hover:underline hover:text-main ">
                                 Главная
                             </Link>
-                            <Link to="/" className="block text-white w-max font-semibold hover:underline hover:text-blue">
+                            <Link to="/" className="block text-black w-max font-semibold hover:underline hover:text-main">
                                 О компании
                             </Link>
-                            <Link to="/production" className="block text-white w-fit font-semibold hover:underline hover:text-blue">
+                            <Link to="/production" className="block text-black w-fit font-semibold hover:underline hover:text-main">
                                 Производство
                             </Link>
-                            <Link to="/distribution" className="block text-white w-fit font-semibold hover:underline hover:text-blue">
+                            <Link to="/distribution" className="block text-black w-fit font-semibold hover:underline hover:text-main">
                                 Дистрибьюция
                             </Link>
-                            <Link to="/logistic" className="block text-white w-fit font-semibold hover:underline hover:text-blue">
+                            <Link to="/logistic" className="block text-black w-fit font-semibold hover:underline hover:text-main">
                                 Логистика
                             </Link>
-                            <Link to="" className="block text-white w-fit font-semibold hover:underline hover:text-blue">
+                            <Link to="/" className="block text-black w-fit font-semibold hover:underline hover:text-main">
                                 Прочее
                             </Link>
-                            <button onClick={toggleMenu} className="text-white absolute w-[32px] h-[32px] top-6 right-6">
+                            <button onClick={toggleMenu} className="text-black absolute w-[32px] h-[32px] top-6 right-6">
                                 <img src={Close} alt="close button" />
                             </button>
                         </div>
@@ -79,7 +89,7 @@ const Navbar: React.FC<NavbarProps> = ({ position }) => {
                             isMenuOpen ? 'opacity-0' : 'opacity-100'
                         }`}
                     >
-                        <img src={Burger} alt="" />
+                        <img src={Burger} alt="Burger icon" />
                         <p>Меню</p>
                     </button>
                     <img src={Logo} alt="logo Daniel" className="h-[56px] mr-4" />
