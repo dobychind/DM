@@ -17,6 +17,8 @@ const Production: React.FC = () => {
   const [selectedType, setSelectedType] = useState<string>('');
   const [selectedCategory, setSelectedCategory] = useState<string>('');
   const [selectedManufacturer, setSelectedManufacturer] = useState<string>('');
+  const [isFilterOpen, setIsFilterOpen] = useState<boolean>(false); // State to control filter visibility
+
   const location = useLocation();
 
   // Извлекаем тип из URL (например, /production/confectionery)
@@ -41,6 +43,10 @@ const Production: React.FC = () => {
     setSelectedManufacturer(manufacturer);
   };
 
+  const toggleFilter = () => {
+    setIsFilterOpen(!isFilterOpen); // Toggle filter visibility
+  };
+
   const filteredProducts = initialProducts.filter((product) => {
     return (
       (selectedType ? product.type === selectedType : true) &&
@@ -59,12 +65,12 @@ const Production: React.FC = () => {
   const manufacturers = Array.from(new Set(initialProducts.map((product) => product.manufacturer)));
 
   return (
-    <div className="flex flex-col gap-8 justify-center items-center pb-12">
+    <div className="flex font-body flex-col gap-8 justify-center items-center pb-12">
       <Navbar position="fixed" />
       <div className="flex flex-col gap-8 lg:w-[90%] justify-center mt-32">
         <Navigation />
         <div>
-          <nav className="flex gap-12">
+          <nav className="flex flex-col gap-4 md:flex-row md:gap-12">
             {allTypes.map((type) => (
               <Link
                 className={`text-3xl font-bold hover:text-main ${
@@ -79,8 +85,15 @@ const Production: React.FC = () => {
           </nav>
         </div>
         <div className='relative flex gap-8'>
+          <button
+            className="md:hidden bg-main text-white px-4 py-2 rounded-lg fixed top-72 left-1 md:top-24 md:left-4 z-10"
+            onClick={toggleFilter}
+          >
+            Фильтр
+          </button>
+
           <div className='inherit'>
-            <div className='sticky top-[8rem]'>
+            <div className='md:sticky top-[8rem]'>
               <ProductFilter
                 categories={categories}
                 manufacturers={manufacturers}
@@ -88,9 +101,10 @@ const Production: React.FC = () => {
                 selectedManufacturer={selectedManufacturer}
                 onCategoryChange={handleCategoryChange}
                 onManufacturerChange={handleManufacturerChange}
+                isOpen={isFilterOpen} 
+                toggleFilter={toggleFilter} 
               />
             </div>
-
           </div>
           <div className='w-4/5 ml-auto'>
             <ProductList products={filteredProducts} />

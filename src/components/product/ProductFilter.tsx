@@ -1,4 +1,5 @@
 import React from 'react';
+import Select from 'react-select';
 
 interface ProductFilterProps {
     categories: string[];
@@ -7,6 +8,8 @@ interface ProductFilterProps {
     selectedManufacturer: string;
     onCategoryChange: (category: string) => void;
     onManufacturerChange: (manufacturer: string) => void;
+    isOpen: boolean;
+    toggleFilter: () => void;
 }
 
 const ProductFilter: React.FC<ProductFilterProps> = ({
@@ -16,34 +19,74 @@ const ProductFilter: React.FC<ProductFilterProps> = ({
     selectedManufacturer,
     onCategoryChange,
     onManufacturerChange,
+    isOpen,
+    toggleFilter,
 }) => {
+    const manufacturerOptions = manufacturers.map((manufacturer) => ({
+        value: manufacturer,
+        label: manufacturer,
+    }));
+
+    const customStyles = {
+        control: (provided: any) => ({
+            ...provided,
+            backgroundColor: '#FF6A00',
+            borderColor: '#FF6A00',
+            color: 'white',
+            padding: '4px 8px',
+            borderRadius: '0.5rem',
+            fontSize: '1rem',
+            fontWeight: '500',
+        }),
+        singleValue: (provided: any) => ({
+            ...provided,
+            color: 'white',
+        }),
+        option: (provided: any, state: any) => ({
+            ...provided,
+            backgroundColor: state.isFocused ? '#FF6A00' : 'transparent',
+            color: state.isFocused ? 'white' : 'black',
+            padding: '8px 12px',
+        }),
+        menu: (provided: any) => ({
+            ...provided,
+            backgroundColor: '#FF6A00',
+            borderRadius: '0.5rem',
+        }),
+    };
+
     return (
-        <div className="flex flex-col gap-6 border px-12 py-8 rounded-2xl bg-[#FF6A0099]">
-            <div className="relative">
-                <select
-                    value={selectedManufacturer}
-                    onChange={(e) => onManufacturerChange(e.target.value)}
-                    className="appearance-none text-lg font-medium px-4 py-2 pr-8 rounded-lg bg-orange text-white focus:outline-none focus:ring-2 focus:ring-main active:border-main"
+        <div
+            className={`fixed inset-0 z-50 bg-[#CC7C32] w-4/5 md:w-auto md:relative md:rounded-l-2xl transform transition-transform ${
+                isOpen ? 'translate-x-0' : '-translate-x-full'
+            } md:translate-x-0 md:flex md:flex-col gap-4 2xl:gap-6 md:border px-12 py-4 2xl:py-8`}
+        >
+            <div className="flex justify-between items-center md:hidden">
+                <h2 className="text-xl font-bold text-white">Фильтр</h2>
+                <button
+                    className="text-white text-3xl"
+                    onClick={toggleFilter}
                 >
-                    <option value="">Все производители</option>
-                    {manufacturers.map((manufacturer) => (
-                        <option key={manufacturer} value={manufacturer}>
-                            {manufacturer}
-                        </option>
-                    ))}
-                </select>
-                <div className="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
-                    <svg className="w-4 h-4 fill-current text-white" viewBox="0 0 20 20">
-                        <path d="M7 10l5 5 5-5H7z" />
-                    </svg>
-                </div>
+                    &times;
+                </button>
             </div>
 
+            <div className="relative mt-4 md:mt-0">
+                <Select
+                    value={manufacturerOptions.find(option => option.value === selectedManufacturer)}
+                    onChange={(selectedOption) => onManufacturerChange(selectedOption?.value || '')}
+                    options={manufacturerOptions}
+                    styles={customStyles}
+                    isClearable
+                    placeholder="Все производители"
+                />
+            </div>
 
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 mt-4">
                 <button
-                    className={`px-4 py-2 rounded-lg text-lg font-medium ${selectedCategory === '' ? 'bg-orange text-white' : 'text-black'
-                        }`}
+                    className={`px-4 py-2 rounded-lg text-lg font-medium ${
+                        selectedCategory === '' ? 'bg-orange text-white' : 'text-black'
+                    }`}
                     onClick={() => onCategoryChange('')}
                 >
                     Все категории
@@ -51,16 +94,15 @@ const ProductFilter: React.FC<ProductFilterProps> = ({
                 {categories.map((category) => (
                     <button
                         key={category}
-                        className={`px-4 py-2 rounded-lg text-lg font-medium text-black ${selectedCategory === category ? 'bg-orange text-white' : 'text-black'
-                            }`}
+                        className={`px-4 py-2 rounded-lg text-lg font-medium text-black ${
+                            selectedCategory === category ? 'bg-orange text-white' : 'text-black'
+                        }`}
                         onClick={() => onCategoryChange(category)}
                     >
                         {category}
                     </button>
                 ))}
             </div>
-
-
         </div>
     );
 };

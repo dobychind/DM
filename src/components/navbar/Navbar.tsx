@@ -60,25 +60,25 @@ const Navbar: React.FC<NavbarProps> = ({ position }) => {
                             data-aos-duration="500"
                             className="flex flex-col z-10 gap-4 text-2xl bg-gray-800 py-6 pl-6 absolute top-0 left-0 w-full"
                         >
-                            <Link to="/" className="block text-black w-fit font-semibold hover:underline hover:text-main ">
+                            <Link to="/" className="block text-white w-fit font-semibold hover:underline hover:text-main ">
                                 Главная
                             </Link>
-                            <Link to="/" className="block text-black w-max font-semibold hover:underline hover:text-main">
+                            <Link to="/" className="block text-white w-max font-semibold hover:underline hover:text-main">
                                 О компании
                             </Link>
-                            <Link to="/production" className="block text-black w-fit font-semibold hover:underline hover:text-main">
+                            <Link to="/production" className="block text-white w-fit font-semibold hover:underline hover:text-main">
                                 Производство
                             </Link>
-                            <Link to="/distribution" className="block text-black w-fit font-semibold hover:underline hover:text-main">
+                            <Link to="/distribution" className="block text-white w-fit font-semibold hover:underline hover:text-main">
                                 Дистрибьюция
                             </Link>
-                            <Link to="/logistic" className="block text-black w-fit font-semibold hover:underline hover:text-main">
+                            <Link to="/logistic" className="block text-white w-fit font-semibold hover:underline hover:text-main">
                                 Логистика
                             </Link>
-                            <Link to="/" className="block text-black w-fit font-semibold hover:underline hover:text-main">
+                            <Link to="/" className="block text-white w-fit font-semibold hover:underline hover:text-main">
                                 Прочее
                             </Link>
-                            <button onClick={toggleMenu} className="text-black absolute w-[32px] h-[32px] top-6 right-6">
+                            <button onClick={toggleMenu} className="text-white absolute w-[32px] h-[32px] top-6 right-6">
                                 <img src={Close} alt="close button" />
                             </button>
                         </div>
@@ -90,7 +90,7 @@ const Navbar: React.FC<NavbarProps> = ({ position }) => {
                         }`}
                     >
                         <img src={Burger} alt="Burger icon" />
-                        <p>Меню</p>
+                        <p className='text-black'>Меню</p>
                     </button>
                     <img src={Logo} alt="logo Daniel" className="h-[56px] mr-4" />
                 </div>

@@ -18,7 +18,7 @@ const Logistic = () => {
 
 
   return (
-    <div>
+    <div className="font-body">
       <Navbar position="fixed"/>
       <div className="w-full object-cover relative">
         <div className="absolute w-full md:w-1/3 flex flex-col pt-10 gap-2 md:gap-4 md:rounded-2xl md:top-1/2 md:left-4 bg-opacity-50 p-8 bg-black">
