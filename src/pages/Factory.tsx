@@ -8,14 +8,9 @@ import Banner from '/banner.jpg'
 import BreadShop from '/breadshop.jpg'
 
 
-import Aos from 'aos'
-import 'aos/dist/aos.css'
-import { useEffect } from 'react'
 
 const Factory = () => {
-  useEffect(() => {
-    Aos.init();
-  }, [])
+
   const handleClick = () => {
     console.log('Button clicked!');
   };

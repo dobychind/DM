@@ -4,7 +4,12 @@ import formImage from "/FormImage.png"
 import InputMask from 'react-input-mask';
 import closeIcon from "/close.png";
 
-const FeedbackForm: React.FC = () => {
+
+interface FormProps {
+    text: string;
+  }
+
+const FeedbackForm: React.FC<FormProps> = ({ text }) => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
@@ -61,7 +66,7 @@ const FeedbackForm: React.FC = () => {
 
     return (
         <div className='z-50'>
-            <Button text='Консультация с логистом' onClick={handleOpen} color='main'></Button>
+            <Button text={text} onClick={handleOpen} color='main'></Button>
 
             {isOpen && (
                 <div id='modal-background' onClick={handleBackgroundClick}
@@ -75,7 +80,7 @@ const FeedbackForm: React.FC = () => {
                             <img src={closeIcon} alt="" />
                         </button>
                         <form className="flex justify-center items-center flex-col gap-8 md:p-8 rounded-2xl" onSubmit={handleSubmit}>
-                            <p className="text-black text-3xl font-bold">Консультация с логистом</p>
+                            <p className="text-black text-3xl font-bold">{text}</p>
                             <div className='flex gap-16 items-center'>
                                 <div className="w-full mr-auto flex flex-col gap-4">
                                     <div className='flex flex-col gap-1'>
