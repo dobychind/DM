@@ -22,7 +22,7 @@ const Breadcrumbs: React.FC = () => {
 
       return (
         <span key={path} className='flex items-center gap-2'>
-          <Link className='text-main font-semibold text-m' to={path}>{label}</Link>
+          <Link className='text-main font-semibold text-sm' to={path}>{label}</Link>
           {index < pathParts.length - 1 && ' > '}
         </span>
       );

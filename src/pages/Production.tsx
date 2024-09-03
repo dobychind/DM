@@ -5,6 +5,7 @@ import ProductList from '../components/product/ProductList';
 import ProductFilter from '../components/product/ProductFilter';
 import Navbar from "../components/navbar/Navbar";
 import Navigation from '../components/nav/Navigation';
+import FeedbackForm from '../components/logistic/Form';
 
 const typeMapping: { [key: string]: string } = {
   'Кондитерские изделия': 'confectionery',
@@ -82,6 +83,7 @@ const Production: React.FC = () => {
                 {type}
               </Link>
             ))}
+            <FeedbackForm text='Запросить прайс-лист'/>
           </nav>
         </div>
         <div className='relative flex gap-8'>
