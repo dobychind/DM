@@ -15,12 +15,18 @@ import Novg2 from '/novg2.jpg';
 import Novg3 from '/novg3.jpg';
 import Novg4 from '/novg4.jpg';
 import Psen from '/psen.png'
+import { useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css'
+
 
 
 
 
 const Factory = () => {
-
+  useEffect(() => {
+    Aos.init();
+  }, [])
   const handleClick = () => {
     console.log('Button clicked!');
   };
@@ -31,8 +37,8 @@ const Factory = () => {
       <div className='w-full bg-white relative'>
         <img src={Banner} alt="banner hpp1" className='' />
         <img src={hpp} alt="Hpp Logotype" className='absolute w-16 top-1 right-1 md:top-4 md:right-4 md:w-48' />
-        <h2 className='text-amber-900 font-semibold md:font-medium text-lg md:text-5xl top-14 absolute right-5 md:top-56 md:right-36 max-w-[48%]'>Хлебопекарное предприятие № 1</h2>
-        <p className='text-main w-[96%] text-center md:w-auto md:text-start pt-6 md:py-6 md:pt-0 font-normal md:text-3xl md:absolute md:top-[22rem] md:right-32 md:max-w-[40%]'>Ключевой производитель хлеба и хлебобулочных изделий в составе группы компаний «Даниэль М».</p>
+        <h2 data-aos="zoom-in" data-aos-duration="1000" className='text-amber-900 font-semibold  md:font-medium text-lg md:text-5xl top-14 absolute right-5 md:top-56 md:right-36 max-w-[48%]'>Хлебопекарное предприятие № 1</h2>
+        <p data-aos="zoom-in" data-aos-duration="2000" className='text-main w-[96%] text-center md:w-auto md:text-start pt-6 md:py-6 md:pt-0 font-normal md:text-3xl md:absolute md:top-[22rem] md:right-32 md:max-w-[40%]'>Ключевой производитель хлеба и хлебобулочных изделий в составе группы компаний «Даниэль М».</p>
 
         <div className='mt-4 mb-8 md:mb-0 flex justify-center md:mt-0 md:absolute md:bottom-16 md:right-16'>
           <Link to="/production/bread"><Button onClick={handleClick} color='main' text='Продукция' /></Link>
@@ -49,7 +55,7 @@ const Factory = () => {
           </div>
         </div>
 
-        <div className='flex bg-white flex-col gap-8 w-[96%] md:w-[80%] px-4 py-3 md:px-12 md:py-8 rounded-2xl shadow-2xl'>
+        <div data-aos="fade-down" data-aos-duration="2000" className='flex bg-white flex-col gap-8 w-[96%] md:w-[80%] px-4 py-3 md:px-12 md:py-8 rounded-2xl shadow-2xl'>
           <h3 className='text-xl font-semibold md:text-3xl md:font-bold'>Наши изделия заслуженно занимают места на полках ведущих федеральных и региональных торговых сетей</h3>
           <div className='flex flex-wrap justify-between md:flex-nowrap gap-2 md:gap-6 items-center md:justify-around'>
             <img className='w-[47%] md:w-1/4 rounded-2xl' src={Bread} alt="Хлебный отдел в магазине" />
@@ -58,7 +64,7 @@ const Factory = () => {
           </div>
         </div>
 
-        <div className='flex bg-white flex-col gap-8 w-[96%] md:w-[80%] px-4 py-3 md:px-12 md:py-8 rounded-2xl shadow-2xl'>
+        <div data-aos="fade-down" data-aos-duration="2000" className='flex bg-white flex-col gap-8 w-[96%] md:w-[80%] px-4 py-3 md:px-12 md:py-8 rounded-2xl shadow-2xl'>
           <h3 className='text-xl font-semibold md:text-3xl md:font-bold'>Также ХПП № 1 восстанавливает Хлебопекарный завод В Великом Новгороде, что будет являться сохранением предприятия имеющего социальную значимость для региона</h3>
           <div className='flex flex-wrap gap-3 md:gap-6 items-center justify-around'>
             <img className='md:w-1/2 rounded-2xl' src={Novg} alt="Хлебный отдел в магазине" />
@@ -69,7 +75,7 @@ const Factory = () => {
           </div>
         </div>
 
-        <div className='flex bg-white flex-col gap-8 w-[96%] md:w-[80%] px-4 py-3 md:px-12 md:py-8 rounded-2xl shadow-2xl'>
+        <div data-aos="fade-down" data-aos-duration="2000" className='flex bg-white flex-col gap-8 w-[96%] md:w-[80%] px-4 py-3 md:px-12 md:py-8 rounded-2xl shadow-2xl'>
           <h5 className='text-lg font-semibold md:text-xl'> В наших планах — активно развивать продукцию под лейблом «Сделано в Великом Новгороде», которое производит Хлебопекарное предприятие № 1.</h5>
           <div className='flex flex-col-reverse md:flex-row gap-6 items-center justify-between'>
             <p className='md:w-3/5 text-lg md:text-xl'>
@@ -80,7 +86,7 @@ const Factory = () => {
           </div>
         </div>
 
-        <div className='flex bg-white flex-col gap-8 w-[96%] md:w-[80%] px-4 py-3 md:px-12 md:py-8 rounded-2xl shadow-2xl'>
+        <div data-aos="fade-down" data-aos-duration="2000" className='flex bg-white flex-col gap-8 w-[96%] md:w-[80%] px-4 py-3 md:px-12 md:py-8 rounded-2xl shadow-2xl'>
           <h5 className='text-lg font-semibold md:text-xl'>С 2024 года мы с гордостью запускаем нашу новую торговую марку «Мастерская Э.Пшеничного» под вдохновляющим лозунгом «Вкуснее с нами!».
             <br />Этот бренд посвящён искусству ремесленного хлебопечения и объединяет в себе традиции и инновации.</h5>
           <div className='flex flex-wrap md:flex-nowrap gap-6 items-center justify-between'>
@@ -91,13 +97,13 @@ const Factory = () => {
           </div>
         </div>
 
-        <div className='flex bg-white flex-col gap-8 w-[96%] md:w-[80%] px-4 py-3 md:px-12 md:py-8 rounded-2xl shadow-2xl'>
+        <div data-aos="fade-down" data-aos-duration="2000" className='flex bg-white flex-col gap-8 w-[96%] md:w-[80%] px-4 py-3 md:px-12 md:py-8 rounded-2xl shadow-2xl'>
           <h5 className='text-xl font-semibold md:font-bold md:text-3xl'>Наши награды</h5>
           <div className='flex gap-6 items-center justify-between'>
           </div>
         </div>
 
-        <div className='flex bg-white flex-col gap-8 w-[96%] md:w-[80%] px-4 py-3 md:px-12 md:py-8 rounded-2xl shadow-2xl'>
+        <div data-aos="fade-down" data-aos-duration="2000" className='flex bg-white flex-col gap-8 w-[96%] md:w-[80%] px-4 py-3 md:px-12 md:py-8 rounded-2xl shadow-2xl'>
           <h5 className='text-2xl font-semibold md:font-bold md:text-3xl'>СМИ о нас</h5>
           <div className='flex flex-wrap md:flex-nowrap gap-6 items-center justify-between'>
             <iframe className='rounded-2xl w-full' width="720" height="405" src="https://rutube.ru/play/embed/1569906122342b2625e6c70d94a393a4/" frameBorder="0" allow="clipboard-write; autoplay" allowFullScreen></iframe>
