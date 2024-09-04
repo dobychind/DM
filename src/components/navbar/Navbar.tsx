@@ -21,7 +21,7 @@ const Navbar: React.FC<NavbarProps> = ({ position }) => {
             return 'text-black ';
         }
     };
-    
+
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -31,7 +31,10 @@ const Navbar: React.FC<NavbarProps> = ({ position }) => {
         <section className={`${position === 'fixed' ? 'fixed' : 'block'} bg-transparent w-full z-50 top-0 pb-4 md:pb-0`}>
             <div className="flex flex-col items-center">
                 <div className="hidden md:flex mx-auto w-full justify-between items-center py-3 font-main bg-white shadow-transparent ">
-                    <img src={Logo} alt="logo Daniel" className="h-[70px] ml-8" />
+
+                    <a href="/">
+                        <img src={Logo} alt="logo Daniel" className="h-[70px] ml-8" />
+                    </a>
                     <div className="flex max-w-[95vw] mx-auto gap-5 text-xl md:items-center md:text-2xl">
                         <Link to="/">
                             <p className={`${isActive('/')} text-black font-semibold hover:underline hover:text-main `}>Главная</p>
@@ -85,14 +88,16 @@ const Navbar: React.FC<NavbarProps> = ({ position }) => {
                     )}
                     <button
                         onClick={toggleMenu}
-                        className={`text-white flex flex-col items-center w-[32px] h-[32px] ml-4 mt-4 transition-opacity duration-300 ${
-                            isMenuOpen ? 'opacity-0' : 'opacity-100'
-                        }`}
+                        className={`text-white flex flex-col items-center w-[32px] h-[32px] ml-4 mt-4 transition-opacity duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100'
+                            }`}
                     >
                         <img src={Burger} alt="Burger icon" />
                         <p className='text-black'>Меню</p>
                     </button>
-                    <img src={Logo} alt="logo Daniel" className="h-[56px] mr-4" />
+                    <a href="/">
+                        <img src={Logo} alt="logo Daniel" className="h-[56px] mr-4" />
+
+                    </a>
                 </div>
             </div>
         </section>

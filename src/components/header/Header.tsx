@@ -36,7 +36,7 @@ const Header: React.FC<HeaderProps> = ({ scrollToAbout, scrollToProduction, forw
   return (
     <section className="bg-[url('/back-main.jpg')] bg-cover">
       <div ref={forwardRef} className="flex flex-col items-center">
-        <div className='absolute left-2 bottom-2'>
+        <div className='absolute z-10 right-2 top-2 md:right-auto md:top-auto md:left-2 md:bottom-2'>
           <Link to="/production/bread">
             <Button onClick={handleClick} color='orange' text='Узнать больше' />
           </Link>
@@ -69,7 +69,7 @@ const Header: React.FC<HeaderProps> = ({ scrollToAbout, scrollToProduction, forw
         </div>
         <div className="md:hidden relative w-full">
           {isMenuOpen && (
-            <div data-aos="fade-right" data-aos-duration="500" className={`flex flex-col gap-4 text-2xl bg-gray-800 py-6 pl-6 absolute top-0 left-0 w-full`}>
+            <div data-aos="fade-right" data-aos-duration="500" className={`flex z-30 flex-col gap-4 text-2xl bg-gray-800 py-6 pl-6 absolute top-0 left-0 w-full`}>
               <a onClick={scrollToAbout} className='block text-white w-fit font-semibold hover:underline hover:text-blue'>Главная</a>
               <a onClick={scrollToAbout} className='block text-white w-max font-semibold hover:underline hover:text-blue'>О компании</a>
               <Link to="/production" className='block text-white w-fit font-semibold hover:underline hover:text-blue'>Производство</Link>
