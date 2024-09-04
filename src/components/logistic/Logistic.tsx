@@ -38,7 +38,7 @@ const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ f
 
                     </div>
                     <div className='ml-auto'>
-                        <Link to="/logistic"> <Button onClick={handleClick} text='Подробнее' /></Link>
+                        <Link reloadDocument to="/logistic"> <Button onClick={handleClick} text='Подробнее' /></Link>
                     </div>
                 </div>
             </div>

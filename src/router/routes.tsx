@@ -6,6 +6,8 @@ import React from "react"
 import MainPage from "../pages/MainPage";
 import Factory from "../pages/Factory";
 import Policy from "../pages/Policy";
+import Job from "../pages/Job";
+import Contacts from "../pages/Contacts";
 
 
 interface RouteConfig {
@@ -20,5 +22,7 @@ export const publicRoutes: RouteConfig[] =[
     {path: '/production/confectionery', component: <Production/>},
     {path: '/distribution', component: <Distribution/>},
     {path: '/logistic', component: <Logistic/>},
-    {path: '/policy' , component: <Policy/>}
+    {path: '/policy' , component: <Policy/>},
+    {path: '/job', component: <Job/>},
+    {path: '/contacts', component: <Contacts/>}
 ]

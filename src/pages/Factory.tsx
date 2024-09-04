@@ -41,7 +41,7 @@ const Factory = () => {
         <p data-aos="zoom-in" data-aos-duration="2000" className='text-main w-[96%] text-center md:w-auto md:text-start pt-6 md:py-6 md:pt-0 font-normal md:text-3xl md:absolute md:top-[22rem] md:right-32 md:max-w-[40%]'>Ключевой производитель хлеба и хлебобулочных изделий в составе группы компаний «Даниэль М».</p>
 
         <div className='mt-4 mb-8 md:mb-0 flex justify-center md:mt-0 md:absolute md:bottom-16 md:right-16'>
-          <Link to="/production/bread"><Button onClick={handleClick} color='main' text='Продукция' /></Link>
+          <Link reloadDocument to="/production/bread"><Button onClick={handleClick} color='main' text='Продукция' /></Link>
         </div>
       </div>
 

@@ -66,7 +66,7 @@ const Production: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({
       </div>
 
       <div className='mx-auto'>
-        <Link to="/production"><Button onClick={handleClick} text='Узнать больше' color='orange' /></Link>
+        <Link reloadDocument to="/production"><Button onClick={handleClick} text='Узнать больше' color='orange' /></Link>
       </div>
     </div>
   );

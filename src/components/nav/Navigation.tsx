@@ -22,7 +22,7 @@ const Breadcrumbs: React.FC = () => {
 
       return (
         <span key={path} className='flex items-center gap-2'>
-          <Link className='text-main font-semibold text-sm' to={path}>{label}</Link>
+          <Link reloadDocument className='text-main font-semibold text-sm' to={path}>{label}</Link>
           {index < pathParts.length - 1 && ' > '}
         </span>
       );
@@ -33,7 +33,7 @@ const Breadcrumbs: React.FC = () => {
 
   return (
     <div className="flex items-center gap-2">
-      <Link className='text-main font-semibold text-m' to="/">Главная</Link>
+      <Link reloadDocument className='text-main font-semibold text-m' to="/">Главная</Link>
       {pathParts.length > 0 && ' > '}
       {generateBreadcrumbs()}
     </div>

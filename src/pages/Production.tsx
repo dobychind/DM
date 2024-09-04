@@ -73,7 +73,7 @@ const Production: React.FC = () => {
         <div>
           <nav className="flex flex-col gap-4 md:flex-row md:gap-12">
             {allTypes.map((type) => (
-              <Link
+              <Link reloadDocument
                 className={`text-3xl font-bold hover:text-main ${
                   selectedType === type ? 'text-main' : 'text-black'
                 }`}

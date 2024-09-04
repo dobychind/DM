@@ -14,7 +14,7 @@ const Error = () => {
           4
         </div>
         <p className="text-3xl font-semibold">Страница не найдена</p>
-        <Link to="/" className="text-orange text-3xl cursor-pointer">Вернуться на главную страницу</Link>
+        <Link reloadDocument to="/" className="text-orange text-3xl cursor-pointer">Вернуться на главную страницу</Link>
       </div>
 
     </div>
