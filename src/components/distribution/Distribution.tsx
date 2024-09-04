@@ -29,7 +29,7 @@ const Distribution: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = 
                 <div className='flex flex-col p-4 md:px-12 gap-12 justify-between md:py-8'>
                     <div className='flex flex-col-reverse md:flex-row-reverse gap-4 justify-between '>
                         <img data-aos="fade-down" data-aos-duration="2000" src={MapPic} alt="" className='rounded-xl md:w-1/2' />
-                        <div className='flex justify-center items-center flex-col gap-4'>
+                        <div className='flex justify-center 2xl:justify-around  items-center 2xl:items-start flex-col gap-4'>
                             <p className=' text-black text-xl font-normal md:text-2xl md:leading-normal md:font-medium	2xl:text-3xl 2xl:leading-normal'>
                                 ГК Даниэль М  занимает важное положение в сфере дистрибуции хлеба в стратегически важных регионах России как Москва и Санкт-Петербург, а так же их областях.
                             </p>
