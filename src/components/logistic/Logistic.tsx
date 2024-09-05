@@ -30,7 +30,7 @@ const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ f
                     <img data-aos='fade-left' data-aos-duration="2000" data-aos-anchor-placement="bottom-bottom" data-aos-easing="linear" src={Car} alt='brand car' className='translate-x-full w-full h-full ease-in duration-[4000ms]' />
                 </div>
                 <div className='flex flex-col gap-6 lg:w-1/2'>
-                    <p className='text-black font-normal text-xl lg:w-fit md:text-2xl md:font-medium 2xl:text-2xl 2xl:leading-normal'>
+                    <p className='text-black font-normal text-xl lg:w-fit md:text-2xl md:font-medium min-[1920px]:text-2xl min-[1920px]:leading-normal'>
                         В 2019 году стартовал проект, основанный на нашем дистрибьюторском опыте, по предоставлению логистических услуг.
                         <br />Наша логистическая компания специализируется на оказании высококачественных услуг по системе 3PL.
                     </p>
@@ -43,13 +43,13 @@ const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ f
                 </div>
             </div>
 
-            <Counters/>
+            <Counters />
 
             <Services />
 
-            
 
-           
+
+
 
             <p className='text-3xl font-bold'>Доставка груза</p>
             <div className='grid grid-cols-1 w-4/5 md:w-full items-start justify-between gap-8 md:max-w-[70%] md:grid-cols-2 md:flex-row'>
@@ -81,18 +81,18 @@ const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ f
 
                 <div data-aos="fade-up" data-aos-duration="1000" className='flex w-full bg-white rounded-xl shadow-md p-3 h-full items-center'>
                     <div className='w-full h-full flex flex-col justify-between'>
-                        <div className='max-h-[280px] h-full'>
-                            <img src={Threepl} alt='' className='w-full h-[200px] rounded-xl ' />
+                        <div className='w-full h-full'>
+                            <img src={Threepl} alt='Оптимальные условия хранения' className='w-full h-full object-cover rounded-xl ' />
                         </div>
-                        <p className='text-main font-semibold text-2xl m-auto py-4 text-center'>Создание оптимальных условий для хранения продуктов питания</p>
+                        <p className='text-main font-semibold text-xl m-auto py-4 text-center'>Создание оптимальных условий для хранения продуктов питания</p>
                     </div>
 
                 </div>
 
                 <div data-aos="fade-up" data-aos-duration="2000" className='flex w-full bg-white rounded-xl shadow-md p-3 h-full items-center'>
                     <div className='w-full h-full flex flex-col justify-between'>
-                        <div className='h-full'>
-                            <img src={Cars} alt='' className='w-full  h-[200px] rounded-xl' />
+                        <div className='h-full w-full'>
+                            <img src={Cars} alt='Собственный автопарк' className='w-full h-full object-cover rounded-xl' />
                         </div>
                         <p className='text-main font-semibold text-xl my-auto py-4 text-center'>Собственный автопарк и погрузочно-разгрузочное оборудование</p>
                     </div>
@@ -101,7 +101,9 @@ const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ f
 
                 <div data-aos="fade-up" data-aos-duration="3000" className='flex w-full bg-white rounded-xl shadow-md h-full p-3 items-center'>
                     <div className='w-full h-full flex flex-col '>
-                        <img src={Sklad} alt='' className='w-full h-[200px] rounded-xl' />
+                        <div className='h-full w-full'>
+                            <img src={Sklad} alt='Складские помещения' className='w-full h-full object-cover rounded-xl' />
+                        </div>
                         <p className='text-main font-semibold text-2xl m-auto py-4 text-center'>Склады в Москве, Санкт-Петербуге и Новгороде</p>
                     </div>
 
@@ -109,9 +111,9 @@ const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ f
             </div>
 
             <div className='w-full flex flex-col md:flex-row justify-center gap-8 items-center'>
-                <p className='font-light md:w-1/2'>Стоимость услуг оператора для каждого типа логистики рассчитывается индивидуально. 
+                <p className='font-light md:w-1/2'>Стоимость услуг оператора для каждого типа логистики рассчитывается индивидуально.
                     <br />Для расчета обратитесь к менеджерам компании, заполнив форму или позвонив по телефону, указанному на сайте.</p>
-                <FeedbackForm text='Консультация с логистом'/>    
+                <FeedbackForm text='Консультация с логистом' />
             </div>
         </div>
     )

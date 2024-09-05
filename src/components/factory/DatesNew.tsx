@@ -40,32 +40,32 @@ const DatesNew = () => {
             }}
         >
             <SwiperSlide className='flex flex-col gap-4 md:gap-6 items-center  min-h-[150px] h-full'>
-                <div className='flex w-full items-center justify-around text-2xl text-main'>Февраль - март<p className='text-5xl'>2018</p></div>
-                <div className='flex items-center justify-center w-full'>Запуск производственной площадки в Санкт-Петербурге</div>
+                <div className='flex w-full items-center justify-around text-2xl min-[1920px]:text-4xl text-main'>Февраль - март<p className='text-5xl min-[1920px]:text-7xl'>2018</p></div>
+                <div className='flex items-center justify-center w-full min-[1920px]:text-2xl'>Запуск производственной площадки в Санкт-Петербурге</div>
             </SwiperSlide>
             <SwiperSlide className='flex flex-col gap-4 md:gap-6 items-center min-h-[150px] h-full'>
-                <div className='flex w-full items-center justify-around text-2xl text-main'>Март <p className='text-5xl'>2018</p></div>
-                <div className='flex items-center justify-center w-full'>Запуск площадки в Москве</div>
+                <div className='flex w-full items-center justify-around text-2xl  min-[1920px]:text-4xl text-main'>Март <p className='text-5xl min-[1920px]:text-7xl'>2018</p></div>
+                <div className='flex items-center justify-center w-full min-[1920px]:text-2xl'>Запуск площадки в Москве</div>
             </SwiperSlide>
             <SwiperSlide className='flex flex-col gap-4 md:gap-6 items-center min-h-[150px] h-full'>
-                <div className='text-5xl text-main'>2019 <p></p></div>
-                <div  className='flex items-center justify-center w-full'>Вывод собственной продукции на рынок СЗФО и онлайн-ритейл (Озон, Яндекс Лавка, Самокат)</div>
+                <div className='text-5xl  min-[1920px]:text-7xl text-main'>2019 <p></p></div>
+                <div  className='flex items-center justify-center w-full min-[1920px]:text-2xl'>Вывод собственной продукции на рынок СЗФО и онлайн-ритейл (Озон, Яндекс Лавка, Самокат)</div>
             </SwiperSlide>
             <SwiperSlide className='flex flex-col gap-4 md:gap-6 items-center min-h-[150px] h-full'>
-                <div className='text-5xl text-main'>2022-2023</div>
-                <div className='flex items-center justify-center w-full'>Расширение производственных площадей с 500 до 1500 кв. метров, увеличение объема производства в 2 раза</div>
+                <div className='text-5xl  min-[1920px]:text-7xl text-main'>2022-2023</div>
+                <div className='flex items-center justify-center w-full min-[1920px]:text-2xl'>Расширение производственных площадей с 500 до 1500 кв. метров, увеличение объема производства в 2 раза</div>
             </SwiperSlide>
             <SwiperSlide className='flex flex-col gap-4 md:gap-6 items-center min-h-[150px] h-full'>
-                <div className='text-5xl text-main'>2024</div>
-                <div  className='flex items-center justify-center w-full'>Покупка всех производственных мощностей АО Новгородхлеб</div>
+                <div className='text-5xl  min-[1920px]:text-7xl text-main'>2024</div>
+                <div  className='flex items-center justify-center w-full min-[1920px]:text-2xl'>Покупка всех производственных мощностей АО Новгородхлеб</div>
             </SwiperSlide>
             <SwiperSlide className='flex flex-col gap-4 md:gap-6 items-center min-h-[150px] h-full'>
-                <div className='flex w-full items-center justify-around text-2xl text-main'>Февраль <p className='text-5xl'>2024</p></div>
-                <div  className='flex items-center justify-center w-full'>Начало производства ХПП №1 в Великом Новгороде с объемом 5-6 тонн</div>
+                <div className='flex w-full items-center justify-around text-2xl  min-[1920px]:text-4xl text-main'>Февраль <p className='text-5xl min-[1920px]:text-7xl'>2024</p></div>
+                <div  className='flex items-center justify-center w-full min-[1920px]:text-2xl'>Начало производства ХПП №1 в Великом Новгороде с объемом 5-6 тонн</div>
             </SwiperSlide>
             <SwiperSlide className='flex flex-col gap-4 md:gap-6 items-center min-h-[150px] h-full'>
-                <div className='flex w-full items-center justify-around text-2xl text-main'>Июль <p className='text-5xl'>2024</p></div>
-                <div  className='flex items-center justify-center w-full'>Увеличение мощности производства ХПП №1 в Великом Новгороде до 12-13 тонн.</div>
+                <div className='flex w-full items-center justify-around text-2xl text-main  min-[1920px]:text-4xl'>Июль <p className='text-5xl min-[1920px]:text-7xl'>2024</p></div>
+                <div  className='flex items-center justify-center w-full min-[1920px]:text-2xl'>Увеличение мощности производства ХПП №1 в Великом Новгороде до 12-13 тонн.</div>
             </SwiperSlide>
 
         </Swiper>
