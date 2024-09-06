@@ -15,7 +15,9 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ scrollToAbout, scrollToProduction, forwardRef }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHoveredProduction, setIsHoveredProduction] = useState(false);
+  const [isHoveredMisc, setIsHoveredMisc] = useState(false);
+
 
   const handleClick = () => {
     console.log('click');
@@ -23,14 +25,6 @@ const Header: React.FC<HeaderProps> = ({ scrollToAbout, scrollToProduction, forw
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-  };
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
   };
 
   return (
@@ -45,19 +39,19 @@ const Header: React.FC<HeaderProps> = ({ scrollToAbout, scrollToProduction, forw
           <Link reloadDocument to="/"><p className='text-white font-semibold hover:underline hover:text-blue'>Главная</p></Link>
           <a className='cursor-pointer' onClick={scrollToAbout}><p className='text-white text-l w-max font-semibold hover:underline hover:text-blue'>О компании</p></a>
           <div
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
+            onMouseEnter={() => setIsHoveredProduction(true)}
+            onMouseLeave={() => setIsHoveredProduction(false)}
             className='relative'
           >
             <div className="flex items-center cursor-pointer">
               <span className='text-white font-semibold'>Производство</span>
               <img
-                className={`ml-2 transform transition-transform ${isHovered ? 'rotate-180' : 'rotate-0'}`}
+                className={`ml-2 transform transition-transform ${isHoveredProduction ? 'rotate-180' : 'rotate-0'}`}
                 src='chevron-down.svg'
                 alt="arrow"
               />
             </div>
-            <div className={`dropdown-content ${isHovered ? 'show' : ''} flex absolute top-10 bg-slate-500 p-4 rounded-2xl flex-col gap-3`}>
+            <div className={`dropdown-content ${isHoveredProduction ? 'show' : ''} flex absolute top-10 bg-slate-500 p-4 rounded-2xl flex-col gap-3`}>
               <a onClick={scrollToProduction} href="#brands" className='text-lg text-white font-semibold hover:underline hover:text-blue'>Наши бренды</a>
               <Link reloadDocument to="/production" className='text-lg hover:underline text-white font-semibold hover:text-blue'>О производстве</Link>
               <Link reloadDocument to="/production/bread" className='text-lg hover:underline text-white font-semibold hover:text-blue'>Продукция</Link>
@@ -65,7 +59,24 @@ const Header: React.FC<HeaderProps> = ({ scrollToAbout, scrollToProduction, forw
           </div>
           <Link reloadDocument to="/distribution"><p className='text-white font-semibold hover:underline hover:text-blue'>Дистрибьюция</p></Link>
           <Link reloadDocument to="/logistic"><p className='text-white font-semibold hover:underline hover:text-blue'>Логистика</p></Link>
-          <a className='cursor-pointer' onClick={scrollToAbout}><p className='text-white font-semibold hover:underline hover:text-blue'>Прочее</p></a>
+          <div
+            onMouseEnter={() => setIsHoveredMisc(true)}
+            onMouseLeave={() => setIsHoveredMisc(false)}
+            className='relative'
+          >
+            <div className="flex items-center cursor-pointer">
+              <span className='text-white font-semibold'>Прочее</span>
+              <img
+                className={`ml-2 transform transition-transform ${isHoveredMisc ? 'rotate-180' : 'rotate-0'}`}
+                src='chevron-down.svg'
+                alt="arrow"
+              />
+            </div>
+            <div className={`dropdown-content ${isHoveredMisc ? 'show' : ''} flex absolute top-10 bg-slate-500 p-4 rounded-2xl flex-col gap-3`}>
+              <Link reloadDocument to="/job" className='text-lg hover:underline text-white font-semibold hover:text-blue'>Вакансии</Link>
+              <Link reloadDocument to="/contacts" className='text-lg hover:underline text-white font-semibold hover:text-blue'>Контакты</Link>
+            </div>
+          </div>
         </div>
         <div className="md:hidden relative w-full">
           {isMenuOpen && (
@@ -74,29 +85,43 @@ const Header: React.FC<HeaderProps> = ({ scrollToAbout, scrollToProduction, forw
               <a onClick={scrollToAbout} className='block text-white w-max font-semibold hover:underline hover:text-blue'>О компании</a>
 
               <div
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
+                onMouseEnter={() => setIsHoveredProduction(true)}
+                onMouseLeave={() => setIsHoveredProduction(false)}
                 className='relative'
               >
                 <div className="flex items-center cursor-pointer">
                   <span className='text-white font-semibold'>Производство</span>
                   <img
-                    className={`ml-2 transform transition-transform ${isHovered ? 'rotate-180' : 'rotate-0'}`}
+                    className={`ml-2 transform transition-transform ${isHoveredProduction ? 'rotate-180' : 'rotate-0'}`}
                     src='chevron-down.svg'
                     alt="arrow"
                   />
                 </div>
-                <div className={`dropdown-content ${isHovered ? 'show' : ''} flex absolute top-10 bg-slate-500 p-4 rounded-2xl flex-col gap-3`}>
+                <div className={`dropdown-content ${isHoveredProduction ? 'show' : ''} flex absolute top-10 bg-slate-500 p-4 rounded-2xl flex-col gap-3`}>
                   <a onClick={scrollToProduction} href="#brands" className='text-lg text-white font-semibold hover:underline hover:text-blue'>Наши бренды</a>
                   <Link reloadDocument to="/production" className='text-lg hover:underline text-white font-semibold hover:text-blue'>О производстве</Link>
                   <Link reloadDocument to="/production/bread" className='text-lg hover:underline text-white font-semibold hover:text-blue'>Продукция</Link>
                 </div>
               </div>              <Link reloadDocument to="/distribution" className='block text-white w-fit font-semibold hover:underline hover:text-blue'>Дистрибьюция</Link>
               <Link reloadDocument to="/logistic" className='block text-white w-fit font-semibold hover:underline hover:text-blue'>Логистика</Link>
-              <a onClick={scrollToAbout} className='block text-white w-fit font-semibold hover:underline hover:text-blue'>Прочее</a>
-              <button onClick={toggleMenu} className="text-white absolute w-[32px] h-[32px] top-6 right-6">
-                <img src={Close} alt='close button' />
-              </button>
+              <div
+                onMouseEnter={() => setIsHoveredMisc(true)}
+                onMouseLeave={() => setIsHoveredMisc(false)}
+                className='relative'
+              >
+                <div className="flex items-center cursor-pointer">
+                  <span className='text-white font-semibold'>Прочее</span>
+                  <img
+                    className={`ml-2 transform transition-transform ${isHoveredMisc ? 'rotate-180' : 'rotate-0'}`}
+                    src='chevron-down.svg'
+                    alt="arrow"
+                  />
+                </div>
+                <div className={`dropdown-content ${isHoveredMisc ? 'show' : ''} flex absolute top-10 bg-slate-500 p-4 rounded-2xl flex-col gap-3`}>
+                  <Link reloadDocument to="/job" className='text-lg hover:underline text-white font-semibold hover:text-blue'>Вакансии</Link>
+                  <Link reloadDocument to="/contacts" className='text-lg hover:underline text-white font-semibold hover:text-blue'>Контакты</Link>
+                </div>
+              </div>
             </div>
           )}
           <button onClick={toggleMenu} className={`text-white flex flex-col items-center w-[32px] h-[32px] ml-4 mt-4 transition-opacity duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}>

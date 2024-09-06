@@ -29,19 +29,11 @@ const Navbar: React.FC<NavbarProps> = ({ position }) => {
         }
     };
 
-    const [isHovered, setIsHovered] = useState(false);
-
+    const [isHoveredProduction, setIsHoveredProduction] = useState(false);
+    const [isHoveredMisc, setIsHoveredMisc] = useState(false);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
-    };
-
-    const handleMouseEnter = () => {
-        setIsHovered(true);
-    };
-
-    const handleMouseLeave = () => {
-        setIsHovered(false);
     };
 
     return (
@@ -53,26 +45,26 @@ const Navbar: React.FC<NavbarProps> = ({ position }) => {
                         <img src={Logo} alt="logo Daniel" className="h-[70px] ml-8" />
                     </a>
                     <div className="flex max-w-[95vw] mx-auto gap-5 text-xl md:items-center md:text-2xl">
-                        <Link  reloadDocument to="/">
+                        <Link reloadDocument to="/">
                             <p className={`${isActive('/')} text-black font-semibold hover:underline hover:text-main `}>Главная</p>
                         </Link>
                         <Link reloadDocument to="/">
                             <p className={`${isActive('/')} text-black text-l w-max font-semibold hover:underline hover:text-main`}>О компании</p>
                         </Link>
                         <div
-                            onMouseEnter={handleMouseEnter}
-                            onMouseLeave={handleMouseLeave}
+                            onMouseEnter={() => setIsHoveredProduction(true)}
+                            onMouseLeave={() => setIsHoveredProduction(false)}
                             className='relative'
                         >
                             <div className="flex items-center cursor-pointer">
                                 <span className='text-black font-semibold'>Производство</span>
                                 <img
-                                    className={`ml-2 transform transition-transform ${isHovered ? 'rotate-180' : 'rotate-0'}`}
+                                    className={`ml-2 transform transition-transform ${isHoveredProduction ? 'rotate-180' : 'rotate-0'}`}
                                     src={Chevron}
                                     alt="arrow"
                                 />
                             </div>
-                            <div className={`dropdown-content ${isHovered ? 'show' : ''} flex absolute top-10 bg-slate-500 p-4 rounded-2xl flex-col gap-3`}>
+                            <div className={`dropdown-content ${isHoveredProduction ? 'show' : ''} flex absolute top-10 bg-slate-500 p-4 rounded-2xl flex-col gap-3`}>
                                 <Link reloadDocument to="/production" className='text-lg hover:underline text-white font-semibold hover:text-blue'>О производстве</Link>
                                 <Link reloadDocument to="/production/bread" className='text-lg hover:underline text-white font-semibold hover:text-blue'>Продукция</Link>
                             </div>
@@ -83,9 +75,24 @@ const Navbar: React.FC<NavbarProps> = ({ position }) => {
                         <Link reloadDocument to="/logistic">
                             <p className={`${isActive('/logistic')} text-black font-semibold hover:underline hover:text-main`}>Логистика</p>
                         </Link>
-                        <Link reloadDocument to="/">
-                            <p className="text-black font-semibold hover:underline hover:text-main">Прочее</p>
-                        </Link>
+                        <div
+                            onMouseEnter={() => setIsHoveredMisc(true)}
+                            onMouseLeave={() => setIsHoveredMisc(false)}
+                            className='relative'
+                        >
+                            <div className="flex items-center cursor-pointer">
+                                <span className='text-black font-semibold'>Прочее</span>
+                                <img
+                                    className={`ml-2 transform transition-transform ${isHoveredMisc ? 'rotate-180' : 'rotate-0'}`}
+                                    src={Chevron}
+                                    alt="arrow"
+                                />
+                            </div>
+                            <div className={`dropdown-content ${isHoveredMisc ? 'show' : ''} flex absolute top-10 bg-slate-500 p-4 rounded-2xl flex-col gap-3`}>
+                                <Link reloadDocument to="/job" className='text-lg hover:underline text-white font-semibold hover:text-blue'>Вакансии</Link>
+                                <Link reloadDocument to="/contacts" className='text-lg hover:underline text-white font-semibold hover:text-blue'>Контакты</Link>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className="md:hidden flex justify-between relative w-full">
@@ -102,19 +109,20 @@ const Navbar: React.FC<NavbarProps> = ({ position }) => {
                                 О компании
                             </Link>
                             <div
-                                onMouseEnter={handleMouseEnter}
-                                onMouseLeave={handleMouseLeave}
+                                onMouseEnter={() => setIsHoveredProduction(true)}
+                                onMouseLeave={() => setIsHoveredProduction(false)}
                                 className='relative'
                             >
                                 <div className="flex items-center cursor-pointer">
                                     <span className='text-white font-semibold'>Производство</span>
                                     <img
-                                        className={`ml-2 transform transition-transform ${isHovered ? 'rotate-180' : 'rotate-0'}`}
-                                        src={ChevronWhite}
+                                        className={`ml-2 transform transition-transform ${isHoveredProduction ? 'rotate-180' : 'rotate-0'}`}
+                                        src='chevron-down.svg'
                                         alt="arrow"
                                     />
                                 </div>
-                                <div className={`dropdown-content ${isHovered ? 'show' : ''} flex absolute top-10 bg-slate-500 p-4 rounded-2xl flex-col gap-3`}>
+                                <div className={`dropdown-content ${isHoveredProduction ? 'show' : ''} flex absolute top-10 bg-slate-500 p-4 rounded-2xl flex-col gap-3`}>
+                                    <a href="#brands" className='text-lg text-white font-semibold hover:underline hover:text-blue'>Наши бренды</a>
                                     <Link reloadDocument to="/production" className='text-lg hover:underline text-white font-semibold hover:text-blue'>О производстве</Link>
                                     <Link reloadDocument to="/production/bread" className='text-lg hover:underline text-white font-semibold hover:text-blue'>Продукция</Link>
                                 </div>
@@ -125,9 +133,24 @@ const Navbar: React.FC<NavbarProps> = ({ position }) => {
                             <Link reloadDocument to="/logistic" className="block text-white w-fit font-semibold hover:underline hover:text-main">
                                 Логистика
                             </Link>
-                            <Link reloadDocument to="/" className="block text-white w-fit font-semibold hover:underline hover:text-main">
-                                Прочее
-                            </Link>
+                            <div
+                                onMouseEnter={() => setIsHoveredMisc(true)}
+                                onMouseLeave={() => setIsHoveredMisc(false)}
+                                className='relative'
+                            >
+                                <div className="flex items-center cursor-pointer">
+                                    <span className='text-white font-semibold'>Прочее</span>
+                                    <img
+                                        className={`ml-2 transform transition-transform ${isHoveredMisc ? 'rotate-180' : 'rotate-0'}`}
+                                        src='chevron-down.svg'
+                                        alt="arrow"
+                                    />
+                                </div>
+                                <div className={`dropdown-content ${isHoveredMisc ? 'show' : ''} flex absolute top-10 bg-slate-500 p-4 rounded-2xl flex-col gap-3`}>
+                                    <Link reloadDocument to="/job" className='text-lg hover:underline text-white font-semibold hover:text-blue'>Вакансии</Link>
+                                    <Link reloadDocument to="/contacts" className='text-lg hover:underline text-white font-semibold hover:text-blue'>Контакты</Link>
+                                </div>
+                            </div>
                             <button onClick={toggleMenu} className="text-white absolute w-[32px] h-[32px] top-6 right-6">
                                 <img src={Close} alt="close button" />
                             </button>
