@@ -27,7 +27,7 @@ const Factory = () => {
     console.log('Button clicked!');
   };
   return (
-    <div className='flex font-body bg-bg flex-col justify-center items-center pb-12'>
+    <div className='flex font-body bg-white flex-col justify-center items-center'>
       <Navbar position='block' />
 
       <div className='w-full bg-white relative'>
@@ -41,17 +41,17 @@ const Factory = () => {
         </div>
       </div>
 
-      <div className='flex w-full flex-col gap-12 md:gap-24 justify-center items-center'>
+      <div className='flex w-full pt-12 bg-gradient-to-b from-white from-10% via-[#CC7C3280] to-bg flex-col pb-12 gap-12 md:gap-24 justify-center items-center'>
 
-        <div className='w-[96%] mt-8 md:mt-0 flex flex-col justify-center gap-6 md:w-[86%]'>
+        <div className='w-[96%] bg-white shadow-2xl rounded-2xl mt-8 md:mt-0 flex flex-col justify-center gap-6 md:w-[86%]'>
           <h3 className='text-xl md:text-4xl md:text-center font-semibold md:font-bold md:py-8'>Этапы развития собственного производства</h3>
           {/* <Dates /> */}
-          <div className='max-w-full  bg-white p-6 rounded-2xl shadow-2xl'>
+          <div className='max-w-full  bg-white p-6 rounded-2xl'>
             <DatesNew />
           </div>
         </div>
 
-        <div data-aos="fade-down" data-aos-duration="2000" className='flex bg-white flex-col gap-8 w-[96%] md:w-[80%] px-4 py-3 md:px-12 md:py-8 rounded-2xl shadow-2xl'>
+        <div data-aos="fade-down" data-aos-duration="2000" className='flex flex-col bg-white gap-8 w-[96%] md:w-[80%] px-4 py-3 md:px-12 md:py-8 rounded-2xl'>
           <h3 className='text-xl font-semibold md:text-3xl min-[1920px]:text-5xl md:font-bold'>Наши изделия заслуженно занимают места на полках ведущих федеральных и региональных торговых сетей</h3>
           <div className='flex flex-wrap justify-between md:flex-nowrap gap-2 md:gap-6 items-center md:justify-around'>
             <img className='w-[47%] md:w-1/4 rounded-2xl' src={Bread} alt="Хлебный отдел в магазине" />
@@ -60,7 +60,7 @@ const Factory = () => {
           </div>
         </div>
 
-        <div data-aos="fade-down" data-aos-duration="2000" className='flex bg-white flex-col gap-8 w-[96%] md:w-[80%] px-4 py-3 md:px-12 md:py-8 rounded-2xl shadow-2xl'>
+        <div data-aos="fade-down" data-aos-duration="2000" className='flex flex-col bg-white gap-8 w-[96%] md:w-[80%] px-4 py-3 md:px-12 md:py-8 rounded-2xl'>
           <h3 className='text-xl font-semibold md:text-xl lg:text-2xl min-[1920px]:text-5xl md:font-bold'>Также ХПП № 1 восстанавливает Хлебопекарный завод В Великом Новгороде, что будет являться сохранением предприятия имеющего социальную значимость для региона</h3>
           <div className='flex flex-wrap gap-3 md:gap-6 items-center justify-around'>
             <img className='md:w-[30%] md:object-cover min-[1920px]:object-contain max-h-[300px] min-[1920px]:max-h-max rounded-2xl' src={Novg} alt="Хлебный отдел в магазине" />
@@ -69,7 +69,7 @@ const Factory = () => {
           </div>
         </div>
 
-        <div data-aos="fade-down" data-aos-duration="2000" className='flex bg-white flex-col gap-8 w-[96%] md:w-[80%] px-4 py-3 md:px-12 md:py-8 rounded-2xl shadow-2xl'>
+        <div data-aos="fade-down" data-aos-duration="2000" className='flex flex-col bg-white gap-8 w-[96%] md:w-[80%] px-4 py-3 md:px-12 md:py-8 rounded-2xl '>
           <h5 className='text-lg font-semibold md:text-xl lg:text-2xl min-[1920px]:text-5xl'> В наших планах — активно развивать продукцию под лейблом «Сделано в Великом Новгороде», которое производит Хлебопекарное предприятие № 1.</h5>
           <div className='flex flex-col-reverse md:flex-row gap-6 items-center justify-between'>
             <p className='md:w-3/5 text-lg md:text-xl min-[1920px]:text-3xl'>
@@ -80,7 +80,7 @@ const Factory = () => {
           </div>
         </div>
 
-        <div data-aos="fade-down" data-aos-duration="2000" className='flex bg-white flex-col gap-8 w-[96%] md:w-[80%] px-4 py-3 md:px-12 md:py-8 rounded-2xl shadow-2xl'>
+        <div data-aos="fade-down" data-aos-duration="2000" className='flex flex-col bg-white gap-8 w-[96%] md:w-[80%] px-4 py-3 md:px-12 md:py-8 rounded-2xl'>
           <h5 className='text-lg font-semibold md:text-xl lg:text-2xl min-[1920px]:text-5xl'>С 2024 года мы с гордостью запускаем нашу новую торговую марку «Мастерская Э.Пшеничного» под вдохновляющим лозунгом «Вкуснее с нами!».
             <br />Этот бренд посвящён искусству ремесленного хлебопечения и объединяет в себе традиции и инновации.</h5>
           <div className='flex flex-wrap md:flex-nowrap gap-6 items-center justify-between'>
@@ -91,13 +91,13 @@ const Factory = () => {
           </div>
         </div>
 
-        <div data-aos="fade-down" data-aos-duration="2000" className='flex bg-white flex-col gap-8 w-[96%] md:w-[80%] px-4 py-3 md:px-12 md:py-8 rounded-2xl shadow-2xl'>
+        <div data-aos="fade-down" data-aos-duration="2000" className='flex bg-white flex-col gap-8 w-[96%] md:w-[80%] px-4 py-3 md:px-12 md:py-8 rounded-2xl'>
           <h5 className='text-xl font-semibold md:font-bold md:text-3xl min-[1920px]:text-5xl'>Наши награды</h5>
           <div className='flex gap-6 items-center justify-between'>
           </div>
         </div>
 
-        <div data-aos="fade-down" data-aos-duration="2000" className='flex bg-white flex-col gap-8 w-[96%] md:w-[80%] px-4 py-3 md:px-12 md:py-8 rounded-2xl shadow-2xl'>
+        <div data-aos="fade-down" data-aos-duration="2000" className='flex bg-white flex-col gap-8 w-[96%] md:w-[80%] px-4 py-3 md:px-12 md:py-8 rounded-2xl'>
           <h5 className='text-2xl font-semibold md:font-bold md:text-3xl min-[1920px]:text-5xl'>СМИ о нас</h5>
           <div className='flex flex-wrap md:flex-nowrap gap-6 items-center justify-between'>
             <iframe className='rounded-2xl w-full' width="720" height="405" src="https://rutube.ru/play/embed/1569906122342b2625e6c70d94a393a4/" frameBorder="0" allow="clipboard-write; autoplay" allowFullScreen></iframe>
