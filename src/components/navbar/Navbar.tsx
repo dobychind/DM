@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import Burger from '/burgen-menu.png';
 import Close from '/close.png';
 import Logo from '/DmLogo.svg';
-import ChevronWhite from '/chevron-down.svg';
 import Chevron from '/chevron-black.svg'
 import { Link, useLocation } from 'react-router-dom';
 import Aos from 'aos'

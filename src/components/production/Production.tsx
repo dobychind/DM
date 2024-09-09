@@ -18,7 +18,6 @@ interface ProductionDataItem {
 const productionData: ProductionDataItem[] = [
   { logo: HppLogo, name: 'ХПП №1' },
   { logo: DmLogo, name: 'Даниэль М' },
-  { logo: NovLogo, name: 'Новгородхлеб' },
   { logo: RzevLogo, name: 'Ржевка' }
 ];
 
@@ -58,7 +57,7 @@ const Production: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({
       </div>
       <div ref={forwardRef} className=''>
         <h3 data-aos="fade-up" data-aos-duration="1000" className='text-black text-3xl py-8 font-bold text-center md:text-4xl'>Наши бренды</h3>
-        <div data-aos="fade-up" data-aos-duration="1000" className='grid grid-cols-2 gap-4 items-center pb-4 mx-auto lg:w-[80%] md:grid-cols-4 md:pb-16 md:gap-16 xl:gap-36'>
+        <div data-aos="fade-up" data-aos-duration="1000" className='grid grid-cols-2 gap-4 items-center pb-4 mx-auto lg:w-[80%] md:grid-cols-3 md:pb-16 md:gap-16 xl:gap-36'>
           {productionData.map((item, index) => (
             <a className='2xl:max-w-[380px] flex flex-col w-full justify-between items-center h-full gap-4' href=""><ProductionCard key={index} {...item} /></a>
           ))}

@@ -96,23 +96,6 @@ const Logistic = () => {
 
             </div>
 
-            <div className="flex flex-col gap-8 w-fit mr-auto bg-white border border-black rounded-2xl p-6">
-              <p className="text-2xl md:text-4xl font-bold"><span className="text-main">Доставляем</span> груз в Торговые точки по Москве и Московской области, Санкт-Петербургу и ЛО, а также Великий Новгород.</p>
-              <div className="flex flex-col md:flex-row gap-8">
-                <div className="w-full md:w-2/3">
-                  <img className="w-full" src={del} alt="Фон с доставкой" />
-                </div>
-                <div className="w-full md:w-1/3 flex flex-col justify-center gap-4">
-                  <p className="text-main text-4xl font-bold">Наши автомобили</p>
-                  <ul className="list-disc flex flex-col ml-7 gap-1">
-                    <li className="text-2xl font-semibold">Газель NEXT</li>
-                    <li className="text-2xl font-semibold">Газель Бизнес</li>
-                    <li className="text-2xl font-semibold">Газель с рефрижерактором</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
             <div className='w-full flex flex-col md:flex-row justify-center gap-8 items-center'>
                 <p className='font-normal md:w-2/3'>Стоимость услуг оператора для каждого типа логистики рассчитывается индивидуально. 
                     <br />Для расчета обратитесь к менеджерам компании, заполнив форму или позвонив по телефону, указанному на сайте.</p>

@@ -122,6 +122,9 @@ const Header: React.FC<HeaderProps> = ({ scrollToAbout, scrollToProduction, forw
                   <Link reloadDocument to="/contacts" className='text-lg hover:underline text-white font-semibold hover:text-blue'>Контакты</Link>
                 </div>
               </div>
+              <button onClick={toggleMenu} className="text-white absolute w-[32px] h-[32px] top-6 right-6">
+                <img src={Close} alt="close button" />
+              </button>
             </div>
           )}
           <button onClick={toggleMenu} className={`text-white flex flex-col items-center w-[32px] h-[32px] ml-4 mt-4 transition-opacity duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}>

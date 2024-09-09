@@ -23,7 +23,7 @@ const Distribution = () => {
 
         <div className="flex flex-col gap-16 py-16">
           <div className="mt-8 flex flex-col justify-center items-center gap-8">
-            <p className="text-3xl font-bold">Наши достижения</p>
+            <p className="text-3xl font-bold">Первый профессиональный дистрибьютор хлеба в России</p>
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  gap-6">
 
               <div className="relative flex items-center justify-center font-semibold text-xl w-[17rem] h-64 rounded-2xl">
@@ -52,7 +52,7 @@ const Distribution = () => {
           </div>
           <Possibilities/>
           <div className='w-full flex flex-col md:flex-row justify-center gap-8 items-center'>
-            <FeedbackForm text="Получить прайс-лист" />
+            <FeedbackForm text="Стать частью пула поставщиков" />
           </div>
         </div>
       </div>
