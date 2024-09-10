@@ -4,11 +4,10 @@ import Navbar from "../components/navbar/Navbar"
 import PL from '/3plbanner.jpg';
 import loc from '/location.png';
 import skl from '/skl.jpg';
-import del from '/dellog.png';
 import Lenta from '/lenta.jpg';
 import 'aos/dist/aos.css'; // Не забудьте импортировать стили AOS
 import FeedbackForm from "../components/logistic/Form";
-// import ClientSwiper from "../components/distribution/ClientSwiper";
+import ClientSwiper from "../components/distribution/ClientSwiper";
 
 const Logistic = () => {
   useEffect(() => {
@@ -19,7 +18,7 @@ const Logistic = () => {
 
   return (
     <div className="font-body">
-      <Navbar position="fixed"/>
+      <Navbar position="fixed" />
       <div className="w-full object-cover relative">
         <div className="absolute w-full md:w-1/3 flex flex-col pt-10 gap-2 md:gap-4 md:rounded-2xl md:top-1/2 md:left-4 bg-opacity-50 p-8 bg-black">
           <h2 className="text-xl pt-8 md:text-4xl text-white font-bold">Логистика 3PL</h2>
@@ -42,7 +41,7 @@ const Logistic = () => {
               <div className="flex flex-col gap-10 md:gap-0 md:flex-row justify-between">
                 <div className="flex flex-col gap-4 w-full md:w-1/2">
                   <p className="text-lg md:text-xl py-3 px-8  font-semibold border rounded-2xl border-black">
-                    Комплекс погрузочно-разгрузочных работ <span className="text-main">под ключ</span> 
+                    Комплекс погрузочно-разгрузочных работ <span className="text-main">под ключ</span>
                   </p>
                   <p className="text-lg md:text-xl py-3 px-8 font-semibold border rounded-2xl border-black "><span className="text-main">Приемка товара</span> с осуществлением его сортировки и складской маркировки</p>
                   <p className="text-lg md:text-xl py-3 px-8 font-semibold border rounded-2xl border-black "><span className="text-main">Паллетирование упаковок</span> с учетом требований по их хранению</p>
@@ -74,6 +73,13 @@ const Logistic = () => {
               <p className="text-2xl font-semibold">Список выбранных услуг фиксируется в договоре, а их выполнение тщательно планируется для улучшения качества обслуживания и предотвращения ошибок и недочетов</p>
             </div>
 
+            <div data-aos="fade-down" data-aos-duration="2000" className='flex flex-col border border-black bg-white gap-8 w-[96%] md:w-4/5 px-4 py-3 md:px-12 md:py-8 rounded-2xl'>
+              <h3 className='text-xl md:text-center font-semibold md:text-3xl min-[1920px]:text-5xl md:font-bold'>Наши партнеры</h3>
+              <div className='flex flex-wrap justify-between md:flex-nowrap gap-2 md:gap-6 items-center md:justify-around'>
+                <ClientSwiper />
+              </div>
+            </div>
+
             <div className="flex flex-col w-fit gap-8 ml-auto bg-white border border-black rounded-2xl p-6">
               <p className="text-4xl font-bold">Наши <span className="text-main">склады</span> размещены в 3х городах России: </p>
               <div className="flex flex-col md:flex-row gap-8">
@@ -97,9 +103,9 @@ const Logistic = () => {
             </div>
 
             <div className='w-full flex flex-col md:flex-row justify-center gap-8 items-center'>
-                <p className='font-normal md:w-2/3'>Стоимость услуг оператора для каждого типа логистики рассчитывается индивидуально. 
-                    <br />Для расчета обратитесь к менеджерам компании, заполнив форму или позвонив по телефону, указанному на сайте.</p>
-                <FeedbackForm text="Консультация с логистом"/>    
+              <p className='font-normal md:w-2/3'>Стоимость услуг оператора для каждого типа логистики рассчитывается индивидуально.
+                <br />Для расчета обратитесь к менеджерам компании, заполнив форму или позвонив по телефону, указанному на сайте.</p>
+              <FeedbackForm text="Консультация с логистом" />
             </div>
           </div>
         </div>

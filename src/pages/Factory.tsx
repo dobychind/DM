@@ -14,6 +14,7 @@ import Psen from '/psen.png'
 import { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css'
+import ClientSwiper from '../components/distribution/ClientSwiper';
 
 
 
@@ -77,6 +78,13 @@ const Factory = () => {
               <br />
               Мы стремимся, чтобы каждый покупатель мог оценить качество и уникальность товаров, произведённых в этом древнем городе. </p>
             <img src={hppbanner} className='md:w-2/5 rounded-2xl' alt="Баннер сделано в Великом Новгороде" />
+          </div>
+        </div>
+
+        <div data-aos="fade-down" data-aos-duration="2000" className='flex flex-col bg-white gap-8 w-[96%] md:w-[80%] px-4 py-3 md:px-12 md:py-8 rounded-2xl'>
+          <h3 className='text-xl md:text-center font-semibold md:text-3xl min-[1920px]:text-5xl md:font-bold'>Где купить?</h3>
+          <div className='flex flex-wrap justify-between md:flex-nowrap gap-2 md:gap-6 items-center md:justify-around'>
+            <ClientSwiper/>
           </div>
         </div>
 

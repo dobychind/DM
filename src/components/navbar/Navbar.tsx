@@ -29,7 +29,6 @@ const Navbar: React.FC<NavbarProps> = ({ position }) => {
     };
 
     const [isHoveredProduction, setIsHoveredProduction] = useState(false);
-    const [isHoveredMisc, setIsHoveredMisc] = useState(false);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -74,24 +73,11 @@ const Navbar: React.FC<NavbarProps> = ({ position }) => {
                         <Link reloadDocument to="/logistic">
                             <p className={`${isActive('/logistic')} text-black font-semibold hover:underline hover:text-main`}>Логистика</p>
                         </Link>
-                        <div
-                            onMouseEnter={() => setIsHoveredMisc(true)}
-                            onMouseLeave={() => setIsHoveredMisc(false)}
-                            className='relative'
-                        >
-                            <div className="flex items-center cursor-pointer">
-                                <span className='text-black font-semibold'>Прочее</span>
-                                <img
-                                    className={`ml-2 transform transition-transform ${isHoveredMisc ? 'rotate-180' : 'rotate-0'}`}
-                                    src={Chevron}
-                                    alt="arrow"
-                                />
-                            </div>
-                            <div className={`dropdown-content ${isHoveredMisc ? 'show' : ''} flex absolute top-10 bg-slate-500 p-4 rounded-2xl flex-col gap-3`}>
-                                <Link reloadDocument to="/job" className='text-lg hover:underline text-white font-semibold hover:text-blue'>Вакансии</Link>
-                                <Link reloadDocument to="/contacts" className='text-lg hover:underline text-white font-semibold hover:text-blue'>Контакты</Link>
-                            </div>
-                        </div>
+                        <Link reloadDocument to="/job">
+                            <p className={`${isActive('/job')} text-black font-semibold hover:underline hover:text-main`}>Вакансии</p>
+                        </Link><Link reloadDocument to="/contacts">
+                            <p className={`${isActive('/contacts')} text-black font-semibold hover:underline hover:text-main`}>Контакты</p>
+                        </Link>
                     </div>
                 </div>
                 <div className="md:hidden flex justify-between relative w-full">
@@ -132,24 +118,12 @@ const Navbar: React.FC<NavbarProps> = ({ position }) => {
                             <Link reloadDocument to="/logistic" className="block text-white w-fit font-semibold hover:underline hover:text-main">
                                 Логистика
                             </Link>
-                            <div
-                                onMouseEnter={() => setIsHoveredMisc(true)}
-                                onMouseLeave={() => setIsHoveredMisc(false)}
-                                className='relative'
-                            >
-                                <div className="flex items-center cursor-pointer">
-                                    <span className='text-white font-semibold'>Прочее</span>
-                                    <img
-                                        className={`ml-2 transform transition-transform ${isHoveredMisc ? 'rotate-180' : 'rotate-0'}`}
-                                        src='chevron-down.svg'
-                                        alt="arrow"
-                                    />
-                                </div>
-                                <div className={`dropdown-content ${isHoveredMisc ? 'show' : ''} flex absolute top-10 bg-slate-500 p-4 rounded-2xl flex-col gap-3`}>
-                                    <Link reloadDocument to="/job" className='text-lg hover:underline text-white font-semibold hover:text-blue'>Вакансии</Link>
-                                    <Link reloadDocument to="/contacts" className='text-lg hover:underline text-white font-semibold hover:text-blue'>Контакты</Link>
-                                </div>
-                            </div>
+                            <Link reloadDocument to="/job" className="block text-white w-fit font-semibold hover:underline hover:text-main">
+                                Вакансии
+                            </Link>
+                            <Link reloadDocument to="/contacts" className="block text-white w-fit font-semibold hover:underline hover:text-main">
+                                Контакты
+                            </Link>
                             <button onClick={toggleMenu} className="text-white absolute w-[32px] h-[32px] top-6 right-6">
                                 <img src={Close} alt="close button" />
                             </button>

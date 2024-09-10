@@ -3,7 +3,6 @@ import ProductionCard from './ProductionCard';
 import Button from '../button/Button';
 import HppLogo from '/HppLogo.png';
 import DmLogo from '/DmLogo.svg';
-import NovLogo from '/NovHleb.png';
 import RzevLogo from '/rzevka.png';
 import Aos from 'aos'
 import 'aos/dist/aos.css'

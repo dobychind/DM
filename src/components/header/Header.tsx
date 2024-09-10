@@ -59,24 +59,8 @@ const Header: React.FC<HeaderProps> = ({ scrollToAbout, scrollToProduction, forw
           </div>
           <Link reloadDocument to="/distribution"><p className='text-white font-semibold hover:underline hover:text-blue'>Дистрибьюция</p></Link>
           <Link reloadDocument to="/logistic"><p className='text-white font-semibold hover:underline hover:text-blue'>Логистика</p></Link>
-          <div
-            onMouseEnter={() => setIsHoveredMisc(true)}
-            onMouseLeave={() => setIsHoveredMisc(false)}
-            className='relative'
-          >
-            <div className="flex items-center cursor-pointer">
-              <span className='text-white font-semibold'>Прочее</span>
-              <img
-                className={`ml-2 transform transition-transform ${isHoveredMisc ? 'rotate-180' : 'rotate-0'}`}
-                src='chevron-down.svg'
-                alt="arrow"
-              />
-            </div>
-            <div className={`dropdown-content ${isHoveredMisc ? 'show' : ''} flex absolute top-10 bg-slate-500 p-4 rounded-2xl flex-col gap-3`}>
-              <Link reloadDocument to="/job" className='text-lg hover:underline text-white font-semibold hover:text-blue'>Вакансии</Link>
-              <Link reloadDocument to="/contacts" className='text-lg hover:underline text-white font-semibold hover:text-blue'>Контакты</Link>
-            </div>
-          </div>
+          <Link reloadDocument to="/job" className=' hover:underline text-white font-semibold hover:text-blue'>Вакансии</Link>
+          <Link reloadDocument to="/contacts" className=' hover:underline text-white font-semibold hover:text-blue'>Контакты</Link>
         </div>
         <div className="md:hidden relative w-full">
           {isMenuOpen && (

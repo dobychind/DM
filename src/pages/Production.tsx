@@ -86,7 +86,7 @@ const Production: React.FC = () => {
             <FeedbackForm text='Запросить прайс-лист'/>
           </nav>
         </div>
-        <div className='relative flex gap-8'>
+        <div className='relative flex gap-4 md:gap-8'>
           <button
             className="md:hidden bg-main text-white px-4 py-2 rounded-lg fixed top-72 left-1 md:top-24 md:left-4 z-10"
             onClick={toggleFilter}
@@ -108,7 +108,7 @@ const Production: React.FC = () => {
               />
             </div>
           </div>
-          <div className='w-4/5 ml-auto'>
+          <div className='md:w-4/5 w-full ml-auto'>
             <ProductList products={filteredProducts} />
           </div>
         </div>
