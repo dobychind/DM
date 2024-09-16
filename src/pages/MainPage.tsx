@@ -16,11 +16,10 @@ const MainPage = () => {
 
   const scrollToAbout = useSmoothScrollToRef(aboutRef);
   const scrollToHeader = useSmoothScrollToRef(headerRef);
-  const scrollToProduction = useSmoothScrollToRef(productionRef); 
 
   return (
     <div id='root' className='overflow-x-hidden font-body'>
-        <Header scrollToProduction={scrollToProduction} scrollToAbout={scrollToAbout} forwardRef={headerRef}/>
+        <Header  scrollToAbout={scrollToAbout} forwardRef={headerRef}/>
         <div className="flex bg-bg py-[4rem] flex-col gap-[4rem] ">
           <About forwardRef={aboutRef}/>
           <Production forwardRef={productionRef}/>

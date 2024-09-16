@@ -5,23 +5,21 @@ import Burger from '/burgen-menu.png';
 import Close from '/close.png';
 import { Link } from 'react-router-dom';
 import './index.css';
-import Button from '../button/Button';
+// import Button from '../button/Button';
 
 interface HeaderProps {
   scrollToAbout: () => void;
-  scrollToProduction: () => void;
   forwardRef: React.RefObject<HTMLDivElement>;
 }
 
-const Header: React.FC<HeaderProps> = ({ scrollToAbout, scrollToProduction, forwardRef }) => {
+const Header: React.FC<HeaderProps> = ({ scrollToAbout, forwardRef }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isHoveredProduction, setIsHoveredProduction] = useState(false);
   const [isHoveredMisc, setIsHoveredMisc] = useState(false);
 
 
-  const handleClick = () => {
-    console.log('click');
-  }
+  // const handleClick = () => {
+  //   console.log('click');
+  // }
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -30,64 +28,28 @@ const Header: React.FC<HeaderProps> = ({ scrollToAbout, scrollToProduction, forw
   return (
     <section className="bg-[url('/back-main.jpg')] bg-cover">
       <div ref={forwardRef} className="flex flex-col items-center">
-        <div className='absolute z-10 right-2 top-2 md:right-auto md:top-auto md:left-2 md:bottom-2'>
-          <Link reloadDocument to="/production/bread">
-            <Button onClick={handleClick} color='orange' text='Узнать больше' />
+        {/* <div className='absolute z-10 right-1/2 top-1/2 md:right-auto md:top-auto md:left-[43%] md:bottom-[20%]'>
+          <Link  to="/production/bread">
+            <Button onClick={handleClick} color='orange' text='Каталог продукции' />
           </Link>
-        </div>
+        </div> */}
         <div className='max-w-[95vw] hidden md:flex mx-auto gap-5 p-3 text-xl md:text-2xl'>
-          <Link reloadDocument to="/"><p className='text-white font-semibold hover:underline hover:text-blue'>Главная</p></Link>
-          <a className='cursor-pointer' onClick={scrollToAbout}><p className='text-white text-l w-max font-semibold hover:underline hover:text-blue'>О компании</p></a>
-          <div
-            onMouseEnter={() => setIsHoveredProduction(true)}
-            onMouseLeave={() => setIsHoveredProduction(false)}
-            className='relative'
-          >
-            <div className="flex items-center cursor-pointer">
-              <span className='text-white font-semibold'>Производство</span>
-              <img
-                className={`ml-2 transform transition-transform ${isHoveredProduction ? 'rotate-180' : 'rotate-0'}`}
-                src='chevron-down.svg'
-                alt="arrow"
-              />
-            </div>
-            <div className={`dropdown-content ${isHoveredProduction ? 'show' : ''} flex absolute top-10 bg-slate-500 p-4 rounded-2xl flex-col gap-3`}>
-              <a onClick={scrollToProduction} href="#brands" className='text-lg text-white font-semibold hover:underline hover:text-blue'>Наши бренды</a>
-              <Link reloadDocument to="/production" className='text-lg hover:underline text-white font-semibold hover:text-blue'>О производстве</Link>
-              <Link reloadDocument to="/production/bread" className='text-lg hover:underline text-white font-semibold hover:text-blue'>Продукция</Link>
-            </div>
-          </div>
-          <Link reloadDocument to="/distribution"><p className='text-white font-semibold hover:underline hover:text-blue'>Дистрибьюция</p></Link>
-          <Link reloadDocument to="/logistic"><p className='text-white font-semibold hover:underline hover:text-blue'>Логистика</p></Link>
-          <Link reloadDocument to="/job" className=' hover:underline text-white font-semibold hover:text-blue'>Вакансии</Link>
-          <Link reloadDocument to="/contacts" className=' hover:underline text-white font-semibold hover:text-blue'>Контакты</Link>
+          <Link to="/"><p className='text-white font-semibold hover:underline hover:text-blue'>Главная</p></Link>
+          <Link to="/production" className='hover:underline text-white font-semibold hover:text-blue'>Производство</Link>
+          <Link to="/production/bread" className='hover:underline text-white font-semibold hover:text-blue'>Продукция</Link>
+          <Link to="/distribution"><p className='text-white font-semibold hover:underline hover:text-blue'>Дистрибьюция</p></Link>
+          <Link to="/logistic"><p className='text-white font-semibold hover:underline hover:text-blue'>Логистика</p></Link>
+          <Link to="/job" className=' hover:underline text-white font-semibold hover:text-blue'>Вакансии</Link>
+          <Link to="/contacts" className=' hover:underline text-white font-semibold hover:text-blue'>Контакты</Link>
         </div>
         <div className="md:hidden relative w-full">
           {isMenuOpen && (
             <div data-aos="fade-right" data-aos-duration="500" className={`flex z-30 flex-col gap-4 text-2xl bg-gray-800 py-6 pl-6 absolute top-0 left-0 w-full`}>
-              <a onClick={scrollToAbout} className='block text-white w-fit font-semibold hover:underline hover:text-blue'>Главная</a>
-              <a onClick={scrollToAbout} className='block text-white w-max font-semibold hover:underline hover:text-blue'>О компании</a>
-
-              <div
-                onMouseEnter={() => setIsHoveredProduction(true)}
-                onMouseLeave={() => setIsHoveredProduction(false)}
-                className='relative'
-              >
-                <div className="flex items-center cursor-pointer">
-                  <span className='text-white font-semibold'>Производство</span>
-                  <img
-                    className={`ml-2 transform transition-transform ${isHoveredProduction ? 'rotate-180' : 'rotate-0'}`}
-                    src='chevron-down.svg'
-                    alt="arrow"
-                  />
-                </div>
-                <div className={`dropdown-content ${isHoveredProduction ? 'show' : ''} flex absolute top-10 bg-slate-500 p-4 rounded-2xl flex-col gap-3`}>
-                  <a onClick={scrollToProduction} href="#brands" className='text-lg text-white font-semibold hover:underline hover:text-blue'>Наши бренды</a>
-                  <Link reloadDocument to="/production" className='text-lg hover:underline text-white font-semibold hover:text-blue'>О производстве</Link>
-                  <Link reloadDocument to="/production/bread" className='text-lg hover:underline text-white font-semibold hover:text-blue'>Продукция</Link>
-                </div>
-              </div>              <Link reloadDocument to="/distribution" className='block text-white w-fit font-semibold hover:underline hover:text-blue'>Дистрибьюция</Link>
-              <Link reloadDocument to="/logistic" className='block text-white w-fit font-semibold hover:underline hover:text-blue'>Логистика</Link>
+              <a className='block text-white w-fit font-semibold hover:underline hover:text-blue'>Главная</a>
+              <Link to="/production" className='text-lg hover:underline text-white font-semibold hover:text-blue'>Производство</Link>
+              <Link to="/production/bread" className='text-lg hover:underline text-white font-semibold hover:text-blue'>Продукция</Link>
+              <Link to="/distribution" className='block text-white w-fit font-semibold hover:underline hover:text-blue'>Дистрибьюция</Link>
+              <Link to="/logistic" className='block text-white w-fit font-semibold hover:underline hover:text-blue'>Логистика</Link>
               <div
                 onMouseEnter={() => setIsHoveredMisc(true)}
                 onMouseLeave={() => setIsHoveredMisc(false)}
@@ -102,8 +64,8 @@ const Header: React.FC<HeaderProps> = ({ scrollToAbout, scrollToProduction, forw
                   />
                 </div>
                 <div className={`dropdown-content ${isHoveredMisc ? 'show' : ''} flex absolute top-10 bg-slate-500 p-4 rounded-2xl flex-col gap-3`}>
-                  <Link reloadDocument to="/job" className='text-lg hover:underline text-white font-semibold hover:text-blue'>Вакансии</Link>
-                  <Link reloadDocument to="/contacts" className='text-lg hover:underline text-white font-semibold hover:text-blue'>Контакты</Link>
+                  <Link to="/job" className='text-lg hover:underline text-white font-semibold hover:text-blue'>Вакансии</Link>
+                  <Link to="/contacts" className='text-lg hover:underline text-white font-semibold hover:text-blue'>Контакты</Link>
                 </div>
               </div>
               <button onClick={toggleMenu} className="text-white absolute w-[32px] h-[32px] top-6 right-6">

@@ -17,8 +17,8 @@ const Logistic = () => {
 
 
   return (
-    <div className="font-body">
-      <Navbar position="fixed" />
+    <div className="flex flex-col justify-center items-center font-body">
+      <Navbar logoname="DM" position="fixed" />
       <div className="w-full object-cover relative">
         <div className="absolute w-full md:w-1/3 flex flex-col pt-10 gap-2 md:gap-4 md:rounded-2xl md:top-1/2 md:left-4 bg-opacity-50 p-8 bg-black">
           <h2 className="text-xl pt-8 md:text-4xl text-white font-bold">Логистика 3PL</h2>
@@ -29,12 +29,12 @@ const Logistic = () => {
       </div>
       <div className="flex w-full justify-center items-center px-4 py-16 flex-col  bg-bg" >
 
-        <div className="flex flex-col gap-12 justify-center lg:max-w-[80%] items-center relative">
+        <div className="flex flex-col gap-12 justify-center w-full items-center relative">
 
           <div className="flex flex-col items-center justify-center gap-16">
             {/* 3PL */}
 
-            <div className="flex w-full flex-col p-6 gap-10 bg-white border border-black rounded-2xl">
+            <div className="flex w-[96%] md:w-[80%] flex-col p-6 gap-10 bg-white border border-black rounded-2xl">
               <p className="text-2xl md:text-3xl pb-3 font-bold border-black border-b-4">
                 Сотрудничество в рамках предоставляемого комплекса услуг системы 3PL включает:
               </p>
@@ -60,7 +60,7 @@ const Logistic = () => {
               </div>
             </div>
 
-            <div className="w-full md:w-4/5 bg-white rounded-2xl border border-black p-6 flex flex-col gap-3 md:pl-16 justify-center mr-auto">
+            <div className="w-[96%] md:w-[80%] bg-white rounded-2xl border border-black p-6 flex flex-col gap-3 md:pl-16 justify-center">
               <p className="text-2xl font-bold">По запросу компании-отправителя могут быть предоставлены <span className="text-main">дополнительные услуги</span> по</p>
               <ul className="list-disc flex flex-col ml-8 gap-1">
                 <li className="text-xl font-normal">Обработке</li>
@@ -73,14 +73,14 @@ const Logistic = () => {
               <p className="text-2xl font-semibold">Список выбранных услуг фиксируется в договоре, а их выполнение тщательно планируется для улучшения качества обслуживания и предотвращения ошибок и недочетов</p>
             </div>
 
-            <div data-aos="fade-down" data-aos-duration="2000" className='flex flex-col border border-black bg-white gap-8 w-[96%] md:w-4/5 px-4 py-3 md:px-12 md:py-8 rounded-2xl'>
-              <h3 className='text-xl md:text-center font-semibold md:text-3xl min-[1920px]:text-5xl md:font-bold'>Наши партнеры</h3>
-              <div className='flex flex-wrap justify-between md:flex-nowrap gap-2 md:gap-6 items-center md:justify-around'>
+            <div data-aos="fade-down" data-aos-duration="2000" className='flex flex-col gap-8 w-[96%] max-w-[70%] px-4 py-3 rounded-2xl'>
+              <h3 className='text-xl md:text-center font-semibold md:text-3xl min-[1920px]:text-5xl md:font-bold'>Где купить?</h3>
+              <div className='flex flex-wrap w-full justify-between md:flex-nowrap gap-2 md:gap-6 items-center md:justify-around'>
                 <ClientSwiper />
               </div>
             </div>
 
-            <div className="flex flex-col w-fit gap-8 ml-auto bg-white border border-black rounded-2xl p-6">
+            <div className="flex flex-col w-[96%] md:w-4/5 gap-8 bg-white border border-black rounded-2xl p-6">
               <p className="text-4xl font-bold">Наши <span className="text-main">склады</span> размещены в 3х городах России: </p>
               <div className="flex flex-col md:flex-row gap-8">
                 <img className="w-full md:w-2/3" src={skl} alt="Склад" />

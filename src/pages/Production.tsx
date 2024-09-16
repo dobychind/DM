@@ -7,6 +7,7 @@ import Navbar from "../components/navbar/Navbar";
 import Navigation from '../components/nav/Navigation';
 import FeedbackForm from '../components/logistic/Form';
 
+
 const typeMapping: { [key: string]: string } = {
   'Кондитерские изделия': 'confectionery',
   'Свежий хлеб': 'bread',
@@ -67,23 +68,22 @@ const Production: React.FC = () => {
 
   return (
     <div className="flex font-body flex-col gap-8 justify-center items-center pb-12">
-      <Navbar position="fixed" />
+      <Navbar position="fixed" logoname='Hpp' />
       <div className="flex flex-col gap-8 lg:w-[90%] justify-center mt-32">
         <Navigation />
         <div>
           <nav className="flex flex-col gap-4 md:flex-row md:gap-12">
             {allTypes.map((type) => (
-              <Link reloadDocument
-                className={`text-3xl font-bold hover:text-main ${
-                  selectedType === type ? 'text-main' : 'text-black'
-                }`}
+              <Link
+                className={`text-3xl font-bold hover:text-main ${selectedType === type ? 'text-main' : 'text-black'
+                  }`}
                 key={type}
                 to={`/production/${typeMapping[type]}`}
               >
                 {type}
               </Link>
             ))}
-            <FeedbackForm text='Запросить прайс-лист'/>
+            <FeedbackForm text='Запросить прайс-лист' />
           </nav>
         </div>
         <div className='relative flex gap-4 md:gap-8'>
@@ -103,8 +103,8 @@ const Production: React.FC = () => {
                 selectedManufacturer={selectedManufacturer}
                 onCategoryChange={handleCategoryChange}
                 onManufacturerChange={handleManufacturerChange}
-                isOpen={isFilterOpen} 
-                toggleFilter={toggleFilter} 
+                isOpen={isFilterOpen}
+                toggleFilter={toggleFilter}
               />
             </div>
           </div>

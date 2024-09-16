@@ -3,6 +3,7 @@ import ProductionCard from './ProductionCard';
 import Button from '../button/Button';
 import HppLogo from '/HppLogo.png';
 import DmLogo from '/DmLogo.svg';
+import Psen from '/psen.png'
 import RzevLogo from '/rzevka.png';
 import Aos from 'aos'
 import 'aos/dist/aos.css'
@@ -17,7 +18,8 @@ interface ProductionDataItem {
 const productionData: ProductionDataItem[] = [
   { logo: HppLogo, name: 'ХПП №1' },
   { logo: DmLogo, name: 'Даниэль М' },
-  { logo: RzevLogo, name: 'Ржевка' }
+  { logo: RzevLogo, name: 'Ржевка' },
+  { logo: Psen, name: 'Мастерская Пшеничного' }
 ];
 
 const Production: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forwardRef }) => {
@@ -46,7 +48,7 @@ const Production: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({
         <div className="bg-[url('/bgbread.jpg')] p-4 col-span-2 row-span-2 rounded-2xl flex justify-center h-full bg-cover min-h-[28rem] xl:min-h-[34rem] items-center" />
 
         <div data-aos="flip-left" data-aos-duration="1500" className='bg-orange p-4 rounded-2xl flex justify-center items-center'>
-          <p className='text-white text-center text-xl md:text-2xl 2xl:text-2xl '>Здесь мы сочетаем традиции мастерства с новейшими технологиями, чтобы предложить нашим клиентам продукцию высочайшего качества</p>
+          <p className='text-white text-center text-xl md:text-2xl 2xl:text-2xl '>Мы сочетаем традиции мастерства с новейшими технологиями, чтобы предложить нашим клиентам продукцию высочайшего качества</p>
         </div>
 
         <div className="bg-[url('/production.png')] bg-cover bg-no-repeat p-4 rounded-2xl flex justify-end  min-h-[16rem] items-end">
@@ -56,7 +58,7 @@ const Production: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({
       </div>
       <div ref={forwardRef} className=''>
         <h3 data-aos="fade-up" data-aos-duration="1000" className='text-black text-3xl py-8 font-bold text-center md:text-4xl'>Наши бренды</h3>
-        <div data-aos="fade-up" data-aos-duration="1000" className='grid grid-cols-2 gap-4 items-center pb-4 mx-auto lg:w-[80%] md:grid-cols-3 md:pb-16 md:gap-16 xl:gap-36'>
+        <div data-aos="fade-up" data-aos-duration="1000" className='grid grid-cols-2 gap-4 items-center pb-4 mx-auto lg:w-[80%] md:grid-cols-4 md:pb-16 md:gap-16 xl:gap-36'>
           {productionData.map((item, index) => (
             <a className='2xl:max-w-[380px] flex flex-col w-full justify-between items-center h-full gap-4' href=""><ProductionCard key={index} {...item} /></a>
           ))}
@@ -64,7 +66,7 @@ const Production: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({
       </div>
 
       <div className='mx-auto'>
-        <Link reloadDocument to="/production"><Button onClick={handleClick} text='Узнать больше' color='orange' /></Link>
+        <Link  to="/production"><Button onClick={handleClick} text='Узнать больше' color='orange' /></Link>
       </div>
     </div>
   );

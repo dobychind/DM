@@ -29,7 +29,7 @@ const Factory = () => {
   };
   return (
     <div className='flex font-body bg-white flex-col justify-center items-center'>
-      <Navbar position='block' />
+      <Navbar logoname="DM" position='block' />
 
       <div className='w-full bg-white relative'>
         <img src={Banner} alt="banner hpp1" className='' />
@@ -38,11 +38,11 @@ const Factory = () => {
         <p data-aos="zoom-in" data-aos-duration="2000" className='text-main w-[96%] text-center md:w-auto md:text-start pt-6 md:py-6 md:pt-0 font-normal md:text-3xl min-[1920px]:text-4xl min-[1920px]:font-semibold md:absolute md:top-[22rem] md:right-32 md:max-w-[40%]'>Ключевой производитель хлеба и хлебобулочных изделий в составе группы компаний «Даниэль М».</p>
 
         <div className='mt-4 mb-8 md:mb-0 flex justify-center md:mt-0 md:absolute md:bottom-16 md:right-16'>
-          <Link reloadDocument to="/production/bread"><Button onClick={handleClick} color='main' text='Продукция' /></Link>
+          <Link  to="/production/bread"><Button onClick={handleClick} color='main' text='Продукция' /></Link>
         </div>
       </div>
 
-      <div className='flex w-full pt-12 bg-gradient-to-b from-white from-10% via-[#CC7C3280] to-bg flex-col pb-12 gap-12 md:gap-24 justify-center items-center'>
+      <div className='flex w-full py-12 bg-bg flex-col gap-12 md:gap-24 justify-center items-center'>
 
         <div className='w-[96%] bg-white shadow-2xl rounded-2xl mt-8 md:mt-0 flex flex-col justify-center gap-6 md:w-[86%]'>
           <h3 className='text-xl md:text-4xl md:text-center font-semibold md:font-bold md:py-8'>Этапы развития собственного производства</h3>

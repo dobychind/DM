@@ -7,7 +7,8 @@ import Dixy from '/dixy.png';
 import Lenta from '/lenta.jpg';
 import Spar from '/spar.jpg';
 import Okey from '/okey.png';
-import Samokat from '/samokat.png'
+import Samokat from '/samokat.png';
+import Lavka from '/Lavka.png';
 // Import Swiper styles
 import './index.css';
 import 'swiper/css';
@@ -53,7 +54,7 @@ export default () => {
             <SwiperSlide className='flex h-[150px] items-center justify-center'><img src={Spar} alt='Lenta' className='h-[150px] object-contain grayscale hover:grayscale-0' /></SwiperSlide>
             <SwiperSlide className='flex h-[150px] items-center justify-center'><img src={Okey} alt='Lenta' className='h-[150px] object-contain grayscale hover:grayscale-0' /></SwiperSlide>
             <SwiperSlide className='flex h-[150px] items-center justify-center'><img src={Samokat} alt='Lenta' className='h-[150px] object-contain grayscale hover:grayscale-0 ' /></SwiperSlide>
-
+            <SwiperSlide className='flex h-[150px] items-center justify-center'><img src={Lavka} alt='Lenta' className='h-[150px] object-contain grayscale hover:grayscale-0 ' /></SwiperSlide>
         </Swiper>
     );
 };

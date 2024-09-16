@@ -85,7 +85,7 @@ const Distribution: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = 
                 </div>
 
                 <div data-aos="fade-left" data-aos-duration="3000" className='pb-16 mt-auto px-4 md:px-8 ml-auto'>
-                    <Link reloadDocument to="/distribution"><Button onClick={handleClick} text='Подробнее' /></Link>
+                    <Link  to="/distribution"><Button onClick={handleClick} text='Подробнее' /></Link>
                 </div>
 
 
