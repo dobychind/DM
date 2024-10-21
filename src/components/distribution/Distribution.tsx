@@ -5,12 +5,12 @@ import Aos from 'aos'
 import 'aos/dist/aos.css'
 import Button from '../button/Button';
 import { Link } from 'react-router-dom';
-import MapPic from '/map.png'
 import Stol from '/stol.png';
 import Catering from '/catering.png';
 import Horeca from '/horeca.png';
 
 import Goverment from '/gov.png';
+import Map from './Map';
 
 
 
@@ -22,12 +22,16 @@ const Distribution: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = 
         console.log('Button clicked!');
     };
     return (
-        <div className="">
+        <div data-aos="fade-down" data-aos-duration="3000" data-aos-anchor-placement="center-bottom" className="">
             <div ref={forwardRef} className="flex w-full flex-col  px-8 py-16 bg-white rounded-2xl mx-auto items-center justify-center gap-12">
                 <div className='flex flex-col w-full gap-12 justify-between'>
-                    <div className='flex w-full flex-col-reverse lg:flex-row-reverse gap-12 justify-between '>
-                        <img data-aos="fade-down" data-aos-duration="2000" src={MapPic} alt="" className='rounded-xl lg:w-1/2' />
-                        <div className='flex justify-center 2xl:justify-around  items-center 2xl:items-start flex-col gap-12 2xl:max-w-[50vw]'>
+                    <div className='flex w-full flex-col-reverse xl:flex-row-reverse gap-12 justify-between '>
+                        {/* <img data-aos="fade-down" data-aos-duration="2000" src={MapPic} alt="" className='rounded-xl lg:w-1/2' /> */}
+                        <div className='w-full'>
+                        <Map/>
+
+                        </div>
+                        <div className='flex justify-center 2xl:justify-around  items-center 2xl:items-start flex-col gap-12 xl:max-w-[30vw]'>
                             <h3 className='text-main text-3xl font-bold text-center md:my-0 md:text-5xl'>Дистрибьюция</h3>
                             <div className='flex flex-col justify-evenly h-full'>
                                 <p className=' text-black text-xl font-normal text-justify md:text-xl md:leading-normal md:font-medium	2xl:text-2xl 2xl:leading-normal'>
@@ -45,7 +49,7 @@ const Distribution: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = 
                 </div>
                 <div className='flex flex-col gap-6'>
                     <h4 className='text-black text-3xl font-medium text-start'>Почему выбирают нас: </h4>
-                    <div data-aos="fade-down" data-aos-duration="3000" >
+                    <div data-aos="fade-down" data-aos-duration="3000" data-aos-anchor-placement="center-bottom" >
                         <div className='grid grid-cols-1 gap-6 md:gap-12 md:grid-cols-2 xl:grid-cols-4 '>
                             <div className='p-6 flex flex-col gap-4 justify-center items-center border border-main rounded-2xl '>
                                 <img src={Goverment} className='w-[80px]' alt="" />
@@ -70,7 +74,7 @@ const Distribution: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = 
 
                 <div className='flex flex-col gap-8 '>
                     <p className='text-black text-3xl font-medium text-start'>Наши клиенты:</p>
-                    <div className='max-w-full overflow-hidden'>
+                    <div data-aos="fade-down" data-aos-duration="3000" data-aos-anchor-placement="center-bottom" data-aos-delay="500" className='max-w-full overflow-hidden'>
                         <ClientSwiper />
                     </div>
                 </div>

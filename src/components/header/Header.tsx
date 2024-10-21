@@ -26,7 +26,7 @@ const Header: React.FC<HeaderProps> = ({ scrollToAbout, forwardRef }) => {
   };
 
   return (
-    <section className="bg-[url('/bgLanding.png')] rounded-b-[56px] rounded-br-[56px] bg-cover w-screen h-screen">
+    <section data-scroll-container className="bg-[url('/bgLanding.png')] rounded-b-[56px] rounded-br-[56px] bg-cover w-screen h-screen">
       <div ref={forwardRef} className="flex flex-col">
         <div className='max-w-[95vw] hidden md:flex gap-7 p-6 pl-28 font-normal text-xl md:text-2xl'>
           <Link to="/"><p className='text-white  hover:underline hover:text-main'>Главная</p></Link>
@@ -77,7 +77,7 @@ const Header: React.FC<HeaderProps> = ({ scrollToAbout, forwardRef }) => {
       <div className="flex rounded-b-lg rounded-bl-lg flex-col bg-cover h-full justify-center">
         <div className="flex flex-col gap-8 mb-32">
           <img src={Logo} alt='logo Daniel' className='h-[150px] md:h-[200px]' />
-          <h2 className='text-white text-2xl text-center letter-wider font-normal md:text-3xl'>Группа компаний<br /><span className='text-5xl font-title font-normal md:text-[5.5rem]'>Даниэль М</span></h2>
+          <h2 data-scroll data-scroll-speed="0.1" className='text-white text-2xl text-center letter-wider font-normal md:text-3xl'>Группа компаний<br /><span className='text-5xl font-title font-normal md:text-[5.5rem]'>Даниэль М</span></h2>
         </div>
         <button onClick={scrollToAbout} className='absolute w-fit left-0 right-0 bottom-3 mx-auto'><img src={ArrowDown} alt="arrow down" /></button>
       </div>

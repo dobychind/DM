@@ -21,7 +21,7 @@ const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ f
     }, [])
 
     return (
-        <div ref={forwardRef} className='flex flex-col overflow-hidden bg-white items-center gap-24 justify-center mx-auto p-3 md:p-8 rounded-2xl'>
+        <div data-aos="fade-down" data-aos-duration="3000" ref={forwardRef} className='flex flex-col overflow-hidden bg-white items-center gap-24 justify-center mx-auto p-3 md:p-8 rounded-2xl'>
             <div className='flex flex-col w-full justify-between p-4 lg:gap-6 items-center lg:flex-row md:py-12 md:pb-0'>
                 <div className='w-1/3 h-full'>
                     <img data-aos='fade-left' data-aos-duration="2000" data-aos-anchor-placement="bottom-bottom" data-aos-easing="linear" src={Car} alt='brand car' className='translate-x-full w-full h-full ease-in duration-[4000ms]' />
@@ -71,7 +71,7 @@ const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ f
                     ].map(({ src, alt, text, duration }) => (
                         <div
                             key={alt}
-                            data-aos="fade-up"
+                            data-aos="fade-down"
                             data-aos-duration={duration}
                             className='flex w-full h-full items-start'
                         >

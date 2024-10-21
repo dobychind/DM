@@ -1,4 +1,3 @@
-import React from 'react'
 import Stol from '/stol.png';
 import Catering from '/catering.png';
 import Horeca from '/horeca.png';
