@@ -18,9 +18,9 @@ const MainPage = () => {
   const scrollToHeader = useSmoothScrollToRef(headerRef);
 
   return (
-    <div id='root' className='overflow-x-hidden font-body'>
+    <div id='root' className='flex flex-col  bg-bg justify-center items-center overflow-x-hidden font-body gap-20 lg:gap-24 xl:gap-28 2xl:gap-32'>
         <Header  scrollToAbout={scrollToAbout} forwardRef={headerRef}/>
-        <div className="flex bg-bg py-[4rem] flex-col gap-[4rem] ">
+        <div className="flex flex-col justify-center items-center gap-[8rem] w-[96vw] lg:w-[89vw]">
           <About forwardRef={aboutRef}/>
           <Production forwardRef={productionRef}/>
           <Distribution forwardRef={distributionRef}/>

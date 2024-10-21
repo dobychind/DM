@@ -7,14 +7,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        main: "#CC7C32",
+        main: "#F7832C",
         blue: "#71B4BE",
         orange: "#FF6A00",
         bg: "#F2F3F4"
       },
       fontFamily: {
         body: ['Manrope'],
-        title: ['Bitter'],
+        title: ['Bona Nova SC'],
         moon: ['Rubik Moonrocks']
       }
     },

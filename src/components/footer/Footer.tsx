@@ -8,7 +8,7 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = ({ scrollToHeader }) => {
   return (
 
-    <div className="bg-[url('/back.jpg')] bg-bottom bg-cover">
+    <div className="bg-[url('/back.jpg')] w-full bg-bottom bg-cover">
       <div className="flex flex-col py-8 gap-4 mx-auto max-w-[95%] w-full justify-between md:flex-row">
 
         <div className='flex flex-col md:items-center md:gap-4 gap-8 md:flex-row'>

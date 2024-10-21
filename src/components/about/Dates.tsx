@@ -7,11 +7,15 @@ const Dates = () => {
         Aos.init();
       }, [])
     return (
-        <div className='lg:w-[70%]'>
+        <div className='w-full'>
             <div className="flex gap-2 md:gap-0 md:flex-col">
                 <div className='flex flex-col md:flex-row w-full gap-8 md:gap-0 justify-between pb-3'>
                     <p data-aos="zoom-in" data-aos-duration="1000" className='text-2xl md:text-5xl font-semibold text-main'>2012 г.</p>
-                    <p data-aos="zoom-in" data-aos-duration="2000" className='text-2xl md:text-5xl md:ml-12 font-semibold text-main'>2018 г.</p>
+                    <p data-aos="zoom-in" data-aos-duration="2000" className='text-2xl md:text-5xl font-semibold text-main'>2018 г.</p>
+                    <p data-aos="zoom-in" data-aos-duration="3000" className='text-2xl md:text-5xl font-semibold text-main'>2023 г.</p>
+                    <p data-aos="zoom-in" data-aos-duration="3000" className='text-2xl md:text-5xl font-semibold text-main'>2023 г.</p>
+                    <p data-aos="zoom-in" data-aos-duration="3000" className='text-2xl md:text-5xl font-semibold text-main'>2023 г.</p>
+                    <p data-aos="zoom-in" data-aos-duration="3000" className='text-2xl md:text-5xl font-semibold text-main'>2023 г.</p>
                     <p data-aos="zoom-in" data-aos-duration="3000" className='text-2xl md:text-5xl font-semibold text-main'>2023 г.</p>
                 </div>
                 <div className='md:w-full relative border-2 border-main'>

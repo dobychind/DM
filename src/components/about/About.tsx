@@ -3,7 +3,7 @@ import FoodAbout from '/FoodAbout.png';
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import Counters from './Counters';
-import Dates from './Dates';
+// import Dates from './Dates';
 
 
 
@@ -12,21 +12,25 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
     Aos.init();
   }, [])
   return (
-    <div data-aos="fade-down" data-aos-duration="1000" className='flex px-4 flex-col my-auto w-full gap-4 mx-auto bg-bg items-center md:py-8 md:gap-24 2xl:text-4xl'>
+    <div data-aos="fade-down" data-aos-duration="1000" className='flex flex-col my-auto w-full gap-10 mx-auto items-center md:gap-16 2xl:text-4xl'>
 
-      <h3 className='text-black text-4xl font-bold text-center lg:text-5xl'>О компании</h3>
 
-      <div ref={forwardRef} data-aos="fade-right" data-aos-duration="2000" className='flex flex-col w-full mx-auto gap-4 md:gap-8 md:max-h-[42vh]  lg:w-[70%] 2xl:gap-16 md:flex-row '>
-        <p className='text-black my-auto md:text-2xl lg:text-2xl font-semibold leading-normal text-center md:text-start md:w-fit lg:w-1/2'>
-        Мы – Группа компаний "Даниэль М", специализирующаяся на логистике, дистрибуции и производстве хлебобулочных изделий. <br />
-        Наше сотрудничество с партнерами строится на принципах открытости и надежности, что является основой нашего успеха и долгосрочных отношений
-        </p>
+      <div ref={forwardRef} data-aos="fade-right" data-aos-duration="2000" className='flex flex-col w-full mx-auto gap-4 md:gap-[12vw] md:max-h-[42vh] 2xl:gap-16 md:flex-row '>
+        <div className='flex flex-col'>
+          <h3 className='text-main text-3xl font-semibold  lg:text-5xl'>О компании</h3>
+          <p className='text-black my-auto md:text-2xl lg:text-2xl font-normal leading-normal text-justify'>
+            Мы – Группа компаний "Даниэль М", специализирующаяся на логистике, дистрибуции и производстве хлебобулочных изделий. <br />
+            <p/> <br/>
+            Наше сотрудничество с партнерами строится на принципах открытости и надежности, что является основой нашего успеха и долгосрочных отношений
+          </p>
+        </div>
+
         <div className='lg:w-3/5 md:w-full'>
           <img src={FoodAbout} alt='BreadPhoto' className='w-full h-full rounded-2xl object-cover' />
         </div>
       </div>
-      <Dates/>
-      <Counters/>
+      {/* <Dates /> */}
+      <Counters />
     </div>
   );
 }
