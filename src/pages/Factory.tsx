@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom'
 import Button from '../components/button/Button'
 import Navbar from '../components/navbar/Navbar'
-import hpp from '/HppLogo.png'
-import Banner from '/banner.jpg';
+import banner from '/banner.png';
 import Breadf from '/breadfact.jpg';
 import DatesNew from '../components/factory/DatesNew'
 import Bread from '/hppbread.jpg'
@@ -16,10 +15,6 @@ import Aos from 'aos';
 import 'aos/dist/aos.css'
 import ClientSwiper from '../components/distribution/ClientSwiper';
 
-
-
-
-
 const Factory = () => {
   useEffect(() => {
     Aos.init();
@@ -29,22 +24,21 @@ const Factory = () => {
   };
   return (
     <div className='flex font-body bg-white flex-col justify-center items-center'>
-      <Navbar logoname="DM" position='block' />
-
-      <div className='w-full bg-white relative'>
-        <img src={Banner} alt="banner hpp1" className='' />
-        <img src={hpp} alt="Hpp Logotype" className='absolute w-16 top-1 right-1 md:top-4 md:right-4 md:w-48' />
-        <h2 data-aos="zoom-in" data-aos-duration="1000" className='text-amber-900 font-semibold  md:font-medium text-lg md:text-5xl min-[1920px]:text-7xl min-[1920px]:font-bold top-14 absolute right-5 md:top-56 md:right-36 max-w-[48%]'>Хлебопекарное предприятие № 1</h2>
-        <p data-aos="zoom-in" data-aos-duration="2000" className='text-main w-[96%] text-center md:w-auto md:text-start pt-6 md:py-6 md:pt-0 font-normal md:text-3xl min-[1920px]:text-4xl min-[1920px]:font-semibold md:absolute md:top-[22rem] md:right-32 md:max-w-[40%]'>Ключевой производитель хлеба и хлебобулочных изделий в составе группы компаний «Даниэль М».</p>
-
-        <div className='mt-4 mb-8 md:mb-0 flex justify-center md:mt-0 md:absolute md:bottom-16 md:right-16'>
-          <Link  to="/production/bread"><Button onClick={handleClick} color='main' text='Продукция' /></Link>
+      <Navbar logoname="DM" position='fixed' />
+      <div className=' flex w-full bg-white relative justify-end'>
+        <div>
+          <h2 data-aos="zoom-in" data-aos-duration="1000" className='text-black font-medium font-title md:font-medium text-lg md:text-5xl xl:text-7xl top-14 absolute left-5 md:top-56 md:left-32 max-w-[52%]'>Хлебопекарное предприятие № 1</h2>
+          <p data-aos="zoom-in" data-aos-duration="2000" className='text-main w-[96%] text-center md:w-auto md:text-start pt-6 md:pt-0 font-normal md:text-xl xl:text-2xl min-[1920px]:text-3xl md:absolute md:top-[21rem] xl:top-[24rem] md:left-[10rem] xl:left-[15rem] md:max-w-[30%]'>Ключевой производитель хлеба и хлебобулочных изделий в составе группы компаний «Даниэль М».</p>
+        </div>
+        <img src={banner} alt="banner hpp1" className='' />
+        <div className='mt-4 mb-8 md:mb-0 flex justify-center md:mt-0 absolute md:bottom-8 md:left-16'>
+          <Link to="/production/bread"><Button onClick={handleClick} color='main' text='Продукция' /></Link>
         </div>
       </div>
 
-      <div className='flex w-full py-12 bg-bg flex-col gap-12 md:gap-24 justify-center items-center'>
+      <div className='flex py-12 bg-bg flex-col w-[96vw] lg:w-[89vw] gap-12 md:gap-24 justify-center items-center'>
 
-        <div className='w-[96%] bg-white shadow-2xl rounded-2xl mt-8 md:mt-0 flex flex-col justify-center gap-6 md:w-[86%]'>
+        <div className='w-[96%] bg-white shadow-2xl rounded-2xl mt-8 md:mt-0 flex flex-col justify-center gap-6 '>
           <h3 className='text-xl md:text-4xl md:text-center font-semibold md:font-bold md:py-8'>Этапы развития собственного производства</h3>
           {/* <Dates /> */}
           <div className='max-w-full  bg-white p-6 rounded-2xl'>
@@ -52,7 +46,7 @@ const Factory = () => {
           </div>
         </div>
 
-        <div data-aos="fade-down" data-aos-duration="2000" className='flex flex-col bg-white gap-8 w-[96%] md:w-[80%] px-4 py-3 md:px-12 md:py-8 rounded-2xl'>
+        <div data-aos="fade-down" data-aos-duration="2000" className='flex flex-col bg-white gap-8 w-[96%]  px-4 py-3 md:px-12 md:py-8 rounded-2xl'>
           <h3 className='text-xl font-semibold md:text-3xl min-[1920px]:text-5xl md:font-bold'>Наши изделия заслуженно занимают места на полках ведущих федеральных и региональных торговых сетей</h3>
           <div className='flex flex-wrap justify-between md:flex-nowrap gap-2 md:gap-6 items-center md:justify-around'>
             <img className='w-[47%] md:w-1/4 rounded-2xl' src={Bread} alt="Хлебный отдел в магазине" />
@@ -61,7 +55,7 @@ const Factory = () => {
           </div>
         </div>
 
-        <div data-aos="fade-down" data-aos-duration="2000" className='flex flex-col bg-white gap-8 w-[96%] md:w-[80%] px-4 py-3 md:px-12 md:py-8 rounded-2xl'>
+        <div data-aos="fade-down" data-aos-duration="2000" className='flex flex-col bg-white gap-8 w-[96%]  px-4 py-3 md:px-12 md:py-8 rounded-2xl'>
           <h3 className='text-xl font-semibold md:text-xl lg:text-2xl min-[1920px]:text-5xl md:font-bold'>Также ХПП № 1 восстанавливает Хлебопекарный завод В Великом Новгороде, что будет являться сохранением предприятия имеющего социальную значимость для региона</h3>
           <div className='flex flex-wrap gap-3 md:gap-6 items-center justify-around'>
             <img className='md:w-[30%] md:object-cover min-[1920px]:object-contain max-h-[300px] min-[1920px]:max-h-max rounded-2xl' src={Novg} alt="Хлебный отдел в магазине" />
@@ -70,7 +64,7 @@ const Factory = () => {
           </div>
         </div>
 
-        <div data-aos="fade-down" data-aos-duration="2000" className='flex flex-col bg-white gap-8 w-[96%] md:w-[80%] px-4 py-3 md:px-12 md:py-8 rounded-2xl '>
+        <div data-aos="fade-down" data-aos-duration="2000" className='flex flex-col bg-white gap-8 w-[96%]  px-4 py-3 md:px-12 md:py-8 rounded-2xl '>
           <h5 className='text-lg font-semibold md:text-xl lg:text-2xl min-[1920px]:text-5xl'> В наших планах — активно развивать продукцию под лейблом «Сделано в Великом Новгороде», которое производит Хлебопекарное предприятие № 1.</h5>
           <div className='flex flex-col-reverse md:flex-row gap-6 items-center justify-between'>
             <p className='md:w-3/5 text-lg md:text-xl min-[1920px]:text-3xl'>
@@ -81,14 +75,14 @@ const Factory = () => {
           </div>
         </div>
 
-        <div data-aos="fade-down" data-aos-duration="2000" className='flex flex-col bg-white gap-8 w-[96%] md:w-[80%] px-4 py-3 md:px-12 md:py-8 rounded-2xl'>
+        <div data-aos="fade-down" data-aos-duration="2000" className='flex flex-col bg-white gap-8 w-[96%]  px-4 py-3 md:px-12 md:py-8 rounded-2xl'>
           <h3 className='text-xl md:text-center font-semibold md:text-3xl min-[1920px]:text-5xl md:font-bold'>Где купить?</h3>
           <div className='flex flex-wrap justify-between md:flex-nowrap gap-2 md:gap-6 items-center md:justify-around'>
-            <ClientSwiper/>
+            <ClientSwiper />
           </div>
         </div>
 
-        <div data-aos="fade-down" data-aos-duration="2000" className='flex flex-col bg-white gap-8 w-[96%] md:w-[80%] px-4 py-3 md:px-12 md:py-8 rounded-2xl'>
+        <div data-aos="fade-down" data-aos-duration="2000" className='flex flex-col bg-white gap-8 w-[96%]  px-4 py-3 md:px-12 md:py-8 rounded-2xl'>
           <h5 className='text-lg font-semibold md:text-xl lg:text-2xl min-[1920px]:text-5xl'>С 2024 года мы с гордостью запускаем нашу новую торговую марку «Мастерская Э.Пшеничного» под вдохновляющим лозунгом «Вкуснее с нами!».
             <br />Этот бренд посвящён искусству ремесленного хлебопечения и объединяет в себе традиции и инновации.</h5>
           <div className='flex flex-wrap md:flex-nowrap gap-6 items-center justify-between'>
@@ -99,13 +93,13 @@ const Factory = () => {
           </div>
         </div>
 
-        <div data-aos="fade-down" data-aos-duration="2000" className='flex bg-white flex-col gap-8 w-[96%] md:w-[80%] px-4 py-3 md:px-12 md:py-8 rounded-2xl'>
+        <div data-aos="fade-down" data-aos-duration="2000" className='flex bg-white flex-col gap-8 w-[96%]  px-4 py-3 md:px-12 md:py-8 rounded-2xl'>
           <h5 className='text-xl font-semibold md:font-bold md:text-3xl min-[1920px]:text-5xl'>Наши награды</h5>
           <div className='flex gap-6 items-center justify-between'>
           </div>
         </div>
 
-        <div data-aos="fade-down" data-aos-duration="2000" className='flex bg-white flex-col gap-8 w-[96%] md:w-[80%] px-4 py-3 md:px-12 md:py-8 rounded-2xl'>
+        <div data-aos="fade-down" data-aos-duration="2000" className='flex bg-white flex-col gap-8 w-[96%]  px-4 py-3 md:px-12 md:py-8 rounded-2xl'>
           <h5 className='text-2xl font-semibold md:font-bold md:text-3xl min-[1920px]:text-5xl'>СМИ о нас</h5>
           <div className='flex flex-wrap md:flex-nowrap gap-6 items-center justify-between'>
             <iframe className='rounded-2xl w-full' width="720" height="405" src="https://rutube.ru/play/embed/1569906122342b2625e6c70d94a393a4/" frameBorder="0" allow="clipboard-write; autoplay" allowFullScreen></iframe>
