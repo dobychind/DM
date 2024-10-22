@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  
+  # Разрешить доступ к существующим файлам напрямую
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # Все остальные запросы перенаправлять на index.html
+  RewriteRule . /index.html [L]
+</IfModule>
