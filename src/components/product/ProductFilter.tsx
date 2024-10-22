@@ -72,7 +72,7 @@ const ProductFilter: React.FC<ProductFilterProps> = ({
     }),
     menu: (provided: any) => ({
       ...provided,
-      backgroundColor: '#FF6A00',
+      backgroundColor: '#F7832C',
       borderRadius: '0.5rem',
     }),
   };
@@ -80,7 +80,7 @@ const ProductFilter: React.FC<ProductFilterProps> = ({
   return (
     <div
       ref={filterRef} // Attach the ref to the container
-      className={`fixed inset-0 z-50 bg-[#CC7C32] w-4/5 md:w-auto md:relative md:rounded-l-2xl transform transition-transform ${
+      className={`fixed inset-0 z-50 bg-[#F7832C] w-4/5 md:w-auto md:relative md:rounded-l-2xl transform transition-transform ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
       } md:translate-x-0 md:flex md:flex-col gap-4 2xl:gap-6 md:border px-12 py-4 2xl:py-8`}
     >

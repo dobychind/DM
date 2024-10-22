@@ -8,6 +8,7 @@ import Spar from '/spar.jpg';
 import Okey from '/okey.png';
 import Samokat from '/samokat.png';
 import Lavka from '/Lavka.png';
+import Ozon from '/ozon.png';
 
 import './index.css';
 import 'swiper/css';
@@ -43,26 +44,30 @@ const ClientSwiper = () => {
             }}
         >
             <SwiperSlide className='flex justify-center items-center h-[180px]'>
-                <img src={Lenta} alt='Lenta' className='h-full object-cover grayscale hover:grayscale-0' />
+                <img src={Ozon} alt='Lenta' className='h-full max-h-[150px] object-cover grayscale hover:grayscale-0' />
             </SwiperSlide>
             <SwiperSlide className='flex justify-center items-center h-[180px]'>
-                <img src={Auchan} alt='Auchan' className='h-full object-contain grayscale hover:grayscale-0' />
+                <img src={Samokat} alt='Samokat' className='h-full max-h-[150px] object-contain grayscale hover:grayscale-0' />
             </SwiperSlide>
             <SwiperSlide className='flex justify-center items-center h-[180px]'>
-                <img src={Dixy} alt='Dixy' className='h-full object-contain grayscale hover:grayscale-0' />
+                <img src={Lavka} alt='Lavka' className='h-full max-h-[150px] object-contain grayscale hover:grayscale-0' />
             </SwiperSlide>
             <SwiperSlide className='flex justify-center items-center h-[180px]'>
-                <img src={Spar} alt='Spar' className='h-full object-contain grayscale hover:grayscale-0' />
+                <img src={Lenta} alt='Lenta' className='h-full max-h-[150px] object-cover grayscale hover:grayscale-0' />
             </SwiperSlide>
             <SwiperSlide className='flex justify-center items-center h-[180px]'>
-                <img src={Okey} alt='Okey' className='h-full object-contain grayscale hover:grayscale-0' />
+                <img src={Auchan} alt='Auchan' className='h-full max-h-[150px] object-contain grayscale hover:grayscale-0' />
             </SwiperSlide>
             <SwiperSlide className='flex justify-center items-center h-[180px]'>
-                <img src={Samokat} alt='Samokat' className='h-full object-contain grayscale hover:grayscale-0' />
+                <img src={Dixy} alt='Dixy' className='h-full max-h-[150px] object-contain grayscale hover:grayscale-0' />
             </SwiperSlide>
             <SwiperSlide className='flex justify-center items-center h-[180px]'>
-                <img src={Lavka} alt='Lavka' className='h-full object-contain grayscale hover:grayscale-0' />
+                <img src={Spar} alt='Spar' className='h-full max-h-[150px] object-contain grayscale hover:grayscale-0' />
             </SwiperSlide>
+            <SwiperSlide className='flex justify-center items-center h-[180px]'>
+                <img src={Okey} alt='Okey' className='h-full max-h-[150px] object-contain grayscale hover:grayscale-0' />
+            </SwiperSlide>
+            
         </Swiper>
     );
 };

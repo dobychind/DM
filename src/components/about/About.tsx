@@ -3,7 +3,7 @@ import FoodAbout from '/FoodAbout.png';
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import Counters from './Counters';
-// import Dates from '../factory/DatesNew';
+import DatesNew from '../factory/DatesNew';
 // import Dates from './Dates';
 
 
@@ -20,8 +20,8 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
         <div className='flex flex-col'>
           <h3 className='text-main text-3xl font-semibold  lg:text-5xl'>О компании</h3>
           <p className='text-black my-auto md:text-2xl lg:text-2xl font-normal leading-normal text-justify'>
-            Мы – Группа компаний "Даниэль М", специализирующаяся на логистике, дистрибуции и производстве хлебобулочных изделий. <br />
-            <p/> <br/>
+            Мы – Группа компаний "Даниэль М", специализирующаяся на производстве, дистрибуции и логистике хлебобулочных изделий. <br />
+            <p /> <br />
             Наше сотрудничество с партнерами строится на принципах открытости и надежности, что является основой нашего успеха и долгосрочных отношений
           </p>
         </div>
@@ -30,7 +30,10 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
           <img src={FoodAbout} alt='BreadPhoto' className='w-full h-full rounded-2xl object-cover' />
         </div>
       </div>
-      {/* <Dates /> */}
+      <div className='max-w-full overflow-hidden'>
+        <DatesNew />
+
+      </div>
       <Counters />
     </div>
   );

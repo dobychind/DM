@@ -46,13 +46,13 @@ const Production: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({
 
         <div className="p-4 hidden rounded-2xl justify-center bg-[url('/bread.jpg')] bg-cover min-h-[14rem] items-center xl:min-h-[20rem]  md:flex " />
 
-        <div className="bg-[url('/bgbread.jpg')] p-4 col-span-2 row-span-2 rounded-2xl flex justify-center h-full bg-cover min-h-[28rem] xl:min-h-[34rem] items-center" />
+        <div className="bg-[url('/ProdSmall.png')] p-4 col-span-2 row-span-2 rounded-2xl flex justify-center h-full bg-cover min-h-[28rem] xl:min-h-[34rem] items-center" />
 
         <div data-aos="fade-down" data-aos-delay="500" data-aos-duration="1500" className='border border-main rounded-2xl p-8 flex justify-center items-center'>
           <p className='text-black text-justify text-xl md:text-2xl 2xl:text-2xl '>Мы сочетаем традиции мастерства с новейшими технологиями, чтобы предложить нашим клиентам продукцию высочайшего качества</p>
         </div>
 
-        <div className="bg-[url('/production.png')] hidden bg-cover bg-no-repeat p-4 rounded-2xl justify-end  min-h-[16rem] items-end md:flex">
+        <div className="bg-[url('/ProdBig.png')] hidden bg-cover bg-no-repeat p-4 rounded-2xl justify-end  min-h-[16rem] items-end md:flex">
         </div>
 
       </div>
@@ -66,7 +66,7 @@ const Production: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({
       </div>
 
       <div className='mx-auto'>
-        <Link to="/production"><Button onClick={handleClick} text='Узнать больше' color='orange' /></Link>
+        <Link to="/production"><Button onClick={handleClick} text='Подробнее' color='bg-main' /></Link>
       </div>
     </div>
   );

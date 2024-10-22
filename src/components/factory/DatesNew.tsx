@@ -38,7 +38,12 @@ const DatesNew = () => {
                 }
 
             }}
-        >
+        >   
+            <SwiperSlide className='flex flex-col gap-4 md:gap-6 items-center  min-h-[150px] h-full'>
+            <div className='text-5xl  min-[1920px]:text-7xl text-main'>2012 <p></p></div>
+                <div className='flex items-center justify-center w-full min-[1920px]:text-2xl'>Начало работы Группы компаний "Даниэль М" в сфере производства хлебобулочных изделий</div>
+            </SwiperSlide>
+
             <SwiperSlide className='flex flex-col gap-4 md:gap-6 items-center  min-h-[150px] h-full'>
                 <div className='flex w-full items-center justify-around text-2xl min-[1920px]:text-4xl text-main'>Февраль - март<p className='text-5xl min-[1920px]:text-7xl'>2018</p></div>
                 <div className='flex items-center justify-center w-full min-[1920px]:text-2xl'>Запуск производственной площадки в Санкт-Петербурге</div>

@@ -9,7 +9,6 @@ import Aos from 'aos'
 import 'aos/dist/aos.css'
 import Services from './Services';
 import { Link } from 'react-router-dom';
-// import FeedbackForm from './Form';
 import Counters from './Counters';
 
 const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forwardRef }) => {
@@ -21,7 +20,7 @@ const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ f
     }, [])
 
     return (
-        <div data-aos="fade-down" data-aos-duration="3000" ref={forwardRef} className='flex flex-col overflow-hidden bg-white items-center gap-24 justify-center mx-auto p-3 md:p-8 rounded-2xl'>
+        <div data-aos="fade-down" data-aos-duration="3000" ref={forwardRef} className='flex flex-col w-full overflow-hidden bg-white items-center gap-24 justify-center mx-auto p-3 md:p-8 rounded-2xl'>
             <div className='flex flex-col w-full justify-between p-4 lg:gap-6 items-center lg:flex-row md:py-12 md:pb-0'>
                 <div className='w-1/3 h-full'>
                     <img data-aos='fade-left' data-aos-duration="2000" data-aos-anchor-placement="bottom-bottom" data-aos-easing="linear" src={Car} alt='brand car' className='translate-x-full w-full h-full ease-in duration-[4000ms]' />
@@ -45,7 +44,7 @@ const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ f
             <Counters />
 
             <Services />
-            <div className='flex flex-col gap-8'>
+            <div className='flex flex-col gap-8 w-full'>
 
                 <p className='text-3xl font-bold'>Наши преимущества</p>
                 <div className='grid grid-cols-1 gap-8 w-full md:grid-cols-3'>
@@ -76,7 +75,6 @@ const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ f
                             className='flex w-full h-full items-start'
                         >
                             <div className='w-full flex flex-col justify-between items-center'>
-                                {/* Фиксированная высота для изображения */}
                                 <div className='w-full max-h-[300px] h-[300px]'>
                                     <img
                                         src={src}
@@ -84,7 +82,6 @@ const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ f
                                         className='w-full h-full object-cover rounded-xl'
                                     />
                                 </div>
-                                {/* Текстовый блок с margin и padding для центрирования */}
                                 <p className='text-main font-normal text-xl w-2/3 py-4 text-center'>
                                     {text}
                                 </p>
@@ -94,12 +91,6 @@ const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ f
                 </div>
             </div>
 
-
-            {/* <div className='w-full flex flex-col md:flex-row justify-center gap-8 items-center'>
-                <p className='font-light md:w-1/2'>Стоимость услуг оператора для каждого типа логистики рассчитывается индивидуально.
-                    <br />Для расчета обратитесь к менеджерам компании, заполнив форму или позвонив по телефону, указанному на сайте.</p>
-                <FeedbackForm text='Консультация с логистом' />
-            </div> */}
         </div>
     )
 }
