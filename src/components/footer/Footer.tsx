@@ -3,12 +3,11 @@ import Button from '../button/Button';
 import { Link } from 'react-router-dom';
 
 interface FooterProps {
-  scrollToHeader: () => void; // Принимаем функцию для скролла к компоненту About
+  scrollToHeader?: () => void; // Делаем функцию для скролла необязательной
 }
 
 const Footer: React.FC<FooterProps> = ({ scrollToHeader }) => {
   return (
-
     <div className="bg-[url('/foooter.png')] w-full bg-bottom bg-cover bg-no-repeat">
       <div className="flex flex-col py-8 gap-8 mx-auto max-w-[95%] w-full justify-between md:flex-row">
 
@@ -26,11 +25,11 @@ const Footer: React.FC<FooterProps> = ({ scrollToHeader }) => {
           </div>
         </div>
         <div className='flex  md:justify-end mt-auto h-fit'>
-          <Button onClick={scrollToHeader} text='Наверх'/>
+          <Button onClick={scrollToHeader ? scrollToHeader : () => window.scrollTo(0, 0)} text='Наверх'/>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

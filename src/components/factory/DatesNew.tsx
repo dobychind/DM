@@ -23,8 +23,8 @@ const DatesNew = () => {
                 320: {
                     slidesPerView: 1,
                 },
-                420: {
-                    slidesPerView: 2,
+                560: {
+                    slidesPerView: 1,
                     spaceBetween: 40
                 },
                 768: {

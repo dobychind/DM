@@ -39,7 +39,7 @@ const Navbar: React.FC<NavbarProps> = ({ position, logoname }) => {
     };
 
     return (
-        <section className={`${position === 'fixed' ? 'fixed' : 'block'} bg-white w-full z-50 top-0 pb-4 md:pb-0`}>
+        <section className={`${position === 'fixed' ? 'fixed' : 'block'} bg-transparent md:bg-white w-full z-50 top-0 pb-4 md:pb-0`}>
             <div className="flex flex-col">
                 <div className='w-full hidden justify-between  md:flex gap-5 2xl:gap-7 p-6 pt-2 pl-14 2xl:pl-28 font-normal text-xl 2xl:text-2xl'>
                     <div className='flex items-center gap-7'>
@@ -73,7 +73,7 @@ const Navbar: React.FC<NavbarProps> = ({ position, logoname }) => {
                             </button>
                         </div>
                     )}
-                    <button onClick={toggleMenu} className={`text-white flex flex-col items-center w-[32px] h-[32px] ml-4 mt-4 transition-opacity duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}>
+                    <button onClick={toggleMenu} className={`text-black flex flex-col items-center w-[32px] h-[32px] ml-4 mt-4 transition-opacity duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}>
                         <img src={Burger} alt='menu button' />
                         <p>Меню</p>
                     </button>
