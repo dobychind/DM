@@ -26,7 +26,6 @@
     position: relative;
     max-width: 980px;
     margin: auto;
-    padding: 20px;
 }
 .rf-map .district b {
     position: absolute;
@@ -89,7 +88,6 @@
     top: 60px;
     width: calc(100% - 20px);
     height: calc(100% - 90px);
-    padding: 0 20px;
     overflow: auto;
     color: #FFF;
     font-size: 13px;

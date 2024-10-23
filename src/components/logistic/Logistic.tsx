@@ -20,10 +20,10 @@ const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ f
     }, [])
 
     return (
-        <div data-aos="fade-down" data-aos-duration="3000" ref={forwardRef} className='flex flex-col w-full overflow-hidden bg-white items-center gap-24 justify-center mx-auto p-3 md:p-8 rounded-2xl'>
+        <div data-aos="fade-down" data-aos-duration="3000" ref={forwardRef} className='flex flex-col w-full overflow-hidden bg-white items-center gap-16 md:gap-24 justify-center mx-auto p-3 md:p-8 rounded-2xl'>
             <div className='flex flex-col w-full justify-between p-4 lg:gap-6 items-center lg:flex-row md:py-12 md:pb-0'>
                 <div className='w-1/3 h-full'>
-                    <img data-aos='fade-left' data-aos-duration="2000" data-aos-anchor-placement="bottom-bottom" data-aos-easing="linear" src={Car} alt='brand car' className='translate-x-full w-full h-full ease-in duration-[4000ms]' />
+                    <img data-aos='fade-left' data-aos-duration="2000" data-aos-anchor-placement="top-bottom" data-aos-easing="linear" src={Car} alt='brand car' className='translate-x-full w-full h-full ease-in duration-[4000ms]' />
                 </div>
                 <div className='flex flex-col gap-6 lg:w-2/3'>
                     <h3 className='text-main text-xl font-bold md:text-5xl'>Логистические услуги по системе 3PL</h3>
@@ -46,7 +46,7 @@ const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ f
             <Services />
             <div className='flex flex-col gap-8 w-full'>
 
-                <p className='text-3xl font-bold'>Наши преимущества</p>
+                <p className='text-2xl md:text-3xl font-medium'>Наши преимущества</p>
                 <div className='grid grid-cols-1 gap-8 w-full md:grid-cols-3'>
                     {[
                         {
@@ -82,7 +82,7 @@ const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ f
                                         className='w-full h-full object-cover rounded-xl'
                                     />
                                 </div>
-                                <p className='text-main font-normal text-xl w-2/3 py-4 text-center'>
+                                <p className='text-main font-normal text-xl md:w-2/3 py-4 text-center'>
                                     {text}
                                 </p>
                             </div>

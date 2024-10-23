@@ -10,7 +10,7 @@ import Novg from '/novg.png';
 import Novg2 from '/novg2.png';
 import Novg4 from '/novg4.png';
 import Psen from '/psen.png'
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css'
 import ClientSwiper from '../components/distribution/ClientSwiper';
@@ -28,10 +28,17 @@ const Factory = () => {
       <Navbar logoname="DM" position='fixed' />
       <div className=' flex w-full bg-white relative justify-end'>
         <div>
-          <h2 data-aos="zoom-in" data-aos-duration="1000" className='text-black font-medium font-title md:font-medium text-xl md:text-5xl xl:text-7xl top-20 absolute left-5 md:top-56 md:left-32 max-w-[52%]'>Хлебопекарное предприятие № 1</h2>
-          <p data-aos="zoom-in" data-aos-duration="2000" className='text-main w-1/2 text-sm md:w-auto md:text-start bottom-8 md:bottom-auto left-4 md:pt-0 font-normal md:text-xl xl:text-2xl min-[1920px]:text-3xl absolute md:top-[21rem] xl:top-[24rem] md:left-[10rem] xl:left-[15rem] md:max-w-[30%]'>Ключевой производитель хлеба и хлебобулочных изделий в составе группы компаний «Даниэль М».</p>
+          <h2 data-aos="zoom-in" data-aos-duration="1000" 
+          className='text-black font-medium font-title md:font-medium text-xl  top-20 absolute left-5  max-w-[52%] 
+          md:top-56 md:left-32 md:text-5xl xl:text-7xl
+          min-[1920px]:top-[35%] min-[1920px]:max-w-[40%]'>Хлебопекарное предприятие № 1</h2>
+          <p data-aos="zoom-in" data-aos-duration="2000" 
+          className='text-main w-1/2 text-sm bottom-8 left-4 md:pt-0 font-normal absolute
+           md:text-xl md:w-auto md:text-start md:bottom-auto md:top-[21rem] md:left-[10rem] md:max-w-[30%]
+           xl:text-2xl xl:top-[24rem] xl:left-[15rem] 
+           min-[1920px]:text-3xl min-[1920px]:top-1/2'>Ключевой производитель хлеба и хлебобулочных изделий в составе группы компаний «Даниэль М».</p>
         </div>
-        <img src={banner} alt="banner hpp1" className='w-[50vw]' />
+        <img src={banner} alt="banner hpp1" className='object-contain w-1/2 md:w-auto md:h-screen' />
         <div className='mt-4 mb-8 md:mb-0 flex justify-center md:mt-0 absolute md:bottom-8 md:left-16'>
           <Link to="/production/bread"><Button onClick={handleClick} color='main' text='Продукция' /></Link>
         </div>

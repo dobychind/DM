@@ -31,20 +31,20 @@ const Production: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({
     Aos.init();
   }, [])
   return (
-    <div data-aos="fade-down" data-aos-duration="3000" data-aos-anchor-placement="center-bottom" className='flex flex-col gap-8'>
+    <div data-aos="fade-down" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" className='flex flex-col gap-8'>
       <div className='flex flex-col  gap-4 w-full mx-auto md:grid md:grid-cols-3 md:grid-rows-3 md:gap-8'>
 
         <div  className=' w-full rounded-2xl flex justify-center items-center md:col-span-2'>
-          <div className='flex flex-col justify-around h-full'>
-            <div className='flex w-full gap-8'>
+          <div className='flex flex-col justify-around gap-8 md:gap-0 h-full'>
+            <div className='flex flex-col md:flex-row gap-2 w-full md:gap-8'>
               <h3 className='text-main text-3xl font-semibold text-justify md:text-5xl'>Собственное производство</h3>
               <Link to="" ><Button color='main' onClick={handleClick} text="Продукция" /></Link>
             </div>
-            <p className='border border-main rounded-2xl p-8 text-black text-jusstify text-xl md:text-2xl 2xl:text-2xl'>Мы гордимся тем, что наша компания обладает собственными современными производственными мощностями, которые оснащены современным оборудованием включают в себя несколько ключевых площадок в Москве, Санкт-Петербурге и Великом Новгороде.</p>
+            <p className='border border-main rounded-2xl p-4 md:p-8 text-black text-jusstify text-xl md:text-2xl 2xl:text-2xl'>Мы гордимся тем, что наша компания обладает собственными современными производственными мощностями, которые оснащены современным оборудованием включают в себя несколько ключевых площадок в Москве, Санкт-Петербурге и Великом Новгороде.</p>
           </div>
         </div>
 
-        <div className="p-4 hidden rounded-2xl justify-center bg-[url('/bread.jpg')] bg-cover min-h-[14rem] items-center xl:min-h-[20rem]  md:flex " />
+        <div className="p-4 hidden rounded-2xl bg-bottom justify-center bg-[url('/bread.jpg')] bg-cover min-h-[14rem] items-center xl:min-h-[20rem]  md:flex " />
 
         <div className="bg-[url('/ProdSmall.png')] p-4 col-span-2 row-span-2 rounded-2xl flex justify-center h-full bg-cover min-h-[28rem] xl:min-h-[34rem] items-center" />
 
