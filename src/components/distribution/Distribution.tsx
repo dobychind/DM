@@ -5,11 +5,12 @@ import Aos from 'aos'
 import 'aos/dist/aos.css'
 import Button from '../button/Button';
 import { Link } from 'react-router-dom';
-import Stol from '/stol.png';
-import Catering from '/catering.png';
-import Horeca from '/horeca.png';
 
-import Goverment from '/gov.png';
+import best from '/best.svg';
+import partners from '/partners.svg';
+import fast from '/fast.svg';
+import quality from '/quality.svg'
+
 import Map from './Map';
 
 
@@ -51,19 +52,19 @@ const Distribution: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = 
                     <div data-aos="fade-down" data-aos-duration="3000" data-aos-anchor-placement="top-bottom" >
                         <div className='grid grid-cols-1 gap-6 md:gap-12 md:grid-cols-2 xl:grid-cols-4 '>
                             <div className='p-6 flex flex-col gap-4 justify-center items-center border border-main rounded-2xl '>
-                                <img src={Goverment} className='w-[80px]' alt="" />
+                                <img src={best} className='w-[80px]' alt="" />
                                 <p className='text-xl text-center font-medium'>Мы являемся профессионалами в области дистрибуции хлеба в России.</p>
                             </div>
                             <div className='p-6 flex flex-col gap-4 justify-center items-center border border-main rounded-2xl '>
-                                <img src={Catering} className='w-[80px]' alt="" />
+                                <img src={partners} className='w-[80px]' alt="" />
                                 <p className='text-xl text-center font-medium'>Работаем с лучшими пекарнями и хлебозаводами, которые выпускают продукцию высшего качества.</p>
                             </div>
                             <div className='p-6 flex flex-col gap-4 justify-center items-center border border-main rounded-2xl '>
-                                <img src={Stol} className='w-[80px]' alt="" />
+                                <img src={fast} className='w-[80px]' alt="" />
                                 <p className='text-xl text-center font-medium'>Наша собственная логистическая система позволяет доставлять хлеб быстро и своевременно.</p>
                             </div>
                             <div className='p-6 flex flex-col gap-4 justify-center items-center border border-main rounded-2xl '>
-                                <img src={Horeca} className='w-[80px]' alt="" />
+                                <img src={quality} className='w-[80px]' alt="" />
                                 <p className='text-xl text-center font-medium'>Мы тщательно контролируем качество на всех этапах — от производства до доставки.</p>
                             </div>
                         </div>

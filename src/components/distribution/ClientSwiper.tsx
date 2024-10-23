@@ -1,4 +1,4 @@
-import { Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import Auchan from '/auchan.png';
@@ -12,15 +12,18 @@ import Ozon from '/ozon.png';
 
 import './index.css';
 import 'swiper/css';
+
 import 'swiper/css/navigation';
 
 const ClientSwiper = () => {
     return (
         <Swiper
-            modules={[Navigation, Pagination]}
+            modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={50}
             slidesPerView={5}
             navigation
+            loop
+            autoplay
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log('slide change')}
             className='swiper-container'
