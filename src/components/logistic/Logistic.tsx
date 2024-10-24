@@ -20,21 +20,18 @@ const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ f
     }, [])
 
     return (
-        <div data-aos="fade-down" data-aos-duration="3000" ref={forwardRef} className='flex flex-col w-full overflow-hidden bg-white items-center gap-16 md:gap-24 justify-center mx-auto p-3 md:p-8 rounded-2xl'>
+        <div data-aos="fade-down" data-aos-duration="3000" data-aos-once="true" ref={forwardRef} className='flex flex-col w-full overflow-hidden bg-white items-center gap-12 md:gap-24 justify-center mx-auto p-3 md:p-8 rounded-2xl'>
             <div className='flex flex-col w-full justify-between p-4 lg:gap-6 items-center lg:flex-row md:py-12 md:pb-0'>
-                <div className='w-1/3 h-full'>
+                <div className='md:w-1/3 min-h-[100px] h-full'>
                     <img data-aos='fade-left' data-aos-duration="2000" data-aos-anchor-placement="top-bottom" data-aos-easing="linear" src={Car} alt='brand car' className='translate-x-full w-full h-full ease-in duration-[4000ms]' />
                 </div>
                 <div className='flex flex-col gap-6 lg:w-2/3'>
                     <h3 className='text-main text-xl font-bold md:text-5xl'>Логистические услуги по системе 3PL</h3>
 
-                    <p className='text-black font-normal text-xl lg:w-fit md:text-2xl md:font-medium min-[1920px]:text-2xl min-[1920px]:leading-normal'>
+                    <p className='text-black font-normal text-lg lg:w-fit md:text-2xl md:font-medium min-[1920px]:text-2xl min-[1920px]:leading-normal'>
                         В 2019 году стартовал проект, основанный на нашем дистрибьюторском опыте, по предоставлению логистических услуг.
                         <br />Наша логистическая компания специализируется на оказании высококачественных услуг по системе 3PL.
                     </p>
-                    <div>
-
-                    </div>
                     <div className='ml-auto'>
                         <Link to="/logistic"> <Button onClick={handleClick} text='Подробнее' /></Link>
                     </div>
@@ -71,6 +68,7 @@ const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ f
                         <div
                             key={alt}
                             data-aos="fade-down"
+                            data-aos-once="true"
                             data-aos-duration={duration}
                             className='flex w-full h-full items-start'
                         >

@@ -33,7 +33,7 @@ const Factory = () => {
           md:top-56 md:left-32 md:text-5xl xl:text-7xl
           min-[1920px]:top-[35%] min-[1920px]:max-w-[40%]'>Хлебопекарное предприятие № 1</h2>
           <p data-aos="zoom-in" data-aos-duration="2000" 
-          className='text-main w-1/2 text-sm bottom-8 left-4 md:pt-0 font-normal absolute
+          className='text-main  w-2/5 text-sm bottom-8 left-4 md:pt-0 font-normal hidden min-[424px]:block absolute
            md:text-xl md:w-auto md:text-start md:bottom-auto md:top-[21rem] md:left-[10rem] md:max-w-[30%]
            xl:text-2xl xl:top-[24rem] xl:left-[15rem] 
            min-[1920px]:text-3xl min-[1920px]:top-1/2'>Ключевой производитель хлеба и хлебобулочных изделий в составе группы компаний «Даниэль М».</p>
@@ -46,10 +46,9 @@ const Factory = () => {
 
       <div className='flex py-12 bg-bg flex-col w-[96vw] lg:w-[89vw] gap-12 md:gap-24 justify-center items-center'>
 
-        <div className='w-full bg-white shadow-2xl p-6 rounded-2xl md:mt-0 flex flex-col justify-center gap-6 '>
+        <div className='w-full bg-white shadow-2xl p-3 md:p-6 rounded-2xl md:mt-0 flex flex-col justify-center gap-6 '>
           <h3 className='text-xl md:text-4xl md:text-center font-semibold md:font-bold md:py-8'>Этапы развития собственного производства</h3>
-          {/* <Dates /> */}
-          <div className='max-w-full  bg-white  rounded-2xl'>
+          <div className='max-w-full w-[99%]  bg-white  rounded-2xl'>
             <DatesNew />
           </div>
         </div>
@@ -58,7 +57,7 @@ const Factory = () => {
           <div className='flex flex-col gap-8 w-full md:flex-row md:max-h-[400px] xl:max-h-[370px] 2xl:max-h-[330px]'>
             <div className='flex flex-col md:w-3/5 bg-white rounded-2xl gap-4 md:gap-2 py-10 px-4 lg:py-14 lg:px-7'>
               <p className='text-2xl lg:text-3xl text-justify font-medium'>Наши изделия заслуженно занимают места на полках ведущих федеральных и региональных торговых сетей</p>
-              <p className='text-xl lg:text-2xl text-justify font-normal'>Мы развиваемся во всех сегментах продаж хлебобулочных изделий, производя, как традиционные сорта хлебов социальной
+              <p className='text-lg lg:text-2xl text-justify font-normal'>Мы развиваемся во всех сегментах продаж хлебобулочных изделий, производя, как традиционные сорта хлебов социальной
                 значимости, так и уникальных хлебобулочных и мелкоштучных изделий с добавленной стоимостью.</p>
             </div>
             <div className='h-[300px] object-contain md:h-auto md:w-2/5'>
@@ -87,19 +86,19 @@ const Factory = () => {
           <div className='flex flex-col md:flex-row justify-between gap-8 md:gap-20'>
             <div className='flex flex-col w-full gap-4 xl:gap-8 md:w-1/2 2xl:w-3/5'>
               <h3 className='text-3xl md:text-5xl font-semibold text-main'>Наши планы</h3>
-              <p className='text-xl md:text-2xl font-normal text-justify'>Активно развивать продукцию под лейблом «Сделано в Великом Новгороде»,
+              <p className='text-lg md:text-2xl font-normal text-justify'>Активно развивать продукцию под лейблом «Сделано в Великом Новгороде»,
                 которое производит Хлебопекарное предприятие № 1.</p>
-              <p className='text-xl md:text-2xl font-normal text-justify'>Вывести продукцию под этим брендом на полки крупнейших розничных сетей Санкт-Петербурга и Москвы.</p>
-              <p className='text-xl md:text-2xl font-normal text-justify'>Мы стремимся, чтобы каждый покупатель мог оценить качество и уникальность товаров, произведённых в этом древнем городе.</p>
+              <p className='text-lg md:text-2xl font-normal text-justify'>Вывести продукцию под этим брендом на полки крупнейших розничных сетей Санкт-Петербурга и Москвы.</p>
+              <p className='text-lg md:text-2xl font-normal text-justify'>Мы стремимся, чтобы каждый покупатель мог оценить качество и уникальность товаров, произведённых в этом древнем городе.</p>
             </div>
             <img src={hppbanner} className='w-full rounded-2xl md:object-contain md:w-1/2 2xl:w-2/5' alt="" />
           </div>
           <div className='flex flex-col md:flex-row justify-between gap-8 md:gap-20'>
             <img src={Psen} className='md:w-2/5 object-contain rounded-2xl' alt="Баннер сделано в Великом Новгороде" />
             <div className='flex flex-col w-full gap-4 xl:gap-8 md:w-3/5'>
-              <p className='text-xl md:text-2xl font-normal text-justify'>С 2024 года мы с гордостью запускаем нашу новую торговую марку «Мастерская Э.Пшеничного» под вдохновляющим лозунгом «Вкуснее с нами!».
+              <p className='text-lg md:text-2xl font-normal text-justify'>С 2024 года мы с гордостью запускаем нашу новую торговую марку «Мастерская Э.Пшеничного» под вдохновляющим лозунгом «Вкуснее с нами!».
                 Бренд посвящён искусству ремесленного хлебопечения и объединяет в себе традиции и инновации.</p>
-              <p className='text-xl md:text-2xl font-normal text-justify'>Под маркой «Мастерская Э.Пшеничного» будут производиться хлеба, которые уже завоевали признание гурманов по всему миру: чиабатта, багет, сельский
+              <p className='text-lg md:text-2xl font-normal text-justify'>Под маркой «Мастерская Э.Пшеничного» будут производиться хлеба, которые уже завоевали признание гурманов по всему миру: чиабатта, багет, сельский
                 и пшеничный хлеб и многое другое.</p>
             </div>
           </div>

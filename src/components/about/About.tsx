@@ -13,10 +13,10 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
     Aos.init();
   }, [])
   return (
-    <div data-aos="fade-down" data-aos-duration="1000" className='flex flex-col my-auto w-full gap-10 mx-auto items-center md:gap-16 2xl:text-4xl'>
+    <div    className='flex flex-col my-auto w-full gap-10 mx-auto items-center md:gap-16 2xl:text-4xl'>
 
 
-      <div ref={forwardRef} className='flex flex-col w-full mx-auto gap-4 md:gap-[12vw] md:max-h-[42vh] 2xl:gap-24 md:flex-row '>
+      <div ref={forwardRef} data-aos-once="true" data-aos="fade-down" data-aos-duration="1000" className='flex flex-col w-full mx-auto gap-4 md:gap-[12vw] md:max-h-[42vh] 2xl:gap-24 md:flex-row '>
         <div className='flex flex-col'>
           <h3 className='text-main text-3xl font-semibold  lg:text-5xl'>О компании</h3>
           <p className='text-black my-auto md:text-2xl lg:text-2xl font-normal leading-normal text-justify'>
@@ -30,7 +30,7 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
           <img src={FoodAbout} alt='BreadPhoto' className='w-full h-full rounded-2xl object-cover' />
         </div>
       </div>
-      <div className='max-w-full overflow-hidden'>
+      <div className='max-w-full w-[96%] md:w-full overflow-hidden'>
         <DatesNew />
 
       </div>

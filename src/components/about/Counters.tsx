@@ -4,8 +4,8 @@ import AnimatedNumbers from 'react-animated-numbers';
 const Counters = () => {
     return (
         <div className='w-full flex flex-col gap-10 md:gap-8'>
-            <h2 data-aos="fade-down" data-aos-duration="3000" className='text-black font-semibold text-2xl md:text-3xl 2xl:text-3xl text-start'>"Даниэль М" сегодня</h2>
-            <div data-aos="fade-down" data-aos-duration="3000" data-aos-delay="300" className='flex gap-8 h-full w-full md:flex-row 2xl:gap-16'>
+            <h2 data-aos-once="true" data-aos="fade-down" data-aos-duration="3000" className='text-black font-semibold text-2xl md:text-3xl 2xl:text-3xl text-start'>"Даниэль М" сегодня</h2>
+            <div data-aos-once="true" data-aos="fade-down" data-aos-duration="3000" data-aos-delay="300" className='flex gap-8 h-full w-full md:flex-row 2xl:gap-16'>
                 <div className='flex flex-col w-full gap-8 md:gap-0 items-center justify-between md:flex-row md:items-start'>
                     <div className='flex max-w-[196px] flex-col h-full  gap-4 items-center font-medium text-black text-lg md:text-2xl'>
                         <div className='flex h-full justify-between  items-center'>

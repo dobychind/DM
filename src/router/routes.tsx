@@ -9,7 +9,7 @@ import Policy from "../pages/Policy";
 import Error from "../pages/Error"
 
 // import Job from "../pages/Job";
-// import Contacts from "../pages/Contacts";
+import Contacts from "../pages/Contacts";
 
 
 interface RouteConfig {
@@ -25,7 +25,7 @@ export const publicRoutes: RouteConfig[] =[
     {path: '/distribution', component: <Distribution/>},
     {path: '/logistic', component: <Logistic/>},
     {path: '/policy' , component: <Policy/>},
-    {path: "/*", component: <Error/>} 
+    {path: "/*", component: <Error/>},
     // {path: '/job', component: <Job/>},
-    // {path: '/contacts', component: <Contacts/>}
+    {path: '/contacts', component: <Contacts/>}
 ]

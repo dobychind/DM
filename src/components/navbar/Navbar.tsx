@@ -11,9 +11,11 @@ import HPP from '/HppLogo.png';
 interface NavbarProps {
     position: 'fixed' | 'block';
     logoname: 'DM' | 'Hpp';
+    color?: string;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ position, logoname }) => {
+const Navbar: React.FC<NavbarProps> = ({ position, logoname, color }) => {
+    const textColor = color === 'text-white' ? 'text-white' : 'text-black';
     const location = useLocation();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     useEffect(() => {
@@ -27,9 +29,9 @@ const Navbar: React.FC<NavbarProps> = ({ position, logoname }) => {
         if (path === '/' && location.pathname === '/') {
             return ' text-main ';
         } else if (path !== '/' && location.pathname.startsWith(path)) {
-            return ' text-black ';
+            return textColor;
         } else {
-            return 'text-black ';
+            return textColor;
         }
     };
 
@@ -39,29 +41,29 @@ const Navbar: React.FC<NavbarProps> = ({ position, logoname }) => {
     };
 
     return (
-        <section className={`${position === 'fixed' ? 'fixed' : 'block'} bg-transparent md:bg-white w-full z-50 top-0 pb-4 md:pb-0`}>
+        <section className={`${position === 'fixed' ? 'fixed' : 'block'} bg-transparent w-full z-50 top-0 pb-4 md:pb-0`}>
             <div className="flex flex-col">
-                <div className='w-full hidden justify-between  md:flex gap-5 2xl:gap-7 p-6 pt-2 pl-14 2xl:pl-28 font-normal text-xl 2xl:text-2xl'>
+                <div className='w-[99%] hidden justify-between  md:flex gap-5 2xl:gap-7 p-6 pt-2 pl-14 2xl:pl-28 font-normal text-xl 2xl:text-2xl'>
                     <div className='flex items-center gap-7'>
-                        <Link to="/"><p className={`${isActive('/contacts')} text-black hover:underline hover:text-main`}>Главная</p></Link>
-                        <Link to="/production" className={`${isActive('/contacts')} text-black hover:underline hover:text-main`}>Производство</Link>
-                        <Link to="/production/bread" className={`${isActive('/contacts')} text-black hover:underline hover:text-main`}>Продукция</Link>
-                        <Link to="/distribution"><p className={`${isActive('/contacts')} text-black hover:underline hover:text-main`}>Дистрибьюция</p></Link>
-                        <Link to="/logistic"><p className={`${isActive('/contacts')} text-black hover:underline hover:text-main`}>Логистика</p></Link>
-                        <Link to="/job"><p className={`${isActive('/jobs')} text-black hover:underline hover:text-main`}>Работа</p></Link>
-                        <Link to="/contacts"><p className={`${isActive('/contacts')} text-black hover:underline hover:text-main`}>Контакты</p></Link>
-                        
+                        <Link to="/"><p className={`${isActive('/contacts')} ${textColor} hover:underline hover:text-main`}>Главная</p></Link>
+                        <Link to="/production" className={`${isActive('/contacts')} ${textColor} hover:underline hover:text-main`}>Производство</Link>
+                        <Link to="/production/bread" className={`${isActive('/contacts')} ${textColor} hover:underline hover:text-main`}>Продукция</Link>
+                        <Link to="/distribution"><p className={`${isActive('/contacts')} ${textColor} hover:underline hover:text-main`}>Дистрибьюция</p></Link>
+                        <Link to="/logistic"><p className={`${isActive('/contacts')} ${textColor} hover:underline hover:text-main`}>Логистика</p></Link>
+                        <Link to="/job"><p className={`${isActive('/jobs')} ${textColor} hover:underline hover:text-main`}>Работа</p></Link>
+                        <Link to="/contacts"><p className={`${isActive('/contacts')} ${textColor} hover:underline hover:text-main`}>Контакты</p></Link>
+
                     </div>
                     <a className='h-[70px]' href="/">
-                            <img src={getLogo(logoname)} alt="logo Daniel" className="h-full w-full object-contain xl:ml-8" />
-                        </a>
+                        <img src={getLogo(logoname)} alt="logo Daniel" className="h-full w-full object-contain xl:ml-8" />
+                    </a>
 
                 </div>
 
                 <div className="md:hidden relative w-full">
                     {isMenuOpen && (
                         <div data-aos="fade-right" data-aos-duration="500" className={`flex z-30 flex-col gap-4 text-2xl bg-gray-800 py-6 pl-6 absolute top-0 left-0 w-full`}>
-                            <a className='block text-white w-fit font-semibold hover:underline hover:text-main'>Главная</a>
+                            <a href='/' className='block text-white w-fit font-semibold hover:underline hover:text-main'>Главная</a>
                             <Link to="/production" className='text-lg hover:underline text-white font-semibold hover:text-main'>Производство</Link>
                             <Link to="/production/bread" className='text-lg hover:underline text-white font-semibold hover:text-main'>Продукция</Link>
                             <Link to="/distribution" className='block text-white w-fit font-semibold hover:underline hover:text-main'>Дистрибьюция</Link>

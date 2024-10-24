@@ -23,7 +23,7 @@ const Distribution: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = 
         console.log('Button clicked!');
     };
     return (
-        <div data-aos="fade-down" data-aos-duration="3000" data-aos-anchor-placement="top" className="">
+        <div data-aos="fade-down" data-aos-duration="3000" data-aos-once="true" data-aos-anchor-placement="top" className="">
             <div ref={forwardRef} className="flex w-full flex-col py-8 md:px-8 md:py-16 bg-white rounded-2xl mx-auto items-center justify-center gap-12">
                 <div className='flex flex-col px-2 md:px-0 w-full gap-12 justify-between'>
                     <div className='flex w-full flex-col-reverse xl:flex-row-reverse gap-12 justify-between '>
@@ -47,23 +47,23 @@ const Distribution: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = 
                     </div>
 
                 </div>
-                <div className='flex flex-col gap-6 px-2 md:px-0'>
+                <div className='flex flex-col gap-3 md:p-6 px-2 md:px-0'>
                     <h4 className='text-black text-3xl font-medium text-start'>Почему выбирают нас: </h4>
-                    <div data-aos="fade-down" data-aos-duration="3000" data-aos-anchor-placement="top-bottom" >
-                        <div className='grid grid-cols-1 gap-6 md:gap-12 md:grid-cols-2 xl:grid-cols-4 '>
-                            <div className='p-6 flex flex-col gap-4 justify-center items-center border border-main rounded-2xl '>
+                    <div data-aos="fade-down" data-aos-duration="3000" data-aos-once="true" data-aos-anchor-placement="top-bottom" >
+                        <div className='grid grid-cols-1 gap-3 md:p-6 md:gap-12 md:grid-cols-2 xl:grid-cols-4 '>
+                            <div className='p-3 md:p-6 flex flex-col gap-4 justify-center items-center border border-main rounded-2xl '>
                                 <img src={best} className='w-[80px]' alt="" />
                                 <p className='text-xl text-center font-medium'>Мы являемся профессионалами в области дистрибуции хлеба в России.</p>
                             </div>
-                            <div className='p-6 flex flex-col gap-4 justify-center items-center border border-main rounded-2xl '>
+                            <div className='p-3 md:p-6 flex flex-col gap-4 justify-center items-center border border-main rounded-2xl '>
                                 <img src={partners} className='w-[80px]' alt="" />
                                 <p className='text-xl text-center font-medium'>Работаем с лучшими пекарнями и хлебозаводами, которые выпускают продукцию высшего качества.</p>
                             </div>
-                            <div className='p-6 flex flex-col gap-4 justify-center items-center border border-main rounded-2xl '>
+                            <div className='p-3 md:p-6 flex flex-col gap-4 justify-center items-center border border-main rounded-2xl '>
                                 <img src={fast} className='w-[80px]' alt="" />
                                 <p className='text-xl text-center font-medium'>Наша собственная логистическая система позволяет доставлять хлеб быстро и своевременно.</p>
                             </div>
-                            <div className='p-6 flex flex-col gap-4 justify-center items-center border border-main rounded-2xl '>
+                            <div className='p-3 md:p-6 flex flex-col gap-4 justify-center items-center border border-main rounded-2xl '>
                                 <img src={quality} className='w-[80px]' alt="" />
                                 <p className='text-xl text-center font-medium'>Мы тщательно контролируем качество на всех этапах — от производства до доставки.</p>
                             </div>
@@ -74,7 +74,7 @@ const Distribution: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = 
 
                 <div className='flex flex-col gap-8 '>
                     <p className='text-black text-3xl font-medium text-start px-2 md:px-0'>Наши клиенты:</p>
-                    <div data-aos="fade-down" data-aos-duration="3000" data-aos-anchor-placement="top-bottom" data-aos-delay="500" className='max-w-full overflow-hidden'>
+                    <div data-aos="fade-down" data-aos-once="true" data-aos-duration="3000" data-aos-anchor-placement="top-bottom" data-aos-delay="500" className='max-w-full overflow-hidden'>
                         <ClientSwiper />
                     </div>
                 </div>
