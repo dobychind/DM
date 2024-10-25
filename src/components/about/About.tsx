@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import FoodAbout from '/aboutPic.png';
+import aboutPic from '/aboutPic.jpg';
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import Counters from './Counters';
@@ -27,7 +27,7 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
         </div>
 
         <div className='lg:w-3/5 md:w-full'>
-          <img src={FoodAbout} alt='BreadPhoto' className='w-full h-full rounded-2xl object-cover' />
+          <img src={aboutPic} alt='BreadPhoto' className='w-full h-full rounded-2xl object-cover' />
         </div>
       </div>
       <div className='max-w-full w-[96%] md:w-full overflow-hidden'>

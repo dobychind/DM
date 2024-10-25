@@ -1,4 +1,9 @@
 import AnimatedNumbers from 'react-animated-numbers';
+import shop from '/Shop.svg';
+import sklad from '/Sklad.svg';
+import team from '/Team.svg';
+import truck from '/Truck.svg';
+import factory from '/Factory.svg';
 
 
 const Counters = () => {
@@ -8,8 +13,10 @@ const Counters = () => {
             <div data-aos-once="true" data-aos="fade-down" data-aos-duration="3000" data-aos-delay="300" className='flex gap-8 h-full w-full md:flex-row 2xl:gap-16'>
                 <div className='flex flex-col w-full gap-8 md:gap-0 items-center justify-between md:flex-row md:items-start'>
                     <div className='flex max-w-[196px] flex-col h-full  gap-4 items-center font-medium text-black text-lg md:text-2xl'>
+
                         <div className='flex h-full justify-between  items-center'>
-                            <div className='flex flex-col gap-4 h-full justify-between items-baseline'>
+                            <div className='flex flex-col gap-4 h-full justify-between items-center'>
+                                <img className='w-[100px]' src={team} alt="Коллектив" />
                                 <div className='flex justify-center mr-4'>
                                     <p className='text-5xl   text-main font-medium'> &#62;</p>
                                     <AnimatedNumbers
@@ -30,12 +37,13 @@ const Counters = () => {
                                     />
                                 </div>
 
-                                <p className='leading-none text-justifty text-lg md:text-2xl'>Человек насчитывает наш коллектив</p>
+                                <p className='leading-none text-center text-lg md:text-2xl'>Человек насчитывает наш коллектив</p>
                             </div>
                         </div>
                     </div>
                     <div className='flex max-w-[196px] flex-col h-full  gap-4 items-center font-medium text-black text-2xl'>
-                        <div className='flex flex-col gap-4 h-full justify-between font-medium  items-baseline'>
+                        <div className='flex flex-col gap-4 h-full justify-between font-medium  items-center'>
+                            <img className='w-[100px]' src={truck} alt="" />
                             <div className='flex justify-center mr-4'>
                                 <p className='text-5xl   text-main font-medium'> &#62;</p>
                                 <AnimatedNumbers
@@ -56,13 +64,14 @@ const Counters = () => {
                                 />
                             </div>
 
-                            <p className='leading-none text-justifty text-lg md:text-2xl'>Автомобилей в нашем автопарке</p>
+                            <p className='leading-none text-center text-lg md:text-2xl'>Автомобилей в нашем автопарке</p>
                         </div>
 
                     </div>
 
                     <div className='flex flex-col max-w-[196px] gap-4  h-full items-center  font-medium text-black text-2xl'>
-                        <div className='flex flex-col gap-4 h-full justify-between font-medium  items-baseline'>
+                        <div className='flex flex-col gap-4 h-full justify-between font-medium  items-center'>
+                        <img className='w-[100px]' src={sklad} alt="" />
                             <div className='flex justify-center mr-4'>
                                 <p className='text-5xl   text-main font-medium'> &#62;</p>
                                 <AnimatedNumbers
@@ -83,12 +92,13 @@ const Counters = () => {
                                 />
                             </div>
 
-                            <p className='leading-none text-justifty text-lg md:text-2xl	'>М<sup>2 </sup> складские помещения компании</p>
+                            <p className='leading-none text-center text-lg md:text-2xl	'>М<sup>2 </sup> складские помещения компании</p>
                         </div>
                     </div>
 
                     <div className='flex max-w-[196px] flex-col h-full  gap-4 items-center font-medium text-black text-2xl'>
-                        <div className='flex flex-col gap-4 h-full justify-between font-medium  items-baseline'>
+                        <div className='flex flex-col gap-4 h-full justify-between font-medium  items-center'>
+                            <img className='w-[100px]' src={factory} alt="" />
                             <div className='flex justify-center mr-4'>
                                 <p className='text-5xl   text-main font-medium'> &#62;</p>
                                 <AnimatedNumbers
@@ -109,13 +119,14 @@ const Counters = () => {
                                 />
                             </div>
 
-                            <p className='leading-none text-justifty text-lg md:text-2xl'>Тонн продукции производим каждый день</p>
+                            <p className='leading-none text-center text-lg md:text-2xl'>Тонн продукции производим каждый день</p>
                         </div>
                     </div>
 
-                    <div className='flex max-w-[196px] flex-col gap-4  justify-between items-baseline h-full font-medium text-black text-2xl'>
+                    <div className='flex max-w-[196px] flex-col gap-4  justify-between items-center h-full font-medium text-black text-2xl'>
+                    <img className='w-[100px]' src={shop} alt="" />
                         <div className='flex items-center text-lg md:text-2xl'>
-                            <p className='text-5xl text-justifty   text-main font-medium'> &#62;</p>
+                            <p className='text-5xl text-center   text-main font-medium'> &#62;</p>
                             <AnimatedNumbers
                                 transitions={(index) => ({
                                     type: "tween",
@@ -132,7 +143,7 @@ const Counters = () => {
                                 }}
                             />
                         </div>
-                        <p className='leading-none text-justifty text-lg md:text-2xl'>Торговых точек, куда поставляем продукцию</p>
+                        <p className='leading-none text-center text-lg md:text-2xl'>Торговых точек, куда поставляем продукцию</p>
                     </div>
                 </div>
             </div>
