@@ -26,7 +26,7 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
           </p>
         </div>
 
-        <div className='lg:w-3/5 md:w-full'>
+        <div className='lg:w-3/5 2xl:w-2/5 rounded-2xl md:w-full'>
           <img src={aboutPic} alt='BreadPhoto' className='w-full h-full rounded-2xl object-cover' />
         </div>
       </div>

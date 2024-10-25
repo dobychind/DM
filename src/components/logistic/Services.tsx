@@ -15,9 +15,9 @@ const Services = () => {
         Aos.init()
     }, [])
     return (
-        <div className='flex flex-col gap-4 md:px-8 justify-start w-full'>
+        <div className='flex flex-col gap-4 md:gap-8 justify-start w-full'>
             <h4 data-aos="fade-down" className='text-black text-2xl md:text-3xl text-start font-medium'>Ответственное хранение и доставка груза</h4>
-            <div data-aos="fade-down" data-aos-duration="1500" className='grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3 md:gap-4 md:px-8 '>
+            <div data-aos="fade-down" data-aos-duration="1500" className='grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3 md:gap-4 '>
 
                 <div className='flex bg-white justify-start gap-6 items-center p-4 md:px-8 border border-main rounded-2xl box-border'>
                     <img className=' object-cover w-full max-w-[80px]' src={Package} alt='' />

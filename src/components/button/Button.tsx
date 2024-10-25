@@ -6,13 +6,28 @@ interface ButtonProps {
   color?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ onClick, text, color="main" }) => {
-
+const Button: React.FC<ButtonProps> = ({ onClick, text, color = "main" }) => {
   const bgColorClass = color === 'orange' ? 'bg-orange' : 'bg-main';
 
   return (
-    <button className={`text-white font-medium text-xl py-3 px-4 rounded-[32px] hover:bg-opacity-80 hover:transition-opacity hover:duration-300 ${bgColorClass}`} onClick={onClick}>
-      {text}
+    <button
+      className={`relative overflow-hidden text-main font-medium text-xl py-3 px-4 rounded-[32px] border border-main transition-colors duration-300 hover:text-white`}
+      onClick={onClick}
+    >
+      {/* Фоновый слой с анимацией */}
+      <span
+        className={`absolute inset-0 ${bgColorClass} transform translate-y-full transition-transform duration-500 ease-in-out`}
+        aria-hidden="true"
+      />
+      {/* Текст внутри кнопки */}
+      <span className="relative z-10 pointer-events-none">{text}</span>
+
+      {/* При наведении активируем анимацию фона */}
+      <style>{`
+        button:hover span:first-child {
+          transform: translateY(0);
+        }
+      `}</style>
     </button>
   );
 };

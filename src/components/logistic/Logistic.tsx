@@ -28,7 +28,7 @@ const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ f
                 <div className='flex flex-col gap-6 lg:w-2/3'>
                     <h3 className='text-main text-xl font-bold md:text-5xl'>Логистические услуги по системе 3PL</h3>
 
-                    <p className='text-black font-normal text-lg lg:w-fit md:text-2xl md:font-medium min-[1920px]:text-2xl min-[1920px]:leading-normal'>
+                    <p className='text-black md:text-justify font-normal text-lg lg:w-fit md:text-2xl md:font-medium min-[1920px]:text-2xl min-[1920px]:leading-normal'>
                         В 2019 году стартовал проект, основанный на нашем дистрибьюторском опыте, по предоставлению логистических услуг.
                         <br />Наша логистическая компания специализируется на оказании высококачественных услуг по системе 3PL.
                     </p>
