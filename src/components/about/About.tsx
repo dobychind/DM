@@ -17,16 +17,16 @@ const About: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forw
 
 
       <div ref={forwardRef} data-aos-once="true" data-aos="fade-down" data-aos-duration="1000" className='flex flex-col w-full mx-auto gap-4 md:gap-[12vw] md:max-h-[42vh] 2xl:gap-24 md:flex-row '>
-        <div className='flex flex-col'>
+        <div className='flex gap-4 flex-col'>
           <h3 className='text-main text-3xl font-semibold  lg:text-5xl'>О компании</h3>
           <p className='text-black my-auto md:text-2xl lg:text-2xl font-normal leading-normal text-justify'>
             Мы – Группа компаний "Даниэль М", специализирующаяся на производстве, дистрибуции и логистике хлебобулочных изделий. <br />
-            <p /> <br />
+
             Наше сотрудничество с партнерами строится на принципах открытости и надежности, что является основой нашего успеха и долгосрочных отношений
           </p>
         </div>
 
-        <div className='lg:w-3/5 2xl:w-2/5 rounded-2xl md:w-full'>
+        <div className='lg:w-3/5 2xl:w-2/5 rounded-2xl 2xl:max-h-[10vw] md:w-full'>
           <img src={aboutPic} alt='BreadPhoto' className='w-full h-full rounded-2xl object-cover' />
         </div>
       </div>

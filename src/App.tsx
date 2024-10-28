@@ -1,9 +1,10 @@
 import { Route, Routes } from "react-router-dom"
 import { publicRoutes } from "./router/routes"
+import useScrollToTop from "./hooks/useScrollToTop"
 
 
 function App() {
-
+  useScrollToTop();
   return (
     <>
       <Routes>

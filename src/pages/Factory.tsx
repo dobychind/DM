@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom'
 import Button from '../components/button/Button'
 import Navbar from '../components/navbar/Navbar'
-import banner from '/banner.png';
+import prodMain from '/prodMain.png';
 import Breadf from '/breadfact.jpg';
 import DatesNew from '../components/factory/DatesNew'
-// import Bread from '/hppbread.jpg'
 import hppbanner from '/hppbanner.jpg';
 import Novg from '/novg.png';
 import Novg2 from '/novg2.png';
@@ -38,7 +37,7 @@ const Factory = () => {
            xl:text-2xl xl:top-[24rem] xl:left-[15rem] 
            min-[1920px]:text-3xl min-[1920px]:top-1/2'>Ключевой производитель хлеба и хлебобулочных изделий в составе группы компаний «Даниэль М».</p>
         </div>
-        <img src={banner} alt="banner hpp1" className='object-contain w-1/2 md:w-auto md:h-screen' />
+        <img src={prodMain} alt="Главная картинка на странице производства" className='object-contain w-1/2 md:w-auto md:h-screen' />
         <div className='mt-4 mb-8 md:mb-0 flex justify-center md:mt-0 absolute md:bottom-8 md:left-16'>
           <Link to="/production/bread"><Button onClick={handleClick} color='main' text='Продукция' /></Link>
         </div>
