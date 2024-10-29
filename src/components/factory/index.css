@@ -1,18 +1,83 @@
 /* Цвет активных стрелок */
 .swiper-button-next,
 .swiper-button-prev {
-    color: #cc7c32 !important;
+    color: #F7832C !important;
     display: block;
-    
 }
 
 /* Цвет неактивных стрелок */
 .swiper-button-next::after,
 .swiper-button-prev::after {
-    color: #cc7c32e5 !important;
+    color: #F7832C !important;
     display: block;
 }
 
+/* Стили для контейнера слайдов */
+.swiper-slide {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Стрелка в заголовке */
+.accordion-header {
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+/* Стили для кнопки заголовка в Accordion */
+.accordion-button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0.5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    transition: color 0.3s ease;
+}
+
+.accordion-button:hover {
+    color: #F7832C; /* Измените цвет на нужный */
+}
+
+/* Стили для текста в контенте Accordion */
+.accordion-content {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    color: #555555;
+    line-height: 1.5;
+    /* max-height: 0; */
+    /* overflow: hidden; */
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+/* Открытое состояние */
+.accordion-item[open] .accordion-content {
+    max-height: 1000px; /* Значение больше, чем любой ожидаемый контент */
+    padding: 1rem;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+/* Модификации для плавного перехода */
+.accordion-item-enter-active .accordion-content,
+.accordion-item-exit-active .accordion-content {
+    transition: max-height 0.25s ease, padding 0.25s ease;
+}
+
+/* Стрелка для открытого состояния */
+.accordion-header .arrow {
+    transition: transform 0.3s ease;
+}
+
+.accordion-item[open] .arrow {
+    transform: rotate(180deg); /* Поворот стрелки при открытии */
+}
+
+/* Прячем навигационные стрелки на мобильных устройствах */
 @media (max-width: 767px) {
     .swiper-button-next,
     .swiper-button-prev {

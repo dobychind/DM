@@ -32,7 +32,7 @@ const Header: React.FC<HeaderProps> = ({ scrollToAbout, forwardRef }) => {
           <Link to="/production/bread" className='hover:underline text-white  hover:text-main'>Продукция</Link>
           <Link to="/distribution"><p className='text-white hover:underline hover:text-main'>Дистрибьюция</p></Link>
           <Link to="/logistic"><p className='text-white hover:underline hover:text-main'>Логистика</p></Link>
-          <Link to="/job" className=' hover:underline text-white hover:text-main'>Вакансии</Link>
+          <Link to="https://spb.hh.ru/search/vacancy?from=employerPage&employer_id=1601346&hhtmFrom=employer" className=' hover:underline text-white hover:text-main'>Вакансии</Link>
           <Link to="/contacts" className=' hover:underline text-white hover:text-main'>Контакты</Link>
         </div>
         <div className="md:hidden relative w-full">
@@ -43,7 +43,7 @@ const Header: React.FC<HeaderProps> = ({ scrollToAbout, forwardRef }) => {
                             <Link to="/production/bread" className='text-lg hover:underline text-white font-semibold hover:text-main'>Продукция</Link>
                             <Link to="/distribution" className='block text-white w-fit font-semibold hover:underline hover:text-main'>Дистрибьюция</Link>
                             <Link to="/logistic" className='block text-white w-fit font-semibold hover:underline hover:text-main'>Логистика</Link>
-                            <Link to="/job" className='text-lg hover:underline text-white font-semibold hover:text-main'>Вакансии</Link>
+                            <Link to="https://spb.hh.ru/search/vacancy?from=employerPage&employer_id=1601346&hhtmFrom=employer" className='text-lg hover:underline text-white font-semibold hover:text-main'>Вакансии</Link>
                             <Link to="/contacts" className='text-lg hover:underline text-white font-semibold hover:text-main'>Контакты</Link>
                             <button onClick={toggleMenu} className="text-white absolute w-[32px] h-[32px] top-6 right-6">
                                 <img src={Close} alt="close button" />

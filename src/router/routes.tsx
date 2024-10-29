@@ -1,15 +1,15 @@
 import Production from "../pages/Production"
-import Distribution from "../pages/Distribution"
-import Logistic from "../pages/Logistic"
+// import Distribution from "../pages/Distribution"
+// import Logistic from "../pages/Logistic"
 
 import React from "react"
 import MainPage from "../pages/MainPage";
-import Factory from "../pages/Factory";
-import Policy from "../pages/Policy";
+// import Factory from "../pages/Factory";
+// import Policy from "../pages/Policy";
 import Error from "../pages/Error"
 
-import Job from "../pages/Job";
-import Contacts from "../pages/Contacts";
+// import Job from "../pages/Job";
+// import Contacts from "../pages/Contacts";
 
 
 interface RouteConfig {
@@ -19,13 +19,13 @@ interface RouteConfig {
 
 export const publicRoutes: RouteConfig[] =[ 
     {path: '/', component: <MainPage/> },
-    {path: '/production/', component: <Factory/>},
+    // {path: '/production/', component: <Factory/>},
     {path: '/production/bread', component: <Production/>},
     {path: '/production/confectionery', component: <Production/>},
-    {path: '/distribution', component: <Distribution/>},
-    {path: '/logistic', component: <Logistic/>},
-    {path: '/policy' , component: <Policy/>},
+    // {path: '/distribution', component: <Distribution/>},
+    // {path: '/logistic', component: <Logistic/>},
+    // {path: '/policy' , component: <Policy/>},
     {path: "/*", component: <Error/>},
-    {path: '/job', component: <Job/>},
-    {path: '/contacts', component: <Contacts/>}
+    // {path: '/job', component: <Job/>},
+    // {path: '/contacts', component: <Contacts/>}
 ]
