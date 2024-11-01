@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import Logo from '/DmLogo.svg';
 import ArrowDown from '/ArrowDown.svg';
-import Burger from '/burgen-menu.png';
-import Close from '/close.png';
-import { Link } from 'react-router-dom';
+// import Burger from '/burgen-menu.png';
+// import Close from '/close.png';
+// import { Link } from 'react-router-dom';
 import './index.css';
 // import Button from '../button/Button';
 
@@ -13,19 +13,19 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ scrollToAbout, forwardRef }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // const handleClick = () => {
   //   console.log('click');
   // }
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  // const toggleMenu = () => {
+  //   setIsMenuOpen(!isMenuOpen);
+  // };
 
   return (
-    <section data-scroll-container className="bg-[url('/bgLanding.png')] rounded-b-[56px] rounded-br-[56px] bg-cover w-screen h-screen">
-      <div ref={forwardRef} className="flex flex-col">
+    <section ref={forwardRef} data-scroll-container className="bg-[url('/bgLanding.png')] rounded-b-[56px] rounded-br-[56px] bg-cover w-screen h-screen">
+      {/* <div ref={forwardRef} className="flex flex-col">
         <div className='max-w-[95vw] hidden md:flex gap-7 p-6 pl-28 font-normal text-xl md:text-2xl'>
           <Link to="/"><p className='text-white  hover:underline hover:text-main'>Главная</p></Link>
           <Link to="/production" className='hover:underline text-white hover:text-main'>Производство</Link>
@@ -55,7 +55,7 @@ const Header: React.FC<HeaderProps> = ({ scrollToAbout, forwardRef }) => {
                         <p>Меню</p>
                     </button>
                 </div>
-      </div>
+      </div> */}
       <div className="flex rounded-b-lg rounded-bl-lg flex-col bg-cover h-full justify-center">
         <div className="flex flex-col gap-8 mb-32">
           <img src={Logo} alt='logo Daniel' className='h-[150px] md:h-[200px]' />

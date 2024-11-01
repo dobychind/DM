@@ -7,7 +7,6 @@ import 'aos/dist/aos.css'
 import DM from '/DmLogo.svg';
 import HPP from '/HppLogo.png';
 
-
 interface NavbarProps {
     position: 'fixed' | 'block';
     logoname: 'DM' | 'Hpp';
@@ -18,9 +17,31 @@ const Navbar: React.FC<NavbarProps> = ({ position, logoname, color }) => {
     const textColor = color === 'text-white' ? 'text-white' : 'text-black';
     const location = useLocation();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
+
     useEffect(() => {
         Aos.init()
     }, [])
+
+    // Обработчик прокрутки
+    const handleScroll = () => {
+        const currentScrollY = window.scrollY;
+        if (currentScrollY > lastScrollY) {
+            setIsNavbarVisible(false); // Скрываем при прокрутке вниз
+        } else {
+            setIsNavbarVisible(true); // Показываем при прокрутке вверх
+        }
+        setLastScrollY(currentScrollY);
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [lastScrollY]);
+
     const getLogo = (logoname: string) => {
         return logoname === 'Hpp' ? HPP : DM;
     };
@@ -35,15 +56,15 @@ const Navbar: React.FC<NavbarProps> = ({ position, logoname, color }) => {
         }
     };
 
-
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
     return (
-        <section className={`${position === 'fixed' ? 'fixed' : 'block'} bg-transparent w-full z-50 top-0 pb-4 md:pb-0`}>
-            <div className="flex flex-col">
-                <div className='w-[99%] hidden justify-between  md:flex gap-5 2xl:gap-7 p-6 pt-2 pl-14 2xl:pl-28 font-normal text-xl 2xl:text-2xl'>
+        <section
+            className={`${position === 'fixed' ? 'fixed' : 'block'} ${isNavbarVisible ? 'top-0' : '-top-26'} bg-transparent w-full z-50 transition-all duration-300 pb-4 md:pb-0`}>
+            <div className="flex flex-col bg-black bg-opacity-30">
+                <div className='w-[99%] hidden  justify-between md:flex gap-5 2xl:gap-7 p-6 pt-2 pl-14 2xl:pl-28 font-normal text-xl 2xl:text-2xl'>
                     <div className='flex items-center gap-7'>
                         <Link to="/"><p className={`${isActive('/contacts')} ${textColor} hover:underline hover:text-main`}>Главная</p></Link>
                         <Link to="/production" className={`${isActive('/contacts')} ${textColor} hover:underline hover:text-main`}>Производство</Link>
@@ -52,12 +73,10 @@ const Navbar: React.FC<NavbarProps> = ({ position, logoname, color }) => {
                         <Link to="/logistic"><p className={`${isActive('/contacts')} ${textColor} hover:underline hover:text-main`}>Логистика</p></Link>
                         <Link to="/job"><p className={`${isActive('/jobs')} ${textColor} hover:underline hover:text-main`}>Работа</p></Link>
                         <Link to="/contacts"><p className={`${isActive('/contacts')} ${textColor} hover:underline hover:text-main`}>Контакты</p></Link>
-
                     </div>
                     <a className='h-[70px]' href="/">
                         <img src={getLogo(logoname)} alt="logo Daniel" className="h-full w-full object-contain xl:ml-8" />
                     </a>
-
                 </div>
 
                 <div className="md:hidden relative w-full">

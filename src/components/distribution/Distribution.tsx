@@ -3,8 +3,8 @@ import ClientSwiper from './ClientSwiper';
 // import BreadDist from '/FoodDistrib.jpg';
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-import Button from '../button/Button';
-import { Link } from 'react-router-dom';
+// import Button from '../button/Button';
+// import { Link } from 'react-router-dom';
 
 import best from '/best.svg';
 import partners from '/partners.svg';
@@ -19,9 +19,9 @@ const Distribution: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = 
     useEffect(() => {
         Aos.init();
     }, [])
-    const handleClick = () => {
-        console.log('Button clicked!');
-    };
+    // const handleClick = () => {
+    //     console.log('Button clicked!');
+    // };
     return (
         <div data-aos="fade-down" data-aos-duration="3000" data-aos-once="true" data-aos-anchor-placement="top" className="">
             <div ref={forwardRef} className="flex w-full flex-col py-8 md:px-8 md:py-16 bg-white rounded-2xl mx-auto items-center justify-center gap-12">
@@ -31,7 +31,7 @@ const Distribution: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = 
                         <div className='w-full overflow-hidden'>
                             <Map/>
                         </div>
-                        <div className='flex justify-center 2xl:justify-around  items-center 2xl:items-start flex-col gap-12 xl:max-w-[30vw]'>
+                        <div className='flex justify-center 2xl:justify-around  items-center 2xl:items-start flex-col gap-12 xl:max-w-[60vw]'>
                             <h3 className='text-main text-3xl font-bold text-center md:my-0 md:text-5xl'>Дистрибьюция</h3>
                             <div className='flex flex-col justify-evenly h-full'>
                                 <p className=' text-black text-lg font-normal text-justify md:text-xl md:leading-normal md:font-medium	2xl:text-2xl 2xl:leading-normal'>
@@ -41,7 +41,7 @@ const Distribution: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = 
                                     Среди наших партнеров — федеральные сети, интернет-магазины, региональные локальные сети, независимые розничные магазины и предприятия сегмента HoReCa.
                                 </p>
                             </div>
-                            <Link to="/distribution"><Button onClick={handleClick} text='Подробнее' /></Link>
+                            {/* <Link to="/distribution"><Button onClick={handleClick} text='Подробнее' /></Link> */}
 
                         </div>
                     </div>

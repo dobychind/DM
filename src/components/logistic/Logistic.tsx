@@ -3,18 +3,18 @@ import Car from '/gazelle.png';
 import Cars from '/gaz.jpeg';
 import Threepl from '/3pl.jpg';
 import Sklad from '/sklad.png';
-import Button from '../button/Button';
+// import Button from '../button/Button';
 
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import Services from './Services';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Counters from './Counters';
 
 const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ forwardRef }) => {
-    const handleClick = () => {
-        console.log('Button clicked!');
-    };
+    // const handleClick = () => {
+    //     console.log('Button clicked!');
+    // };
     useEffect(() => {
         Aos.init()
     }, [])
@@ -33,7 +33,7 @@ const Logistic: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({ f
                         <br />Наша логистическая компания специализируется на оказании высококачественных услуг по системе 3PL.
                     </p>
                     <div className='ml-auto'>
-                        <Link to="/logistic"> <Button onClick={handleClick} text='Подробнее' /></Link>
+                        {/* <Link to="/logistic"> <Button onClick={handleClick} text='Подробнее' /></Link> */}
                     </div>
                 </div>
             </div>

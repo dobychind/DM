@@ -38,7 +38,7 @@ const Production: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({
           <div className='flex flex-col justify-around gap-8 md:gap-0 h-full'>
             <div className='flex flex-col md:flex-row gap-2 w-full md:gap-8'>
               <h3 className='text-main text-3xl font-semibold text-justify md:text-5xl'>Собственное производство</h3>
-              <Link to="" ><Button color='main' onClick={handleClick} text="Продукция" /></Link>
+              <Link to="/production/bread" ><Button color='main' onClick={handleClick} text="Продукция" /></Link>
             </div>
             <p className='border border-main rounded-2xl p-4 md:p-8 text-black text-justify text-lg md:text-2xl 2xl:text-2xl'>Мы гордимся тем, что наша компания обладает собственными современными производственными мощностями, которые оснащены современным оборудованием включают в себя несколько ключевых площадок в Москве, Санкт-Петербурге и Великом Новгороде.</p>
           </div>
@@ -47,7 +47,7 @@ const Production: React.FC<{ forwardRef: React.RefObject<HTMLDivElement> }> = ({
         <div className="p-4 hidden rounded-2xl bg-bottom justify-center bg-[url('/bread.jpg')] bg-cover min-h-[14rem] items-center xl:min-h-[20rem]  md:flex " />
 
         <div className="bg-[url('/ProdSmall.png')] relative bg-bottom p-4 col-span-2 row-span-2 rounded-2xl flex justify-center h-full bg-cover min-h-[28rem] xl:min-h-[34rem] items-center" >         
-          <Link className='absolute top-4 left-4' to="/production"><Button onClick={handleClick} text='Производство' color='bg-main' /></Link>
+          {/* <Link className='absolute top-4 left-4' to="/production"><Button onClick={handleClick} text='Производство' color='bg-main' /></Link> */}
         </div>
 
         <div data-aos="fade-down" data-aos-once="true" data-aos-delay="500" data-aos-duration="1500" className='border border-main rounded-2xl p-4 md:p-8 flex justify-center items-center'>

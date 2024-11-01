@@ -20,7 +20,7 @@ const Button: React.FC<ButtonProps> = ({ onClick, text, color = "main" }) => {
         aria-hidden="true"
       />
       {/* Текст внутри кнопки */}
-      <span className="flex gap-1 relative z-10 pointer-events-none">{text} &#62;
+      <span className="flex gap-1 relative pointer-events-none">{text} &#62;
       </span>
 
       {/* При наведении активируем анимацию фона */}

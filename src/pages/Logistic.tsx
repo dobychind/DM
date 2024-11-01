@@ -2,12 +2,15 @@ import Aos from "aos";
 import { useEffect } from "react";
 import Navbar from "../components/navbar/Navbar"
 import PL from '/3plbanner.jpg';
+import logistic_main from '/logistic_main.png';
 import loc from '/location.png';
-import skl from '/skl.jpg';
-import Lenta from '/lenta.jpg';
+// import skl from '/skl.jpg';
 import 'aos/dist/aos.css'; // Не забудьте импортировать стили AOS
 import FeedbackForm from "../components/logistic/Form";
 import ClientSwiper from "../components/distribution/ClientSwiper";
+import Map from "../components/distribution/Map";
+import Preferences from "../components/logistic/Preferences";
+import Footer from "../components/footer/Footer";
 
 const Logistic = () => {
   useEffect(() => {
@@ -17,99 +20,78 @@ const Logistic = () => {
 
 
   return (
-    <div className="flex flex-col justify-center items-center font-body">
-      <Navbar logoname="DM" position="fixed" />
+    <div className="flex flex-col justify-center bg-bg items-center font-body">
+      <Navbar logoname="DM" position="fixed" color="text-white" />
       <div className="w-full object-cover relative">
-        <div className="absolute w-full md:w-1/3 flex flex-col pt-10 gap-2 md:gap-4 md:rounded-2xl md:top-1/2 md:left-4 bg-opacity-50 p-8 bg-black">
-          <h2 className="text-xl pt-8 md:text-4xl text-white font-bold">Логистика 3PL</h2>
-          <p className="w-full ml-auto text-white text-m md:text-xl leading-normal font-semibold">Услуги ответственного хранения 3pl подразумевают прием и создание условий для сохранности вверенных материальных ценностей на территории компании-исполнителя. </p>
+        <h2 className="text-xl md:top-48 left-0 right-0 ml-auto mr-auto absolute pt-8 md:text-5xl 2xl:text-7xl text-center font-title text-white">Логистика ЗPL</h2>
+        <img src={logistic_main} alt="Фон 3PL" className="w-full rounded-b-[48px] rounded-br-[48px] md:object-cover md:h-screen max-h-screen" />
+      </div>
+      <div className="flex py-12 flex-col w-[96vw] lg:w-[89vw] gap-12 md:gap-32 justify-center items-center" >
+
+        <div data-aos="fade-down" data-aos-duration="2000" className='flex bg-white w-full p-8 rounded-2xl'>
+          <p className="text-xl md:text-2xl 2xl:text-3xl font-medium">Услуги ответственного хранения 3pl подразумевают прием и создание условий для сохранности вверенных материальных ценностей на территории компании-исполнителя.</p>
         </div>
 
-        <img src={PL} alt="Фон 3PL" className="w-full md md:object-cover max-h-screen" />
-      </div>
-      <div className="flex w-full justify-center items-center px-4 py-16 flex-col  bg-bg" >
+        <Preferences/>
 
-        <div className="flex flex-col gap-12 justify-center w-full items-center relative">
+        <div className="flex flex-col md:flex-row w-full rounded-2xl gap-8 justify-between items-center">
+          <div className="flex flex-col gap-3 md:w-3/5 2xl:w-2/3 justify-center">
+            <p className="text-2xl 2xl:text-3xl font-bold">По запросу компании-отправителя могут быть предоставлены <span className="text-main">дополнительные услуги</span> по</p>
+            <ul className="list-disc flex flex-col ml-8 gap-1">
+              <li className="text-xl 2xl:text-2xl font-normal">Обработке</li>
+              <li className="text-xl 2xl:text-2xl font-normal">Упаковке и доставке товара</li>
+              <li className="text-xl 2xl:text-2xl font-normal">Переупаковка</li>
+              <li className="text-xl 2xl:text-2xl font-normal">Полная или частичная перестикировка</li>
+              <li className="text-xl 2xl:text-2xl font-normal">Выбраковка</li>
+              <li className="text-xl 2xl:text-2xl font-normal">Приемка возвратов</li>
+            </ul>
+            <p className="text-xl 2xl:text-2xl font-medium">Список выбранных услуг фиксируется в договоре, а их выполнение тщательно планируется для улучшения качества обслуживания и предотвращения ошибок и недочетов</p>
+          </div>
+          <img className="md:w-2/5 rounded-2xl 2xl:w-1/3 2xl:h-[15vw]" src={PL} alt="" />
+        </div>
 
-          <div className="flex flex-col items-center justify-center gap-16">
-            {/* 3PL */}
+        <div data-aos="fade-down" data-aos-duration="2000" className='flex flex-col bg-white gap-8 w-full px-4 py-3 rounded-2xl'>
+          <h3 className='text-xl md:text-center font-semibold md:text-3xl min-[1920px]:text-5xl md:font-bold'>Наши партнеры</h3>
+          <div className='flex flex-wrap w-full justify-between md:flex-nowrap gap-2 md:gap-6 items-center md:justify-around'>
+            <ClientSwiper />
+          </div>
+        </div>
 
-            <div className="flex w-[96%] md:w-[80%] flex-col p-6 gap-10 bg-white border border-black rounded-2xl">
-              <p className="text-2xl md:text-3xl pb-3 font-bold border-black border-b-4">
-                Сотрудничество в рамках предоставляемого комплекса услуг системы 3PL включает:
-              </p>
-              <div className="flex flex-col gap-10 md:gap-0 md:flex-row justify-between">
-                <div className="flex flex-col gap-4 w-full md:w-1/2">
-                  <p className="text-lg md:text-xl py-3 px-8  font-semibold border rounded-2xl border-black">
-                    Комплекс погрузочно-разгрузочных работ <span className="text-main">под ключ</span>
-                  </p>
-                  <p className="text-lg md:text-xl py-3 px-8 font-semibold border rounded-2xl border-black "><span className="text-main">Приемка товара</span> с осуществлением его сортировки и складской маркировки</p>
-                  <p className="text-lg md:text-xl py-3 px-8 font-semibold border rounded-2xl border-black "><span className="text-main">Паллетирование упаковок</span> с учетом требований по их хранению</p>
-                  <p className="text-lg md:text-xl py-3 px-8 font-semibold border rounded-2xl border-black "><span className="text-main">Организация доставки</span> товаров оптовым покупателям или в розничную сеть</p>
-                  <p className="text-lg md:text-xl py-3 px-8 font-semibold border rounded-2xl border-black ">Ведение оперативного и товарного <span className="text-main">учета</span> с составлением первичной документации</p>
-                  <p className="text-lg md:text-xl py-3 px-8 font-semibold border rounded-2xl border-black "><span className="text-main">Кросс-докинг</span> для перемещения ценностей с транзитного склада на место постоянного хранения</p>
-                  <p className="text-lg md:text-xl py-3 px-8 font-semibold border rounded-2xl border-black "><span className="text-main">Комплектация</span> партий и заказов согласно указаниям клиента</p>
+        <div className="flex flex-col w-full gap-8 rounded-2xl ">
 
-                </div>
-                <div className="flex flex-col gap-8 justify-center w-full md:w-[35%] mx-auto">
-                  <img src={Lenta} alt="Магазин Лента" className="rounded-3xl object-cover" />
-                  <p className="font-medium"><span className="font-bold text-blue text-3xl">Пример:</span><br />
-                    - <b>Лента</b> более 600 ТТ (Осуществление поставок 3PL ассортимента «ПЕКО» в Москве) </p>
-                </div>
-
-              </div>
-            </div>
-
-            <div className="w-[96%] md:w-[80%] bg-white rounded-2xl border border-black p-6 flex flex-col gap-3 md:pl-16 justify-center">
-              <p className="text-2xl font-bold">По запросу компании-отправителя могут быть предоставлены <span className="text-main">дополнительные услуги</span> по</p>
-              <ul className="list-disc flex flex-col ml-8 gap-1">
-                <li className="text-xl font-normal">Обработке</li>
-                <li className="text-xl font-normal">Упаковке и доставке товара</li>
-                <li className="text-xl font-normal">Переупаковка</li>
-                <li className="text-xl font-normal">Полная или частичная перестикировка</li>
-                <li className="text-xl font-normal">Выбраковка</li>
-                <li className="text-xl font-normal">Приемка возвратов</li>
-              </ul>
-              <p className="text-2xl font-semibold">Список выбранных услуг фиксируется в договоре, а их выполнение тщательно планируется для улучшения качества обслуживания и предотвращения ошибок и недочетов</p>
-            </div>
-
-            <div data-aos="fade-down" data-aos-duration="2000" className='flex flex-col gap-8 w-[96%] max-w-[70%] px-4 py-3 rounded-2xl'>
-              <h3 className='text-xl md:text-center font-semibold md:text-3xl min-[1920px]:text-5xl md:font-bold'>Где купить?</h3>
-              <div className='flex flex-wrap w-full justify-between md:flex-nowrap gap-2 md:gap-6 items-center md:justify-around'>
-                <ClientSwiper />
-              </div>
-            </div>
-
-            <div className="flex flex-col w-[96%] md:w-4/5 gap-8 bg-white border border-black rounded-2xl p-6">
+          <div className="flex flex-col md:flex-row gap-8">
+            <div className="flex md:w-[140%] justify-center flex-col gap-6 md:gap-8">
               <p className="text-4xl font-bold">Наши <span className="text-main">склады</span> размещены в 3х городах России: </p>
-              <div className="flex flex-col md:flex-row gap-8">
-                <img className="w-full md:w-2/3" src={skl} alt="Склад" />
-                <div className="flex justify-center flex-col gap-6 md:gap-12">
-                  <div className="flex items-center gap-3">
-                    <img className="w-[32px]" src={loc} alt="Локация" />
-                    <p className="text-2xl md:text-3xl font-semibold">Санкт-Петербург</p>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <img className="w-[32px]" src={loc} alt="Локация" />
-                    <p className="text-2xl md:text-3xl font-semibold">Москва</p>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <img className="w-[32px]" src={loc} alt="Локация" />
-                    <p className="text-2xl md:text-3xl font-semibold">Великий Новгород</p>
-                  </div>
-                </div>
+
+              <div className="flex items-center gap-3">
+                <img className="w-[32px]" src={loc} alt="Локация" />
+                <p className="text-2xl md:text-3xl font-semibold">Санкт-Петербург</p>
               </div>
-
-            </div>
-
-            <div className='w-full flex flex-col md:flex-row justify-center gap-8 items-center'>
-              <p className='font-normal md:w-2/3'>Стоимость услуг оператора для каждого типа логистики рассчитывается индивидуально.
+              <div className="flex items-center gap-3">
+                <img className="w-[32px]" src={loc} alt="Локация" />
+                <p className="text-2xl md:text-3xl font-semibold">Москва</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <img className="w-[32px]" src={loc} alt="Локация" />
+                <p className="text-2xl md:text-3xl font-semibold">Великий Новгород</p>
+              </div>
+              <p className='font-normal w-full text-justify'>Стоимость услуг оператора для каждого типа логистики рассчитывается индивидуально.
                 <br />Для расчета обратитесь к менеджерам компании, заполнив форму или позвонив по телефону, указанному на сайте.</p>
               <FeedbackForm text="Консультация с логистом" />
             </div>
+            <div className="w-full overflow-hidden">
+              <Map />
+
+            </div>
           </div>
+
+        </div>
+
+        <div className='w-full flex flex-col md:flex-row justify-center gap-8 items-center'>
+
         </div>
       </div>
+    <Footer/>
     </div>
   );
 }

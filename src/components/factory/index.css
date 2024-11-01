@@ -14,7 +14,6 @@
 
 /* Стили для контейнера слайдов */
 .swiper-slide {
-    background-color: #ffffff;
     border-radius: 12px;
     overflow: hidden;
 }
@@ -44,7 +43,6 @@
 
 /* Стили для текста в контенте Accordion */
 .accordion-content {
-    background-color: #f9f9f9;
     padding: 1rem;
     border-radius: 0.5rem;
     font-size: 1rem;

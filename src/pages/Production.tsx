@@ -3,7 +3,7 @@ import { useLocation, Link } from 'react-router-dom';
 import { products as initialProducts } from '../data/products';
 import ProductList from '../components/product/ProductList';
 import ProductFilter from '../components/product/ProductFilter';
-import Navbar from "../components/navbar/Navbar";
+// import Navbar from "../components/navbar/Navbar";
 import Navigation from '../components/nav/Navigation';
 import FeedbackForm from '../components/logistic/Form';
 
@@ -68,7 +68,7 @@ const Production: React.FC = () => {
 
   return (
     <div className="flex font-body flex-col gap-8 justify-center items-center pb-12">
-      <Navbar position="fixed" logoname='Hpp' />
+      {/* <Navbar position="fixed" logoname='Hpp' /> */}
       <div className="flex flex-col gap-8 lg:w-[90%] justify-center mt-32">
         <Navigation />
         <div>
