@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+// import gaz from '/gazelle.png';
 
 const Preferences: React.FC = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
@@ -55,9 +56,8 @@ const Preferences: React.FC = () => {
         Этапы 3PL логистики
       </h3>
       <div
-        className={`grid gap-4 ${
-          isMobile ? "grid-cols-1" : "grid-cols-5"
-        } w-full items-stretch relative`}
+        className={`grid gap-4 ${isMobile ? "grid-cols-1" : "grid-cols-5"
+          } w-full items-stretch relative`}
       >
         {cardContent.map((text, index) => (
           <div
@@ -88,6 +88,7 @@ const Preferences: React.FC = () => {
           </div>
         ))}
       </div>
+      
     </div>
   );
 };

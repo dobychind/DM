@@ -12,6 +12,7 @@ import ClientSwiper from "../components/distribution/ClientSwiper";
 import Map from "../components/distribution/Map";
 import Preferences from "../components/logistic/Preferences";
 import Footer from "../components/footer/Footer";
+import Line from "../components/logistic/Line";
 
 const Logistic = () => {
   useEffect(() => {
@@ -56,6 +57,7 @@ const Logistic = () => {
         </div>
 
         <Preferences />
+        <Line/>
 
         <div className="flex flex-col md:flex-row w-full rounded-2xl gap-8 justify-between items-center">
           <div className="flex flex-col gap-3 md:w-3/5 2xl:w-2/3 justify-center">
