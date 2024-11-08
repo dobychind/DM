@@ -1,12 +1,13 @@
 import Aos from "aos";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "../components/navbar/Navbar"
 import PL from '/3plbanner.jpg';
 import logistic_main from '/logistic_main.png';
 import loc from '/location.png';
+import InputMask from 'react-input-mask';
 // import skl from '/skl.jpg';
 import 'aos/dist/aos.css'; // Не забудьте импортировать стили AOS
-import FeedbackForm from "../components/logistic/Form";
+// import FeedbackForm from "../components/logistic/Form";
 import ClientSwiper from "../components/distribution/ClientSwiper";
 import Map from "../components/distribution/Map";
 import Preferences from "../components/logistic/Preferences";
@@ -16,6 +17,28 @@ const Logistic = () => {
   useEffect(() => {
     Aos.init();
   }, []);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [company, setCompany] = useState('');
+
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
+
+    const response = await fetch('/api/sendMail', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ name, email, phone }),
+    });
+
+    if (response.ok) {
+      alert('Message sent successfully');
+    } else {
+      alert('Failed to send message');
+    }
+  };
 
 
 
@@ -32,7 +55,7 @@ const Logistic = () => {
           <p className="text-xl md:text-2xl 2xl:text-3xl font-medium">Услуги ответственного хранения 3pl подразумевают прием и создание условий для сохранности вверенных материальных ценностей на территории компании-исполнителя.</p>
         </div>
 
-        <Preferences/>
+        <Preferences />
 
         <div className="flex flex-col md:flex-row w-full rounded-2xl gap-8 justify-between items-center">
           <div className="flex flex-col gap-3 md:w-3/5 2xl:w-2/3 justify-center">
@@ -77,7 +100,54 @@ const Logistic = () => {
               </div>
               <p className='font-normal w-full text-justify'>Стоимость услуг оператора для каждого типа логистики рассчитывается индивидуально.
                 <br />Для расчета обратитесь к менеджерам компании, заполнив форму или позвонив по телефону, указанному на сайте.</p>
-              <FeedbackForm text="Консультация с логистом" />
+              <form className="flex w-full md:w-2/3 justify-center items-start flex-col gap-4 rounded-2xl" onSubmit={handleSubmit}>
+                <div className='flex w-full gap-8 items-center'>
+                  <div className="w-full mr-auto flex flex-col gap-4">
+                    <input
+                      className="px-3 py-2 text-black font-medium text-lg rounded-2xl border-black border"
+                      placeholder="Имя"
+                      type="text"
+                      id="name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                    />
+
+                    <input
+                      className="px-3 py-2 text-black font-medium text-lg rounded-2xl border-black border"
+                      placeholder="Название юридического лица"
+                      type="company"
+                      id="company"
+                      value={company}
+                      onChange={(e) => setCompany(e.target.value)}
+                    />
+
+                    <InputMask
+                      className="px-3 py-2 text-black font-medium text-lg rounded-2xl border-black border"
+                      placeholder="Телефон"
+                      id="phone"
+                      mask="+7(999)-999-99-99"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                    />
+
+                    <input
+                      className="px-3 py-2 text-black font-medium text-lg rounded-2xl border-black border"
+                      placeholder="Email"
+                      type="email"
+                      id="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+
+
+                  </div>
+
+                </div>
+                <div>
+                  <label htmlFor="opd">  <input type="checkbox" id="opd" /> Согласен с обработкой <a href="">Персональных данных</a></label>
+                </div>
+                <button className="w-4/5 md:w-1/3 text-center p-3 bg-main rounded-xl text-white border border-main items-end hover:bg-transparent hover:text-main text-xl" type="submit">Отправить</button>
+              </form>
             </div>
             <div className="w-full overflow-hidden">
               <Map />
@@ -91,7 +161,7 @@ const Logistic = () => {
 
         </div>
       </div>
-    <Footer/>
+      <Footer />
     </div>
   );
 }

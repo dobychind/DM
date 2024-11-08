@@ -1,114 +1,89 @@
-import React, { useEffect, useRef, useState } from "react";
-import car_top from '/car_top.png';
-import Aos from 'aos';
-import 'aos/dist/aos.css';
+import React, { useState, useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Preferences: React.FC = () => {
-  const imgRef = useRef<HTMLImageElement | null>(null);
-  const containerRef = useRef<HTMLDivElement | null>(null);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
-  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= 768); // Проверка мобильного экрана
+  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= 768);
 
   useEffect(() => {
-    // Инициализация библиотеки анимации
     Aos.init();
 
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
 
-    // Добавляем обработчик изменения размера окна
     window.addEventListener("resize", handleResize);
-
-    // Скролл анимация для изображения машины
-    const handleScroll = () => {
-      if (imgRef.current && containerRef.current) {
-        const scrollY = window.scrollY;
-        const containerTop = containerRef.current.getBoundingClientRect().top + window.scrollY;
-        const containerHeight = containerRef.current.offsetHeight;
-
-        const newTopPosition = Math.min(
-          scrollY - containerTop,
-          containerHeight - 50
-        );
-
-        imgRef.current.style.transform = `translateY(${newTopPosition}px)`;
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const cardContent = [
     "Организуем сбор товаров на вашем складе",
     "Транспортируем в наш распределительный центр",
-    "Оформляем всю необходимую документацию",
-    "Проводим адресную доставку по торговым точкам",
+    "Оформляем необходимую документацию",
+    "Проводим доставку по торговым точкам",
     "Предоставляем детализированный отчет",
-    "Ваши товары"
   ];
 
   const expandedContent = [
-    "обеспечиваем своевременную и точную передачу груза, оптимизируя ваши ресурсы.",
-    "товар поступает на наш логистический комплекс для оперативной обработки и контроля.",
-    "готовим полный пакет документов, гарантируя бесперебойное прохождение всех этапов.",
-    "организуем своевременное поступление товаров в назначенные точки с соблюдением всех требований.",
-    "вы получаете полную прозрачность и точность информации по каждой поставке.",
-    "под нашей компетентной заботой на каждом этапе логистики!"
+    "Обеспечиваем своевременную и точную передачу груза, оптимизируя ваши ресурсы.",
+    "Товар поступает на наш логистический комплекс для оперативной обработки и контроля.",
+    "Оформляем всю необходимую документацию — готовим полный пакет документов, гарантируя бесперебойное прохождение всех этапов.",
+    "Организуем своевременное поступление товаров в назначенные точки с соблюдением всех требований.",
+    "Вы получаете полную прозрачность и точность информации по каждой поставке.",
   ];
 
+  const icons = [
+    "/packaging.svg",
+    "/Truck.svg",
+    "/print.png",
+    "/deliver.png",
+    "/report.svg",
+  ];
+
+  const getCardStyles = (index: number, isHovered: boolean) => {
+    const baseStyles = "flex flex-col items-center p-4 shadow-md rounded-xl transform transition-all duration-500";
+    const hoverStyles = isHovered ? "shadow-lg scale-105 z-10" : "z-0";
+    const backgroundStyles = index >= 1 && index <= 3 ? "bg-[#ffa058] text-black" : "bg-white text-black";
+
+    return `${baseStyles} ${hoverStyles} ${backgroundStyles}`;
+  };
+
   return (
-    <div
-      className="flex justify-start gap-4 md:gap-16 flex-col w-full overflow-hidden"
-      ref={containerRef}
-    >
-      <h3 className="font-semibold text-main text-lg md:text-3xl 2xl:text-5xl md:w-2/3">
-        Сотрудничество в рамках предоставляемого комплекса услуг системы 3PL включает:
+    <div className="w-full flex flex-col items-center gap-8">
+      <h3 className="font-semibold text-main text-lg md:text-3xl p-4 text-center">
+        Этапы 3PL логистики
       </h3>
-      <div className="w-full flex flex-col gap-4 md:gap-16 justify-start items-start relative">
-        <img
-          src={car_top}
-          alt="Машина Даниэль вид сверху"
-          ref={imgRef}
-          className="h-[150px] md:h-auto absolute right-0 top-0 md:right-64  transition-transform duration-[1500ms] linear"
-        />
+      <div
+        className={`grid gap-4 ${
+          isMobile ? "grid-cols-1" : "grid-cols-5"
+        } w-full items-stretch relative`}
+      >
         {cardContent.map((text, index) => (
           <div
             key={index}
-            data-aos="fade-down"
-            data-aos-duration="3000"
-            data-aos-delay={index * 300}
-            data-aos-once="true"
-            className="relative h-[200px] flex items-center p-2 md:p-0 gap-2 md:gap-4 w-[50%] bg-white rounded-tl-2xl rounded-bl-2xl overflow-visible shadow-md"
-            onMouseEnter={() => !isMobile && setHoveredCard(index)}
-            onMouseLeave={() => !isMobile && setHoveredCard(null)}
-            onClick={() => isMobile && setHoveredCard(prev => (prev === index ? null : index))}
+            className="relative"
+            style={{ height: hoveredCard === index ? "auto" : "initial" }}
           >
-            {/* Основной блок с текстом и номером */}
-            <div className="flex flex-col md:flex-row items-center gap-4 md:p-4 md:h-32 bg-white rounded-bl-2xl rounded-tl-2xl">
-              <p className="font-bold text-main text-2xl md:text-3xl">
-                {index + 1}
-              </p>
-              <p className="text-lg  md:text-2xl text-main font-normal">
-                {text}
-              </p>
-            </div>
-
-            {/* Блок с дополнительным текстом, выезжающий за пределы основного блока */}
             <div
-              className={`absolute top-0 left-full h-full flex items-center p-4 bg-gray-100 text-black text-md md:text-xl font-normal rounded-r-2xl shadow-md transition-all duration-500 ease-in-out ${
-                hoveredCard === index
-                  ? 'opacity-100 md:w-[500px] w-full'
-                  : 'opacity-0 md:w-0 w-full max-h-0'
-              }`}
-              style={{ display: hoveredCard === index || !isMobile ? 'flex' : 'none' }}
+              className={getCardStyles(index, hoveredCard === index)}
+              style={{
+                width: "100%",
+                position: hoveredCard === index ? "absolute" : "relative",
+              }}
+              onMouseEnter={() => !isMobile && setHoveredCard(index)}
+              onMouseLeave={() => !isMobile && setHoveredCard(null)}
+              onClick={() =>
+                isMobile && setHoveredCard((prev) => (prev === index ? null : index))
+              }
             >
-              {expandedContent[index]}
+              <img src={icons[index]} alt="" className="h-[150px] mb-2" />
+              <p className="text-center text-sm md:text-2xl font-semibold">{text}</p>
+              {hoveredCard === index && (
+                <p className="mt-4 text-center text-xs md:text-lg p-2 w-full">
+                  {expandedContent[index]}
+                </p>
+              )}
             </div>
           </div>
         ))}
