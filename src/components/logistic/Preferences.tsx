@@ -20,7 +20,7 @@ const Preferences: React.FC = () => {
 
   const cardContent = [
     "Организуем сбор товаров на вашем складе",
-    "Транспортируем в наш распределительный центр",
+    "Транспортируем в наш РЦ",
     "Оформляем необходимую документацию",
     "Проводим доставку по торговым точкам",
     "Предоставляем детализированный отчет",
@@ -44,14 +44,14 @@ const Preferences: React.FC = () => {
 
   const getCardStyles = (index: number, isHovered: boolean) => {
     const baseStyles = "flex flex-col items-center p-4 shadow-md rounded-xl transform transition-all duration-500";
-    const hoverStyles = isHovered ? "shadow-lg scale-105 z-10" : "z-0";
+    const hoverStyles = isHovered ? "shadow-lg scale-105 z-50" : "z-0";
     const backgroundStyles = index >= 1 && index <= 3 ? "bg-[#ffa058] text-black" : "bg-white text-black";
 
     return `${baseStyles} ${hoverStyles} ${backgroundStyles}`;
   };
 
   return (
-    <div className="w-full flex flex-col items-center gap-8">
+    <div className="w-full flex flex-col items-center gap-8 z-50">
       <h3 className="font-semibold text-main text-lg md:text-3xl p-4 text-center">
         Этапы 3PL логистики
       </h3>
@@ -70,6 +70,7 @@ const Preferences: React.FC = () => {
               style={{
                 width: "100%",
                 position: hoveredCard === index ? "absolute" : "relative",
+                minHeight: "300px"
               }}
               onMouseEnter={() => !isMobile && setHoveredCard(index)}
               onMouseLeave={() => !isMobile && setHoveredCard(null)}
@@ -78,7 +79,7 @@ const Preferences: React.FC = () => {
               }
             >
               <img src={icons[index]} alt="" className="h-[150px] mb-2" />
-              <p className="text-center text-sm md:text-2xl font-semibold">{text}</p>
+              <p className="text-center text-sm md:text-md lg:text-xl xl:text-2xl font-semibold">{text}</p>
               {hoveredCard === index && (
                 <p className="mt-4 text-center text-xs md:text-lg p-2 w-full">
                   {expandedContent[index]}

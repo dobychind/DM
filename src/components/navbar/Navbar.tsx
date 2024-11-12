@@ -62,7 +62,7 @@ const Navbar: React.FC<NavbarProps> = ({ position, logoname, color }) => {
 
     return (
         <section
-            className={`${position === 'fixed' ? 'fixed' : 'block'} ${isNavbarVisible ? 'top-0' : '-top-26'} bg-transparent w-full z-50 transition-all duration-300 pb-4 md:pb-0`}>
+            className={`${position === 'fixed' ? 'fixed' : 'block'} ${isNavbarVisible ? 'top-0' : '-top-26'} bg-transparent w-full z-[60] transition-all duration-300 pb-4 md:pb-0`}>
             <div className="flex flex-col bg-black bg-opacity-30">
                 <div className='w-[99%] hidden  justify-between md:flex gap-5 2xl:gap-7 p-6 pt-2 pl-14 2xl:pl-28 font-normal text-xl 2xl:text-2xl'>
                     <div className='flex items-center gap-7'>
