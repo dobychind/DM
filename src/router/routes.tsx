@@ -1,5 +1,5 @@
 import Production from "../pages/Production"
-// import Distribution from "../pages/Distribution"
+import Distribution from "../pages/Distribution"
 import Logistic from "../pages/Logistic"
 
 import React from "react"
@@ -22,7 +22,7 @@ export const publicRoutes: RouteConfig[] =[
     // {path: '/production/', component: <Factory/>},
     {path: '/production/bread', component: <Production/>},
     {path: '/production/confectionery', component: <Production/>},
-    // {path: '/distribution', component: <Distribution/>},
+    {path: '/distribution', component: <Distribution/>},
     {path: '/logistic', component: <Logistic/>},
     // {path: '/policy' , component: <Policy/>},
     {path: "/*", component: <MainPage/>},
