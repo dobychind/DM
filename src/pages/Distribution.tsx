@@ -22,7 +22,7 @@ const Distribution = () => {
         <div className="w-full relative overflow-hidden ">
           <Navbar logoname="DM" color="text-white" position="fixed" />
           <img className="h-screen rounded-b-[48px] rounded-br-[48px] w-full object-cover z-10" src={Banner} alt="" />
-          <p data-aos="fade-down" data-aos-duration="2000" className="absolute left-6 md:w-fit 2xl:w-2/3 md:left-auto md:right-[-10rem] bottom-[25%] z-30 text-5xl 2xl:text-7xl text-white font-title">Первый профессиональный<br /> дистрибьютор хлеба в России</p>
+          <p data-aos="fade-down" data-aos-duration="2000" className="absolute left-6 md:w-fit 2xl:w-fit md:left-auto md:right-12 bottom-[25%] z-30 text-5xl 2xl:text-7xl text-white font-title">Первый профессиональный<br /> дистрибьютор хлеба в России</p>
         </div>
 
         <div className="flex flex-col gap-16 py-16 lg:w-[96%]">
@@ -42,10 +42,7 @@ const Distribution = () => {
             <div className="w-full h-full" data-aos="fade-down" data-aos-duration="3000" data-aos-delay="600">
               <Possibilities />
             </div>
-
-            <div data-aos="fade-down" data-aos-duration="3000" data-aos-delay="800" className='w-full flex flex-col md:flex-row justify-start gap-8 items-center'>
-              <FeedbackForm text="Стать частью пула поставщиков" />
-            </div>
+            <FeedbackForm text="Стать частью пула поставщиков" />
 
             <div data-aos="fade-down" data-aos-duration="2000" data-aos-delay="1200" className='flex flex-col bg-white gap-8 w-full px-4 py-3 rounded-2xl'>
               <h3 className='text-xl md:text-center font-semibold md:text-3xl min-[1920px]:text-5xl md:font-bold'>Наши партнеры</h3>

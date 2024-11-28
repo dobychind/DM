@@ -19,24 +19,34 @@ const Preferences: React.FC = () => {
   }, []);
 
   const cardContent = [
-    "Прямые контракты с поставщиками",
-    "Лидер в дистрибьюции",
     "Устойчивое присутствие на рынке",
+    "Высокий ежемесячный оборот",
+    "Лидер в дистрибуции",
+    "Прямые контракты с поставщиками",
     "Новаторы в онлайн-ритейле",
   ];
 
+  const icons = [
+    "/profit.svg",
+    "/high_val.svg",
+    "/top.svg",
+    "/handshake.png",
+    "/Idea.svg",
+  ];
+
   const expandedContent = [
-    "Обеспечиваем своевременную и точную передачу груза, оптимизируя ваши ресурсы.",
-    "Товар поступает на наш логистический комплекс для оперативной обработки и контроля.",
-    "Оформляем всю необходимую документацию — готовим полный пакет документов, гарантируя бесперебойное прохождение всех этапов.",
-    "Организуем своевременное поступление товаров в назначенные точки с соблюдением всех требований.",
+    "Группа компаний, успешно работает на рынке с 2012 года.",
+    "Ежемесячный оборот по группе компаний составляет 120 млн рублей.",
+    "Крупнейший дистрибьютор хлеба и хлебобулочных изделий в трех регионах России – Санкт-Петербург, Москва, Великий Новгород.",
+    "Налаженные прямые контракты с поставщиками хлебобулочных изделий для всех сетей СЗФО и ЦФО, а также для локальных сетей и онлайн-ритейла.",
+    "С 2019 года первыми начали поставки хлебобулочных изделий в онлайн-ритейл: Самокат и Яндекс Лавку.",
   ];
 
 
   const getCardStyles = (index: number, isHovered: boolean) => {
     const baseStyles = "flex justify-center flex-col items-center p-4 shadow-md rounded-xl transform transition-all duration-500";
     const hoverStyles = isHovered ? "shadow-lg scale-105 z-50" : "z-0";
-    const backgroundStyles = index >= 1 && index <= 3 ? "bg-main text-white" : "bg-main text-white";
+    const backgroundStyles = index >= 1 && index <= 3 ? "bg-[#ffa058] text-black" : "bg-[#ffa058] text-black";
 
     return `${baseStyles} ${hoverStyles} ${backgroundStyles}`;
   };
@@ -45,7 +55,7 @@ const Preferences: React.FC = () => {
     <div className="w-full flex flex-col items-center gap-8 z-50">
 
       <div
-        className={`grid gap-4 ${isMobile ? "grid-cols-1" : "grid-cols-4"
+        className={`grid gap-4 ${isMobile ? "grid-cols-1" : "grid-cols-5"
           } w-full items-stretch relative`}
       >
         {cardContent.map((text, index) => (
@@ -67,6 +77,7 @@ const Preferences: React.FC = () => {
                 isMobile && setHoveredCard((prev) => (prev === index ? null : index))
               }
             >
+              <img src={icons[index]} alt="" className="h-[150px] mb-2" />
               <p className="text-start w-full text-sm md:text-md lg:text-xl xl:text-2xl font-semibold">{text}</p>
               {hoveredCard === index && (
                 <p className="mt-4 text-start text-xs md:text-lg w-full">

@@ -1,6 +1,10 @@
 module.exports = {
   root: true,
-  env: { browser: true, es2020: true },
+  env: {
+    browser: true,    // Оставляем для React
+    node: true,       // Добавляем поддержку Node.js
+    es2020: true
+  },
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
@@ -14,5 +18,7 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    '@typescript-eslint/no-var-requires': 'off', // Отключаем для использования require в Node.js
+    'no-undef': 'off'                           // Отключаем ошибки для глобальных переменных Node.js, таких как 'process'
   },
-}
+};
