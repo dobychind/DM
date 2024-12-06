@@ -68,7 +68,7 @@ const Navbar: React.FC<NavbarProps> = ({ position, logoname, color }) => {
                     <div className='flex items-center gap-7'>
                         <Link to="/"><p className={`${isActive('/contacts')} ${textColor} hover:underline hover:text-main`}>Главная</p></Link>
                         <Link to="/production" className={`${isActive('/contacts')} ${textColor} hover:underline hover:text-main`}>Производство</Link>
-                        <Link to="/production/bread" className={`${isActive('/contacts')} ${textColor} hover:underline hover:text-main`}>Продукция</Link>
+                        {/* <Link to="/production/bread" className={`${isActive('/contacts')} ${textColor} hover:underline hover:text-main`}>Продукция</Link> */}
                         <Link to="/distribution"><p className={`${isActive('/contacts')} ${textColor} hover:underline hover:text-main`}>Дистрибьюция</p></Link>
                         <Link to="/logistic"><p className={`${isActive('/contacts')} ${textColor} hover:underline hover:text-main`}>Логистика</p></Link>
                         <Link to="/job"><p className={`${isActive('/jobs')} ${textColor} hover:underline hover:text-main`}>Работа</p></Link>
@@ -84,7 +84,7 @@ const Navbar: React.FC<NavbarProps> = ({ position, logoname, color }) => {
                         <div data-aos="fade-right" data-aos-duration="500" className={`flex z-30 flex-col gap-4 text-2xl bg-gray-800 py-6 pl-6 absolute top-0 left-0 w-full`}>
                             <a href='/' className='block text-white w-fit font-semibold hover:underline hover:text-main'>Главная</a>
                             <Link to="/production" className='text-lg hover:underline text-white font-semibold hover:text-main'>Производство</Link>
-                            <Link to="/production/bread" className='text-lg hover:underline text-white font-semibold hover:text-main'>Продукция</Link>
+                            {/* <Link to="/production/bread" className='text-lg hover:underline text-white font-semibold hover:text-main'>Продукция</Link> */}
                             <Link to="/distribution" className='block text-white w-fit font-semibold hover:underline hover:text-main'>Дистрибьюция</Link>
                             <Link to="/logistic" className='block text-white w-fit font-semibold hover:underline hover:text-main'>Логистика</Link>
                             <Link to="/job" className='text-lg hover:underline text-white font-semibold hover:text-main'>Вакансии</Link>

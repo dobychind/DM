@@ -24,23 +24,25 @@ const Logistic = () => {
   const [phone, setPhone] = useState('');
   const [company, setCompany] = useState('');
 
-  const handleSubmit = async (event: React.FormEvent) => {
-    event.preventDefault();
+  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    e.stopPropagation();
 
-    const response = await fetch('/api/sendMail', {
+    fetch("https://formcarry.com/s/cQqXUq8o2FQ", {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
+        "Accept": "application/json",
+        "Content-Type": "application/json"
       },
-      body: JSON.stringify({ name, email, phone }),
-    });
-
-    if (response.ok) {
-      alert('Message sent successfully');
-    } else {
-      alert('Failed to send message');
-    }
-  };
+      body: JSON.stringify({ name, email, phone, company })
+    })
+      .then(response => response.json())
+      .then(response => {
+        if (response.code === 200) {
+          alert("We received your submission, thank you!");
+        }
+      })
+  }
 
 
 
@@ -94,7 +96,7 @@ const Logistic = () => {
               <p className='font-medium text-3xl w-full text-justify'>Заказать консультацию</p>
               <p className='font-normal text-sm w-full text-justify'>Стоимость услуг оператора для каждого типа логистики рассчитывается индивидуально.
                 <br />Для расчета обратитесь к менеджерам компании, заполнив форму или позвонив по телефону, указанному на сайте.</p>
-              <form className="flex w-full  flex-col gap-4 rounded-2xl" onSubmit={handleSubmit}>
+              <form className="flex w-full  flex-col gap-4 rounded-2xl" onSubmit={onSubmit}>
                 <div className='flex w-full gap-8 '>
                   <div className="w-full flex flex-col gap-4">
                     <input
@@ -138,7 +140,7 @@ const Logistic = () => {
 
                 </div>
                 <div>
-                  <label htmlFor="opd">  <input type="checkbox" id="opd" /> Согласен с обработкой <a href="">Персональных данных</a></label>
+                  <label htmlFor="opd">  <input type="checkbox" id="opd" /> Согласен с обработкой <a href="/policy.pdf" download>Персональных данных</a></label>
                 </div>
                 <button className="w-4/5 ml-auto md:w-1/3 text-center p-3 bg-main rounded-xl text-white border border-main items-end hover:bg-transparent hover:text-main text-xl" type="submit">Отправить</button>
               </form>

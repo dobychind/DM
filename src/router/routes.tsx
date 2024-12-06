@@ -1,11 +1,10 @@
-import Production from "../pages/Production"
+// import Production from "../pages/Production"
 import Distribution from "../pages/Distribution"
 import Logistic from "../pages/Logistic"
 
 import React from "react"
 import MainPage from "../pages/MainPage";
-// import Factory from "../pages/Factory";
-// import Policy from "../pages/Policy";
+import Factory from "../pages/Factory";
 // import Error from "../pages/Error"
 
 // import Job from "../pages/Job";
@@ -19,12 +18,11 @@ interface RouteConfig {
 
 export const publicRoutes: RouteConfig[] =[ 
     {path: '/', component: <MainPage/> },
-    // {path: '/production/', component: <Factory/>},
-    {path: '/production/bread', component: <Production/>},
-    {path: '/production/confectionery', component: <Production/>},
+    {path: '/production/', component: <Factory/>},
+    // {path: '/production/bread', component: <Production/>},
+    // {path: '/production/confectionery', component: <Production/>},
     {path: '/distribution', component: <Distribution/>},
     {path: '/logistic', component: <Logistic/>},
-    // {path: '/policy' , component: <Policy/>},
     {path: "/*", component: <MainPage/>},
     // {path: '/job', component: <Job/>},
     // {path: '/contacts', component: <Contacts/>}

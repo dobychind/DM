@@ -27,7 +27,13 @@ const Distribution = () => {
 
         <div className="flex flex-col gap-16 py-16 lg:w-[96%]">
           <div className="mt-8 flex flex-col justify-center items-center gap-16">
-            <Preferences />
+            <div className="flex flex-col gap-6 w-full">
+              <h3 className="font-semibold text-main text-lg md:text-3xl p-4 text-center">
+                Наши Достижения
+              </h3>
+              <Preferences />
+            </div>
+
 
             <div data-aos="fade-down" data-aos-duration="2000" className='flex flex-col bg-white gap-8 w-full px-4 py-3 rounded-2xl'>
               <h3 className='text-xl md:text-center font-semibold md:text-3xl min-[1920px]:text-5xl md:font-bold'>Наши клиенты</h3>
@@ -44,7 +50,7 @@ const Distribution = () => {
             </div>
             <FeedbackForm text="Стать частью пула поставщиков" />
 
-            <div data-aos="fade-down" data-aos-duration="2000" data-aos-delay="1200" className='flex flex-col bg-white gap-8 w-full px-4 py-3 rounded-2xl'>
+            <div data-aos="fade-down" data-aos-duration="2000" data-aos-delay="200" className='flex flex-col bg-white gap-8 w-full px-4 py-3 rounded-2xl'>
               <h3 className='text-xl md:text-center font-semibold md:text-3xl min-[1920px]:text-5xl md:font-bold'>Наши партнеры</h3>
               <div className='flex flex-wrap w-full justify-between md:flex-nowrap gap-2 md:gap-6 items-center md:justify-around'>
                 <ClientSwiper />

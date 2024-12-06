@@ -78,7 +78,7 @@ const Preferences: React.FC = () => {
               }
             >
               <img src={icons[index]} alt="" className="h-[150px] mb-2" />
-              <p className="text-start w-full text-sm md:text-md lg:text-xl xl:text-2xl font-semibold">{text}</p>
+              <p className="text-center w-full text-sm md:text-md lg:text-xl xl:text-2xl font-semibold">{text}</p>
               {hoveredCard === index && (
                 <p className="mt-4 text-start text-xs md:text-lg w-full">
                   {expandedContent[index]}
