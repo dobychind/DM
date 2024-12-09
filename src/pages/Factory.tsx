@@ -7,18 +7,20 @@ import DatesNew from '../components/factory/DatesNew'
 import hppbanner from '/hppbanner.jpg';
 import hppbread from '/hppbread.png';
 import Novg from '/novg.png';
-import Novg2 from '/novg2.png';
+import Novg2 from '/novg2.jpg';
 import Novg4 from '/novg4.png';
 import Psen from '/psen.png';
 import best from '/best.png';
 import cheer from '/cheer.png';
 import second from '/second.png';
 import thanks from '/thanks.png';
+import psenic from '/psenic.jpg';
 import { useEffect } from 'react';
 import Aos from 'aos';
 import 'aos/dist/aos.css'
 import ClientSwiper from '../components/distribution/ClientSwiper';
 import Footer from '../components/footer/Footer';
+import Possibilities from '../components/factory/Possibilities';
 
 const Factory = () => {
   useEffect(() => {
@@ -48,14 +50,17 @@ const Factory = () => {
         </div>
       </div>
 
-      <div className='flex py-12 bg-bg flex-col w-[96vw] lg:w-[89vw] gap-12 md:gap-24 justify-center items-center'>
 
+      <div className='flex py-12 bg-bg flex-col w-[96vw] lg:w-[89vw] gap-12 md:gap-24 justify-center items-center'>
         <div className='w-full bg-white p-3 md:p-6 rounded-2xl md:mt-0 flex flex-col justify-center gap-6 '>
           <h3 className='text-xl md:text-4xl md:text-center font-semibold md:font-bold md:py-8'>Этапы развития собственного производства</h3>
           <div className='max-w-full w-[99%]  bg-white  rounded-2xl'>
             <DatesNew />
           </div>
         </div>
+
+        <Possibilities />
+
 
         <div className='w-full flex flex-col gap-8'>
           <div className='flex flex-col gap-8 w-full md:flex-row md:max-h-[400px] xl:max-h-[370px] 2xl:max-h-[330px]'>
@@ -81,14 +86,14 @@ const Factory = () => {
               <img className='h-full max-h-[330px] w-full object-cover rounded-2xl' src={Novg4} alt="" />
             </div>
             <div className='flex justify-center items-center bg-white py-5 px-4 md:px-16 lg:px-20 xl:px-24 rounded-2xl'>
-              <p className='text-xl  lg:text-2xl text-main xl:text-4xl 2xl:text-5xl font-semibold'>Также ХПП № 1 восстанавливает Хлебопекарный завод в Великом Новгороде, что будет являться сохранением предприятия имеющего социальную значимость для региона</p>
+              <p className='text-xl  lg:text-2xl text-main xl:text-4xl font-semibold'>Также ХПП № 1 восстанавливает Хлебопекарный завод в Великом Новгороде, что будет являться сохранением предприятия имеющего социальную значимость для региона</p>
             </div>
           </div>
         </div>
 
         <div className='flex flex-col w-full gap-12 md:gap-16 py-8 px-3 md:py-16 md:px-9 bg-white rounded-2xl'>
 
-          <div className='flex flex-col items-center justify-between gap-8 md:gap-20'>
+          <div className='flex flex-col items-center justify-between gap-8 md:gap-8'>
             <h3 className='text-3xl md:text-5xl font-semibold text-main'>Наши планы</h3>
             <div className='flex w-[90%] justify-center items-center bg-main p-4 px-12 rounded-2xl gap-4 xl:gap-16 '>
 
@@ -129,23 +134,36 @@ const Factory = () => {
           </div> */}
 
 
-          <div className='flex flex-col justify-between gap-8 md:gap-20'>
-            <h3 className='text-3xl md:text-5xl font-semibold text-main'>Мастерская Пшеничного</h3>
-            <div className='flex w-full gap-4 xl:gap-8 '>
-              <div className='w-1/2'>
+          <div className='flex flex-col justify-between gap-8 md:gap-12'>
+            <h3 className='text-3xl md:text-5xl text-center font-semibold text-main'>Мастерская Пшеничного</h3>
+            <div className='flex w-full gap-4 justify-between xl:gap-8'>
+              <div className='w-[60%]'>
                 <p className='text-lg md:text-2xl font-normal text-justify'>С 2024 года мы с гордостью запускаем нашу новую торговую марку «Мастерская Э.Пшеничного» под вдохновляющим лозунгом «Вкуснее с нами!».
                   Бренд посвящён искусству ремесленного хлебопечения и объединяет в себе традиции и инновации.</p>
               </div>
 
-              <div>
-                <img src={Psen} className='w-full rounded-2xl md:object-contain' alt="" />
+              <div className='w-1/3'>
+                <img src={Psen} className='w-full md:object-contain' alt="" />
               </div>
+
 
             </div>
 
-            <img src="" alt="" />
-            <p className='text-lg md:text-2xl font-normal text-justify'>Под маркой «Мастерская Э.Пшеничного» будут производиться хлеба, которые уже завоевали признание гурманов по всему миру: чиабатта, багет, сельский
-              и пшеничный хлеб и многое другое.</p>
+            <div className=''>
+              <img className='h-full max-h-[500px]  rounded-2xl object-cover w-full' src={psenic} alt="" />
+            </div>
+            <div className='w-full flex justify-between gap-16'>
+              <p className='w-1/2 text-lg md:text-2xl font-normal text-justify'>Под маркой «Мастерская Э.Пшеничного» будут производиться хлеба,
+                которые уже завоевали признание гурманов по всему миру:
+              </p>
+              <ul className='list-disc text-lg md:text-2xl font-normal text-justify'>
+                <li>Чиабатта</li>
+                <li>Багет</li>
+                <li>Сельский хлеб</li>
+                <li>Пшеничный хлеб и многое другое</li>
+              </ul>
+            </div>
+
           </div>
 
         </div>
