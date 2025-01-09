@@ -17,9 +17,9 @@ const Possibilities = () => {
                     ].map((item, index) => (
                         <div 
                             key={index} 
-                            className="flex flex-col-reverse gap-2 border border-bg  items-center justify-center rounded-2xl p-6 min-h-[300px] transform transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+                            className="flex flex-col-reverse gap-2 border border-bg  items-center justify-center rounded-2xl p-6 md:min-h-[300px] transform transition-transform duration-300 hover:scale-105 hover:shadow-xl"
                         >
-                            <p className='text-center min-h-24 w-full text-sm md:text-md lg:text-xl xl:text-2xl font-semibold'>
+                            <p className='text-center md:min-h-24 w-full text-lg md:text-md lg:text-xl xl:text-2xl font-semibold'>
                                 {item.text}
                             </p>
                             <img src={item.img} width={150} alt={item.alt} className="transition-opacity duration-300 hover:opacity-90" />

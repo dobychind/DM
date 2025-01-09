@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import Select from 'react-select';
+// import Select from 'react-select';
 
 interface ProductFilterProps {
   categories: string[];
@@ -14,11 +14,11 @@ interface ProductFilterProps {
 
 const ProductFilter: React.FC<ProductFilterProps> = ({
   categories,
-  manufacturers,
+  // manufacturers,
   selectedCategory,
-  selectedManufacturer,
+  // selectedManufacturer,
   onCategoryChange,
-  onManufacturerChange,
+  // onManufacturerChange,
   isOpen,
   toggleFilter,
 }) => {
@@ -44,43 +44,43 @@ const ProductFilter: React.FC<ProductFilterProps> = ({
     };
   }, [isOpen]); // Add or remove the event listener based on isOpen state
 
-  const manufacturerOptions = manufacturers.map((manufacturer) => ({
-    value: manufacturer,
-    label: manufacturer,
-  }));
+  // const manufacturerOptions = manufacturers.map((manufacturer) => ({
+  //   value: manufacturer,
+  //   label: manufacturer,
+  // }));
 
-  const customStyles = {
-    control: (provided: any) => ({
-      ...provided,
-      backgroundColor: '#FF6A00',
-      borderColor: '#FF6A00',
-      color: 'white',
-      padding: '4px 8px',
-      borderRadius: '0.5rem',
-      fontSize: '1rem',
-      fontWeight: '500',
-    }),
-    singleValue: (provided: any) => ({
-      ...provided,
-      color: 'white',
-    }),
-    option: (provided: any, state: any) => ({
-      ...provided,
-      backgroundColor: state.isFocused ? '#FF6A00' : 'transparent',
-      color: state.isFocused ? 'white' : 'black',
-      padding: '8px 12px',
-    }),
-    menu: (provided: any) => ({
-      ...provided,
-      backgroundColor: '#F7832C',
-      borderRadius: '0.5rem',
-    }),
-  };
+  // const customStyles = {
+  //   control: (provided: any) => ({
+  //     ...provided,
+  //     backgroundColor: '#FF6A00',
+  //     borderColor: '#FF6A00',
+  //     color: 'white',
+  //     padding: '4px 8px',
+  //     borderRadius: '0.5rem',
+  //     fontSize: '1rem',
+  //     fontWeight: '500',
+  //   }),
+  //   singleValue: (provided: any) => ({
+  //     ...provided,
+  //     color: 'white',
+  //   }),
+  //   option: (provided: any, state: any) => ({
+  //     ...provided,
+  //     backgroundColor: state.isFocused ? '#FF6A00' : 'transparent',
+  //     color: state.isFocused ? 'white' : 'black',
+  //     padding: '8px 12px',
+  //   }),
+  //   menu: (provided: any) => ({
+  //     ...provided,
+  //     backgroundColor: '#F7832C',
+  //     borderRadius: '0.5rem',
+  //   }),
+  // };
 
   return (
     <div
       ref={filterRef} // Attach the ref to the container
-      className={`fixed inset-0 z-50 bg-[#F7832C] w-4/5 md:w-auto md:relative md:rounded-l-2xl transform transition-transform ${
+      className={`fixed inset-0 z-50 bg-[#F7832C] w-4/5 md:w-auto md:relative md:rounded-xl transform transition-transform ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
       } md:translate-x-0 md:flex md:flex-col gap-4 2xl:gap-6 md:border px-12 py-4 2xl:py-8`}
     >
@@ -94,7 +94,7 @@ const ProductFilter: React.FC<ProductFilterProps> = ({
         </button>
       </div>
 
-      <div className="relative mt-4 md:mt-0">
+      {/* <div className="relative mt-4 md:mt-0">
         <Select
           value={manufacturerOptions.find(option => option.value === selectedManufacturer)}
           onChange={(selectedOption) => onManufacturerChange(selectedOption?.value || '')}
@@ -103,12 +103,12 @@ const ProductFilter: React.FC<ProductFilterProps> = ({
           isClearable
           placeholder="Все производители"
         />
-      </div>
+      </div> */}
 
-      <div className="flex flex-col gap-2 mt-4">
+      <div className="flex gap-2">
         <button
           className={`px-4 py-2 rounded-lg text-lg font-medium ${
-            selectedCategory === '' ? 'bg-orange text-white' : 'text-black'
+            selectedCategory === '' ? ' text-white' : 'text-black'
           }`}
           onClick={() => onCategoryChange('')}
         >
@@ -118,7 +118,7 @@ const ProductFilter: React.FC<ProductFilterProps> = ({
           <button
             key={category}
             className={`px-4 py-2 rounded-lg text-lg font-medium text-black ${
-              selectedCategory === category ? 'bg-orange text-white' : 'text-black'
+              selectedCategory === category ? 'text-white' : 'text-black'
             }`}
             onClick={() => onCategoryChange(category)}
           >

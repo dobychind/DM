@@ -52,7 +52,7 @@ const Preferences: React.FC = () => {
 
   return (
     <div className="w-full flex flex-col items-center gap-8 z-50">
-      <h3 className="font-semibold text-main text-lg md:text-3xl p-4 text-center">
+      <h3 className="font-semibold text-main text-3xl md:p-4 text-center">
         Этапы 3PL логистики
       </h3>
       <div
@@ -79,9 +79,9 @@ const Preferences: React.FC = () => {
               }
             >
               <img src={icons[index]} alt="" className="h-[150px] mb-2" />
-              <p className="text-center text-sm md:text-md lg:text-xl xl:text-2xl font-semibold">{text}</p>
+              <p className="text-center text-xl md:text-md lg:text-xl xl:text-2xl font-semibold">{text}</p>
               {hoveredCard === index && (
-                <p className="mt-4 text-center text-xs md:text-lg p-2 w-full">
+                <p className="mt-4 text-center text-xl md:text-lg p-2 w-full">
                   {expandedContent[index]}
                 </p>
               )}

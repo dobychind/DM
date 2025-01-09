@@ -18,9 +18,10 @@ const Distribution = () => {
   }, []);
   return (
     <div className="font-body">
+
       <div className="flex w-full justify-center items-center  flex-col">
+      <Navbar logoname="DM" color="text-white" position="fixed" />
         <div className="w-full relative overflow-hidden ">
-          <Navbar logoname="DM" color="text-white" position="fixed" />
           <img className="h-screen rounded-b-[48px] rounded-br-[48px] w-full object-cover z-10" src={Banner} alt="" />
           <p data-aos="fade-down" data-aos-duration="2000" className="absolute left-6 md:w-fit 2xl:w-fit md:left-auto md:right-12 bottom-[25%] z-30 text-5xl 2xl:text-7xl text-white font-title">Первый профессиональный<br /> дистрибьютор хлеба в России</p>
         </div>

@@ -63,8 +63,8 @@ const Navbar: React.FC<NavbarProps> = ({ position, logoname, color }) => {
     return (
         <section
             className={`${position === 'fixed' ? 'fixed' : 'block'} ${isNavbarVisible ? 'top-0' : '-top-26'} bg-transparent w-full z-[60] transition-all duration-300 pb-4 md:pb-0`}>
-            <div className="flex flex-col bg-black bg-opacity-30">
-                <div className='w-[99%] hidden  justify-between md:flex gap-5 2xl:gap-7 p-6 pt-2 pl-14 2xl:pl-28 font-normal text-xl 2xl:text-2xl'>
+            <div className="flex flex-col md:bg-black md:bg-opacity-30">
+                <div className='w-[99%] hidden  justify-between md:flex gap-5 2xl:gap-7 p-6 pl-14 2xl:pl-28 font-normal text-xl 2xl:text-2xl'>
                     <div className='flex items-center gap-7'>
                         <Link to="/"><p className={`${isActive('/contacts')} ${textColor} hover:underline hover:text-main`}>Главная</p></Link>
                         <Link to="/production" className={`${isActive('/contacts')} ${textColor} hover:underline hover:text-main`}>Производство</Link>
@@ -84,9 +84,9 @@ const Navbar: React.FC<NavbarProps> = ({ position, logoname, color }) => {
                         <div data-aos="fade-right" data-aos-duration="500" className={`flex z-30 flex-col gap-4 text-2xl bg-gray-800 py-6 pl-6 absolute top-0 left-0 w-full`}>
                             <a href='/' className='block text-white w-fit font-semibold hover:underline hover:text-main'>Главная</a>
                             <Link to="/production" className='text-lg hover:underline text-white font-semibold hover:text-main'>Производство</Link>
-                            {/* <Link to="/production/bread" className='text-lg hover:underline text-white font-semibold hover:text-main'>Продукция</Link> */}
-                            <Link to="/distribution" className='block text-white w-fit font-semibold hover:underline hover:text-main'>Дистрибьюция</Link>
-                            <Link to="/logistic" className='block text-white w-fit font-semibold hover:underline hover:text-main'>Логистика</Link>
+                            <Link to="/production/bread" className='text-lg hover:underline text-white font-semibold hover:text-main'>Продукция</Link>
+                            <Link to="/distribution" className='block text-lg  text-white w-fit font-semibold hover:underline hover:text-main'>Дистрибьюция</Link>
+                            <Link to="/logistic" className='block text-lg  text-white w-fit font-semibold hover:underline hover:text-main'>Логистика</Link>
                             <Link to="/job" className='text-lg hover:underline text-white font-semibold hover:text-main'>Вакансии</Link>
                             <Link to="/contacts" className='text-lg hover:underline text-white font-semibold hover:text-main'>Контакты</Link>
                             <button onClick={toggleMenu} className="text-white absolute w-[32px] h-[32px] top-6 right-6">

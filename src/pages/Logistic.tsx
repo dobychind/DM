@@ -61,8 +61,8 @@ const Logistic = () => {
         </div>
 
 
-        <div className="flex flex-col md:flex-row w-full rounded-2xl gap-8 bg-[url('/supply.jpg')] bg-cover h-screen min-[1920px]:h-[70vh] bg-bottom justify-between">
-          <div className="flex flex-col pt-16 pl-16 gap-6 md:w-3/5 2xl:w-2/3">
+        <div className="flex flex-col md:flex-row w-full rounded-2xl gap-8 bg-[url('/supply.jpg')] bg-cover h-[70vh] md:h-screen min-[1920px]:h-[70vh] bg-bottom justify-between">
+          <div className="flex flex-col pt-2 pl-2 md:pt-16 md:pl-16 gap-6 md:w-3/5 2xl:w-2/3">
             <p className="text-2xl 2xl:text-3xl font-bold min-[1920px]:w-1/2">По запросу компании-отправителя могут быть предоставлены <span className="text-main">дополнительные услуги</span> по</p>
             <ul className="list-disc flex flex-col ml-8 gap-1">
               <li className="text-xl 2xl:text-2xl font-normal">Обработке</li>
@@ -85,14 +85,14 @@ const Logistic = () => {
 
         <div className="flex flex-col w-full gap-8 justify-between items-center">
 
-          <div className="flex flex-row h-full justify-center w-full gap-8 rounded-2xl ">
-            <div className="flex max-h-[700px] bg-white rounded-2xl justify-between  flex-col md:flex-row gap-8">
+          <div className="flex flex-col md:flex-row h-full justify-center w-full gap-8 rounded-2xl ">
+            <div className="flex md:max-h-[700px] bg-white rounded-2xl justify-between  flex-col md:flex-row gap-8">
               <div className="flex md:w-[100%] mx-8 justify-center flex-col gap-6 md:gap-8">
-                <p className="text-4xl font-bold w-max pt-4 border-b-2 border-main">Наши <span className="text-main">склады</span> размещены в 3х городах России </p>
+                <p className="text-4xl font-bold md:w-max pt-4 border-b-2 border-main">Наши <span className="text-main">склады</span> размещены в 3х городах России </p>
                 <img src={mapsmall} className="w-full rounded-2xl max-h-[500px] object-cover" alt="Карта складов" />
               </div>
             </div>
-            <div className="w-1/3 bg-[url('/statLogistic.png')]  p-4 rounded-2xl flex flex-col justify-around gap-4">
+            <div className="md:w-1/3 bg-[url('/statLogistic.png')]  p-4 rounded-2xl flex flex-col justify-around gap-4">
               <p className='font-medium text-3xl w-full text-justify'>Заказать консультацию</p>
               <p className='font-normal text-sm w-full text-justify'>Стоимость услуг оператора для каждого типа логистики рассчитывается индивидуально.
                 <br />Для расчета обратитесь к менеджерам компании, заполнив форму или позвонив по телефону, указанному на сайте.</p>
