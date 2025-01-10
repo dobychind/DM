@@ -68,7 +68,7 @@ const Navbar: React.FC<NavbarProps> = ({ position, logoname, color }) => {
                     <div className='flex items-center gap-7'>
                         <Link to="/"><p className={`${isActive('/contacts')} ${textColor} hover:underline hover:text-main`}>Главная</p></Link>
                         <Link to="/production" className={`${isActive('/contacts')} ${textColor} hover:underline hover:text-main`}>Производство</Link>
-                        {/* <Link to="/production/bread" className={`${isActive('/contacts')} ${textColor} hover:underline hover:text-main`}>Продукция</Link> */}
+                        <Link to="/production/bread" className={`${isActive('/contacts')} ${textColor} hover:underline hover:text-main`}>Продукция</Link>
                         <Link to="/distribution"><p className={`${isActive('/contacts')} ${textColor} hover:underline hover:text-main`}>Дистрибьюция</p></Link>
                         <Link to="/logistic"><p className={`${isActive('/contacts')} ${textColor} hover:underline hover:text-main`}>Логистика</p></Link>
                         <Link to="/job"><p className={`${isActive('/jobs')} ${textColor} hover:underline hover:text-main`}>Работа</p></Link>

@@ -5,7 +5,7 @@ import factory from '/factoryfactory.svg';
 
 const Possibilities = () => {
     return (
-        <div className="font-body p-6 bg-[url('/backcorp.png')] bg-cover rounded-2xl">
+        <div className="font-body w-full p-6 bg-[url('/backcorp.png')] bg-cover rounded-2xl">
             <div className="flex flex-col gap-8 justify-center items-center">
                 <h3 className="text-4xl min-[1920px]:text-5xl font-bold">Наши возможности</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 w-full">

@@ -32,7 +32,7 @@ const Factory = () => {
   };
   return (
     <div className='flex font-body bg-bg flex-col justify-center items-center'>
-      <Navbar logoname="DM" position='fixed' color='text-white' />
+      <Navbar logoname="Hpp" position='fixed' color='text-white' />
       <div className='flex w-full md:h-screen bg-white relative justify-end'>
         <div>
           <h2 data-aos="zoom-in" data-aos-duration="1000"
@@ -98,21 +98,32 @@ const Factory = () => {
               <h3 className='text-3xl w-full md:text-5xl text-start font-semibold text-main'>Наши планы</h3>
 
               <div className="flex flex-col md:flex-row gap-4 md:gap-24 justify-between items-stretch">
-                <p className="border border-main p-3 md:w-1/3 rounded-2xl text-2xl text-main md:text-2xl leading-snug font-normal text-justify">
-                  Активно развивать продукцию под лейблом «Сделано в Великом Новгороде», которое производит Хлебопекарное предприятие №1.
-                </p>
-                <p className="border border-main p-3 md:w-1/3 rounded-2xl text-2xl text-main md:text-2xl leading-snug font-normal text-justify">
-                  Вывести продукцию под этим брендом на полки крупнейших розничных сетей Санкт-Петербурга и Москвы.
-                </p>
-                <p className="border border-main p-3 md:w-1/3 rounded-2xl text-2xl text-main md:text-2xl leading-snug font-normal text-justify">
-                  Мы стремимся, чтобы каждый покупатель мог оценить качество и уникальность товаров, произведённых в этом древнем городе.
-                </p>
+                <div className='flex gap-2 w-full'>
+                  <p className='text-7xl font-bold text-main'>1.</p>
+                  <p className="border border-main p-3 rounded-2xl text-2xl text-black md:text-2xl leading-snug font-normal text-justify">
+                    Активно развивать продукцию под лейблом «Сделано в Великом Новгороде», которое производит Хлебопекарное предприятие №1.
+                  </p>
+                </div>
+                <div className='flex gap-2 w-full'>
+                  <p className='text-7xl font-bold text-main'>2.</p>
+
+                  <p className="border border-main p-3 rounded-2xl text-2xl text-black md:text-2xl leading-snug font-normal text-justify">
+                    Вывести продукцию под этим брендом на полки крупнейших розничных сетей Санкт-Петербурга и Москвы.
+                  </p>
+                </div>
+                <div className='flex gap-2 w-full'>
+                  <p className='text-7xl font-bold text-main'>3.</p>
+
+                  <p className="border border-main p-3 rounded-2xl text-2xl text-black md:text-2xl leading-snug font-normal text-justify">
+                    Мы стремимся, чтобы каждый покупатель мог оценить качество и уникальность товаров, произведённых в этом древнем городе.
+                  </p>
+                </div>
               </div>
 
 
-              <div className='hidden md:flex flex-row rounded-2xl justify-around overflow-hidden'>
-                <img src={hppbanner} className='w-1/3 rounded-2xl object-cover' alt="" />
-                <img src={shop} className='w-1/3 rounded-2xl object-cover' alt="" />
+              <div className='hidden md:flex flex-row rounded-2xl justify-evenly overflow-hidden'>
+                <img src={hppbanner} className='w-1/3 border border-main rounded-2xl object-cover' alt="" />
+                <img src={shop} className='w-1/3 border border-main rounded-2xl object-cover' alt="" />
               </div>
 
             </div>
