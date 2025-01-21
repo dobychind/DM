@@ -11,9 +11,9 @@ const Contacts = () => {
         <h2 className="font-title absolute bottom-24 left-16 md:left-28 text-white text-5xl xl:text-7xl">Наши контакты</h2>
       </div>
 
-      <div className='grid grid-rows-2 gap-8 w-full my-auto items-center justify-center mx-auto px-4 pb-8'>
+      <div className='grid grid-rows-2 gap-10 w-full my-auto items-center justify-center mx-auto px-4 pb-8'>
         {/* Города */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full">
           <div className='flex flex-col gap-1 font-semibold'>
             <p className='text-main font-medium text-3xl'>Москва</p>
             <a href='tel:+7 (499) 653 53-94' className='font-normal text-black hover:text-main text-2xl'>+7 (499) 653 53-94</a>
@@ -35,18 +35,23 @@ const Contacts = () => {
         </div>
 
         {/* Отделы */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full">
+          <div></div>
           <div className='flex flex-col gap-1 font-semibold'>
-            <p className='text-main font-medium text-3xl'>Отдел кадров</p>
-            <a href='tel:622 12 46' className='font-normal text-black hover:text-main text-2xl'>622 12 46 (добавочный 117)</a>
+            <p className='text-main font-medium text-3xl'>Отдел кадров СПБ</p>
+            <a href='tel:622 12 46' className='font-normal text-black hover:text-main text-2xl'>+7 (812) 622 12 46 (добавочный 117)</a>
           </div>
-          <div className='flex flex-col gap-1 font-semibold'>
+          {/* <div className='flex flex-col gap-1 font-semibold'>
             <p className='text-main font-medium text-3xl'>Отдел продаж</p>
             <a href='tel:+7 (812) 622 12-46' className='font-normal text-black hover:text-main text-2xl'>+7 (812) 622 12-46</a>
           </div>
           <div className='flex flex-col gap-1 font-semibold'>
             <p className='text-main font-medium text-3xl'>Отдел бухгалтерии</p>
             <a href='tel:+7 (812) 622 12-46' className='font-normal text-black hover:text-main text-2xl'>+7 (812) 622 12-46</a>
+          </div> */}
+          <div className='flex flex-col gap-1 font-semibold'>
+          <p className='text-main font-medium text-3xl'>Отдел кадров Новгород</p>
+          <a href='tel:622 12 46' className='font-normal text-black hover:text-main text-2xl'>+7 (816) 262-37-15 (добавочный 150)</a>
           </div>
         </div>
       </div>

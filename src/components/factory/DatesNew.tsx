@@ -14,8 +14,8 @@ import { Accordion, AccordionItem } from '@szhsin/react-accordion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useState } from 'react';
 
-import brslide1 from '/brslide1.jpg';
-import brslide2 from '/brslide2.jpg';
+import brslide1 from '/DmLogo.svg';
+import brslide2 from '/spb.svg';
 import brslide3 from '/brslide3.jpg';
 import brslide4 from '/brslide4.jpg';
 import brslide5 from '/brslide5.jpg';
@@ -50,7 +50,7 @@ const DatesNew = () => {
                     <AccordionItem
                         header={
                             <div className="accordion-header flex flex-col gap-2 justify-between text-2xl font-bold text-main">
-                                <img className='rounded-2xl' src={brslide1} alt="" />
+                                <img className='rounded-2xl h-[10vw]' src={brslide1} alt="" />
                                 <div className='flex w-full items-center justify-between'>
                                     <span className='text-3xl'>2012</span>
                                     <span className={`transition-transform duration-300 ${expanded === 0 ? 'rotate-180' : 'rotate-0'}`}>
@@ -80,7 +80,7 @@ const DatesNew = () => {
                     <AccordionItem
                         header={
                             <div className="accordion-header flex flex-col gap-2 justify-between text-2xl font-bold text-main">
-                                <img className='rounded-2xl' src={brslide2} alt="" />
+                                <img className='rounded-2xl object-contain h-[10vw]' src={brslide2} alt="" />
                                 <div className='flex w-full items-center justify-between'>
                                     <span className='text-3xl'>Февраль 2018</span>
                                     <span className={`transition-transform duration-300 ${expanded === 1 ? 'rotate-180' : 'rotate-0'}`}>
@@ -110,7 +110,7 @@ const DatesNew = () => {
                     <AccordionItem
                         header={
                             <div className="accordion-header flex flex-col gap-2 justify-between text-2xl font-bold text-main">
-                                <img className='rounded-2xl' src={brslide4} alt="" />
+                                <img className='rounded-2xl h-[10vw]' src={brslide4} alt="" />
                                 <div className='flex w-full items-center justify-between'>
                                     <span className='text-3xl'>Март 2018</span>
                                     <span className={`transition-transform duration-300 ${expanded === 2 ? 'rotate-180' : 'rotate-0'}`}>
@@ -140,7 +140,7 @@ const DatesNew = () => {
                     <AccordionItem
                         header={
                             <div className="accordion-header flex flex-col gap-2 justify-between text-2xl font-bold text-main">
-                                <img className='rounded-2xl' src={brslide3} alt="" />
+                                <img className='rounded-2xl h-[10vw]' src={brslide3} alt="" />
                                 <div className='flex w-full items-center justify-between'>
                                     <span className='text-3xl'>2019</span>
                                     <span className={`transition-transform duration-300 ${expanded === 3 ? 'rotate-180' : 'rotate-0'}`}>
@@ -170,7 +170,7 @@ const DatesNew = () => {
                     <AccordionItem
                         header={
                             <div className="accordion-header flex flex-col gap-2 justify-between text-2xl font-bold text-main">
-                                <img className='rounded-2xl' src={brslide5} alt="" />
+                                <img className='rounded-2xl h-[10vw]' src={brslide5} alt="" />
                                 <div className='flex w-full items-center justify-between'>
                                     <span className='text-3xl'>2022-2023</span>
                                     <span className={`transition-transform duration-300 ${expanded === 4 ? 'rotate-180' : 'rotate-0'}`}>
@@ -200,7 +200,7 @@ const DatesNew = () => {
                     <AccordionItem
                         header={
                             <div className="accordion-header flex flex-col gap-2 justify-between text-2xl font-bold text-main">
-                                <img className='rounded-2xl' src={brslide6} alt="" />
+                                <img className='rounded-2xl h-[10vw]' src={brslide6} alt="" />
                                 <div className='flex w-full items-center justify-between'>
                                     <span className='text-3xl'>Февраль 2024</span>
                                     <span className={`transition-transform duration-300 ${expanded === 5 ? 'rotate-180' : 'rotate-0'}`}>
@@ -230,7 +230,7 @@ const DatesNew = () => {
                     <AccordionItem
                         header={
                             <div className="accordion-header flex flex-col gap-2 justify-between text-2xl font-bold text-main">
-                                <img className='rounded-2xl' src={brslide7} alt="" />
+                                <img className='rounded-2xl h-[10vw]' src={brslide7} alt="" />
                                 <div className='flex w-full items-center justify-between'>
                                     <span className='text-3xl'>Июль 2024</span>
                                     <span className={`transition-transform duration-300 ${expanded === 6 ? 'rotate-180' : 'rotate-0'}`}>
