@@ -71,7 +71,7 @@ const Navbar: React.FC<NavbarProps> = ({ position, logoname, color }) => {
                         <Link to="/production/bread" className={`${isActive('/contacts')} ${textColor} hover:underline hover:text-main`}>Продукция</Link>
                         <Link to="/distribution"><p className={`${isActive('/contacts')} ${textColor} hover:underline hover:text-main`}>Дистрибьюция</p></Link>
                         <Link to="/logistic"><p className={`${isActive('/contacts')} ${textColor} hover:underline hover:text-main`}>Логистика</p></Link>
-                        {/* <Link to="/job"><p className={`${isActive('/jobs')} ${textColor} hover:underline hover:text-main`}>Работа</p></Link> */}
+                        <Link to="/job"><p className={`${isActive('/jobs')} ${textColor} hover:underline hover:text-main`}>Работа</p></Link>
                         <Link to="/contacts"><p className={`${isActive('/contacts')} ${textColor} hover:underline hover:text-main`}>Контакты</p></Link>
                     </div>
                     <a className='h-[70px]' href="/">
@@ -87,7 +87,7 @@ const Navbar: React.FC<NavbarProps> = ({ position, logoname, color }) => {
                             <Link to="/production/bread" className='text-lg hover:underline text-white font-semibold hover:text-main'>Продукция</Link>
                             <Link to="/distribution" className='block text-lg  text-white w-fit font-semibold hover:underline hover:text-main'>Дистрибьюция</Link>
                             <Link to="/logistic" className='block text-lg  text-white w-fit font-semibold hover:underline hover:text-main'>Логистика</Link>
-                            {/* <Link to="/job" className='text-lg hover:underline text-white font-semibold hover:text-main'>Вакансии</Link> */}
+                            <Link to="/job" className='text-lg hover:underline text-white font-semibold hover:text-main'>Вакансии</Link>
                             <Link to="/contacts" className='text-lg hover:underline text-white font-semibold hover:text-main'>Контакты</Link>
                             <button onClick={toggleMenu} className="text-white absolute w-[32px] h-[32px] top-6 right-6">
                                 <img src={Close} alt="close button" />

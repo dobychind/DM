@@ -18,12 +18,12 @@ interface Job {
 
 const Job = () => {
   const jobs: Job[] = [
-    { id: 1, title: "Вакансия 1", city: "Москва", experience: "1-3", description: "React, TypeScript", workType: "Full-time", workplace: "Office" },
-    { id: 2, title: "Вакансия 2", city: "Санкт-Петербург", experience: "3+", description: "Node.js, Databases", workType: "Part-time", workplace: "Remote" },
-    { id: 3, title: "Вакансия 3", city: "Великий Новгород", experience: "0", description: "Figma, UI/UX", workType: "Remote", workplace: "Remote" },
-    { id: 4, title: "Вакансия 4", city: "Москва", experience: "1-3", description: "React, TypeScript", workType: "Full-time", workplace: "123123" },
-    { id: 5, title: "Вакансия 5", city: "Санкт-Петербург", experience: "3+", description: "Node.js, Databases", workType: "Part-time", workplace: "Office" },
-    { id: 6, title: "Вакансия 6", city: "Великий Новгород", experience: "11", description: "Figma, UI/UX", workType: "Remote", workplace: "Hybrid" },
+    { id: 1, title: "Кассир", city: "Москва", experience: "1-3", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat atque sapiente saepe minus quaerat modi recusandae temporibus enim culpa. Assumenda sed eligendi perferendis amet iste nemo alias optio eaque dolore corrupti, quam veritatis nam vel dolores repellat iusto. Illo cum doloremque saepe ad soluta corrupti libero repellat iure odio, explicabo quis quibusdam neque excepturi quos, aspernatur voluptatibus quam quia fugiat labore suscipit. Ut nisi assumenda vero harum accusamus labore fugit dolorem sapiente, illo, quis natus expedita, a aperiam saepe commodi praesentium possimus suscipit minus! Magnam nesciunt consequatur dignissimos suscipit fuga. Tenetur quae veritatis eveniet fugit vero delectus facere quos perspiciatis!", workType: "Кассир", workplace: "Офис" },
+    { id: 2, title: "Механик", city: "Санкт-Петербург", experience: "3+", description: "Node.js, Databases", workType: "Механик", workplace: "Гараж" },
+    { id: 3, title: "Водитель", city: "Великий Новгород", experience: "0", description: "Figma, UI/UX", workType: "Водитель", workplace: "Склад" },
+    { id: 4, title: "Пекарь", city: "Москва", experience: "1-3", description: "React, TypeScript", workType: "Пекарь", workplace: "Офис" },
+    { id: 5, title: "Водитель", city: "Санкт-Петербург", experience: "3+", description: "Node.js, Databases", workType: "Водитель", workplace: "Склад" },
+    { id: 6, title: "Пекарь", city: "Великий Новгород", experience: "3+", description: "Figma, UI/UX", workType: "Пекарь", workplace: "Офис" },
   ];
 
   const [searchText, setSearchText] = useState("");
@@ -94,7 +94,7 @@ const Job = () => {
     e.preventDefault();
     e.stopPropagation();
 
-    fetch("https://formcarry.com/s/cQqXUq8o2FQ", {
+    fetch("https://formcarry.com/s/jB7EDl9oajz", {
       method: 'POST',
       headers: {
         "Accept": "application/json",
@@ -141,7 +141,6 @@ const Job = () => {
               <img src={hpp} alt="" />
             </div>
           </div>
-
         </div>
       </div>
 
@@ -241,7 +240,8 @@ const Job = () => {
                 <div className="flex flex-col gap-2">
                   <span className="text-lg">Опыт: {job.experience} года</span>
                   <p className="text-gray-700 text-base leading-6">{job.description}</p>
-                  <span className="text-base">Тип: {job.workType}, {job.workplace}</span>
+                  <span className="text-base">Тип Вакансии: {job.workType}</span>
+                  <span className="text-base">Месть работы: {job.workplace}</span>
                 </div>
 
                 <button className="px-5 py-3 bg-main w-fit text-white text-base rounded-xl hover:bg-main transition-colors"
