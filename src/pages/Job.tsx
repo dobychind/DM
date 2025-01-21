@@ -38,6 +38,8 @@ const Job = () => {
   const [phone, setPhone] = useState('');
   const [date, setDate] = useState('');
   const [job, setJob] = useState('');
+  const [city, setCity] = useState('');
+
 
 
   const toggleFilter = (_filter: string, setFilter: React.Dispatch<React.SetStateAction<string[]>>, value: string) => {
@@ -100,7 +102,7 @@ const Job = () => {
         "Accept": "application/json",
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({ name, country, phone, date, job })
+      body: JSON.stringify({ name, country, phone, date, job, city })
     })
       .then(response => response.json())
       .then(response => {
@@ -311,6 +313,7 @@ const Job = () => {
                 value={selectedJob.city}
                 placeholder="Город трудоустройства"
                 className="px-3 py-2 text-black font-medium text-lg rounded-2xl border-black border"
+                onChange={(e) => setCity(e.target.value)}
                 required
               />
               <div className="flex gap-2 justify-between items-center">
