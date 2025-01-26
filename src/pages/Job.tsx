@@ -65,7 +65,7 @@ const Job = () => {
     });
   }, [searchText, selectedCity, selectedExperience, selectedWorkType, selectedWorkplace, jobs]);
 
-  const handleOpenPopup = (job: Job) => {
+  const handleOpenPopup = (job: any) => {
     setSelectedJob(job);
     setIsPopupOpen(true);
   };
@@ -125,9 +125,9 @@ const Job = () => {
         <h2 className="text-6xl w-full text-center text-white mx-auto font-title font-medium">Вакансии</h2>
       </div>
 
-      <div className="p-4 px-8 ">
-        <div className="bg-white flex flex-row gap-2 w-full p-4 rounded-xl justify-between">
-          <div className="flex w-2/3 flex-col gap-2">
+      <div className="flex p-4 px-8 w-full h-full justify-between gap-12">
+        <div className="bg-white flex flex-col w-full gap-2 p-4 rounded-xl justify-between">
+          <div className="flex w-full flex-col gap-2">
             <p className="w-full text-lg text-justify">Мы - успешная компания, занимающаяся дистрибуцией хлеба, и уже 12 лет остаемся лидерами на рынке.
               Мы смогли успешно развиться в трех направлениях бизнеса: Дистрибуция ХБИ, Хлебопекарное производство и Логистика по системе 3PL.
               Наша миссия - обеспечить клиентов качественной продукцией и безупречным сервисом.</p>
@@ -144,17 +144,107 @@ const Job = () => {
             </div>
           </div>
         </div>
+        <div className=" bg-main rounded-2xl p-4 px-6 flex flex-col justify-around w-1/3">
+          <div className="flex flex-col gap-3">
+            <p className="text-white text-2xl font-normal">Уважаемый кандидат!</p>
+            <p className="text-white text-lg font-medium">Для уточнения актуальности вакансий вы можете связаться с нами по следующим телефонам: <br />
+              <a href="tel:+7 (812) 622-12-46 (доб.117)">+7 (812) 622-12-46 (доб.117)</a>;
+              <br /><a href="tel:+7 (931) 381-71-10">+7 (931) 381-71-10</a>
+              <br />или написать на почту:
+              <a className="font-semibold " href="mailto:jobs@thdm.ru">jobs@thdm.ru</a>
+            </p>
+          </div>
+          <div className="flex flex-col gap-3">
+            <p className="text-white text-lg font-medium">Если не нашлась подходящая вакансия, то можете заполнить форму ниже</p>
+            <button className="px-5 py-3 bg-white w-fit text-main text-base rounded-xl hover:bg-main hover:text-white transition-colors"
+              onClick={() => handleOpenPopup(job)}
+            >
+              Заполнить форму
+            </button>
+          </div>
+
+          {isPopupOpen && (
+            <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+              <div className="bg-white rounded-xl p-8 w-[90%] md:w-[50%]">
+                <h3 className="text-2xl font-semibold mb-4" >Заполните форму</h3>
+                <form className="flex flex-col gap-4" onSubmit={onSubmit}>
+                  <input
+                    className="px-3 py-2 text-black font-medium text-lg rounded-2xl border-black border"
+                    placeholder="ФИО"
+                    type="text"
+                    id="name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                  />
+                  <input
+                    className="px-3 py-2 text-black font-medium text-lg rounded-2xl border-black border"
+                    placeholder="Дата рождения"
+                    type="date"
+                    id="name"
+                    value={date}
+                    onChange={(e) => setDate(e.target.value)}
+                    required
+                  />
+                  <InputMask
+                    className="px-3 py-2 text-black font-medium text-lg rounded-2xl border-black border"
+                    placeholder="Телефон"
+                    id="phone"
+                    mask="+7(999)-999-99-99"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    required
+                  />
+                  <input
+                    className="px-3 py-2 text-black font-medium text-lg rounded-2xl border-black border"
+                    placeholder="Гражданство"
+                    type="text"
+                    id="nationality"
+                    value={country}
+                    onChange={(e) => setCountry(e.target.value)}
+                    required
+                  />
+                  <input
+                    type="text"
+                    placeholder="Вакансия"
+                    className="px-3 py-2 text-black font-medium text-lg rounded-2xl border-black border"
+                    onChange={(e) => setJob(e.target.value)}
+                    required
+                  />
+                  <input
+                    type="text"
+                    placeholder="Город трудоустройства"
+                    className="px-3 py-2 text-black font-medium text-lg rounded-2xl border-black border"
+                    onChange={(e) => setCity(e.target.value)}
+                    required
+                  />
+                  <div className="flex gap-2 justify-between items-center">
+                    <label className="flex items-center gap-2">
+                      <input type="checkbox" required /> Согласен с обработкой<a href="/policy.pdf" download>персональных данных</a>
+                    </label>
+                    <button
+                      type="submit"
+                      className="px-4 py-2 bg-main text-white rounded-md"
+                    >
+                      Отправить
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
 
       <div className="flex bg-bg h-full justify-center min-h-[69vh] flex-col md:flex-row w-full gap-4 px-2 md:px-8">
         {/* Фильтры */}
         <div className="flex h-fit p-4 rounded-2xl bg-white flex-col gap-6 w-full md:w-1/4 shadow-lg">
-          <h3 className="text-3xl font-semibold">Фильтры</h3>
+          <h3 className="text-2xl font-semibold">Фильтры</h3>
 
           <div className="flex flex-col gap-4">
-            <h4 className="font-medium text-2xl">Города</h4>
+            <h4 className="font-medium text-xl">Города</h4>
             {uniqueCities.map((city) => (
-              <label key={city} className="flex items-center gap-4 text-xl">
+              <label key={city} className="flex items-center gap-2 text-lg">
                 <input
                   type="checkbox"
                   checked={selectedCity.includes(city)}
@@ -166,9 +256,9 @@ const Job = () => {
           </div>
 
           <div className="flex flex-col gap-4">
-            <h4 className="font-medium text-2xl">Опыт</h4>
+            <h4 className="font-medium text-xl">Опыт</h4>
             {uniqueExperiences.map((experience) => (
-              <label key={experience} className="flex items-center gap-4 text-xl">
+              <label key={experience} className="flex items-center gap-2 text-lg">
                 <input
                   type="checkbox"
                   checked={selectedExperience.includes(experience)}
@@ -180,9 +270,9 @@ const Job = () => {
           </div>
 
           <div className="flex flex-col gap-4">
-            <h4 className="font-medium text-2xl">Тип вакансии</h4>
+            <h4 className="font-medium text-xl">Тип вакансии</h4>
             {uniqueWorkTypes.map((workType) => (
-              <label key={workType} className="flex items-center gap-4 text-xl">
+              <label key={workType} className="flex items-center gap-2 text-lg">
                 <input
                   type="checkbox"
                   checked={selectedWorkType.includes(workType)}
@@ -194,9 +284,9 @@ const Job = () => {
           </div>
 
           <div className="flex flex-col gap-4">
-            <h4 className="font-medium text-2xl">Место работы</h4>
+            <h4 className="font-medium text-xl">Место работы</h4>
             {uniqueWorkplaces.map((workplace) => (
-              <label key={workplace} className="flex items-center gap-4 text-xl">
+              <label key={workplace} className="flex items-center gap-2 text-lg">
                 <input
                   type="checkbox"
                   checked={selectedWorkplace.includes(workplace)}
