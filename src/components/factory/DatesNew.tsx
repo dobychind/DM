@@ -14,8 +14,8 @@ import { Accordion, AccordionItem } from '@szhsin/react-accordion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useState } from 'react';
 
-import brslide1 from '/DmLogo.svg';
-import brslide2 from '/spb.svg';
+import brslide1 from '/brslide1.jpg';
+import brslide2 from '/brslide2.jpg';
 import brslide3 from '/brslide3.jpg';
 import brslide4 from '/brslide4.jpg';
 import brslide5 from '/brslide5.jpg';
@@ -35,6 +35,7 @@ const DatesNew = () => {
             spaceBetween={50}
             slidesPerView={4}
             navigation
+            autoplay
             loop
             className='grid md:px-12'
             breakpoints={{

@@ -2,8 +2,6 @@ import { useState, useMemo, useEffect } from "react";
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
 import banner from '/jobhead.jpg';
-import dm from '/DmLogo.svg';
-import hpp from '/HppLogo.png'
 import InputMask from 'react-input-mask';
 
 interface Job {
@@ -127,24 +125,17 @@ const Job = () => {
 
       <div className="flex p-4 px-8 w-full h-full justify-between gap-12">
         <div className="bg-white flex flex-col w-full gap-2 p-4 rounded-xl justify-between">
-          <div className="flex w-full flex-col gap-2">
+          <div className="flex w-full h-full justify-start flex-col gap-8">
             <p className="w-full text-lg text-justify">Мы - успешная компания, занимающаяся дистрибуцией хлеба, и уже 12 лет остаемся лидерами на рынке.
               Мы смогли успешно развиться в трех направлениях бизнеса: Дистрибуция ХБИ, Хлебопекарное производство и Логистика по системе 3PL.
               Наша миссия - обеспечить клиентов качественной продукцией и безупречным сервисом.</p>
             <p className="w-full text-lg text-justify">Наша миссия — обеспечить клиентов качественной продукцией и безупречным обслуживанием,
-              (далее фразу выделить либо цветом или добавить жирности или размер) и <b> мы ищем талантливых и целеустремленных людей, которые хотят расти и развиваться вместе с нами </b> в Москве, Санкт-Петербурге и Великом Новгороде!</p>
+              и <b> мы ищем талантливых и целеустремленных людей, которые хотят расти и развиваться вместе с нами </b> в Москве, Санкт-Петербурге и Великом Новгороде!</p>
             <p className="w-full text-lg text-justify"><b>Если вы готовы стать частью нашей команды и внести вклад в успех компании, добро пожаловать!</b></p>
           </div>
-          <div className="flex gap-3 items-center justify-between w-[30%]">
-            <div className="w-full">
-              <img src={dm} alt="" />
-            </div>
-            <div className="w-full">
-              <img src={hpp} alt="" />
-            </div>
-          </div>
+
         </div>
-        <div className=" bg-main rounded-2xl p-4 px-6 flex flex-col justify-around w-1/3">
+        <div className=" bg-main rounded-2xl p-4 px-6 flex flex-col justify-around w-1/2">
           <div className="flex flex-col gap-3">
             <p className="text-white text-2xl font-normal">Уважаемый кандидат!</p>
             <p className="text-white text-lg font-medium">Для уточнения актуальности вакансий вы можете связаться с нами по следующим телефонам: <br />

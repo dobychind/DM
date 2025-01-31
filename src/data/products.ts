@@ -27,8 +27,6 @@ export const products: Product[] = [
     { id: 17, name: 'Кольцо песочное c орехом', type: 'Свежий хлеб' , category: 'Сдоба', image: '/products/Colc.png', manufacturer: 'ХПП №1' },
     { id: 18, name: 'Лаваш армянский 250 гр', type: 'Свежий хлеб' , category: 'Лаваш', image: '/products/ArmLav.png', manufacturer: 'ХПП №1' },
     { id: 19, name: 'Лаваш армянский ролл', type: 'Свежий хлеб' , category: 'Лаваш', image: '/products/ArmLavRoll.png', manufacturer: 'ХПП №1' },
-    { id: 20, name: 'Багет ржаной с семечками', type: 'Свежий хлеб' , category: 'Багет', image: '/products/Rzanbag.png', manufacturer: 'ХПП №1' },
-    { id: 21, name: 'Багет кручный', type: 'Свежий хлеб' , category: 'Багет', image: '/products/Kruchbag.png', manufacturer: 'ХПП №1' },
     { id: 22, name: 'Плюшка Московская', type: 'Свежий хлеб' , category: 'Сдоба', image: '/products/Moscow.png', manufacturer: 'ХПП №1' },
     { id: 23, name: 'Слойка с маком', type: 'Свежий хлеб' , category: 'Сдоба', image: '/products/Mak.png', manufacturer: 'ХПП №1' },
     { id: 24, name: 'Лепешка с сыром', type: 'Свежий хлеб' , category: 'Лепешка', image: '/products/Cheese.png', manufacturer: 'ХПП №1' },
