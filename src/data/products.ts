@@ -34,6 +34,6 @@ export const products: Product[] = [
     { id: 26, name: 'Cлойка с сыром', type: 'Свежий хлеб' , category: 'Сдоба', image: '/products/Syr.png', manufacturer: 'ХПП №1' },
     { id: 27, name: 'Язычок с сахаром', type: 'Свежий хлеб' , category: 'Сдоба', image: '/products/Sugar.png', manufacturer: 'ХПП №1' },
     { id: 28, name: 'Булочка с повидлом', type: 'Свежий хлеб' , category: 'Сдоба', image: '/products/Jam.png', manufacturer: 'ХПП №1' },
-    { id: 29, name: 'Пшеничный багет', type: 'Свежий хлеб' , category: 'Багет', image: '/products/bagPsen.png', manufacturer: 'ХПП №1' },
-    { id: 30, name: 'Зерновой багет', type: 'Свежий хлеб' , category: 'Багет', image: '/products/bagZern.png', manufacturer: 'ХПП №1' },
+    { id: 29, name: 'Пшеничный багет', type: 'Свежий хлеб' , category: 'Багет', image: '/products/bagPsen.png', manufacturer: 'Мастеская Пшеничного' },
+    { id: 30, name: 'Зерновой багет', type: 'Свежий хлеб' , category: 'Багет', image: '/products/bagZern.png', manufacturer: 'Мастеская Пшеничного' },
 ];

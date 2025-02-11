@@ -73,7 +73,7 @@ const Production: React.FC = () => {
       <Navbar position="block" color="text-white" logoname="Hpp" />
 
       {/* Основной контент */}
-      <div className="flex flex-col gap-8 lg:w-[90%] justify-center mt-2">
+      <div className="flex flex-col gap-8 lg:w-[90%] justify-center mt-2 px-3">
         {/* Навигация */}
         <Navigation />
         <div>

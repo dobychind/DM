@@ -7,7 +7,7 @@ import MainPage from "../pages/MainPage";
 import Factory from "../pages/Factory";
 // import Error from "../pages/Error"
 
-import Job from "../pages/Job";
+// import Job from "../pages/Job";
 import Contacts from "../pages/Contacts";
 
 
@@ -24,6 +24,6 @@ export const publicRoutes: RouteConfig[] =[
     {path: '/distribution', component: <Distribution/>},
     {path: '/logistic', component: <Logistic/>},
     {path: "/*", component: <MainPage/>},
-    {path: '/job', component: <Job/>},
+    // {path: '/job', component: <Job/>},
     {path: '/contacts', component: <Contacts/>}
 ]

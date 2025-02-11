@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-// import Select from 'react-select';
+import Select from 'react-select';
 
 interface ProductFilterProps {
   categories: string[];
@@ -14,20 +14,19 @@ interface ProductFilterProps {
 
 const ProductFilter: React.FC<ProductFilterProps> = ({
   categories,
-  // manufacturers,
+  manufacturers,
   selectedCategory,
-  // selectedManufacturer,
+  selectedManufacturer,
   onCategoryChange,
-  // onManufacturerChange,
+  onManufacturerChange,
   isOpen,
   toggleFilter,
 }) => {
-  const filterRef = useRef<HTMLDivElement>(null); // Create a ref for the filter container
+  const filterRef = useRef<HTMLDivElement>(null);
 
-  // Function to handle clicks outside the filter
   const handleClickOutside = (event: MouseEvent) => {
     if (filterRef.current && !filterRef.current.contains(event.target as Node)) {
-      toggleFilter(); // Close the filter if the click was outside
+      toggleFilter();
     }
   };
 
@@ -38,93 +37,105 @@ const ProductFilter: React.FC<ProductFilterProps> = ({
       document.removeEventListener('mousedown', handleClickOutside);
     }
 
-    // Clean up event listener on unmount
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [isOpen]); // Add or remove the event listener based on isOpen state
+  }, [isOpen]);
 
-  // const manufacturerOptions = manufacturers.map((manufacturer) => ({
-  //   value: manufacturer,
-  //   label: manufacturer,
-  // }));
+  const manufacturerOptions = manufacturers.map((manufacturer) => ({
+    value: manufacturer,
+    label: manufacturer,
+  }));
 
-  // const customStyles = {
-  //   control: (provided: any) => ({
-  //     ...provided,
-  //     backgroundColor: '#FF6A00',
-  //     borderColor: '#FF6A00',
-  //     color: 'white',
-  //     padding: '4px 8px',
-  //     borderRadius: '0.5rem',
-  //     fontSize: '1rem',
-  //     fontWeight: '500',
-  //   }),
-  //   singleValue: (provided: any) => ({
-  //     ...provided,
-  //     color: 'white',
-  //   }),
-  //   option: (provided: any, state: any) => ({
-  //     ...provided,
-  //     backgroundColor: state.isFocused ? '#FF6A00' : 'transparent',
-  //     color: state.isFocused ? 'white' : 'black',
-  //     padding: '8px 12px',
-  //   }),
-  //   menu: (provided: any) => ({
-  //     ...provided,
-  //     backgroundColor: '#F7832C',
-  //     borderRadius: '0.5rem',
-  //   }),
-  // };
+  const customStyles = {
+    control: (provided: any) => ({
+      ...provided,
+      backgroundColor: '#FF6A00',
+      borderColor: '#FF6A00',
+      color: 'white',
+      padding: '4px 8px',
+      borderRadius: '0.5rem',
+      fontSize: '1rem',
+      fontWeight: '500',
+    }),
+    singleValue: (provided: any) => ({
+      ...provided,
+      color: 'white',
+    }),
+    option: (provided: any, state: any) => ({
+      ...provided,
+      backgroundColor: state.isFocused ? '#FF6A00' : 'transparent',
+      color: state.isFocused ? 'white' : 'black',
+      padding: '8px 12px',
+    }),
+    menu: (provided: any) => ({
+      ...provided,
+      backgroundColor: '#F7832C',
+      borderRadius: '0.5rem',
+      color: 'white',
+    }),
+    placeholder: (provided: any) => ({
+      ...provided,
+      color: 'white',
+    }),
+  };
 
   return (
-    <div
-      ref={filterRef} // Attach the ref to the container
-      className={`fixed inset-0 z-50 bg-[#F7832C] w-4/5 md:w-auto md:relative md:rounded-xl transform transition-transform ${
-        isOpen ? 'translate-x-0' : '-translate-x-full'
-      } md:translate-x-0 md:flex md:flex-col gap-4 2xl:gap-6 md:border px-12 py-4 2xl:py-8`}
-    >
-      <div className="flex justify-between items-center md:hidden">
-        <h2 className="text-xl font-bold text-white">Фильтр</h2>
-        <button
-          className="text-white text-3xl"
-          onClick={toggleFilter}
-        >
-          &times;
-        </button>
-      </div>
+    <div>
+      <button
+        className="flex top-4 left-4 z-50 bg-[#FF6A00] text-white px-4 py-2 rounded-lg shadow-lg hover:bg-[#e55e00] focus:outline-none focus:ring-2 focus:ring-white md:hidden"
+        onClick={toggleFilter}
+      >
+        Открыть фильтры
+      </button>
 
-      {/* <div className="relative mt-4 md:mt-0">
-        <Select
-          value={manufacturerOptions.find(option => option.value === selectedManufacturer)}
-          onChange={(selectedOption) => onManufacturerChange(selectedOption?.value || '')}
-          options={manufacturerOptions}
-          styles={customStyles}
-          isClearable
-          placeholder="Все производители"
-        />
-      </div> */}
-
-      <div className="flex gap-2">
-        <button
-          className={`px-4 py-2 rounded-lg text-lg font-medium ${
-            selectedCategory === '' ? ' text-white' : 'text-black'
-          }`}
-          onClick={() => onCategoryChange('')}
-        >
-          Все категории
-        </button>
-        {categories.map((category) => (
-          <button
-            key={category}
-            className={`px-4 py-2 rounded-lg text-lg font-medium text-black ${
-              selectedCategory === category ? 'text-white' : 'text-black'
-            }`}
-            onClick={() => onCategoryChange(category)}
+      <div
+        ref={filterRef}
+        className={`fixed inset-0 z-[1000] bg-[#F7832C] w-1/2 md:w-auto md:relative md:rounded-xl transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'
+          } md:translate-x-0 md:flex md:flex-row md:justify-between gap-4 2xl:gap-6 md:border px-4 py-4 2xl:py-8`}
+      >
+        <div className="flex justify-between items-center md:hidden">
+          <h2 className="text-xl font-bold text-white">Фильтр</h2>
+          {/* <button
+            className="text-white w-full text-3xl bg-black p-2 rounded-full hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-white"
+            onClick={toggleFilter}
           >
-            {category}
+            &times;
+          </button> */}
+        </div>
+
+        {/* Производитель Фильтр */}
+        <div className="relative mt-4 md:mt-0">
+          <Select
+            value={manufacturerOptions.find(option => option.value === selectedManufacturer)}
+            onChange={(selectedOption) => onManufacturerChange(selectedOption?.value || '')}
+            options={manufacturerOptions}
+            styles={customStyles}
+            isClearable
+            placeholder="Все производители"
+          />
+        </div>
+
+        {/* Категории Фильтр */}
+        <div className="flex flex-wrap md:flex-nowrap gap-2 mt-4 md:mt-0">
+          <button
+            className={`px-4 py-2 w-full rounded-lg text-sm font-medium  ${selectedCategory === '' ? 'bg-main text-white border border-white' : 'bg-main text-white'
+              }`}
+            onClick={() => onCategoryChange('')}
+          >
+            Все категории
           </button>
-        ))}
+          {categories.map((category) => (
+            <button
+              key={category}
+              className={`px-4 py-2 rounded-lg text-sm font-medium w-full ${selectedCategory === category ? 'bg-white text-black' : 'bg-main text-white'
+                }`}
+              onClick={() => onCategoryChange(category)}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );

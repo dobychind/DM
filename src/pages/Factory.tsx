@@ -3,7 +3,7 @@ import Button from '../components/button/Button'
 import Navbar from '../components/navbar/Navbar'
 import prodMain from '/prodMain.jpg';
 import DatesNew from '../components/factory/DatesNew'
-import hppbanner from '/hppbanner.jpg';
+// import hppbanner from '/hppbanner.jpg';
 // import hppbread from '/hppbread.jpg';
 import Novg from '/novg.png';
 import hpp from '/hppround.png';
@@ -11,7 +11,8 @@ import breadpres from '/breadpres.jpg';
 // import Novg2 from '/novg2.jpg';
 // import Novg4 from '/novg4.jpg';
 import psenlogo from '/psenlogo.png';
-import shop from '/shop.jpg';
+import vn from '/vn.png';
+// import shop from '/shop.jpg';
 // import Psen from '/psen.png';
 import PsenBack from '/PsenBack.png';
 import best from '/best.png';
@@ -34,7 +35,7 @@ const Factory = () => {
     console.log('Button clicked!');
   };
   return (
-    <div className='flex font-body bg-bg flex-col justify-center items-center'>
+    <div className='flex font-body overflow-hidden bg-bg flex-col justify-center items-center'>
       <Navbar logoname="Hpp" position='fixed' color='text-white' />
       <div className='flex w-full md:h-screen bg-white relative justify-end'>
         <div className='absolute flex flex-col gap-4 top-24 left-5 md:top-56 md:left-[8rem] min-[1920px]:top-[35%]'>
@@ -48,7 +49,7 @@ const Factory = () => {
            min-[1920px]:text-3xl '>Ключевой производитель хлеба и хлебобулочных изделий в составе группы компаний «Даниэль М».</p>
         </div>
         <img src={prodMain} alt="Главная картинка на странице производства" className='object-cover w-full md:w-screen md:h-screen' />
-        <div className='mt-4 mb-8 md:mb-0 flex justify-center md:mt-0 absolute md:bottom-8 md:left-[8rem]'>
+        <div className='mt-4 mb-8 md:mb-0 hidden md:flex justify-center md:mt-0 absolute md:bottom-8 md:left-[8rem]'>
           <Link to="/production/bread"><Button onClick={handleClick} color='main' text='Продукция' /></Link>
         </div>
       </div>
@@ -73,7 +74,7 @@ const Factory = () => {
                 значимости, так и уникальных хлебобулочных и мелкоштучных изделий с добавленной стоимостью.</p>
             </div>
             <div className='h-[300px] relative  md:h-auto md:w-2/5'>
-              <img src={hpp} alt="" className='absolute z-30 top-[25%] left-[-75px] h-[150px]' />
+              <img src={hpp} alt="" className='absolute z-30 top-[25%] left-[30%] md:left-[-75px] h-[150px]' />
               <img data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true" data-aos-anchor-placement="top-bottom" className='h-full w-full object-cover rounded-2xl' src={Novg} alt="Наша продукция в магазине" />
             </div>
           </div>
@@ -83,7 +84,7 @@ const Factory = () => {
               <img data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600" data-aos-once="true" data-aos-anchor-placement="top-bottom" className='h-full md:max-h-[330px] w-full object-cover rounded-2xl' src={breadpres} alt="" />
             </div>
             <div className='flex justify-center relative items-center py-5 px-4 md:px-16 lg:px-20 xl:px-24'>
-              <img src={hpp} alt="" className='absolute object-contain  top-1/5 left-[-100px] h-[150px]' />
+              <img src={hpp} alt="" className='absolute hidden md:block object-contain  top-1/5 left-[-100px] h-[150px]' />
               <p className='text-xl  lg:text-2xl text-main xl:text-4xl font-semibold'>Также ХПП № 1 восстанавливает Хлебопекарный завод в Великом Новгороде, что будет являться сохранением предприятия имеющего социальную значимость для региона</p>
             </div>
           </div>
@@ -92,35 +93,32 @@ const Factory = () => {
         <div data-aos="fade-down" data-aos-duration="1000" data-aos-once="true" data-aos-anchor-placement="top-bottom" className='flex flex-col w-full gap-12 md:gap-16  rounded-2xl'>
           <div className='flex flex-col h-full items-center justify-between gap-8 md:gap-8'>
             <div className="flex flex-col w-full h-full px-5 py-4 md:p-12 md:py-16 bg-[url('/backcorp.png')] bg-cover md:gap-12 gap-8 rounded-2xl">
-              <h3 className='text-3xl w-full md:text-5xl text-start font-semibold text-white'>Наши планы</h3>
+              <h3 className='text-3xl w-full md:text-5xl text-start font-semibold text-white min-[1920px]:text-5xl'>Наши планы</h3>
+              <div className='flex w-full justify-between gap-6'>
 
-              <div className="flex flex-col md:flex-row gap-4 md:gap-24 justify-between items-stretch">
-                <div data-aos="fade-down" data-aos-duration="1000" data-aos-once="true" data-aos-anchor-placement="top-bottom" className='flex gap-2 w-full'>
-                  <p className='text-7xl font-bold text-white'>1.</p>
-                  <p className="border bg-main border-white p-3 rounded-2xl text-2xl text-white md:text-2xl leading-snug font-normal text-justify">
-                    Активно развивать продукцию под лейблом «Сделано в Великом Новгороде», которое производит Хлебопекарное предприятие №1.
-                  </p>
+                <div className="flex flex-col md:flex-col md:w-2/3 gap-4 md:gap-24 justify-between items-stretch">
+                  <div data-aos="fade-down" data-aos-duration="1000" data-aos-once="true" data-aos-anchor-placement="top-bottom" className='flex gap-2 w-full'>
+                    <p className="border bg-main border-white p-3 rounded-2xl text-2xl text-white md:text-2xl leading-snug font-normal text-justify min-[1920px]:text-3xl">
+                      Активно развивать продукцию под лейблом «Сделано в Великом Новгороде», которое производит Хлебопекарное предприятие №1.
+                    </p>
+                  </div>
+                  <div data-aos="fade-down" data-aos-duration="1300" data-aos-once="true" data-aos-anchor-placement="top-bottom" className='flex gap-2 w-full'>
+                    <p className="border bg-main border-white p-3 rounded-2xl text-2xl text-white md:text-2xl leading-snug font-normal text-justify min-[1920px]:text-3xl">
+                      Вывести продукцию под этим брендом на полки крупнейших розничных сетей Санкт-Петербурга и Москвы.
+                    </p>
+                  </div>
+                  <div data-aos="fade-down" data-aos-duration="1600" data-aos-once="true" data-aos-anchor-placement="top-bottom" className='flex gap-2 w-full'>
+                    <p className="border bg-main border-white p-3 rounded-2xl text-2xl text-white md:text-2xl leading-snug font-normal text-justify min-[1920px]:text-3xl">
+                      Мы стремимся, чтобы каждый покупатель мог оценить качество и уникальность товаров, произведённых в этом древнем городе.
+                    </p>
+                  </div>
                 </div>
-                <div data-aos="fade-down" data-aos-duration="1300" data-aos-once="true" data-aos-anchor-placement="top-bottom" className='flex gap-2 w-full'>
-                  <p className='text-7xl font-bold text-white'>2.</p>
 
-                  <p className="border bg-main border-white p-3 rounded-2xl text-2xl text-white md:text-2xl leading-snug font-normal text-justify">
-                    Вывести продукцию под этим брендом на полки крупнейших розничных сетей Санкт-Петербурга и Москвы.
-                  </p>
+
+                <div className='hidden w-1/3 md:flex flex-col rounded-2xl justify-evenly overflow-hidden'>
+                  <img src={vn} className='w-full rounded-2xl object-cover' alt="" />
+                  {/* <img src={hppbanner} className='w-1/2 border border-white rounded-2xl object-cover' alt="" /> */}
                 </div>
-                <div data-aos="fade-down" data-aos-duration="1600" data-aos-once="true" data-aos-anchor-placement="top-bottom" className='flex gap-2 w-full'>
-                  <p className='text-7xl font-bold text-white'>3.</p>
-
-                  <p className="border bg-main border-white p-3 rounded-2xl text-2xl text-white md:text-2xl leading-snug font-normal text-justify">
-                    Мы стремимся, чтобы каждый покупатель мог оценить качество и уникальность товаров, произведённых в этом древнем городе.
-                  </p>
-                </div>
-              </div>
-
-
-              <div className='hidden md:flex flex-row rounded-2xl justify-evenly overflow-hidden'>
-                <img src={hppbanner} className='w-1/3 border border-white rounded-2xl object-cover' alt="" />
-                <img src={shop} className='w-1/3 border border-white rounded-2xl object-cover' alt="" />
               </div>
 
             </div>

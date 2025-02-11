@@ -88,7 +88,7 @@ const FeedbackForm: React.FC<FormProps> = ({ text }) => {
                             >
                                 <img src={closeIcon} alt="Close" />
                             </button>
-                            <form className="flex w-2/3  flex-col gap-4 rounded-2xl" onSubmit={onSubmit}>
+                            <form className="flex w-2/3  flex-col gap-4 rounded-lg md:rounded-2xl" onSubmit={onSubmit}>
                                 <div className='flex w-full gap-8'>
                                     <div className="w-full flex flex-col gap-4">
                                         <input

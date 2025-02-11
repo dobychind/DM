@@ -11,7 +11,7 @@ const Button: React.FC<ButtonProps> = ({ onClick, text, color = "main" }) => {
 
   return (
     <button
-      className={`relative overflow-hidden text-main font-medium text-xl py-3 px-4 rounded-[32px] border border-main transition-colors duration-300 hover:text-white`}
+      className={`relative overflow-hidden text-main font-medium text-xl py-3 px-4 rounded-lg md:rounded-[32px] border border-main transition-colors duration-300 hover:text-white`}
       onClick={onClick}
     >
       {/* Фоновый слой с анимацией */}
@@ -20,7 +20,7 @@ const Button: React.FC<ButtonProps> = ({ onClick, text, color = "main" }) => {
         aria-hidden="true"
       />
       {/* Текст внутри кнопки */}
-      <span className="flex gap-1 relative pointer-events-none">{text} &#62;
+      <span className="flex w-max gap-1 relative pointer-events-none">{text} &#62;
       </span>
 
       {/* При наведении активируем анимацию фона */}

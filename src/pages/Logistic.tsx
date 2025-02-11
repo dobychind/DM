@@ -50,8 +50,8 @@ const Logistic = () => {
     <div className="flex flex-col justify-center bg-bg items-center font-body">
       <Navbar logoname="DM" position="fixed" color="text-white" />
       <div className="w-full object-cover relative">
-        <h2 className="text-xl md:top-44 left-0 right-0 ml-auto mr-auto absolute pt-8 md:text-5xl 2xl:text-7xl text-center font-title text-white">Логистика ЗPL</h2>
-        <img src={plog} alt="Фон 3PL" className="w-full rounded-b-[48px] rounded-br-[48px] md:object-cover md:h-screen max-h-screen" />
+        <h2 className="text-4xl top-8 md:top-44 left-0 right-0 ml-auto mr-auto absolute pt-8 md:text-5xl 2xl:text-7xl text-center font-title text-white">Логистика ЗPL</h2>
+        <img src={plog} alt="Фон 3PL" className="w-full h-[40vh] rounded-b-[48px] rounded-br-[48px] md:object-cover md:h-screen max-h-screen" />
       </div>
       <div className="flex py-12 flex-col w-[96vw] lg:w-[89vw] gap-8 md:gap-24 justify-center items-center" >
 
@@ -61,7 +61,7 @@ const Logistic = () => {
         </div>
 
 
-        <div className="flex flex-col md:flex-row w-full rounded-2xl gap-8 bg-[url('/supply.jpg')] bg-cover h-[70vh] md:h-screen min-[1920px]:h-[70vh] bg-bottom justify-between">
+        <div className="flex flex-col md:flex-row w-full rounded-2xl gap-8 bg-[url('/supply.jpg')] bg-cover h-[85vh] md:h-screen min-[1920px]:h-[70vh] bg-bottom justify-between">
           <div className="flex flex-col pt-2 pl-2 md:pt-16 md:pl-16 gap-6 md:w-3/5 2xl:w-2/3">
             <p className="text-2xl 2xl:text-3xl font-bold min-[1920px]:w-1/2">По запросу компании-отправителя могут быть предоставлены <span className="text-main">дополнительные услуги</span> по</p>
             <ul className="list-disc flex flex-col ml-8 gap-1">
@@ -76,7 +76,7 @@ const Logistic = () => {
         </div>
 
         <div data-aos="fade-down" data-aos-duration="2000" className='flex flex-col bg-white gap-8 w-full px-4 py-3 rounded-2xl'>
-          <h3 className='text-xl md:text-center font-semibold md:text-3xl min-[1920px]:text-5xl md:font-bold'>Наши партнеры</h3>
+          <h3 className='text-2xl text-center font-semibold md:text-3xl min-[1920px]:text-5xl md:font-bold'>Наши партнеры</h3>
           <div className='flex flex-wrap w-full justify-between md:flex-nowrap gap-2 md:gap-6 items-center md:justify-around'>
             <ClientSwiper />
           </div>
@@ -88,7 +88,7 @@ const Logistic = () => {
           <div className="flex flex-col md:flex-row h-full justify-center w-full gap-8 rounded-2xl ">
             <div className="flex md:max-h-[700px] bg-white rounded-2xl justify-between  flex-col md:flex-row gap-8">
               <div className="flex md:w-[100%] mx-8 justify-center flex-col gap-6 md:gap-8">
-                <p className="text-4xl font-bold md:w-max pt-4 border-b-2 border-main">Наши <span className="text-main">склады</span> размещены в 3х городах России </p>
+                <p className=" text-2xl md:text-4xl font-bold md:w-max pt-4 border-b-2 border-main">Наши <span className="text-main">склады</span> размещены в 3х городах России </p>
                 <img src={mapsmall} className="w-full rounded-2xl max-h-[500px] object-cover" alt="Карта складов" />
               </div>
             </div>
