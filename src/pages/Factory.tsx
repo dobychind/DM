@@ -41,7 +41,7 @@ const Factory = () => {
         <div className='absolute flex flex-col gap-4 top-24 left-5 md:top-56 md:left-[8rem] min-[1920px]:top-[35%]'>
           <h2 data-aos="zoom-in" data-aos-duration="1000"
             className='text-black font-medium font-title md:font-medium text-2xl w-full 
-           md:text-5xl xl:text-7xl md:max-w-[60%]'>Хлебопекарное предприятие №1</h2>
+           md:text-5xl xl:text-7xl md:max-w-[60%]'>Хлебопекарное<br className='md:hidden'/> предприятие №1</h2>
           <p data-aos="zoom-in" data-aos-duration="2000"
             className='text-main text-sm md:pt-0 font-normal hidden min-[426px]:block 
            md:text-xl md:w-auto md:text-start md:bottom-auto md:max-w-[52%]

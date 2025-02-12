@@ -6,7 +6,7 @@ import ctm from '/ctm.png';
 
 const Possibilities = () => {
     return (
-        <div className="font-body md:p-6 bg-[url('/backcorp.png')] bg-cover rounded-lg md:rounded-2xl">
+        <div className="font-body md:p-6 bg-[url('/backcorp.png')] p-2 pt-6 bg-cover bg-repeat-y bg-[-100px] rounded-2xl">
             <div className="flex flex-col gap-8 justify-center items-center">
                 <h3 className="text-3xl min-[1920px]:text-5xl font-bold">Наши возможности</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 w-full">

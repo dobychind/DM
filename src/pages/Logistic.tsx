@@ -61,14 +61,14 @@ const Logistic = () => {
         </div>
 
 
-        <div className="flex flex-col md:flex-row w-full rounded-2xl gap-8 bg-[url('/supply.jpg')] bg-cover h-[85vh] md:h-screen min-[1920px]:h-[70vh] bg-bottom justify-between">
-          <div className="flex flex-col pt-2 pl-2 md:pt-16 md:pl-16 gap-6 md:w-3/5 2xl:w-2/3">
+        <div className="flex flex-col md:flex-row w-full rounded-2xl gap-8 bg-[url('/supply.jpg')] bg-cover h-[90vh] md:h-screen min-[1920px]:h-[70vh] bg-bottom justify-between">
+          <div className="flex flex-col p-2 pt-4 pl-4 md:pt-16 md:pl-16 gap-6 md:w-3/5 2xl:w-2/3">
             <p className="text-2xl 2xl:text-3xl font-bold min-[1920px]:w-1/2">По запросу компании-отправителя могут быть предоставлены <span className="text-main">дополнительные услуги</span> по</p>
             <ul className="list-disc flex flex-col ml-8 gap-1">
               <li className="text-xl 2xl:text-2xl font-normal">Обработке</li>
               <li className="text-xl 2xl:text-2xl font-normal">Упаковке и доставке товара</li>
               <li className="text-xl 2xl:text-2xl font-normal">Переупаковка</li>
-              <li className="text-xl 2xl:text-2xl font-normal">Полная или частичная перестикировка</li>
+              <li className="text-xl 2xl:text-2xl font-normal">Полная или частичная перестикеровка</li>
               <li className="text-xl 2xl:text-2xl font-normal">Выбраковка</li>
               <li className="text-xl 2xl:text-2xl font-normal">Приемка возвратов</li>
             </ul>
